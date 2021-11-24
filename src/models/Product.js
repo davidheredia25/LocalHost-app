@@ -32,10 +32,10 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    size: {
+    size: [{
         type: String,
         required: true
-    },
+    }],
     numReviews: {
         uno: {
             type: Number,

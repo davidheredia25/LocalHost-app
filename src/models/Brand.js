@@ -5,7 +5,12 @@ const brandSchema = new Schema({
     name: {
         type: String,
         required: true
-    }
+    },
+    categories: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
+    }]
 }, {
     versionKey: false,
     timestamps: false

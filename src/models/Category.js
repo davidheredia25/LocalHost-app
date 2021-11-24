@@ -5,7 +5,12 @@ const categorySchema = new Schema({
     name: {
         type: String,
         required: true
-    } 
+    },
+    types:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Types',
+        required: true
+    }]
 }, {
     versionKey: false,
     timestamps: false

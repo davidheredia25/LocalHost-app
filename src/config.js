@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dorenv.config();
+dotenv.config();
 
 module.exports = {
     MONGO_DB: process.env.MONGO_DB || 'LoclaHost-App',

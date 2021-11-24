@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 
-const URL
-
+const MONGODB_URI = `mongodb+srv://molucax:74DmtnKCB3APPtKE@drinkscluster.miouw.mongodb.net/VSClothes?retryWrites=true&w=majority`;
 
 mongoose
-    .connect(URL, {
+    .connect(MONGODB_URI, {
         useUnifiedTopology: true,
  		useNewUrlParser: true
     })
-    .then(db => console.log(`Base de datos conectando con: ${db.connection.name}`))
+    .then(db => console.log(`Base de datos conectada con: ${db.connection.name}`))
     .catch(err => console.log(err));
