@@ -1,8 +1,8 @@
 const { Router } = require('express');
-const reviewRoutes = require('./routes.review');
+const brandRoutes = require('./routes.brand');
 
 const router = Router();
 
-router.use('/review', reviewRoutes);
+router.use('/brand', brandRoutes);
 
 module.exports = router;

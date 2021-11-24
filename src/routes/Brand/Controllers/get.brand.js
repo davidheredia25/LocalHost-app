@@ -1,6 +1,6 @@
-const User = require('../../../models/User');
+const Brand = require('../../../models/Brand');
 
-const getUser = async (req, res) => {
+const getBrand = async (req, res) => {
     try {
 
     } catch (error) {
@@ -8,7 +8,7 @@ const getUser = async (req, res) => {
     }
 };
 
-const getUserById = async (req, res) => {
+const getBrandById = async (req, res) => {
     try {
 
     } catch (error) {
@@ -17,6 +17,6 @@ const getUserById = async (req, res) => {
 };
 
 module.exports = {
-    getUser,
-    getUserById
+    getBrand,
+    getBrandById
 };

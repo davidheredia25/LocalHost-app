@@ -22,3 +22,4 @@ app.use(passport.initialize());
 //Routes
 
 
+module.exports = app;
