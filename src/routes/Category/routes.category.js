@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const router = require('./index.category');
 const {  
     createCategory,
     deleteCategory,
