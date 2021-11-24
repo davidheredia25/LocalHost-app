@@ -1,10 +1,10 @@
 const initialState = {
-  products: []
+  cart: []
 };
 
 
 
-export function productsReducer(state = initialState, action) {
+export function cartReducer(state = initialState, action) {
   switch(action.type){
     default:
     return state;
