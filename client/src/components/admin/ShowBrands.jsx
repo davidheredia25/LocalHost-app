@@ -12,7 +12,6 @@ const ShowBrands = ({...props}) => {
 
     return (
         <div>
-            <
             {
                 brands?.map(x => {
                     return <button name={x.name}>{x.name}</button>

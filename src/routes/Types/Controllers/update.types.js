@@ -1,6 +1,6 @@
 const Types = require('../../../models/Ticket');
 
-const deleteTypes = async (req, res) => {
+const updateTypes = async (req, res) => {
     try {
 
     } catch (error) {
@@ -9,5 +9,5 @@ const deleteTypes = async (req, res) => {
 };
 
 module.exports = {
-    deleteTypes
+    updateTypes
 };

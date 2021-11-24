@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { useDispatch } from 'react-redux';
 import SearchIcon from "@material-ui/icons/Search";
-/* import { getProducts, setPage } from '../../redux/actions/actions';
- */
+import { getProducts} from '../../../redux/actions/products.actions'
+
 
 
 const SearchBar= () => {
@@ -11,17 +11,16 @@ const SearchBar= () => {
     const [filteredData, setFilteredData] = useState([])
     const [input, setInput] = useState("")
 
-   /*  function handleInputChange(e){
+    function handleInputChange(e){
         e.preventDefault()
         setInput(e.target.value)
-    } */
+    }
 
-   /*  function handleSubmit(e){
+    function handleSubmit(e){
         e.preventDefault()
-        dispatch(setPage(1))
         dispatch(getProducts({name:input}))
         setInput("")
-    } */
+    }
 
     const handleFilter = (e) =>{
         const filterProducts = products.filter((x) =>{
