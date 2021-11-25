@@ -5,9 +5,10 @@ export const GET_PRODUCTS_DETAILS = "GET_PRODUCTS_DETAILS"
 
 
 
-export const getProducts = ({ name, category }) => async (dispatch) => {
+export const getProducts = () => async (dispatch) => {
     try {
-        const res = await axios.get(`/product?name=${name ? name : ""}`); //&category=${category ? category : ""}
+       // const res = await axios.get(`/product?name=${name ? name : ""}`); //&category=${category ? category : ""}
+       let res= await axios.get('/product')
         return dispatch({
             type: GET_PRODUCTS,
             payload: res.data,
