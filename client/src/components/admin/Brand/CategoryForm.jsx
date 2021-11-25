@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const CategoryForm = () => {
     
-    const dispatch = useDispatch();
+    /*const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(getCategories())
@@ -19,11 +19,11 @@ const CategoryForm = () => {
     const handleClick = (e) => {
         dispatch(setBrandCategories(input));
         setInput("");
-    }
+    }*/
 
     return (
         <div>
-            <div>
+            {/*<div>
                 <h3>Seleccionar categorías:</h3>
                 <select onChange={handleSelect}>
                     <option selected value="">-categorías-</option>
@@ -42,7 +42,7 @@ const CategoryForm = () => {
                     onChange={() => setInput(e.target.value)}
                 />
                 <button onClick={handleClick}>AGREGAR</button>
-            </div>
+                </div> */}
         </div>
     )
 }
