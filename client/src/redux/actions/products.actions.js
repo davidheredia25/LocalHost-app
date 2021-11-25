@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const GET_PRODUCTS = "GET_PRODUCTS"
 export const GET_PRODUCTS_DETAILS = "GET_PRODUCTS_DETAILS"
 

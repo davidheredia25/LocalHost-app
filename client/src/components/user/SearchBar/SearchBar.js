@@ -7,7 +7,7 @@ import { getProducts} from '../../../redux/actions/products.actions'
 
 const SearchBar= () => {
 
-    const dispatch = useDispatch();
+    /*const dispatch = useDispatch();
     const [filteredData, setFilteredData] = useState([])
     const [input, setInput] = useState("")
 
@@ -37,10 +37,11 @@ const SearchBar= () => {
         dispatch(setPage(1))
         dispatch(getProducts({name:input}))
         setInput("")
-    }
+    }*/
 
     return (
-        <form onSubmit={e => handleSubmit(e)}className="search">
+        <div>
+        {/*<form onSubmit={e => handleSubmit(e)}className="search">
         <input  value = {input} className={style.input} 
                 placeholder="Buscar por nombre y marca" 
                 onChange={handleFilter}/>
@@ -60,7 +61,8 @@ const SearchBar= () => {
             )}
         </div>
         <button className="button"></button>
-    </form>
+            </form>*/}Searchbar
+    </div>
     )
 }
 
