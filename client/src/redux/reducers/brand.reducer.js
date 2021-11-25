@@ -3,7 +3,9 @@ import {
     GET_CATEGORIES,
     GET_SUBCATEGORIES,
     SET_BRAND_NAME, 
-    SET_BRAND_CATEGORIES
+    SET_BRAND_CATEGORIES,
+    SET_BRAND_SUBCATEGORIES,
+    SET_EXISTENT_BRAND,
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -42,14 +44,40 @@ export function brandReducer(state = initialState, { type, payload }) {
                 }
             }
         case SET_BRAND_CATEGORIES:
+            let categoryObj = {
+                name: payload,
+                subcategories: []
+            }
             return {
                 ...state,
                 brandInfo: {
                     ...state.brandInfo,
-                    categories: [...state.brandInfo.categories, payload]
+                    categories: [
+                        ...state.brandInfo.categories, 
+                        categoryObj
+                    ]
                 }
             }
-        case SET_BRAND_EXISTENT:
+        case SET_BRAND_SUBCATEGORIES:
+            let objectFound = state.brandInfo.categories.find(x => x.name === payload.category)
+            objectFound = {
+                ...objectFound, 
+                subcategories: [
+                    ...objectFound.subcategories, 
+                    payload.subcategory
+                ]
+            }
+            return {
+                ...state,
+                brandInfo: {
+                    ...state.brandInfo,
+                    categories: [
+                        ...state.brandInfo.categories, 
+                        objectFound
+                    ]
+                }
+            }
+        case SET_EXISTENT_BRAND:
             return {
                 ...state,
                 brandInfo: payload

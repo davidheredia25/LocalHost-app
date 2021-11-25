@@ -7,6 +7,7 @@ export const GET_SUBCATEGORIES = "GET_SUBCATEGORIES";
 export const SET_BRAND_NAME = "SET_BRAND_NAME";
 export const SET_BRAND_CATEGORIES = "SET_BRAND_CATEGORIES";
 export const SET_BRAND_SUBCATEGORIES = "SET_BRAND_SUBCATEGORIES"; 
+export const SET_EXISTENT_BRAND = "SET_EXISTENT_BRAND";
 
 // ACTION CREATORS
 // export const getBrands = () => async (dispatch) => {
@@ -27,9 +28,16 @@ export const setBrandCategories = (category) => {
     }
 }
 
-export const setBrandSubcategories = (subcategories) => {
+export const setBrandSubcategories = (object) => { // object = { category: "Calzados", subcategory: "Deportivo" } 
     return {
         type: SET_BRAND_SUBCATEGORIES,
-        payload: subcategories
+        payload: object
     }
 }
+
+export const setExistentBrand = (brandInfo) => {
+    return {
+        type: SET_EXISTENT_BRAND,
+        payload: brandInfo
+    }
+} 

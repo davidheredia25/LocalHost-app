@@ -4,19 +4,21 @@ import { useDispatch } from "react-redux";
 const BrandForm = ({ brands }) => {
 
     const dispatch = useDispatch();
-    const [input, setInput] = useState("")
 
+    const [input, setInput] = useState("");
     const handleChange = (e) => {
-        setInput(e.target.value)
+        setInput(e.target.value);
     }
 
-    const handleClick = () => {
-        dispatch(setBrandName(input))
-        setInput("")
-    }
-
+    // Al seleccionar una marca existente la seteo con sus categorías y subcategorías preexistentes
     const handleSelect = (e) => {
-        dispatch(setBrandName(e.target.value))
+        dispatch(setBrandName(e.target.value));
+    }
+
+    // El input sólo setea brandInfo.name ""
+    const handleClick = () => {
+        dispatch(setBrandName(input));
+        setInput("");
     }
 
     return (
