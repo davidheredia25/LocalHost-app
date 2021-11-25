@@ -1,18 +1,64 @@
 const Brand = require('../../../models/Brand');
+const Category = require('../../../models/Category');
 
 const verificacionId = async (id) => {
-    let find = await Brand.findById(id);
-    if(find)  return true;
-    return false;
+    try {
+        let find = await Brand.findById(id);
+        let obj = {
+            bool: false
+        };
+        if(find !== [] || find !== null) {
+            obj = {
+                bool: true,
+                brand: find
+            }
+            return obj;
+        }
+        return obj;
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 const verificacionName = async (name) => {
-    let find = await Brand.find({name: name});
-    if(find) return true;
-    return false;
+    try {
+        let find = await Brand.find({name: name});
+        console.log('find',find);
+        let obj = {
+            bool: false
+        };
+        if(find === []) {
+            obj = {
+                bool: true,
+            }
+            return obj;
+        }
+        return obj;
+    } catch (error) {
+        console.log(error);
+    }
 };
+
+const verificacionC = async (id) => {
+    try {
+        let find = await Category.find({_id: id}); 
+        let obj = {
+            bool: false
+        };
+        if(find === []) {
+            obj = {
+                bool: true,
+            }
+            return obj;
+        }
+        return obj;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 module.exports = {
     verificacionId,
-    verificacionName
+    verificacionName,
+    verificacionC
 };

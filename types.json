@@ -1,0 +1,120 @@
+[{
+    "_id": {
+        "$oid": "619e97976a92375a82169eb2"
+    },
+    "name": "Running"
+},
+{
+    "name": "Skate",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb3"
+    }
+},
+{
+    "name": "LifeStyle",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb4"
+    }
+},
+{
+    "name": "Court",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb5"
+    }
+},
+{
+    "name": "terrace",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb6"
+    }
+},
+{
+    "name": "chalecos",
+    "_id": {
+        "$oid": "619e97976a92375a82169ea6"
+    }
+},
+{
+    "name": "remeras",
+    "_id": {
+        "$oid": "619e97976a92375a82169ea7"
+    }
+},
+{
+    "name": "Buzos sin capucha",
+    "_id": {
+        "$oid": "619e97976a92375a82169ea8"
+    }
+},
+{
+    "name": "camperas",
+    "_id": {
+        "$oid": "619e97976a92375a82169eaa"
+    }
+},
+{
+    "name": "chombas",
+    "_id": {
+        "$oid": "619e97976a92375a82169eab"
+    }
+},
+{
+    "name": "pantalones",
+    "_id": {
+        "$oid": "619e97976a92375a82169eac"
+    }
+},
+{
+    "name": "pantalones deportivos",
+    "_id": {
+        "$oid": "619e97976a92375a82169ead"
+    }
+},
+{
+    "name": "buzos",
+    "_id": {
+        "$oid": "619e97976a92375a82169eae"
+    }
+},
+{
+    "name": "camisetas",
+    "_id": {
+        "$oid": "619e97976a92375a82169eaf"
+    }
+},
+{
+    "name": "bermudas",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb0"
+    }
+},
+{
+    "name": "gorras",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb7"
+    }
+},
+{
+    "name": "guantes",
+    "_id": {
+        "$oid": "619e97976a92375a82169eb8"
+    }
+},
+{
+    "name": "mochilas",
+    "_id":{
+        "$oid": "619e97976a92375a82169eb9"
+    }
+},
+{
+    "name": "gafas",
+    "_id": {
+        "$oid": "619e97976a92375a82169eba"
+    }
+},
+{
+    "name": "medias",
+    "_id": {
+        "$oid": "619e97976a92375a82169ebb"
+    }
+}]

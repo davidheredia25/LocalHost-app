@@ -11,13 +11,28 @@ const verificacionName = async (name) => {
     }
 }
 
-const verificacionType = async (types) => {
+const verificacionId = async (id) => {
     try {
-        let find = await Category.find();
-        let filtered = find.filter(c => c.types)
-        if(find) return true;
-        return false;
+        let find = await Category.findById(id);
+        let obj;
+        if(find) {
+            obj = {
+                bool: true,
+                category: find 
+            };
+            return obj;
+        }
+        obj = {
+            bool: false
+        }
+        return obj;
     } catch(error) {
         console.log(error);
     }
+};
+
+
+module.exports = {
+    verificacionId,
+    verificacionName
 };

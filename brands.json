@@ -1,0 +1,172 @@
+[
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf19"
+        },
+        "name": "adidas Originals",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1a"
+        },
+        "name": "Champion",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "name": "Converse",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1c"
+        },
+        "name": "Jordan",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1d"
+        },
+        "name": "Lacoste",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1e"
+        },
+        "name": "New Balance",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf1f"
+        },
+        "name": "Nike",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf20"
+        },
+        "name": "New Era",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf21"
+        },
+        "name": "The North Face",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "619ecea36a92375a826baf22"
+        },
+        "name": "Vans",
+        "categories": [
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            }
+        ]
+    }
+]
