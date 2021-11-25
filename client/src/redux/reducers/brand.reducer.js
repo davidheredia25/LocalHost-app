@@ -14,7 +14,7 @@ const initialState = {
     subcategories: [],
     brandInfo: {
         name: "",
-        categories: [] // [{ name: "Accesorios", subcategories: ["gorras", "relojes"] }, {}, {}, ...]
+        categories: [] // [{ name: "Indumentaria", subcategories: ["remeras", "buzos"] }, {}, {}, ...]
     },
   };
   
@@ -78,9 +78,10 @@ export function brandReducer(state = initialState, { type, payload }) {
                 }
             }
         case SET_EXISTENT_BRAND:
+            let brandFound = state.brands.find(x => x.name === payload);
             return {
                 ...state,
-                brandInfo: payload
+                brandInfo: brandFound
             }
         default:
             return state;
