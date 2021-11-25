@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setBrandName } from "../../../redux/actions/brand.actions";
-
+import { setBrandName, setExistentBrand } from "../../../redux/actions/brand.actions";
 const BrandForm = ({ brands }) => {
 
-    /*const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const [input, setInput] = useState("");
     const handleChange = (e) => {
@@ -16,15 +15,15 @@ const BrandForm = ({ brands }) => {
         dispatch(setExistentBrand(e.target.value));
     }
 
-    // El input sólo setea brandInfo.name ""
+    // El input sólo setea brandInfo.name "" (porque estoy agregando una marca nueva)
     const handleClick = () => {
         dispatch(setBrandName(input));
         setInput("");
     }
-    */
+
     return (
         <div>
-            {/*<div>
+            <div>
                 <h3>Añadir Marca:</h3>
                 <input name="brand" value={input} type="text" onChange={handleChange} />
                 <button onClick={handleClick}>SET</button>
@@ -39,7 +38,7 @@ const BrandForm = ({ brands }) => {
                         })
                     }
                 </select>
-                </div>*/}
+            </div>
         </div>
     )
 }
