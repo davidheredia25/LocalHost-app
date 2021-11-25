@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-const BrandForm = () => {
+const BrandForm = ({ brands }) => {
 
-    const { brands } = useSelector(state => state.brand)
+    const dispatch = useDispatch();
     const [input, setInput] = useState("")
-
-    useEffect(() => {
-        dispatch(getBrands())
-    }, [dispatch])
 
     const handleChange = (e) => {
         setInput(e.target.value)
     }
 
     const handleClick = () => {
-        set
+        dispatch(setBrandName(input))
+        setInput("")
+    }
+
+    const handleSelect = (e) => {
+        dispatch(setBrandName(e.target.value))
     }
 
     return (
@@ -23,14 +24,14 @@ const BrandForm = () => {
             <div>
                 <h3>Añadir Marca:</h3>
                 <input name="brand" value={input} type="text" onChange={handleChange} />
-                <button onClick={handleClick}></button>
+                <button onClick={handleClick}>SET</button>
             </div>
             <div>
                 <h3>Editar Marca:</h3>
-                <select>
+                <select onChange={handleSelect}>
                     <option selected value="">-selecciona una marca-</option>
                     {
-                        brands?.map(x => {
+                        brands?.lenght?.map(x => {
                             return <option value={x.name}>{x.name}</option>
                         })
                     }
@@ -39,3 +40,5 @@ const BrandForm = () => {
         </div>
     )
 }
+
+export default BrandForm;
