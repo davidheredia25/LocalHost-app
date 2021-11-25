@@ -1,11 +1,10 @@
 import React from "react";
+import './Card.scss';
 
-
-
-const Card= () => {
+const Card= ({}) => {
     return (
         <div>
-            Card
+         Card
         </div>
     )
 }

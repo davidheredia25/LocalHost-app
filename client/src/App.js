@@ -1,7 +1,7 @@
 
 import { Route } from 'react-router-dom';
-/* import {Home, Card, Cards, Details, Cart, NavBar, SearchBar} from "./components";
- */
+ import {Home, Card, Cards, Details, Cart, NavBar, SearchBar} from "./components";
+
 
 
 
@@ -11,6 +11,7 @@ import { Route } from 'react-router-dom';
 function App () {
 	return (
 		<div>
+			
 			{/* <Home/>
 			<Card/>
 			<Cards/>

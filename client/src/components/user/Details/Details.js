@@ -5,10 +5,10 @@ import { getProductsDetails } from "../../../redux/actions/products.actions";
 
 
 
-const DetailContainer= (props) => {
+const Details= (props) => {
     const dispatch = useDispatch();
     const {id} = props.match.params
-    const detail = useSelector(state => state.product)
+    //const detail = useSelector(state => state.product)
 
      useEffect(() => {
           dispatch(getProductsDetails(id))
@@ -18,8 +18,8 @@ const DetailContainer= (props) => {
     return (
 
         <div>
-           <ProductInfo name={product.name} price={product.price} brand={product.brand}/>
-           <ProductImage image={product.image}/>
+           {/*<ProductInfo name={product.name} price={product.price} brand={product.brand}/>
+           <ProductImage image={product.image}/>*/}
         </div>
     )
 }
