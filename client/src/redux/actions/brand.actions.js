@@ -26,3 +26,10 @@ export const setBrandCategories = (category) => {
         payload: category
     }
 }
+
+export const setBrandSubcategories = (subcategories) => {
+    return {
+        type: SET_BRAND_SUBCATEGORIES,
+        payload: subcategories
+    }
+}

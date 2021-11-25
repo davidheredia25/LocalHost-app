@@ -3,8 +3,7 @@ import {
     GET_CATEGORIES,
     GET_SUBCATEGORIES,
     SET_BRAND_NAME, 
-    SET_BRAND_CATEGORIES, 
-    SET_BRAND_SUBCATEGORIES 
+    SET_BRAND_CATEGORIES
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -13,8 +12,7 @@ const initialState = {
     subcategories: [],
     brandInfo: {
         name: "",
-        categories: [],
-        subcategories: [] 
+        categories: [] // [{ name: "Accesorios", subcategories: ["gorras", "relojes"] }, {}, {}, ...]
     },
   };
   
@@ -51,13 +49,10 @@ export function brandReducer(state = initialState, { type, payload }) {
                     categories: [...state.brandInfo.categories, payload]
                 }
             }
-        case SET_BRAND_SUBCATEGORIES:
+        case SET_BRAND_EXISTENT:
             return {
                 ...state,
-                brandInfo: {
-                    ...state.brandInfo,
-                    subcategories: [...state.brandInfo.subcategories, payload]
-                }
+                brandInfo: payload
             }
         default:
             return state;
