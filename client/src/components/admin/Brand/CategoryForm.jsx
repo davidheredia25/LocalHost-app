@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { getCategories, setBrandCategories } from "../../../redux/actions/brand.actions";
 
 const CategoryForm = () => {
     
@@ -39,7 +40,7 @@ const CategoryForm = () => {
                 <input 
                     value={input} 
                     type="text" 
-                    onChange={() => setInput(e.target.value)}
+                    onChange={(e) => setInput(e.target.value)}
                 />
                 <button onClick={handleClick}>AGREGAR</button>
             </div>

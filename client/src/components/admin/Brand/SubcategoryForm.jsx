@@ -87,7 +87,7 @@ const SubcategoryForm = () => {
                                 }
                             </select>
                             <div>
-                                <input value={input} type="text" onChange={() => setInput(e.target.value)} />
+                                <input value={input} type="text" onChange={(e) => setInput(e.target.value)} />
                                 <button onClick={handleAdd}>AGREGAR</button>
                             </div>
                             <div>

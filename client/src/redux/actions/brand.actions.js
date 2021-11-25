@@ -55,3 +55,18 @@ export const saveBrand = (object) => async (dispatch) => {
     }
 
 } 
+
+export const setExistentBrand = (brand) => {
+    return {
+        type: SET_EXISTENT_BRAND,
+        payload: brand
+    }
+}
+
+export const getCategories = () => async dispatch => {
+    const { data } = axios.get("/categories")
+    return dispatch({
+        type: GET_CATEGORIES,
+        payload: data
+    })
+}
