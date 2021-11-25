@@ -29,13 +29,15 @@ const ticketSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: true,
+        autopopulate: true
     },
     products: [{
         product: {
             type: Schema.Types.ObjectId,
             ref: "Product",
-            required: true
+            required: true,
+            autopopulate: true
         },
         qty: {
             type: Number
@@ -45,5 +47,7 @@ const ticketSchema = new Schema({
     versionKey: false,
     timestamps: false
 });
+
+ticketSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = model('Ticket', ticketSchema);

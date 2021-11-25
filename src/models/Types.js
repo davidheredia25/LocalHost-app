@@ -1,7 +1,7 @@
 const pkg = require('mongoose');
 const { Schema, model } = pkg;
 
-const typeSchema = new Schema({
+const typesSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -12,4 +12,4 @@ const typeSchema = new Schema({
 });
 
 
-module.exports = model('Types', typeSchema);
+module.exports = model('Types', typesSchema);

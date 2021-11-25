@@ -12,11 +12,14 @@ const reviewSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true 
+        required: true,
+        autopopulate: true
     }
 }, {
     versionKey: false,
     timestamps: false
 });
+
+reviewSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = model('Review', reviewSchema);

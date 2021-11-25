@@ -9,11 +9,20 @@ const brandSchema = new Schema({
     categories: [{
         type: Schema.Types.ObjectId,
         ref: 'Category',
-        required: true
-    }]
+        required: true,
+        autopopulate: true
+    }],
+    // types: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Types',
+    //     required: true,
+    //     autopopulate: true
+    // }]
 }, {
     versionKey: false,
     timestamps: false
 });
 
-module.exports = model('Brand', brandSchema);
+brandSchema.plugin(require('mongoose-autopopulate'));
+
+module.exports = model("Brand", brandSchema);

@@ -52,7 +52,17 @@ const userSchema = new Schema({
     isDelivery: {
         type: Boolean,
         default: false
-    }
+    },
+    ticket: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Ticket',
+        autopopulate: true
+    }],
+    cart: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+        autopopulate: true
+    }]
 }, {
     versionKey: false,
     timestamps: false
@@ -70,5 +80,7 @@ UserSchema.methods.isValidContraseña = async function (contraseña) {
     const compara = await bcrypt.compare(contraseña, user.contraseña);
     return compara;
 } */ /* tkm marquito */
+
+userSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = model('User', userSchema);
