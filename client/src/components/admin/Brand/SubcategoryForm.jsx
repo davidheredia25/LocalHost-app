@@ -4,7 +4,7 @@ import { saveBrand, setBrandSubcategories } from "../../../redux/actions/brand.a
 
 const SubcategoryForm = () => {
 
-    const dispatch = useDispatch();
+   /* const dispatch = useDispatch();
 
     const [object, setObject] = useState({
         category: "",
@@ -65,10 +65,10 @@ const SubcategoryForm = () => {
         dispatch(setBrandSubcategories(object))
         dispatch(saveBrand(brandInfo))
     }
-
+    */
     return (
         <div>
-            {
+           {/* {
                 brandInfo.categories.map(x => {
                     return (
                         <div>
@@ -106,7 +106,7 @@ const SubcategoryForm = () => {
                         </div>
                     )
                 })
-            }
+            } */}
         </div>
 
     )

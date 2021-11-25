@@ -6,31 +6,10 @@
     
 }
 
-.size{
-    @include flexCenter(row);
-    p{
-        margin: 5px;
-    
-    }
-}
-
-.info {
-    @include flexCenter(column);
-    
-}
 
 
-.button{
-    @include flexCenter(column);
-    
-}
-
-
-
-button{
-    @include buttonType(black, white);
-    &:hover{
-        @include buttonType(white, black);
-    }
+.image {
+    height: 100px;
+    width: 100px;
 }
 
