@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const CategoryForm = () => {
-
-    const { categories } = useSelector(state => state.brand);
-    const [input, setInput] = useState("");
-
+    
+    const dispatch = useDispatch();
+    
     useEffect(() => {
         dispatch(getCategories())
     }, [dispatch])
 
+    const { categories } = useSelector(state => state.brand);
+
     const handleSelect = (e) => {
         dispatch(setBrandCategories(e.target.value))
-        // y acá despacharía para que se seteen las subcategorías ya existentes en esa categoría
     }
 
+    const [input, setInput] = useState("");
     const handleClick = (e) => {
-        dispatch(setBrandCategories(input))
+        dispatch(setBrandCategories(input));
+        setInput("");
     }
 
     return (
@@ -44,3 +46,5 @@ const CategoryForm = () => {
         </div>
     )
 }
+
+export default CategoryForm;
