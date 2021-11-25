@@ -1,6 +1,6 @@
 import React, {useEffect, useSelector} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {ProductCreate} from "../../../redux/actions/Crud.actions.js"
+import {productCreate} from "../../../redux/actions/Crud.actions.js"
 
 
 const CreateProduct = () => {
@@ -16,17 +16,31 @@ const CreateProduct = () => {
         sexo: "",
     })
     
-    const {color, size} = useSelector(state => state.prodcuts)
+    // const {color, size} = useSelector(state => state.prodcuts)
 
 
     const handleChange = (e) => {
         setForm({
+            ...form,
             [e.target.name] : e.target.value
         })
 
     }
 
+    const handleClick = (e) => {
+        dispatch(productCreate(form))
+        setForm({
+            name: "",
+            brand: "",
+            category: "",
+            price: "",
+            color: [],
+            material: "",
+            size: [],
+            sexo: "",
+        })
 
+    }
     return (
         <div>
             <form>
@@ -110,8 +124,7 @@ const CreateProduct = () => {
                     onChange={handleChange} />
                 </div>
 
-                <button>Crear</button>                
-        
+                <button onClick={handleClick}>Crear</button>                
 
             </form>
         </div>

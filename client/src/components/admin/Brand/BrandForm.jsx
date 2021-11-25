@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setBrandName, setExistentBrand } from "../../../redux/actions/brand.actions";
-
 const BrandForm = ({ brands }) => {
 
     const dispatch = useDispatch();
@@ -16,7 +15,7 @@ const BrandForm = ({ brands }) => {
         dispatch(setExistentBrand(e.target.value));
     }
 
-    // El input sólo setea brandInfo.name ""
+    // El input sólo setea brandInfo.name "" (porque estoy agregando una marca nueva)
     const handleClick = () => {
         dispatch(setBrandName(input));
         setInput("");

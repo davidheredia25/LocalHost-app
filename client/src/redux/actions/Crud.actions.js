@@ -4,7 +4,7 @@ import axios from "axios";
 //CONSTANTES
 PRODUCT_CREATE = "PRODUCT_CREATE"
 
-export const ProductCreate = () => async (dispatch) => {
+export const productCreate = () => async (dispatch) => {
     try {
         const res = await axios.post()
         return dispatch({
