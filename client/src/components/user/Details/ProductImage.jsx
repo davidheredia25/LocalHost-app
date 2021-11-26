@@ -7,7 +7,7 @@ const ProductImage = ({image}) => {
 
     return(
         <div>
-            <img src={image}/>
+             <img src={image} alt="lcdtm"/> 
         </div>
     )
 }

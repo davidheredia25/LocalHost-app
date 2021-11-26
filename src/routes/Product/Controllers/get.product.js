@@ -1,5 +1,7 @@
 const Product = require('../../../models/Product');
 
+// const itemsPerPage = 10
+
 const getProduct = async (req, res) => {
     const {name} = req.query;
 
@@ -9,6 +11,7 @@ const getProduct = async (req, res) => {
              product = await product.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));
                 
         }
+        // if(page)
         
         res.json(product)
     } catch (error) {
