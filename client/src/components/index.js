@@ -1,4 +1,5 @@
-export { default as Home} from "./user/Home/Home.js";
+export { default as Home} from "./user/Home/Home.jsx";
+export { default as Carousels} from "./user/Carousels/Carousels.jsx";
 export { default as Cards} from "./user/Cards/Cards.js";
 export { default as Card} from "./user/Card/Card.js";
 export { default as Cart} from "./user/Cart/Cart.js";
