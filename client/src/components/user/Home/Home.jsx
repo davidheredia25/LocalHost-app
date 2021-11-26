@@ -3,6 +3,7 @@ import Cards from '../Cards/Cards';
 import Carousels from '../Carousels/Carousels.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import NavBar from "../NavBar/NavBar";
+import ImgSection from "../ImgSection/ImgSection";
 
 
 const Home= () => {
@@ -12,6 +13,7 @@ const Home= () => {
             
             <NavBar />
             <Carousels />
+            <ImgSection />
             <Cards />
             
         </div>
