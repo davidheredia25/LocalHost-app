@@ -4,11 +4,12 @@ import {useDispatch, useSelector} from "react-redux";
 import { getProductsDetails } from "../../../redux/actions/products.actions";
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
+import {useParams } from "react-router-dom"
 
-const Details= (props) => {
+const Details= () => {
     const dispatch = useDispatch();
-    const {products} = useSelector((state) => state.products)
-    const  {id}  = props.match.params;
+    const {product} = useSelector((state) => state.products)
+     const { id } = useParams();
 
      useEffect(() => {
           dispatch(getProductsDetails(id))
@@ -16,10 +17,17 @@ const Details= (props) => {
 
 
     return (
+        
+      
         <div>
-           <ProductInfo name={products.name} price={products.price} brand={products.brand}/>
-           <ProductImage image={products.image}/>
-        </div>
+
+        
+        <ProductInfo />
+        <ProductImage
+           image={product.image}/>
+        </div> 
+        
+        
     )
 }
 
