@@ -6,11 +6,11 @@ const getProducts = async (req, res) => {
     console.log('name getProducts', name);
     try {
         let getAllProducts = await Product.find();
-        console.log('getAllProducts getProducts', getAllProducts);
+        // console.log('getAllProducts getProducts', getAllProducts);
         if(!name) return res.json(getAllProducts);
         
         let getProductsName = await product.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));    
-        console.log('getProductsName getProducts', getProductsName);
+        // console.log('getProductsName getProducts', getProductsName);
         res.json(getProductsName);
     } catch (error) {
         console.log(error);
@@ -22,7 +22,7 @@ const getProductById = async (req, res) => {
     console.log('id getProducts', id);
     try {
         let verificacion = verificacionId(id);
-        console.log('verificacion getProducts', verificacion);
+        // console.log('verificacion getProducts', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.product);
         res.send('No se encontro el producto');
