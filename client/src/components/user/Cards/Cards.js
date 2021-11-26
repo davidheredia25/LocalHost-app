@@ -12,7 +12,7 @@ const Cards = () => {
     console.log('productos', products)
 
     useEffect(() => {
-        dispatch(getProducts())
+        dispatch(getProducts({}))
     }, [dispatch])
 
     
