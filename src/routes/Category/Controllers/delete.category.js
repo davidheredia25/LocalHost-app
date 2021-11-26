@@ -8,7 +8,7 @@ const deleteCategory = async (req, res) => {
         let verificacion = await verificacionId(id);
 
         if(verificacion.bool) {
-            let deleted = await Category.findByIdAndDelete(id)
+            let deleted = await Category.findByIdAndDelete(id);
             console.log('deleted deleteCategory', deleted);
             if(deleted)  return res.json(deleted);
             return res.send('No se elimino correctamente');
