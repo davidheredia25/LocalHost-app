@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { useDispatch } from 'react-redux';
-import SearchIcon from "@material-ui/icons/Search";
 import { getProducts} from '../../../redux/actions/products.actions'
 
 
