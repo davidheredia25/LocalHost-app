@@ -2,12 +2,12 @@ import {React, useEffect, useState} from "react";
 
 
 
-const ProductImage = ({image}) => {
+const ProductImage = ({props}) => {
 
 
     return(
         <div>
-            <img src={image}/>
+            <img src={props.image}/>
         </div>
     )
 }

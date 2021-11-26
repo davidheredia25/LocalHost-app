@@ -1,21 +1,21 @@
 import {React, useEffect, useState} from "react";
 
 
-const ProductInfo = ({name, price, description, brand}) => {
+const ProductInfo = (props) =>  {
 
     return (
     <div>
             <div>
-                <h1>{name}</h1>
+                <h1>{props.name}</h1>
             </div>
             <div>
-                <h2>{price}</h2>
+                <h2>{props.price}</h2>
             </div>
             <div>
-                <h2>{description}</h2>
+                <h2>{props.description}</h2>
             </div>
             <div>
-                <h2>{brand}</h2>
+                <h2>{props.brand}</h2>
             </div>
     </div>
     )

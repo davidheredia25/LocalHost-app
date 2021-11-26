@@ -1,14 +1,14 @@
-import {React, useEffect, useState} from "react";
+import React, {useEffect} from "react";
+import {useState}  from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import ProductInfo from "./ProductInfo";
 import { getProductsDetails } from "../../../redux/actions/products.actions";
-
-
+import ProductImage from "./ProductImage";
+import ProductInfo from "./ProductInfo";
 
 const Details= (props) => {
     const dispatch = useDispatch();
-    const {id} = props.match.params
-    //const detail = useSelector(state => state.product)
+    const {products} = useSelector((state) => state.products)
+    const  {id}  = props.match.params;
 
      useEffect(() => {
           dispatch(getProductsDetails(id))
@@ -16,10 +16,9 @@ const Details= (props) => {
 
 
     return (
-
         <div>
-           {/*<ProductInfo name={product.name} price={product.price} brand={product.brand}/>
-           <ProductImage image={product.image}/>*/}
+           <ProductInfo name={products.name} price={products.price} brand={products.brand}/>
+           <ProductImage image={products.image}/>
         </div>
     )
 }
