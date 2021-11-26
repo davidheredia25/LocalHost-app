@@ -1,23 +1,35 @@
 @import '../../styles/mixins.scss';
 
-.container {
-    width: 569px;
-    height: 569px;
-     
-    
-}
-
-
-
-.image {
-    width: 569px;
-    height: 569px;
-    
-     outline: rgb(0, 0, 0) solid 1px;
+.container_card {
+    width: 450px;
+    height: 600px;
+    border: rgb(0, 0, 0) solid 1px;
     box-sizing: border-box;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
 }
 
-.name {
+.card_div_button {
+    @include flexCenter(column);
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.card_div_name {
+    @include flexCenter(column);
+    margin-top: 10px;
+}
+
+.card_image {
+    width: 450px;
+    height:450px;
+    
+}
+
+.card_price{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 16px;
@@ -25,7 +37,20 @@
     text-transform: uppercase;
     height: 18px;
     width: 418px;
-    display: block;
+    margin-left: 45%;
+}
+
+.card_name {
+    
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    height: 18px;
+    width: max-content;
+    
     
 
 }
