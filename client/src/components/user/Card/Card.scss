@@ -1,23 +1,47 @@
 @import '../../styles/mixins.scss';
+@import '../../styles/media-queries.scss';
 
-.container {
-    width: 569px;
-    height: 569px;
-     
-    
-}
-
-
-
-.image {
-    width: 569px;
-    height: 569px;
-    
-     outline: rgb(0, 0, 0) solid 1px;
+.container_card {
+    width: 450px;
+    height: 600px;
+    border: rgb(0, 0, 0) solid 1px;
     box-sizing: border-box;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    @include xs {
+        width: 100%;
+        margin: 0px;
+      }
 }
 
-.name {
+.card_div_button {
+    margin-left: 40%;
+    margin-top: 30px;
+    
+}
+
+.card_div_name {
+   // @include flexCenter(column);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25%;
+}
+.card_div_price {
+    // @include flexCenter(column);
+     margin-top: 30px;
+     margin-bottom: 10px;
+     margin-left: 43%;
+ }
+.card_image {
+    width: 450px;
+    height:450px;
+    
+}
+
+.card_price{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 16px;
@@ -25,8 +49,16 @@
     text-transform: uppercase;
     height: 18px;
     width: 418px;
-    display: block;
+    margin-top: 15px;
     
+}
 
+.card_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    height: 18px;
 }
 
