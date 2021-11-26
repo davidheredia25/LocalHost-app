@@ -19,7 +19,7 @@ const Card = ({product}) => {
                 <div className='card_div_name'>
                     <p className='card_name'>{product.name}</p>
                 </div>
-                    <div className='card_div_name'>
+                    <div className='card_div_price'>
                     <p className='card_price'>${product.price}</p>
                     </div>
             <div className='card_div_button'>

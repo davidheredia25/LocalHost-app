@@ -1,5 +1,6 @@
 
 @import '../../styles/mixins.scss';
+@import '../../styles/media-queries.scss';
 
 
 .container{
@@ -8,6 +9,10 @@
     .cards {
         @include flexCenter(column);
         margin: 50px;
+        @include xs {
+            display: block;
+            margin: 0px;
+          }
     }
     flex-wrap: wrap;
 

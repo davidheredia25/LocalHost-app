@@ -1,4 +1,5 @@
 @import '../../styles/mixins.scss';
+@import '../../styles/media-queries.scss';
 
 .container_card {
     width: 450px;
@@ -10,19 +11,30 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 10px;
+    @include xs {
+        width: 100%;
+        margin: 0px;
+      }
 }
 
 .card_div_button {
-    @include flexCenter(column);
     margin-left: 40%;
-    margin-top: 10px;
+    margin-top: 30px;
+    
 }
 
 .card_div_name {
-    @include flexCenter(column);
+   // @include flexCenter(column);
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25%;
 }
-
+.card_div_price {
+    // @include flexCenter(column);
+     margin-top: 30px;
+     margin-bottom: 10px;
+     margin-left: 43%;
+ }
 .card_image {
     width: 450px;
     height:450px;
@@ -37,21 +49,16 @@
     text-transform: uppercase;
     height: 18px;
     width: 418px;
-    margin-left: 45%;
+    margin-top: 15px;
+    
 }
 
 .card_name {
-    
-    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 16px;
     text-align: left;
     text-transform: uppercase;
     height: 18px;
-    width: max-content;
-    
-    
-
 }
 
