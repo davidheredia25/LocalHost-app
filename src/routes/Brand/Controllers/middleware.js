@@ -7,7 +7,7 @@ const verificacionId = async (id) => {
         let obj = {
             bool: false
         };
-        if(find !== [] || find !== null) {
+        if(find.length !== 0 || find !== null) {
             obj = {
                 bool: true,
                 brand: find
@@ -27,9 +27,9 @@ const verificacionName = async (name) => {
         let obj = {
             bool: false
         };
-        if(find === []) {
+        if(find.length === 0 || find !== null) {
             obj = {
-                bool: true,
+                bool: true
             }
             return obj;
         }
@@ -45,9 +45,9 @@ const verificacionC = async (id) => {
         let obj = {
             bool: false
         };
-        if(find === []) {
+        if(find.length === 0 || find === null) {
             obj = {
-                bool: true,
+                bool: true
             }
             return obj;
         }

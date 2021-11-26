@@ -5,12 +5,11 @@ const getCategory = async (req, res) => {
     const { name } = req.query;
     console.log('name getCategory', name);
     try {
-        let getAllCategories = await Category.find()
-        // .populate('types');
+        let getAllCategories = await Category.find();
         console.log('getAll getCategory', getAllCategories);
         if(!name)  return res.json(getAllCategories);
         
-        let getCategoriesByName = getAllCategories.filter(c => c.name.toLowerCase().include(name.toLowerCase()));
+        let getCategoriesByName = getAllCategories.filter(c => c.name.toLowerCase().includes(name.toLowerCase()));
         console.log('getByName getCategory', getCategoriesByName);
         res.json(getCategoriesByName);
     } catch (error) {

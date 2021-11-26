@@ -1,8 +1,7 @@
 const Brand = require('../../../models/Brand');
-// const Category = require('../../../models/Category');
 const { 
     verificacionName, 
-    // verificacionC 
+    verificacionC 
 } = require('./middleware');
 
 const createBrand = async (req, res) => {
@@ -14,18 +13,17 @@ const createBrand = async (req, res) => {
         console.log('verificacion createBrand', verificacionBrand);
         if(verificacionBrand.bool)  return res.send(`La marca ${name} ya existe`);
         
-        // for(let i = 0; i < categories.length; i++) {
-        //     let verificacionCategory = await verificacionC(categories[i]);
-        //     console.log('verificacionCategory createBrand', verificacionCategory)
-        //     if(verificacionCategory.bool) continue;
-        //     else return res.send('Algunas de las categoria no es valida'); 
-        // }
+        for(let i = 0; i < categories.length; i++) {
+            let verificacionCategory = await verificacionC(categories[i]);
+            console.log('verificacionCategory createBrand', verificacionCategory)
+            if(verificacionCategory.bool) continue;
+            else return res.send('Algunas de las categoria no es valida'); 
+        }
         
         let newBrand = new Brand({
             name,
             categories
         });
-        
         newBrand = await newBrand.save();
         console.log('newBrand createBrand', newBrand);
         res.json(newBrand);
