@@ -1,10 +1,22 @@
-const Product = require('../../../models/Product');
-const { verificacionName } = require('./middleware');
+/* const Product = require('../../../models/Product');
+const { 
+    verificacionName,
+    
+} = require('./middleware');
 
 const createProduct = async (req, res) => {
-    const {name, brandId, categoriesId, typesId, price, color, talle, stock} = req.body;
+    const { 
+        name,
+        brand,
+        categories, 
+        types, 
+        price, 
+        color, 
+        talle, 
+        stock
+    } = req.body;
     try {
-        letverif 
+        let verificacion = 
     } catch (error) {
         console.log(error);
     }
@@ -12,4 +24,4 @@ const createProduct = async (req, res) => {
 
 module.exports = {
     createProduct
-};
+}; */

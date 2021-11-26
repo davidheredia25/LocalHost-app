@@ -11,9 +11,7 @@ const CreateProduct = () => {
         category: "",
         price: "",
         color: [],
-        material: "",
         size: [],
-        sexo: "",
     })
     
     // const {color, size} = useSelector(state => state.prodcuts)
@@ -131,6 +129,3 @@ const CreateProduct = () => {
     )
 
 }
-
-
-export default CreateProduct;
