@@ -1,15 +1,32 @@
 @import '../../styles/mixins.scss';
 
 .container {
-    width: 100px;
-    height: 300px;
+    width: 569px;
+    height: 569px;
+     
     
 }
 
 
 
 .image {
-    height: 100px;
-    width: 100px;
+    width: 569px;
+    height: 569px;
+    
+     outline: rgb(0, 0, 0) solid 1px;
+    box-sizing: border-box;
+}
+
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    height: 18px;
+    width: 418px;
+    display: block;
+    
+
 }
 

@@ -27,9 +27,9 @@ const verificacionName = async (name) => {
         let obj = {
             bool: false
         };
-        if(find.length === 0 || find !== null) {
+        if(find.lenght === 0 || find === null) {
             obj = {
-                bool: true
+                bool: true,
             }
             return obj;
         }
@@ -41,13 +41,13 @@ const verificacionName = async (name) => {
 
 const verificacionC = async (id) => {
     try {
-        let find = await Category.find({_id: id}); 
+        let find = await Category.findById(id); 
         let obj = {
             bool: false
         };
-        if(find.length === 0 || find === null) {
-            obj = {
-                bool: true
+        if(find.length !== 0 || find !== null) {
+                obj = {
+                bool: true,
             }
             return obj;
         }

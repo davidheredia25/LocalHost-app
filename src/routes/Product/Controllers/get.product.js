@@ -21,8 +21,11 @@ const getProduct = async (req, res) => {
 
 
 const getProductById = async (req, res) => {
+    const { id } = req.params;
     try {
-
+        const product = await Product.findById(id)
+        if(product !== null || product.length !== 0)  return res.json(product)
+        res.send('No se encuentra este producto');
     } catch (error) {
         console.log(error);
     }

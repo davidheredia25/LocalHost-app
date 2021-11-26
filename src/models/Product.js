@@ -12,18 +12,18 @@ const productSchema = new Schema({
         required: true,
         autopopulate: true
     },
-    // category: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Category',
-    //     required: true,
-    //     autopopulate: true
-    // }],
-    // types: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Types',
-    //     required: true,
-    //     autopopulate: true
-    // }],
+    category: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true,
+        autopopulate: true
+    }],
+    types: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Types',
+        required: true,
+        autopopulate: true
+    }],
     price: {
         type: Number,
         required: true
@@ -32,7 +32,6 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    
     talle: [{
         type: String,
         required: true
