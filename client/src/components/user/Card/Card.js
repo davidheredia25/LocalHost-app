@@ -8,7 +8,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Card = ({product}) => {
 
-    console.log('cardProduct',product)
+   
       
     return (
         <div className='container_card'>
