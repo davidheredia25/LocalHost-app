@@ -1,14 +1,15 @@
 import React, {useState} from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProducts} from '../../../redux/actions/products.actions'
-
+import style from "./SearchBar.css";
 
 
 const SearchBar= () => {
 
-    /*const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [filteredData, setFilteredData] = useState([])
     const [input, setInput] = useState("")
+    const { products } = useSelector(state => state.products)
 
     function handleInputChange(e){
         e.preventDefault()
@@ -33,19 +34,18 @@ const SearchBar= () => {
     }
     function handleSubmit(e){
         e.preventDefault()
-        dispatch(setPage(1))
         dispatch(getProducts({name:input}))
         setInput("")
-    }*/
+    }
 
     return (
         <div>
-        {/*<form onSubmit={e => handleSubmit(e)}className="search">
+        <form onSubmit={e => handleSubmit(e)}className="search">
         <input  value = {input} className={style.input} 
                 placeholder="Buscar por nombre y marca" 
                 onChange={handleFilter}/>
                 <div className="searchIcon">
-                    <SearchIcon/>
+                    {/* <SearchIcon/> */}
                 </div>
 
                 <div className="dataResult">
@@ -60,7 +60,7 @@ const SearchBar= () => {
             )}
         </div>
         <button className="button"></button>
-            </form>*/}Searchbar
+            </form>
     </div>
     )
 }

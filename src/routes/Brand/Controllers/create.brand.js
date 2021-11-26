@@ -1,4 +1,5 @@
 const Brand = require('../../../models/Brand');
+// const Category = require('../../../models/Category');
 const { 
     verificacionName, 
     verificacionC 
@@ -24,6 +25,7 @@ const createBrand = async (req, res) => {
             name,
             categories
         });
+        
         newBrand = await newBrand.save();
         console.log('newBrand createBrand', newBrand);
         res.json(newBrand);
