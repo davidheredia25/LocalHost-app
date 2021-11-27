@@ -1,6 +1,8 @@
-import React, {useEffect, useSelector} from "react";
+import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {productCreate} from "../../../redux/actions/Crud.actions.js"
+import { getBrands, getCategories, getSubCategories} from "../../../redux/actions/brand.actions.js";
+
 
 
 const CreateProduct = () => {
@@ -9,20 +11,28 @@ const CreateProduct = () => {
         name: "",
         brand: "",
         category: "",
+        subcategory: "",
         price: "",
         color: [],
         size: [],
     })
     
     // const {color, size} = useSelector(state => state.prodcuts)
-
-
+    const {brands, categories, subcategories} = useSelector(state => state.brand)
+    
+    
+    useEffect(() => {
+        dispatch(getBrands())
+         dispatch(getCategories())
+         dispatch(getSubCategories())
+    },[])
+    
+    
     const handleChange = (e) => {
         setForm({
             ...form,
             [e.target.name] : e.target.value
         })
-
     }
 
     const handleClick = (e) => {
@@ -31,14 +41,23 @@ const CreateProduct = () => {
             name: "",
             brand: "",
             category: "",
+            subcategory: "",
             price: "",
             color: [],
-            material: "",
             size: [],
-            sexo: "",
         })
 
     }
+
+
+    const handleSelect = (e) => {
+        setForm({
+            ...form,
+            [e.target.name] : e.target.value
+        })
+    }
+
+
     return (
         <div>
             <form>
@@ -49,26 +68,6 @@ const CreateProduct = () => {
                     type="text"
                     placeholder="Nombre.."
                     value={form.name}
-                    onChange={handleChange} />
-                </div>
-       
-                <div>
-                    <label>Categoria</label>
-                    <input
-                    name="category"
-                    type="text"
-                    placeholder="Marca.."
-                    value={form.brand}
-                    onChange={handleChange} />
-                </div>
-
-                <div>
-                    <label>Marca</label>
-                    <input
-                    name="brand"
-                    type="text"
-                    placeholder="Marca.."
-                    value={form.brand}
                     onChange={handleChange} />
                 </div>
 
@@ -91,16 +90,6 @@ const CreateProduct = () => {
                     value={form.color}
                     onChange={handleChange} />
                 </div>
-    
-                <div>
-                    <label>Material</label>
-                    <input
-                    name="material"
-                    type="text"
-                    placeholder="Material.."
-                    value={form.material}
-                    onChange={handleChange} />
-                </div>
 
                 <div>
                     <label>Size</label>
@@ -113,13 +102,40 @@ const CreateProduct = () => {
                 </div> 
 
                 <div>
-                    <label>Sexo</label>
-                    <input
-                    name="sexo"
-                    type="text"
-                    placeholder="Sexo..."
-                    value={form.sexo}
-                    onChange={handleChange} />
+                    <select onChange={handleSelect}>
+                       <option selected value="">Selecciona la Marca</option>
+                        {brands?.map(e => {
+                            return (
+                                <option value={e.name}>{e.name}</option>
+                            )
+                        })}
+                    </select>
+                </div>
+
+                <div>
+                    <select>
+                        <option selected value="">Selecciona la Categoria</option>
+                        {
+                            categories?.map(e => {
+                                return(
+                                    <option name="category" value={e.name}>{e.name}</option>
+                                )
+                            })
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <select>
+                        <option selected value="">Selecciona la SubCategoria</option>
+                        {
+                            subcategories?.map(e => {
+                                return(
+                                    <option name="subcategory" value={e.name}>{e.name}</option>
+                                )
+                            })
+                        }
+                    </select>
                 </div>
 
                 <button onClick={handleClick}>Crear</button>                
@@ -129,3 +145,5 @@ const CreateProduct = () => {
     )
 
 }
+
+export default CreateProduct;

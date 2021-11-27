@@ -13,7 +13,7 @@ export const SAVE_BRAND = "SAVE_BRAND";
 // ACTION CREATORS
 export const getBrands = () => async (dispatch) => {
     try {
-        const { data } = axios.get(`/brand`)
+        const { data } = await axios.get(`/brand`)
         return dispatch({
             type: GET_BRANDS,
             payload: data
@@ -64,9 +64,17 @@ export const setExistentBrand = (brand) => {
 }
 
 export const getCategories = () => async dispatch => {
-    const { data } = axios.get("/category")
+    const { data } = await axios.get("/category")
     return dispatch({
         type: GET_CATEGORIES,
+        payload: data
+    })
+}
+
+export const getSubCategories = () => async dispatch => {
+    const { data } = await axios.get("/types")
+    return dispatch({
+        type: GET_SUBCATEGORIES,
         payload: data
     })
 }

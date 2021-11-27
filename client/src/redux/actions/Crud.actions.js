@@ -2,9 +2,6 @@ import axios from "axios";
 import { getProducts } from "./products.actions.js";
 
 
-//CONSTANTES
-PRODUCT_CREATE = "PRODUCT_CREATE"
-
 export const productCreate = (form) => async (dispatch) => {
     try {
         await axios.post(`/product/create`, form)
