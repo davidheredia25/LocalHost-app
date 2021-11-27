@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemToCart, setCount } from '../../../redux/actions/cart.actions.js'
+import { addItemToCart, setCount } from '../../../redux/actions/cart.actions.js';
+import { Button } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { AddShoppingCart } from "@material-ui/icons";
+import './cart.scss'
 
 const AddToCart = () => {
 
@@ -24,16 +28,18 @@ const AddToCart = () => {
     
     return (
         <div>
-            <div>
-                <button disabled={num === 1} onClick={subtraction}>
+            <div >
+                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 10, 'margin': 10}} disabled={num === 1} onClick={subtraction}>
                     -
-                </button>
+                </Button>
                 <span>{num}</span>
-                <button onClick={addition}>
+                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 5   , 'margin': 10}}  onClick={addition}>
                     +
-                </button>
+                </Button>
             </div>
-            <button disabled={cartProduct.talle === ""} onClick={addCart}>AGREGAR AL CARRITO</button>
+            <div>
+            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10}}  disabled={cartProduct.talle === ""} onClick={addCart}>   <AddShoppingCart/> </Button>
+            </div>
         </div>
     )
 }

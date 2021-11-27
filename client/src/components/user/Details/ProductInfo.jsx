@@ -46,7 +46,9 @@ const ProductInfo = ({product}) =>  {
                         }
                         </div>
                     </div>
+                    <div className='info__cart'>
                     <AddToCart />
+                    </div>
                 </div>
             </div>
             :

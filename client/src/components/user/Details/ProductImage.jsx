@@ -9,7 +9,7 @@ const ProductImage = ({images, product}) => {
         product ?
             <div className='product_image_container'>
                 <div className='carousel'>
-                    <Carousel className='carousel'>       
+                    <Carousel className='image_carousel'>       
                     {
                         images.length && 
                         images.map(i => {
