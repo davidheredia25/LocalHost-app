@@ -10,27 +10,27 @@ const ImgSection = () => {
 
         <div className={style.ctn}>
             <div className={style.ctnImg}>
-                <div className={style.ctnTitle}>
-                    <p className={style.title}> ZAPATILLAS</p>
+                <div className={style.fondo}>
+                    <img className={style.imgSec} src={shoes} alt="Zpatillas" />
                 </div>
-                <img className={style.imgSec} src={shoes} alt="Zpatillas" />
+
+                <p className={style.title}> ZAPATILLAS</p>
             </div>
 
             <div className={style.ctnImg}>
-                <div className={style.ctnTitle}>
-                    <p className={style.title}> ACCESORIOS</p>
+                <div className={style.fondo}>
+                    <img className={style.imgSec} src={clothing} alt="Indumentaria" />
                 </div>
-                <img className={style.imgSec} src={ace} alt="Ascesorios" />
+                <p className={style.title}> INDUMENTARIA</p>
             </div>
 
             <div className={style.ctnImg}>
-                <div className={style.ctnTitle}>
-                    <p className={style.title}> INDUMENTARIA</p>
+                <div className={style.fondo}>
+                    <img className={style.imgSec} src={ace} alt="Ascesorios" />
                 </div>
-                <img className={style.imgSec} src={clothing} alt="Indumentaria" />
-            </div>
+                <p className={style.title}> ACCESORIOS</p>
 
-            
+            </div>
 
         </div>
 
