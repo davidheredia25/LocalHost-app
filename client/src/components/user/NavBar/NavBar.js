@@ -161,7 +161,7 @@ class NavBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{'backgroundColor': '#000000'}}>
+        <AppBar position='static' style={{'backgroundColor': '#000000'}}>
           <Toolbar>
            {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />

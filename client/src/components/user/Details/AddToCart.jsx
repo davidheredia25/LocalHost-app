@@ -2,23 +2,31 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addItemToCart} from '../../../redux/actions/cart.actions.js'
 
-const AddToCart = ({talle}) => {
+const AddToCart = ({ talle, product }) => {
     
-    const { product } = useSelector(state => state.products)
+    const { cart } = useSelector(state => state.cart)
+    console.log(cart)
     const dispatch = useDispatch()
-    const [count, setCount] = useState(1);
+    
+   
     const [itemInfo, setItemInfo] = useState({
         product: product,
-        count: count,
+        count: 1,
         talle: talle
     })
 
     const subtraction = () => {
-        setCount(count - 1)
+        setItemInfo({
+            ...itemInfo,
+            count: itemInfo.count - 1 
+        })
     }
 
     const addition = () => {
-        setCount(count + 1)
+        setItemInfo({
+            ...itemInfo,
+            count: itemInfo.count + 1 
+        })
     }
 
     const addCart = () => {
@@ -28,15 +36,17 @@ const AddToCart = ({talle}) => {
     return (
         <div>
             <div>
-                <button onClick={subtraction}>
+                <button disabled={itemInfo.count === 1} onClick={subtraction}>
                     -
                 </button>
-                <span>{count}</span>
+                <span>{itemInfo.count}</span>
                 <button onClick={addition}>
                     +
                 </button>
             </div>
-            <button onClick={addCart}>AGREGAR AL CARRITO</button>
+            <button disabled={talle === ""} onClick={addCart}>AGREGAR AL CARRITO</button>
         </div>
     )
 }
+
+export default AddToCart;

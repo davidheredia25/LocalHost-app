@@ -7,9 +7,11 @@ import ProductInfo from "./ProductInfo";
 import {useParams } from "react-router-dom";
 import NavBar from '../NavBar/NavBar';
 import './Details.scss';  
+import AddToCart from "./AddToCart";
 
 const Details= () => {
     const dispatch = useDispatch();
+    const [state, setState] =useState('')
     const {product} = useSelector((state) => state.products)
      const { id } = useParams();
 
@@ -32,7 +34,7 @@ const Details= () => {
            <div className='details_image'>
            <ProductInfo />
            </div>
-           
+          
            </div>
         </div> 
         

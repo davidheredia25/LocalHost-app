@@ -4,9 +4,17 @@ import './info.scss';
 import { Button } from '@mui/material';
 import AddToCart from './AddToCart';
 
+
 const ProductInfo = () =>  {
 
     const {product} = useSelector((state) => state.products)
+    const [talle, setTalle] = useState('');
+    console.log('talle', talle)
+
+    function onClick (e) {
+        e.preventDefault();
+        setTalle(e.target.value)
+    }
     
     return (
     <div className='info_container'>
@@ -20,13 +28,13 @@ const ProductInfo = () =>  {
                 {product.talle?
                  product.talle.map(t => {
                      return(
-                    <Button variant='text' style={{'color' : '#000000'}} className='info_button' >{t}</Button>
+                    <Button value={t} onClick={onClick}  variant={talle===t ? 'outlined' : 'text' } style={{'color' : '#000000'}} className='info_button' >{t}</Button>
                      )
                 }) :null   
             }
             </div>
             </div>
-             
+             <AddToCart talle={talle} product={product} />
                 {/* <h2>{product.brand.name}</h2> */}
             </div>
     </div>
