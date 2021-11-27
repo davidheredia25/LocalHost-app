@@ -8,7 +8,7 @@ const initialState = {
   brand: "",
   category: "",
   subcategory: "",
-};
+}
 
 export function filtersReducer(state = initialState, { type, payload }) {
   switch(action.type){

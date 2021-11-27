@@ -1,5 +1,5 @@
 const Category = require('../../../models/Category');
-const {  } = require('./middleware');
+const { verificacionId } = require('./middleware');
 
 const deleteCategory = async (req, res) => {
     const { id } = req.params;

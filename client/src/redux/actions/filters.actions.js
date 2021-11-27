@@ -10,16 +10,30 @@ export const setFilterBrand = (string) => {
       payload: string
   }  
 }
+
 export const setFilterCategory = (string) => {
     return{
         type: SET_FILTER_BRAND,
         payload:string
     }  
 }
+
 export const setFilterSubCategory = (string) => {
     return{
         type: SET_FILTER_BRAND,
         payload: string
     }  
+}
+
+export const filterProducts = ({ brand, category, subcategory }) => async (dispatch) => {
+    const { data } = axios.get(`/products/filter
+        ?brand=${brand ? brand : ""}
+        &category=${category ? category : ""}
+        &subcategory=${subcategory ? subcategory : ""}
+    `)
+    return dispatch({
+        type: GET_PRODUCTS,
+        payload: data
+    })
 }
 
