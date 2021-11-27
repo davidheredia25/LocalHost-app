@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {AppBar} from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -18,6 +19,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import SearchBar from '../SearchBar/SearchBar';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import './NavBar.scss';
 
 const styles = theme => ({
   root: {
@@ -159,14 +161,16 @@ class NavBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{'backgroundColor': '#000000'}}>
+        <AppBar position='static' style={{'backgroundColor': '#000000'}}>
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+           {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />
-            </IconButton>
+    </IconButton> */}
+            <Link to='/' className='Link'>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               VSClothes
             </Typography>
+            </Link>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 
