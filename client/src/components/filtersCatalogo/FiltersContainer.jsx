@@ -5,6 +5,15 @@ import FilterBySubcategory from "./FilterBySubcategory";
 
 const FiltersContainer = () => {
 
+    /* Componente Padre:  
+    
+    Acumula los filtros:
+    state.filters = {
+        brand: "",        // "Nike"
+        category: "",     // "Indumentaria"
+        subcategory: "",  // "Remeras"
+    }
+    */
     return (
         <div>
             <FilterByBrand />
