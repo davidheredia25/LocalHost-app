@@ -21,7 +21,7 @@ const Cards = () => {
 
         <div className='container'>
            {
-            !products.length 
+            !products?.length 
                 ? <p>Not Found</p> 
                 : (
                     <div className='cards'>

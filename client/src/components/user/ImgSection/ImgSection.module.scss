@@ -1,0 +1,41 @@
+.ctn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fondo{
+  background-color: black;
+}
+
+
+.ctnImg {
+  display: inline-block;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  font-size:20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.imgSec {
+  width: 100%;
+  object-fit: cover;
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.imgSec:hover {
+  opacity: 100%;
+  transform: scale(1.01);
+}
+
+

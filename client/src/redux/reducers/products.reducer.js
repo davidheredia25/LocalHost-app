@@ -1,10 +1,9 @@
 import { GET_PRODUCTS, GET_PRODUCTS_DETAILS } from "../actions/products.actions";
 
 const initialState = {
-  products: []
+  products: [],
+  product: null
 };
-
-
 
 export function productsReducer(state = initialState, action) {
   switch(action.type){
@@ -16,7 +15,7 @@ export function productsReducer(state = initialState, action) {
       }
     case GET_PRODUCTS_DETAILS:
       return {
-        products: action.payload
+        product: action.payload
       }
 
     default:
