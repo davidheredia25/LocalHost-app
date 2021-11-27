@@ -19,7 +19,7 @@ const AddToCart = () => {
     }
 
     const addCart = () => {
-        dispatch(addItemToCart(cartProduct))
+        dispatch(addItemToCart())
     }
     
     return (

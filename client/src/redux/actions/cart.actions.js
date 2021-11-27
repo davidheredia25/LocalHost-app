@@ -17,10 +17,9 @@ export const addItemToCartBack = (cartProduct) => async (dispatch) => {
 }  
 */
 
-export const addItemToCart = (cartProduct) => {
+export const addItemToCart = () => {
     return {
         type: ADD_ITEM_TO_CART,
-        payload: cartProduct
     }
 } 
 
