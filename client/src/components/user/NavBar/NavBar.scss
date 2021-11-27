@@ -16,3 +16,19 @@
     text-transform: uppercase;
     border: 1px solid #000000
 }
+
+
+
+.Link {
+    text-decoration: none;
+    color: #EEEEEE;
+    &:hover{
+        text-decoration: none;
+        background-color: #000000;
+        color: #EEEEEE;
+    }
+}
+
+.searchbar{
+    margin-left: 30%;
+}

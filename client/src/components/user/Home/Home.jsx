@@ -4,15 +4,15 @@ import Carousels from '../Carousels/Carousels.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import NavBar from "../NavBar/NavBar";
 import ImgSection from "../ImgSection/ImgSection";
+import './Home.scss';
 
 
 const Home= () => {
     return (
         <div>
             {/* // <button> Filters </button> */}
-            
             <NavBar />
-            <Carousels />
+            <Carousels className='carousel_home' />
             <ImgSection />
             <Cards />
             
