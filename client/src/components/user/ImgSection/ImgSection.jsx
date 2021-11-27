@@ -13,21 +13,21 @@ const ImgSection = () => {
                 <div className={style.ctnTitle}>
                     <p className={style.title}> ZAPATILLAS</p>
                 </div>
-                <img className={style.img} src={shoes} alt="Zpatillas" />
+                <img className={style.imgSec} src={shoes} alt="Zpatillas" />
             </div>
 
             <div className={style.ctnImg}>
                 <div className={style.ctnTitle}>
                     <p className={style.title}> ACCESORIOS</p>
                 </div>
-                <img className={style.img} src={ace} alt="Ascesorios" />
+                <img className={style.imgSec} src={ace} alt="Ascesorios" />
             </div>
 
             <div className={style.ctnImg}>
                 <div className={style.ctnTitle}>
                     <p className={style.title}> INDUMENTARIA</p>
                 </div>
-                <img className={style.img} src={clothing} alt="Indumentaria" />
+                <img className={style.imgSec} src={clothing} alt="Indumentaria" />
             </div>
 
             

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
 }
 
-img {
+.imgSec {
   height: 300px;
 }
 
@@ -29,7 +29,7 @@ img {
     margin:0;
   }
   
-  .img:hover {
+  .imgSec:hover {
     opacity: 0.20;
     -webkit-transition: opacity 500ms;
     -moz-transition: opacity 500ms;
