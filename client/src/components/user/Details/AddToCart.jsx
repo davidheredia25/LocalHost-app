@@ -1,50 +1,39 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemToCart} from '../../../redux/actions/cart.actions.js'
+import { addItemToCart, setCount } from '../../../redux/actions/cart.actions.js'
 
-const AddToCart = ({ talle, product }) => {
-    
-    const { cart } = useSelector(state => state.cart)
-    console.log(cart)
-    const dispatch = useDispatch()
-    
-   
-    const [itemInfo, setItemInfo] = useState({
-        product: product,
-        count: 1,
-        talle: talle
-    })
+const AddToCart = () => {
+
+    const dispatch = useDispatch();
+    const { cartProduct } = useSelector(state => state.cart)
+
+    const [num, setNum] = useState(1);
 
     const subtraction = () => {
-        setItemInfo({
-            ...itemInfo,
-            count: itemInfo.count - 1 
-        })
+        setNum(num -1)
+        dispatch(setCount(num - 1))
     }
-
     const addition = () => {
-        setItemInfo({
-            ...itemInfo,
-            count: itemInfo.count + 1 
-        })
+        setNum(num + 1)
+        dispatch(setCount(num + 1))
     }
 
     const addCart = () => {
-        dispatch(addItemToCart(itemInfo))
+        dispatch(addItemToCart(cartProduct))
     }
     
     return (
         <div>
             <div>
-                <button disabled={itemInfo.count === 1} onClick={subtraction}>
+                <button disabled={num === 1} onClick={subtraction}>
                     -
                 </button>
-                <span>{itemInfo.count}</span>
+                <span>{num}</span>
                 <button onClick={addition}>
                     +
                 </button>
             </div>
-            <button disabled={talle === ""} onClick={addCart}>AGREGAR AL CARRITO</button>
+            <button disabled={cartProduct.talle === ""} onClick={addCart}>AGREGAR AL CARRITO</button>
         </div>
     )
 }

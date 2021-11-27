@@ -7,40 +7,36 @@ import ProductInfo from "./ProductInfo";
 import {useParams } from "react-router-dom";
 import NavBar from '../NavBar/NavBar';
 import './Details.scss';  
-import AddToCart from "./AddToCart";
 
 const Details= () => {
-    const dispatch = useDispatch();
-    const [state, setState] =useState('')
-    const {product} = useSelector((state) => state.products)
-     const { id } = useParams();
+  const dispatch = useDispatch();
+  const {product} = useSelector((state) => state.products)
+  const { id } = useParams();
 
-     useEffect(() => {
-          dispatch(getProductsDetails(id))
-      }, [dispatch, id])
+  useEffect(() => {
+      dispatch(getProductsDetails(id))
+  }, [dispatch, id])
 
-
-    return (
-        
-      
-        <div>
+  return (
+    product 
+      ?
+      <div>
         <NavBar/>
         <div className='details_container'>
           <div className='details_image'>
-        <ProductImage
-           images={[product.image, product.image1, product.image2]}
-           />
-           </div>
-           <div className='details_image'>
-           <ProductInfo />
-           </div>
-          
-           </div>
-        </div> 
-        
-        
-    )
+            <ProductImage
+              images={[product.image, product.image1, product.image2]}
+              product={product}
+            />
+          </div>
+          <div className='details_image'>
+            <ProductInfo product={product} />
+          </div>
+        </div>
+      </div>
+      :
+      "Loading..."
+  )
 }
-
 
 export default Details;

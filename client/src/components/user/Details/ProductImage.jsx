@@ -4,35 +4,33 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
-const ProductImage = ({images}) => {
-
-
-    return(
-        <div className='product_image_container'>
-            <div className='carousel'>
-            <Carousel className='carousel'>
-            
-           {
-               images.length && 
-               images.map(i => {
-                   if (i) {
-                   return (
-                    <Carousel.Item interval={3000}>
-                    <img 
-                        className="product_image"
-                        src={i}
-                        alt="First slide"
-                    />
-                    </Carousel.Item>
-                   )  
-                   }
-                   
-               })
-           }
-           
-            </Carousel>
+const ProductImage = ({images, product}) => {
+    return (
+        product ?
+            <div className='product_image_container'>
+                <div className='carousel'>
+                    <Carousel className='carousel'>       
+                    {
+                        images.length && 
+                        images.map(i => {
+                            if (i) {
+                            return (
+                                <Carousel.Item interval={3000}>
+                                <img 
+                                    className="product_image"
+                                    src={i}
+                                    alt="First slide"
+                                />
+                                </Carousel.Item>
+                            )  
+                            }
+                        })
+                    }
+                    </Carousel>
+                </div>
             </div>
-        </div>
+            :
+            "Loading..."
     )
 }
 
