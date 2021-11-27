@@ -1,41 +1,41 @@
 .ctn {
-  margin-top: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.fondo{
+  background-color: black;
+}
+
+
+.ctnImg {
+  display: inline-block;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: white;
+  font-size:20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .imgSec {
-  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 60%;
+  cursor: pointer;
 }
 
-.title{
-    font-family: 'Montserrat', sans-serif;
-   font-size: 30px;
+.imgSec:hover {
+  opacity: 100%;
+  transform: scale(1.01);
 }
-
-.ctnImg {
-    display:inline-block;
-    position:relative;
-    // background-color: black;
-    
-  }
-  
-  .ctnImg > .ctnTitle {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:-1;
-    padding:10px;
-    margin:0;
-  }
-  
-  .imgSec:hover {
-    opacity: 0.20;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    -ms-transition: opacity 500ms;
-    transition: opacity 500ms;
-  }
 
 
