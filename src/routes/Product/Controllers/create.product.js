@@ -1,15 +1,17 @@
 const Product = require('../../../models/Product');
 const { 
     verificacionName,
-    
+    verificacionB,
+    verificacionC,
+    verificacionT
 } = require('./middleware');
 
 const createProduct = async (req, res) => {
     const { 
         name,
-        brand,
-        categories, 
-        types, 
+        brand, //String
+        categories, //String
+        types, //String
         price, 
         color, 
         talle, 
@@ -20,36 +22,37 @@ const createProduct = async (req, res) => {
         console.log('verificacion createProduct', verificacion);
         if(verificacion.bool) return res.send(`El producto ${name} ya existe`);
 
-        let verificacionBrand = [];
-        for(let i = 0; i < categories.length; i++) {
-            let verificacionBr = await verificacionC(brand[i]);
-            console.log('verificacionBr createProduct', verificacionCa);
-            if(verificacionCa.bool) continue
-            else return res.send('Algunas de las categoria no es valida');
-            verificacionCategory.push(verificacionCa.category);
-        }
-        console.log('verificacionBrand createProduct', verificacionCategory);
+        let verificacionBrand = await verificacionB(brand);
+        console.log('verificacionBrand createProduct', verificacionBrand);
+        if(verificacionBrand.bool) brand = verificacionBrand.brand;
+        else return res.send('La marca no es valida');
+        console.log('brand createProduct', brand);
 
-        let verificacionCategory = [];
-        for(let i = 0; i < categories.length; i++) {
-            let verificacionCa = await verificacionC(categories[i]);
-            console.log('verificacionCa createProduct', verificacionCa);
-            if(verificacionCa.bool) continue
-            else return res.send('Algunas de las categoria no es valida');
-            verificacionCategory.push(verificacionCa.category);
-        }
+        let verificacionCategory = await verificacionC(categories);
         console.log('verificacionCategory createProduct', verificacionCategory);
+        if(verificacionCa.bool) categories = verificacionCategory.category
+        else return res.send('La categoria no es valida');
+        console.log('categories createProduct', categories);
         
-        let verificacionTypes = [];
-        for(let i = 0; i < types.length; i++) {
-            let verificacionTy = await verificacionT(types[i]);
-            console.log('verificacionTy createProduct', verificacionTy);
-            if(verificacionTy.bool) continue
-            else return res.send('Algunas de las categoria no es valida');
-            verificacionTypes.push(verificacionTy.type);
-        }
+        let verificacionTypes = await verificacionT(types);
         console.log('verificacionTypes createProduct', verificacionTypes);
+        if(verificacionTypes.bool) types = verificacionTypes.type
+        else return res.send('El tipo no es valido');
+        console.log('types createProduct', types);
 
+        let newProduct = new Product({
+            name,
+            brand: brand,
+            category: categories,
+            types: types,
+            price, 
+            color, 
+            talle, 
+            stock
+        });
+        newProduct = await newProduct.save();
+        console.log('newProduct createProduct', newProduct);
+        res.json(newProduct);
     } catch (error) {
         console.log(error);
     }

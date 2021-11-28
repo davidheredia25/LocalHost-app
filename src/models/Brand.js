@@ -19,7 +19,11 @@ const brandSchema = new Schema({
             required: true,
             autopopulate: true
         }]
-    }]
+    }],
+    image: {
+        type: String,
+        required: true
+    }
 }, {
     versionKey: false,
     timestamps: false

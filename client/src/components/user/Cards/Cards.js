@@ -13,7 +13,7 @@ const Cards = () => {
 
     useEffect(() => {
         dispatch(getProducts({}))
-    }, [dispatch])
+    }, [])
 
     
 

@@ -7,3 +7,4 @@ export { default as NavBar} from "./user/NavBar/NavBar.js";
 export { default as SearchBar} from "./user/SearchBar/SearchBar.jsx";
 export { default as BrandContainer } from "./admin/Brand/BrandContainer";
 export {default as CreateProduct} from "./admin/ProductCRUD/CreateProduct"
+export { default as Catalogo } from "./user/Catalogo/Catalogo";

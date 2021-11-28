@@ -32,12 +32,12 @@ const verificacionId = async (id) => {
 
 const verificacionB = async (name) => {
     try {
-        let find = await Types.find({name: name}); 
-        console.log('find verificacionT', find);
+        let find = await Brand.find({name: name}); 
+        // console.log('find verificacionB', find);
         let obj = {
             bool: false
         };
-        if(find.length !== 0 || find !== null) return obj = { bool: true, type: find._id }
+        if(find.length !== 0 || find !== null) return obj = { bool: true, brand: find._id }
         return obj;
     } catch (error) {
         console.log(error);
@@ -60,12 +60,45 @@ const verificacionC = async (name) => {
 const verificacionT = async (name) => {
     try {
         let find = await Types.find({name: name}); 
-        console.log('find verificacionT', find);
+        // console.log('find verificacionT', find);
         let obj = {
             bool: false
         };
         if(find.length !== 0 || find !== null) return obj = { bool: true, type: find._id }
         return obj;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const filterB = async (name) => {
+    try {
+        let getProduct = await Product.find();
+        let filterBr = await getProduct.filter(p => p.brand.name === name);
+        // console.log('filterBr filterB', filterBr);
+        return filterBr;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const filterC = async (name, array) => {
+    try {
+        let filterCa = await array.filter(p => p.category.name === name);
+        // console.log('filterCa filterC', filterCa);
+        return filterCa;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const filterT = async (name, array) => {
+    try {
+        // console.log('array filterT', array);
+
+        let filterTy = await array.filter(p => p.type.name === name);
+        // console.log('filterTy filterT', filterTy);
+        return filterTy;
     } catch (error) {
         console.log(error);
     }
@@ -77,5 +110,8 @@ module.exports = {
     verificacionName,
     verificacionB,
     verificacionC,
-    verificacionT
+    verificacionT,
+    filterB,
+    filterC,
+    filterT
 };

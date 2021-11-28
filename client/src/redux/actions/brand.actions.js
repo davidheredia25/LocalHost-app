@@ -71,7 +71,7 @@ export const getCategories = () => async dispatch => {
     })
 }
 
-export const getSubCategories = () => async dispatch => {
+export const getSubcategories = () => async dispatch => {
     const { data } = await axios.get("/types")
     return dispatch({
         type: GET_SUBCATEGORIES,

@@ -12,18 +12,18 @@ const productSchema = new Schema({
         required: true,
         autopopulate: true
     },
-    category: [{
+    category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
         required: true,
         autopopulate: true
-    }],
-    types: [{
+    },
+    type: {
         type: Schema.Types.ObjectId,
         ref: 'Types',
         required: true,
         autopopulate: true
-    }],
+    },
     price: {
         type: Number,
         required: true

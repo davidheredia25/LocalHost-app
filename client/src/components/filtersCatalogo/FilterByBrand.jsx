@@ -3,44 +3,40 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBrands } from "../../redux/actions/brand.actions";
 import { setFilterBrand, filterProducts } from "../../redux/actions/filters.actions";
 
-
-const filterBrand = () => {
+const FilterByBrand = () => {
+    
     const dispatch = useDispatch();
-    const {brand} = useSelector(state => state.brand)
-    const {category, subcategory} = useSelector(state => state.filter)
-
-    const [open, setOpen] = useState(false);
+    const { brands } = useSelector(state => state.brand)
+    const { category, subcategory } = useSelector(state => state.filters)
 
     useEffect(() => {
         dispatch(getBrands())
-    },[dispatch])
-
+    },[])
+    
+    const [open, setOpen] = useState(false);
 
     const handleClick = (e) => {
         dispatch(setFilterBrand(e.target.value))
-        dispatch(filterBrand({category, subcategory, brand : e.target.value}))
-
+        dispatch(filterProducts({ brand : e.target.value, category, subcategory }))
     }
 
-    return(
-      
+    return (
         <div>
-        <button onClick={() => setOpen(!open)}>Brand</button>
-        {
-            open ? 
-            <div>
-
-                {brand && brand.map(x => {
-                    return (
-                        <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
-                    )
-                })}
-            </div>:
-            null
-        }
-    </div>
-    
+            <button onClick={() => setOpen(!open)}>MARCAS</button>
+            {
+                open ? 
+                    <div>
+                    {
+                        brands && brands.map(x => {
+                            return (
+                                <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
+                            )
+                        })
+                    }
+                    </div> : null
+            }
+         </div>
     )
 }
 
-export default filterBrand;
+export default FilterByBrand;
