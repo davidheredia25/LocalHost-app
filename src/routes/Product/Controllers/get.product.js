@@ -20,7 +20,6 @@ const getProducts = async (req, res) => {
     try {
         let getAllProducts = await Product.find();
         // console.log('getAllProducts getProducts', getAllProducts);
-        
         // filter
         let filtered = [];
         let filterBrand = [];

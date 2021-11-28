@@ -1,0 +1,41 @@
+
+
+.card{
+    width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    flex-direction: row;
+}
+
+.count{
+    width: 25px;
+}
+
+
+.image{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    
+    
+}
+
+.name{
+    width: 400px;
+    text-align: start;
+    font-weight: 600  ;
+}
+
+.talle{
+    
+    height: 40px;
+    width: 30px;
+    margin-top: 0.5rem;
+    padding: 5px;
+    font-size: large;
+    text-align: center;
+    border: 0.1px solid #000000;
+    border-radius: 15px;
+}
