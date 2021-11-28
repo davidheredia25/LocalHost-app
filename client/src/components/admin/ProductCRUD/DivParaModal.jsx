@@ -12,7 +12,7 @@ const DivParaModal = () => {
         category: "",
         type: "",
         color: [],
-        size: [],
+        talle: [],
     })
 
     const dispatch = useDispatch();
@@ -20,8 +20,20 @@ const DivParaModal = () => {
     useEffect(() => {
         dispatch(getBrands())
         dispatch(getCategories())
-        dispatch(getSubcategories())
+        dispatch(getSubcategories())    
     }, [])
+
+    useEffect(() => {
+        setForm({
+            name: product.name,
+            price: product.price,
+            brand: product.brand,
+            category: product.category,
+            type: product.type,
+            color: product.color,
+            talle: product.talle,
+        })
+    }, [product])
 
     const { brands, categories, subcategories } = useSelector(state => state.brand)
     const { product } = useSelector(state => state.products)
@@ -72,6 +84,7 @@ const DivParaModal = () => {
             </div>
             <div>
                 <p>Marca:</p>
+                <p>{form.brand}</p>
                 <select onChange={handleSelectBrand}>
                     <option selected value="">selecciona marca</option>
                     {
@@ -85,6 +98,7 @@ const DivParaModal = () => {
             </div>
             <div>
                 <p>Categoría:</p>
+                <p>{form.category}</p>
                 <select onChange={handleSelectCategory}>
                     <option selected value="">selecciona categoría</option>
                     {
@@ -98,6 +112,7 @@ const DivParaModal = () => {
             </div>
             <div>
                 <p>Tipo:</p>
+                <p>{form.type}</p>
                 <select onChange={handleSelectType}>
                     <option selected value="">selecciona tipo</option>
                     {

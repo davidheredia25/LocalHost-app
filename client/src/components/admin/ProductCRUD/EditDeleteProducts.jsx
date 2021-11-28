@@ -8,6 +8,7 @@ const EditDeleteProducts = ({ products }) => {
     const dispatch = useDispatch();
 
     const handleDelete = (e) => {
+        // confirmación de borrar
         dispatch(productDelete(e.target.value))
     }
 
