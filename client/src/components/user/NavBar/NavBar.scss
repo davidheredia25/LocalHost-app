@@ -29,3 +29,13 @@
     }
 }
 
+.link_carrito{
+    text-decoration: none;
+    color: #EEEEEE;
+    &:hover{
+        text-decoration: none;
+        background-color: #000000;
+        color: #EEEEEE;
+    }
+}
+
