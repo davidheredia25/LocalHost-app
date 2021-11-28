@@ -9,7 +9,7 @@ const getProducts = async (req, res) => {
         // console.log('getAllProducts getProducts', getAllProducts);
         if(!name) return res.json(getAllProducts);
         
-        let getProductsName = await product.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));    
+        let getProductsName = await getAllProducts.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));    
         // console.log('getProductsName getProducts', getProductsName);
         res.json(getProductsName);
     } catch (error) {

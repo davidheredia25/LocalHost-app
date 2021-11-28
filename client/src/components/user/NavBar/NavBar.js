@@ -179,12 +179,13 @@ class NavBar extends React.Component {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
+              <Link to='/cart' className='link_carrito'>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-              
+              </Link>
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
