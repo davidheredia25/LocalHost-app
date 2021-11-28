@@ -1,9 +1,11 @@
 
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import NavBar from '../NavBar/NavBar';
 import CartCard from "./cartCard";
 import style from './carrito.module.scss';
+import { Button } from '@mui/material';
 
 
 
@@ -41,8 +43,19 @@ const Cart= () => {
             } 
             </div>
             <div>
-              <h3>TOTAL : $ {pago}</h3>
+              {cart.length?
+                
+                <h3>TOTAL : $ {pago}</h3>  
+                : null
+            } 
         
+            </div>
+            <div>
+            {!cart.length?
+                
+           <Link to='/'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>
+                : <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Pagar</Button>
+            } 
             </div>
         </div>
     )

@@ -21,6 +21,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './NavBar.scss';
 
+
 const styles = theme => ({
   root: {
     width: '100%',
@@ -96,7 +97,7 @@ class NavBar extends React.Component {
     anchorEl: null,
     mobileMoreAnchorEl: null,
   };
-
+  
   handleProfileMenuOpen = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
@@ -119,6 +120,8 @@ class NavBar extends React.Component {
     const { classes } = this.props;
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  
+    
 
     const renderMenu = (
       <Menu
@@ -143,7 +146,7 @@ class NavBar extends React.Component {
       >
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={0} color="secondary">
               <ShoppingCartIcon/>
             </Badge>
           </IconButton>
@@ -181,9 +184,7 @@ class NavBar extends React.Component {
             <div className={classes.sectionDesktop}>
               <Link to='/cart' className='link_carrito'>
               <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
                   <ShoppingCartIcon />
-                </Badge>
               </IconButton>
               </Link>
               <IconButton
@@ -213,4 +214,6 @@ NavBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(NavBar);
+
+
+export default  (withStyles(styles))(NavBar);

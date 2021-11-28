@@ -1,7 +1,7 @@
 
 
 .card{
-    width: 600px;
+    width: 800px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -9,25 +9,29 @@
     flex-direction: row;
 }
 
+.count{
+    width: 25px;
+}
+
 
 .image{
     height: 30px;
     width: 30px;
     border-radius: 10px;
-    margin-left: 15px;
+    
     
 }
 
 .name{
-    margin-right: 30px;
-    margin-left: 30px;
+    width: 400px;
+    text-align: start;
     font-weight: 600  ;
 }
 
 .talle{
+    
     height: 40px;
     width: 30px;
-    margin-right: 20px;
     margin-top: 0.5rem;
     padding: 5px;
     font-size: large;
