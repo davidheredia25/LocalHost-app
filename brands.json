@@ -101,7 +101,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/uiyFHrf.jpg"
     },
     {
         "_id": {
@@ -205,7 +206,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/cquvF3y.jpg"
     },
     {
         "_id": {
@@ -309,7 +311,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/8YG4gCV.png"
     },
     {
         "_id": {
@@ -413,13 +416,14 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/HM5gvgG.png"
     },
     {
         "_id": {
             "$oid": "619ecea36a92375a826baf1d"
         },
-        "name": "Lacoste",
+        "name": "puma",
         "categories": [
             {
                 "name":{
@@ -517,7 +521,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/WmEmCD6.png"
     },
     {
         "_id": {
@@ -600,28 +605,25 @@
                 },
                 "types": [
                     {
-                        
                         "$oid": "619e97976a92375a82169eb7"
                     },
                     {
                         
                         "$oid": "619e97976a92375a82169eb8"
                     },
-                    {
-                        
+                    {   
                         "$oid": "619e97976a92375a82169eb9"
                     },
-                    {
-                        
+                    {   
                         "$oid": "619e97976a92375a82169eba"
                     },
                     {
-                        
                         "$oid": "619e97976a92375a82169ebb"
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/yjt7ZgZ.jpg"
     },
     {
         "_id": {
@@ -725,7 +727,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/HJIuk5J.jpg"
     },
     {
         "_id": {
@@ -829,7 +832,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": ""
     },
     {
         "_id": {
@@ -933,7 +937,8 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/mrLSlUM.png"
     },
     {
         "_id": {
@@ -1037,6 +1042,7 @@
                     }
                 ]       
             }
-        ]
+        ],
+        "image": "https://i.imgur.com/beV1rB0.png"
     }
 ]

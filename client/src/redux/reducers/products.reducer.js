@@ -8,10 +8,9 @@ const initialState = {
 export function productsReducer(state = initialState, action) {
   switch(action.type){
     case GET_PRODUCTS:
-      let products = [...action.payload];
       return {
         ...state,
-        products: products
+        products: action.payload
       }
     case GET_PRODUCTS_DETAILS:
       return {

@@ -1,29 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './BrandsHome.module.scss'
-import adidas from './Iconos/adidas.ico';
-import nike from './Iconos/nike.ico';
-import champion from './Iconos/champion.ico';
-import converse from './Iconos/converse.ico';
-import jordan from './Iconos/jordan.ico';
-import newBalance from './Iconos/newBalance.ico';
-import theNortFace from './Iconos/theNortFace.ico';
-import vans from './Iconos/vans.ico';
-import puma from './Iconos/puma.ico';
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setBrandName, getBrands } from "../../../redux/actions/brand.actions";
 
 const BrandsHome = () => {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { brands } = useSelector(state => state.brand)
+
+    useEffect(() => {
+        dispatch(getBrands())
+    }, [])
+
+    const handleClick = (e) => {
+        dispatch(setBrandName(e.target.value))
+        navigate("/catalogo")
+    }
+
     return (
         <div className={style.ctnBrands}>
-            <img className={style.imgIcon} src={adidas} />
-              <img className={style.imgIcon} src={nike} />
-            <img className={style.imgIcon} src={champion} />
-            <img className={style.imgIcon} src={converse} />
-            <img className={style.imgIcon} src={jordan} />
-            <img className={style.imgIcon} src={newBalance} />
-            <img className={style.imgIcon} src={theNortFace} />
-            <img className={style.imgIcon} src={vans} />
-            <img className={style.imgIcon} src={puma} />
+            {
+                brands?.map(x => {
+                    return (
+                        <img 
+                            className={style.imgIcon} 
+                            src={x.image} 
+                            onClick={handleClick}
+                            value={x.name}
+                        /> 
+                    )
+                })
+            }
         </div>
     )
 }

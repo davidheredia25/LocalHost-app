@@ -7,13 +7,14 @@ const FiltersContainer = () => {
 
     /* Componente Padre:  
     
-    Acumula los filtros:
+    Acumula los filtros en el reducer:
     state.filters = {
         brand: "",        // "Nike"
         category: "",     // "Indumentaria"
         subcategory: "",  // "Remeras"
     }
     */
+
     return (
         <div>
             <FilterByBrand />
@@ -22,3 +23,5 @@ const FiltersContainer = () => {
         </div>
     )
 }
+
+export default FiltersContainer;

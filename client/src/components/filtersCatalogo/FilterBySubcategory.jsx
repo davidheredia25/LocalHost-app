@@ -1,48 +1,43 @@
-
-import React, {useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { getSubcategories } from "../../redux/actions/brand.actions";
+import { filterProducts, setFilterSubcategory } from "../../redux/actions/filters.actions";
 
-
-const filterSubCategory = () =>{
+const FilterBySubcategory = () => {
+    
     const dispatch = useDispatch();
-
-    const {subcategories} = useSelector(state => state.brand)
-    const [open, setOpen] = useState(false);
+    const { subcategories } = useSelector(state => state.brand)
     const { brand, category } = useSelector(state => state.filters)
 
     useEffect(() => {
-        dispatch(getSubCategories())
-    }, [dispatch])
+        dispatch(getSubcategories())
+    }, [])
 
+    const [open, setOpen] = useState(false);
 
     const handleClick = (e) =>{
-        dispatch(getSubCategories())
-        dispatch(filterProducts({brand, category, subcategory : e.target.value}))
-
+        dispatch(setFilterSubcategory(e.target.value))
+        dispatch(filterProducts({brand, category, subcategory: e.target.value}))
     }
     
-
-    return (
-           
+    return ( 
         <div>
-            <button onClick={() => setOpen(!open)}>SubCategory</button>
+            <button onClick={() => setOpen(!open)}>TIPOS</button>
             {
                 open ? 
                 <div>
-
-                    {subcategorias && subcategories.map(x => {
+                {
+                    subcategories && subcategories.map(x => {
                         return (
-                            <button value={x} onClick={handleClick}>{x.toUpperCase()}</button>
+                            <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                         )
-                    })}
-                </div>:
-                null
+                    })
+                }
+                </div> : null
             }
-        </div>
-        
+        </div> 
     )
     
 }
 
-export default filterSubCategory;
+export default FilterBySubcategory;

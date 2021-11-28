@@ -1,8 +1,9 @@
 import axios from "axios";
-
-export const SET_FILTER_BRAND = "SET_FILTER_BRAND" 
-export const SET_FILTER_CATEGORY = "SET_FILTER_CATEGORY" 
-export const SET_FILTER_SUBCATEGOTY = "SET_FILTER_SUBCATEGORY" 
+import { GET_PRODUCTS } from "./products.actions";
+export const SET_FILTER_BRAND = "SET_FILTER_BRAND";
+export const SET_FILTER_CATEGORY = "SET_FILTER_CATEGORY"; 
+export const SET_FILTER_SUBCATEGORY = "SET_FILTER_SUBCATEGORY"; 
+export const RESET_FILTER = "RESET_FILTER";
 
 export const setFilterBrand = (string) => {
   return{
@@ -13,23 +14,27 @@ export const setFilterBrand = (string) => {
 
 export const setFilterCategory = (string) => {
     return{
-        type: SET_FILTER_BRAND,
+        type: SET_FILTER_CATEGORY,
         payload:string
     }  
 }
 
-export const setFilterSubCategory = (string) => {
+export const setFilterSubcategory = (string) => {
     return{
-        type: SET_FILTER_BRAND,
+        type: SET_FILTER_SUBCATEGORY,
         payload: string
     }  
 }
 
-export const filterProducts = ({ brand, category, subcategory }) => async (dispatch) => {
-    const { data } = axios.get(`/products/filter
-        ?brand=${brand ? brand : ""}
-        &category=${category ? category : ""}
-        &subcategory=${subcategory ? subcategory : ""}
+export const resetFilter = (property) => {
+    return {
+        type: RESET_FILTER,
+        payload: property
+    }
+}
+
+export const filterProducts = ({ brand, category, subcategory, name }) => async (dispatch) => {
+    const { data } = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}
     `)
     return dispatch({
         type: GET_PRODUCTS,

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {productCreate} from "../../../redux/actions/Crud.actions.js"
-import { getBrands, getCategories, getSubCategories} from "../../../redux/actions/brand.actions.js";
+import { getBrands, getCategories, getSubcategories} from "../../../redux/actions/brand.actions.js";
 
 
 
@@ -23,8 +23,8 @@ const CreateProduct = () => {
     
     useEffect(() => {
         dispatch(getBrands())
-         dispatch(getCategories())
-         dispatch(getSubCategories())
+        dispatch(getCategories())
+        dispatch(getSubcategories())
     },[])
     
     
