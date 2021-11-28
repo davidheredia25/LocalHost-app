@@ -1,8 +1,12 @@
-const { getTypes } = require('./get.types');
-const {  } = require('./delete.types');
-const {  } = require('./create.types');
-const {  } = require('./update.types');
+const { getTypes, getTypesById } = require('./get.types');
+const { deleteTypes } = require('./delete.types');
+const { createTypes } = require('./create.types');
+const { updateTypes } = require('./update.types');
 
 module.exports = {
-    getTypes,
-}
+    getTypes, 
+    getTypesById,
+    updateTypes,
+    deleteTypes,
+    createTypes
+};

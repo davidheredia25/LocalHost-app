@@ -18,30 +18,29 @@ const getProducts = async (req, res) => {
     console.log('category getProducts', category);
     console.log('type getProducts', type);
     try {
-        let getAllProducts = await Product.find();
+        let getAllProducts = await Product.find()
+        .populate('brand', ['name'])
+        .populate('category', ['name'])
+        .populate('type', ['name']);
         // console.log('getAllProducts getProducts', getAllProducts);
+        
         // filter
         let filtered = [];
-        let filterBrand = [];
-        let filterCategories = [];
-        let filterTypes = [];
-        if(brand !== "") {
-            filterBrand = await filterB(brand);
-            // console.log('filterBrand getProducts', filterBrand);
-            filtered = [...filterBrand];
-        }  
+
+        if(brand !== "") filtered = await filterB(brand, getAllProducts);
+        // console.log('filterBrand getProducts', filterBrand);
 
         if(category !== "") {
-            filterCategories = await filterC(category, filterBrand);
-            // console.log('filterCategories getProducts', filterCategories);
-            filtered = [...filterCategories];
+            if(filtered.length === 0 ) filtered = await filterC(category, getAllProducts);
+            else filtered = await filterC(category, filtered);
         } 
+        // console.log('filterCategories getProducts', filterCategories);
         
         if(type !== "") {
-            filterTypes = await filterT(type, filterCategories);
-            // console.log('filterTypes getProducts', filterTypes);
-            filtered = [...filterTypes];
+            if(filtered.length === 0)  filtered = await filterT(type, getAllProducts);
+            else filtered = await filterT(type, filtered);
         }
+        // console.log('filterTypes getProducts', filterTypes);
 
         // Search
         if(name === "" && filtered.length === 0) return res.json(getAllProducts);
@@ -61,7 +60,7 @@ const getProducts = async (req, res) => {
 
 const getProductById = async (req, res) => {
     const { id } = req.params;
-    console.log('id getProducts', id);
+    // console.log('id getProducts', id);
     try {
         let verificacion = await verificacionId(id);
         // console.log('verificacion getProducts', verificacion);
