@@ -21,7 +21,7 @@ const getProductById = async (req, res) => {
     const { id } = req.params;
     console.log('id getProducts', id);
     try {
-        let verificacion = verificacionId(id);
+        let verificacion = await verificacionId(id);
         // console.log('verificacion getProducts', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.product);
