@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getSubcategories } from "../../redux/actions/brand.actions";
-import { filterProducts, setFilterSubcategory } from "../../redux/actions/filters.actions";
+import { getProducts } from "../../redux/actions/products.actions";
+import { setFilterSubcategory } from "../../redux/actions/filters.actions";
 
-const FilterBySubcategory = () => {
+const FilterBySubcategory = ({ subcategories }) => {
     
     const dispatch = useDispatch();
-    const { subcategories } = useSelector(state => state.brand)
     const { brand, category } = useSelector(state => state.filters)
-
-    useEffect(() => {
-        dispatch(getSubcategories())
-    }, [])
 
     const [open, setOpen] = useState(false);
 
     const handleClick = (e) =>{
         dispatch(setFilterSubcategory(e.target.value))
-        dispatch(filterProducts({brand, category, subcategory: e.target.value}))
+        dispatch(getProducts({brand, category, subcategory: e.target.value}))
     }
     
     return ( 

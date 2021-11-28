@@ -2,37 +2,35 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resetFilter, filterProducts } from "../../redux/actions/filters.actions";
 
-const AppliedFilters = () => {
-
-    const { brand, category, subcategory } = useSelector(state => state.filters)
+const AppliedFilters = ({ filters }) => {
     
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
         dispatch(resetFilter(e.target.value))
-        dispatch(filterProducts({brand, category, subcategory}))
+        dispatch(filterProducts({ ...filters, [e.target.value]: "" }))
     }
 
     return (
         <div>
         {
-            brand && 
+            filters.brand && 
                 <div>
-                    <p>{brand}</p>
+                    <p>{filters.brand}</p>
                     <button value="brand" onClick={handleClick}>x</button>
                 </div>
         }
         {   
-            category && 
+            filters.category && 
                 <div>
-                    <p>{category}</p>
+                    <p>{filters.category}</p>
                     <button value="category" onClick={handleClick}>x</button>
                 </div>
         }
         {
-            subcategory && 
+            filters.subcategory && 
                 <div>
-                    <p>{subcategory}</p>
+                    <p>{filters.subcategory}</p>
                     <button value="subcategory" onClick={handleClick}>x</button>
                 </div>
         }
