@@ -3,22 +3,26 @@ import { useSelector, useDispatch } from "react-redux";
 import Cards from "../Cards/Cards";
 import FiltersContainer from "../../filtersCatalogo/FiltersContainer";
 import AppliedFilters from "../../filtersCatalogo/AppliedFilters";
-import { filterProducts } from "../../../redux/actions/filters.actions";
+import { getProducts } from "../../../redux/actions/products.actions";
 
 const Catalogo = () => {
     
     const dispatch = useDispatch();
-    const { brand, category, subcategory } = useSelector(state => state.filters)
-    
+    const { filters } = useSelector(state => state)
+    const { products } = useSelector(state => state.products)
+
     useEffect(() => {
-        dispatch(filterProducts({ brand, category, subcategory }))
+        dispatch(getProducts({ ...filters }))
     }, [])
 
     return (
         <div>
-            <AppliedFilters />
+            <AppliedFilters filters={filters} />
             <FiltersContainer />
-            <Cards />
+            {
+                products?.length ? <Cards products={products}/> : "Loading..."
+            }
+            
         </div>
     )
 }

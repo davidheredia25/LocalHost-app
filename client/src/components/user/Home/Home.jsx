@@ -14,7 +14,6 @@ const Home = () => {
             <Carousels />
             <BrandsHome />
             <ImgSection />
-            <Cards />
         </div>
     )
 }

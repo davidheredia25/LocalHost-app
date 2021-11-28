@@ -5,24 +5,20 @@ import Card from '../Card/Card';
 import './Cards.scss';
 
 
-const Cards = () => {
+const Cards = ({products}) => {
     const dispatch = useDispatch();
-    const { products } = useSelector( state => state.products);
-    //ejemplo para probar el render
-    console.log('productos', products)
+    /* const { brand, category, subcategory } = useSelector(state => state.filters) */
 
-    useEffect(() => {
-        dispatch(getProducts({}))
-    }, [])
-
-    
+ /*    useEffect(() => {
+        dispatch(getProducts({ brand, category, subcategory }))
+    }, []) */
 
     return (
 
         <div className='container'>
            {
             !products?.length 
-                ? <p>Not Found</p> 
+                ? <p>Loading...</p> 
                 : (
                     <div className='cards'>
                         {
