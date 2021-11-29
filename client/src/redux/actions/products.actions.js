@@ -2,7 +2,14 @@ import axios from 'axios';
 
 export const GET_PRODUCTS = "GET_PRODUCTS"
 export const GET_PRODUCTS_DETAILS = "GET_PRODUCTS_DETAILS"
+export const SET_PAGE = "SET_PAGE";
 
+export const setPage = (page) => {
+    return {
+        type: SET_PAGE,
+        payload: page
+    }
+};
 
 
 export const getProducts = ({ name, brand, category, subcategory }) => async (dispatch) => {

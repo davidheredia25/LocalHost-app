@@ -18,24 +18,26 @@ const updateBrand = async (req, res) => {
 
         if(verificacion.bool) {
             let verificacionCategory = [];
-            for (let i = 0; i < categories.length; i++) {
-                let verificacionCa = await verificacionC(categories[i]);
-                // console.log('verificacionCa updateBrand', verificacionCa);
-                if(verificacionCa.bool)  continue
-                else return res.send('Algunas de las categoria no es valida');
-                verificacionCategory.push(varificacionCa.category);
-            };
-            // console.log('verificacionCategory updateBrand', verificacionCategory);
+            if(categories) {
+                for (let i = 0; i < categories.length; i++) {
+                    let verificacionCa = await verificacionC(categories[i]);
+                    // console.log('verificacionCa updateBrand', verificacionCa);
+                    if(verificacionCa.bool) verificacionCategory.push(verificacionCa.category);
+                    else return res.send('Algunas de las categoria no es valida');
+                };
+                // console.log('verificacionCategory updateBrand', verificacionCategory);
+            }
     
             let verificacionTypes = [];
-            for(let i = 0; i < types.length; i++) {
-                let verificacionTy = await verificacionT(types[i]);
-                // console.log('verificacionTy updateBrand', verificacionTy);
-                if(verificacionTy.bool) continue
-                else return res.send('Algun tipo no es valida');
-                verificacionTypes.push(verificacionTy.type);
-            };
-            // console.log('verificacionTypes updateBrand', verificacionTypes);
+            if(types) {
+                for(let i = 0; i < types.length; i++) {
+                    let verificacionTy = await verificacionT(types[i]);
+                    // console.log('verificacionTy updateBrand', verificacionTy);
+                    if(verificacionTy.bool) verificacionTypes.push(verificacionTy.type);
+                    else return res.send('Algun tipo no es valida');
+                };
+                // console.log('verificacionTypes updateBrand', verificacionTypes);
+            }
 
             let update = await Brand.findByIdAndUpdate(id, {
                 name: name,
