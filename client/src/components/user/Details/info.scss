@@ -1,57 +1,41 @@
 
 .info_container{
-    width: 70%;
+    width: 800px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin: 0px 10px 0px 10px;
 }
 
-.info__cart{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    
+.ctn_details{
+    width: 80%;
+}
+
+.info_talles{
+    margin: 15px 0px 15px 0px;
 }
 
 .info_name{
     font-size: 25px;
+    letter-spacing: 1px;
     font-weight: 800;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 0px;
-    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+
 }
-
-
 
 .info_description {
-    font-size: 19px;
-    font-weight: 500;
-    font-family:  Helvetica, sans-serif
-    
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;  
 }
-.info_data{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
 
 .info_price{
-    font-size: 22px;
-    font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: "Glegoo", serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
     
 }
 
-.info_button{
-    margin: 5px;
-}
 
-
-.info_talles{
-    
-}
