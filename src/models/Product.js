@@ -10,19 +10,19 @@ const productSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Brand',
         required: true,
-        autopopulate: true
+        // autopopulate: true
     },
     category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
         required: true,
-        autopopulate: true
+        // autopopulate: true
     },
     type: {
         type: Schema.Types.ObjectId,
         ref: 'Types',
         required: true,
-        autopopulate: true
+        // autopopulate: true
     },
     price: {
         type: Number,

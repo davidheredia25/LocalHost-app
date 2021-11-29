@@ -3,13 +3,13 @@ const { verificacionId } = require('./middleware');
 
 const deleteBrand = async (req, res) => {
     const { id } = req.params;
-    console.log('id deleteBrand', id);
+    // console.log('id deleteBrand', id);
     try {
         let verificacion = await verificacionId(id);
 
         if(verificacion.bool) {
             let deleted = await Brand.findByIdAndDelete(id)
-            console.log('deleted deleteBrand', deleted);
+            // console.log('deleted deleteBrand', deleted);
             if(deleted)  return res.json(deleted);
             return res.send('No se elimino correctamente');
         }
