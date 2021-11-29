@@ -38,10 +38,13 @@ const SubcategoryForm = () => {
     }
 
     const handleX = (e) => {
-        let filterSub = brandInfo.categories.subcategories.filter(el => el !== e.target.value)
+        let array = brandInfo.categories.map(x => {
+            let filtered = x.subcategories.filter(el => el !== e.target.value)
+            return filtered;
+        })
         setObject({
             ...object,
-            subcategories: filterSub,
+            subcategories: array,
         })
     }
 
@@ -68,6 +71,9 @@ const SubcategoryForm = () => {
     
     return (
         <div>
+            <div>
+                {object.subcategories}
+            </div>
             {
                 brandInfo.categories.map(x => {
                     return (
@@ -92,7 +98,7 @@ const SubcategoryForm = () => {
                             </div>
                             <div>
                                 {
-                                    x.subcategories.map(e => {
+                                   x.subcategories?.map(e => {
                                         return (
                                             <div>
                                                 <span>{e}</span>
@@ -113,3 +119,5 @@ const SubcategoryForm = () => {
 }
 
 export default SubcategoryForm;
+
+

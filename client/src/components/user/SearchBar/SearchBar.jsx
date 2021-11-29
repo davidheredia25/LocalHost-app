@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../../redux/actions/products.actions'
 import style from "./SearchBar.css";
 import { Button } from '@mui/material';
-
+import {Link} from "react-router-dom"
 
 
 const SearchBar = () => {
@@ -39,15 +39,16 @@ const SearchBar = () => {
                     placeholder="Buscar por nombre y marca"
                     onChange={handleFilter} />
                 {
-                    filteredData.length ?
+                    filteredData.length  ?
                         <div className="dataResult">
                             {
                                 filteredData.map(e => {
                                     return (
+                                        <Link to={`/detail/${e._id}`}>
                                         <a className="dataItem">
                                             <p>{e.name}</p>
-                                            {/* <Link to="/products/detail:{e.id}"/> */}
                                         </a>
+                                        </Link>
                                     )
                                 })
                             }

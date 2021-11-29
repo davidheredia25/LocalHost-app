@@ -4,7 +4,7 @@ import { getCategories, setBrandCategories } from "../../../redux/actions/brand.
 
 const CategoryForm = () => {
     
-    /*const dispatch = useDispatch();
+    const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(getCategories())
@@ -20,16 +20,16 @@ const CategoryForm = () => {
     const handleClick = (e) => {
         dispatch(setBrandCategories(input));
         setInput("");
-    }*/
+    }
 
     return (
         <div>
-            {/*<div>
+            <div>
                 <h3>Seleccionar categorías:</h3>
                 <select onChange={handleSelect}>
                     <option selected value="">-categorías-</option>
                     {
-                        categories?.length?.map(x => {
+                        categories?.map(x => {
                             return <option value={x.name}>{x.name}</option>
                         })                        
                     }
@@ -43,7 +43,7 @@ const CategoryForm = () => {
                     onChange={(e) => setInput(e.target.value)}
                 />
                 <button onClick={handleClick}>AGREGAR</button>
-                </div> */}
+                </div> 
         </div>
     )
 }
