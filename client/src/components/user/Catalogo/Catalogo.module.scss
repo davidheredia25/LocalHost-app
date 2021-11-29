@@ -1,0 +1,20 @@
+@import '../../styles/media-queries.scss';
+
+
+.filtersAndCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include xs {
+        display: block;
+        margin: 0px;
+      }
+      @include sm {
+        display: block;
+        margin: 0px;
+      }
+      @include md {
+        display: block;
+        margin: 0px;
+      }
+}
