@@ -1,47 +1,31 @@
-import React, {useEffect, useState} from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts, productDelete, productEdit } from "../../../redux/actions/Crud.actions";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { productDelete } from "../../../redux/actions/Crud.actions";
+import { getProductsDetails } from "../../../redux/actions/products.actions";
 
-
-const EditDeleteProducts = () => {
-
-    const [form, setForm] = useState({
-        name: "",
-        brand: "",
-        category: "",
-        price: "",
-        color: [],
-        size: [],
-      
-    })
+const EditDeleteProducts = ({ products }) => {
     
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getProducts({}))
-    }, [dispatch])
-
-
-    const {products} = useSelector(state => state.crud)
-
-
-    const handleDelete = (id) => {
-        dispatch(productDelete(id))
+    const handleDelete = (e) => {
+        // confirmación de borrar
+        dispatch(productDelete(e.target.value))
     }
 
-    const handleEdit = (id) => {
-        dispatch(productEdit({ id, }))
+    const handleEdit = (e) => {
+        dispatch(getProductsDetails(e.target.value))
+        // y se abre el modal
     }
 
     return (
         <div>
             { 
-                products?.map(e => {
+                products?.map(x => {
                    return (
                         <div>
-                            <p>{e.name}</p>
-                            <button onChange={() => handleEdit(x._id)}>Editar</button>
-                            <button onChange={() => handleDelete(x._id)}>Elminar</button>
+                            <p>{x.name}</p>
+                            <button value={x._id} onClick={handleEdit}>Editar</button>
+                            <button value={x._id} onClick={handleDelete}>Elminar</button>
                         </div>
                     )
                 })

@@ -6,11 +6,11 @@ const config = require('./config');
 // IMPORTS ROUTES
 const BrandRoutes = require('./routes/Brand/index.brand');
 const CategoryRoutes = require('./routes/Category/index.category');
-const ProductsRoutes = require('./routes/Product/index.product');
-const ReviewRoutes = require('./routes/Review/index.review');
-const TicketRoutes = require('./routes/Ticket/index.ticket');
-const UserRoutes = require('./routes/User/index.user');
 const TypesRoutes = require('./routes/Types/index.types');
+const ProductsRoutes = require('./routes/Product/index.product');
+const UserRoutes = require('./routes/User/index.user');
+const TicketRoutes = require('./routes/Ticket/index.ticket');
+const ReviewRoutes = require('./routes/Review/index.review');
 
 const app = express();
 
