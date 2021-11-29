@@ -4,8 +4,10 @@ import Cards from "../Cards/Cards";
 import FiltersContainer from "../../filtersCatalogo/FiltersContainer";
 import AppliedFilters from "../../filtersCatalogo/AppliedFilters";
 import { getProducts } from "../../../redux/actions/products.actions";
+
  import NavBar from "../NavBar/NavBar";
 //  import Pagination from '../Pagination/Pagination'
+
 
 const Catalogo = () => {
     
@@ -19,7 +21,9 @@ const Catalogo = () => {
 
     return (
         <div>
+
             <NavBar />
+
             <AppliedFilters filters={filters} />
             <FiltersContainer />
             {
