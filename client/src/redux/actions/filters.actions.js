@@ -3,6 +3,7 @@ import { GET_PRODUCTS } from "./products.actions";
 export const SET_FILTER_BRAND = "SET_FILTER_BRAND";
 export const SET_FILTER_CATEGORY = "SET_FILTER_CATEGORY"; 
 export const SET_FILTER_SUBCATEGORY = "SET_FILTER_SUBCATEGORY"; 
+export const SET_FILTER_NAME = "SET_FILTER_NAME";
 export const RESET_FILTER = "RESET_FILTER";
 
 export const setFilterBrand = (string) => {
@@ -24,6 +25,13 @@ export const setFilterSubcategory = (string) => {
         type: SET_FILTER_SUBCATEGORY,
         payload: string
     }  
+}
+
+export const setFilterName = (name) => {
+    return {
+        type: SET_FILTER_NAME,
+        payload: name
+    }
 }
 
 export const resetFilter = (property) => {

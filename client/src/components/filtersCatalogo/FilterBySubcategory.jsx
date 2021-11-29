@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/products.actions";
 import { setFilterSubcategory } from "../../redux/actions/filters.actions";
+import styles from "./filtersCatalogo.module.css";
 
 const FilterBySubcategory = ({ subcategories }) => {
     
@@ -17,14 +18,14 @@ const FilterBySubcategory = ({ subcategories }) => {
     
     return ( 
         <div>
-            <button onClick={() => setOpen(!open)}>TIPOS</button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>TIPOS</strong></button>
             {
                 open ? 
-                <div>
+                <div className={styles.filtersList}>
                 {
                     subcategories && subcategories.map(x => {
                         return (
-                            <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
+                            <button className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                         )
                     })
                 }

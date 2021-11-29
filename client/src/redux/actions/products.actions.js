@@ -3,6 +3,8 @@ import axios from 'axios';
 export const GET_PRODUCTS = "GET_PRODUCTS"
 export const GET_PRODUCTS_DETAILS = "GET_PRODUCTS_DETAILS"
 export const SET_PAGE = "SET_PAGE";
+export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+export const REMOVE_PRODUCTS = "REMOVE_PRODUCTS";
 
 export const setPage = (page) => {
     return {
@@ -35,5 +37,17 @@ export const getProductsDetails = (id) => async (dispatch) => {
     } catch (error) {
         console.log(error)
         
+    }
+}
+
+export const removeProduct = () => {
+    return {
+        type: REMOVE_PRODUCT
+    }
+}
+
+export const removeProducts = () => {
+    return {
+        type: REMOVE_PRODUCTS
     }
 }

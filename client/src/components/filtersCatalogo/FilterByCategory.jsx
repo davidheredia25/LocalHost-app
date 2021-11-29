@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterCategory } from "../../redux/actions/filters.actions";
 import { getProducts } from "../../redux/actions/products.actions";
+import styles from "./filtersCatalogo.module.css";
 
 const FilterByCategory = ({ categories }) => {
     
@@ -17,14 +18,14 @@ const FilterByCategory = ({ categories }) => {
 
     return (
         <div>
-            <button onClick={() => setOpen(!open)}>CATEGORIAS</button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>CATEGORIAS</strong></button>
             {
                 open ?
-                <div>
+                <div className={styles.filtersList}>
                 {
                     categories?.map(x => {
                         return (
-                            <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
+                            <button className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                         )
                     })
                 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resetFilter, filterProducts } from "../../redux/actions/filters.actions";
+import styles from "./filtersCatalogo.module.css";
 
 const AppliedFilters = ({ filters }) => {
     
@@ -12,26 +13,33 @@ const AppliedFilters = ({ filters }) => {
     }
 
     return (
-        <div>
+        <div className={styles.bcsContainer}>
+        {
+            filters.name && 
+                <div className={styles.appliedContainer}>
+                    <h5 className={styles.h5}>{filters.name.toUpperCase()}</h5>
+                    <button className={styles.x} value="name" onClick={handleClick}>X</button>
+                </div>
+        }
         {
             filters.brand && 
-                <div>
-                    <p>{filters.brand}</p>
-                    <button value="brand" onClick={handleClick}>x</button>
+                <div className={styles.appliedContainer}>
+                    <h5 className={styles.h5}>{filters.brand.toUpperCase()}</h5>
+                    <button className={styles.x} value="brand" onClick={handleClick}>X</button>
                 </div>
         }
         {   
             filters.category && 
-                <div>
-                    <p>{filters.category}</p>
-                    <button value="category" onClick={handleClick}>x</button>
+                <div className={styles.appliedContainer}> 
+                    <h5 className={styles.h5}>{filters.category.toUpperCase()}</h5>
+                    <button className={styles.x} value="category" onClick={handleClick}>X</button>
                 </div>
         }
         {
             filters.subcategory && 
-                <div>
-                    <p>{filters.subcategory}</p>
-                    <button value="subcategory" onClick={handleClick}>x</button>
+                <div className={styles.appliedContainer}>
+                    <h5 className={styles.h5}>{filters.subcategory.toUpperCase()}</h5>
+                    <button className={styles.x} value="subcategory" onClick={handleClick}>X</button>
                 </div>
         }
         </div>    
