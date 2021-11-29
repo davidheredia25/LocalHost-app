@@ -7,12 +7,12 @@ const brandSchema = new Schema({
         required: true
     },
     categories: [{
-        name: {
+        name: [{
             type: Schema.Types.ObjectId,
             ref: 'Category',
             required: true,
             autopopulate: true
-        },
+        }],
         types: [{
             type: Schema.Types.ObjectId,
             ref: 'Types',
@@ -22,7 +22,7 @@ const brandSchema = new Schema({
     }],
     image: {
         type: String,
-        required: true
+        // required: true
     }
 }, {
     versionKey: false,
