@@ -12,6 +12,7 @@ const BrandForm = ({ brands }) => {
 
     // Al seleccionar una marca existente la seteo con sus categorías y subcategorías preexistentes
     const handleSelect = (e) => {
+        e.preventDefault();
         dispatch(setExistentBrand(e.target.value));
     }
 
@@ -33,7 +34,7 @@ const BrandForm = ({ brands }) => {
                 <select onChange={handleSelect}>
                     <option selected value="">-selecciona una marca-</option>
                     {
-                        brands?.lenght?.map(x => {
+                        brands?.map(x => {
                             return <option value={x.name}>{x.name}</option>
                         })
                     }

@@ -78,3 +78,11 @@ export const getSubcategories = () => async dispatch => {
         payload: data
     })
 }
+export const deleteSubcategory = () => async dispatch => {
+    const { data } = await axios.delete("/brand/delete")
+    return dispatch({
+        type: GET_SUBCATEGORIES,
+        payload: data
+    })
+}
+

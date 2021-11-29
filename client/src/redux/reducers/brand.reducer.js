@@ -81,9 +81,22 @@ export function brandReducer(state = initialState, { type, payload }) {
             }
         case SET_EXISTENT_BRAND:
             let brandFound = state.brands.find(x => x.name === payload);
+            let arrayCategories = [];
+            brandFound.categories.forEach(x => {
+                let sub = x.types.map(el => el.name)
+                let object = {
+                    name: x.name.name, // zapatillas //zapatillas
+                    subcategories: sub // ["Running", "Skate, Court" etc...]  
+                }
+                arrayCategories.push(object)
+            })
+            let finalObject = {
+                name: payload,
+                categories: arrayCategories
+            }
             return {
                 ...state,
-                brandInfo: brandFound
+                brandInfo: finalObject
             }
         default:
             return state;
