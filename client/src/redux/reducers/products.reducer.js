@@ -1,8 +1,13 @@
-import { GET_PRODUCTS, GET_PRODUCTS_DETAILS } from "../actions/products.actions";
+import { 
+  GET_PRODUCTS, 
+  GET_PRODUCTS_DETAILS,
+  SET_PAGE
+  } from "../actions/products.actions";
 
 const initialState = {
   products: [],
-  product: null
+  product: null,
+  page: 1,
 };
 
 export function productsReducer(state = initialState, action) {
@@ -12,10 +17,15 @@ export function productsReducer(state = initialState, action) {
         ...state,
         products: action.payload
       }
-    case GET_PRODUCTS_DETAILS:
+      case GET_PRODUCTS_DETAILS:
       return {
         product: action.payload
       }
+      case SET_PAGE:
+        return {
+            ...state,
+            page: action.payload
+        };
 
     default:
     return state;
