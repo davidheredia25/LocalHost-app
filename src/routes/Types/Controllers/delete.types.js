@@ -1,4 +1,4 @@
-const Types = require('../../../models/Ticket');
+const Types = require('../../../models/Types');
 const { verificacionId } = require('./middleware');
 
 const deleteTypes = async (req, res) => {

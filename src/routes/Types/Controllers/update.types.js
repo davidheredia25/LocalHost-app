@@ -1,4 +1,4 @@
-const Types = require('../../../models/Ticket');
+const Types = require('../../../models/Types');
 const { verificacionId } = require('./middleware');
 
 const updateTypes = async (req, res) => {
@@ -12,10 +12,10 @@ const updateTypes = async (req, res) => {
 
         if(name && verificacion.bool) {
             let update = await Types.findByIdAndUpdate(id, {
-                name: name
+                name
             }, {new: true});
-            update = await update.save();
             // console.log('update updateTypes', update);
+            update = await update.save();
             return res.json(update);
         }
         res.send('No se recivio nombre o id del tipo');

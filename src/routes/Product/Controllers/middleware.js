@@ -6,9 +6,9 @@ const Types = require('../../../models/Types');
 const verificacionName = async (name) => {
     try {
         let find = await Product.find({name: name});
-        // console.log('find verificacionName', find);
+         console.log('find verificacionName', find);
         let obj = { bool: false };
-        if(find.lenght !== 0 || find !== null) return obj = { bool: true };
+        if(find.length !== 0) return obj = { bool: true };
         return obj;
     } catch (error) {
         console.log(error);
@@ -23,7 +23,9 @@ const verificacionId = async (id) => {
         .populate('type', ['name']);
         // console.log('find verificacionId', find);
         let obj = { bool: false };
-        if(find.length !== 0 || find !== null) return obj = { bool: true, product: find };
+
+        if(find !== null) return obj = { bool: true, product: find };
+
         return obj;
     } catch (error) {
         console.log(error);
@@ -32,10 +34,12 @@ const verificacionId = async (id) => {
 
 const verificacionB = async (name) => {
     try {
-        let find = await Brand.find({name: name}); 
+        let find = await Brand.findOne({name: name}); 
         // console.log('find verificacionB', find);
         let obj = { bool: false };
-        if(find.length !== 0 || find !== null) return obj = { bool: true, brand: find._id };
+
+        if(find !== null) return obj = { bool: true, brand: find._id };
+
         return obj;
     } catch (error) {
         console.log(error);
@@ -44,10 +48,12 @@ const verificacionB = async (name) => {
 
 const verificacionC = async (name) => {
     try {
-        let find = await Category.find({name: name}); 
+        let find = await Category.findOne({name: name}); 
         // console.log('find verificacionC', find);
         let obj = { bool: false };
-        if(find.length !== 0 || find !== null) return obj = { bool: true, category: find._id };
+
+        if(find !== null) return obj = { bool: true, category: find._id };
+
         return obj;
     } catch (error) {
         console.log(error);
@@ -56,10 +62,12 @@ const verificacionC = async (name) => {
 
 const verificacionT = async (name) => {
     try {
-        let find = await Types.find({name: name}); 
+        let find = await Types.findOne({name: name}); 
         // console.log('find verificacionT', find);
         let obj = { bool: false };
-        if(find.length !== 0 || find !== null) return obj = { bool: true, type: find._id };
+
+        if(find !== null) return obj = { bool: true, type: find._id };
+
         return obj;
     } catch (error) {
         console.log(error);
