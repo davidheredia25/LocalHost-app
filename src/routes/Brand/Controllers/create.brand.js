@@ -19,9 +19,8 @@ const createBrand = async (req, res) => {
         for(let i = 0; i < categories.length; i++) {
             let verificacionCa = await verificacionC(categories[i]);
             // console.log('verificacionCa createBrand', verificacionCa);
-            if(verificacionCa.bool) continue
+            if(verificacionCa.bool) verificacionCategory.push(verificacionCa.category);
             else return res.send('Algunas de las categoria no es valida');
-            verificacionCategory.push(verificacionCa.category);
         }
         // console.log('verificacionCategory createBrand', verificacionCategory);
         
@@ -29,9 +28,8 @@ const createBrand = async (req, res) => {
         for(let i = 0; i < types.length; i++) {
             let verificacionTy = await verificacionT(types[i]);
             // console.log('verificacionTy createBrand', verificacionTy);
-            if(verificacionTy.bool) continue
+            if(verificacionTy.bool) verificacionTypes.push(verificacionTy.type);
             else return res.send('Algunas de las categoria no es valida');
-            verificacionTypes.push(verificacionTy.type);
         }
         // console.log('verificacionTypes createBrand', verificacionTypes);
         
@@ -43,7 +41,7 @@ const createBrand = async (req, res) => {
             }
         });
         newBrand = await newBrand.save();
-        console.log('newBrand createBrand', newBrand);
+        // console.log('newBrand createBrand', newBrand);
         res.json(newBrand);
     } catch (error) {
         console.log(error);
