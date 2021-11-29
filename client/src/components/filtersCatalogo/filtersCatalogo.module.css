@@ -5,6 +5,7 @@
 
 .filtersContainer {
     width: 20vw; 
+    margin-top: 4%;
 }
 
 .buttonTitle {
@@ -19,7 +20,7 @@
 }
 .button:hover {
     background-color: black;
-    color: white;
+    color: black;
 }
 
 .appliedContainer {
