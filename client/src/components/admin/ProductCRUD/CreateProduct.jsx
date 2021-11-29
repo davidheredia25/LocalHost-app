@@ -7,6 +7,7 @@ import {
   getSubcategories,
 } from "../../../redux/actions/brand.actions.js";
 import NavBar from "../../user/NavBar/NavBar";
+import Style from "./Style/CreateProduct.module.scss"
 
 const CreateProduct = () => {
   const dispatch = useDispatch();
@@ -64,144 +65,152 @@ const CreateProduct = () => {
   };
 
   const selectMarca = (e) => {
-      console.log("VALUE!!!", e.target.value)
-        setForm({
-            ...form,
-            brand: e.target.value
-        });
+    console.log("VALUE!!!", e.target.value)
+    setForm({
+      ...form,
+      brand: e.target.value
+    });
   };
   const selectCategoria = (e) => {
     console.log("VALUE!!!", e.target.value)
-      setForm({
+    setForm({
       ...form,
       categories: e.target.value
-      });
-};
-const selectSubcategoria = (e) => {
+    });
+  };
+  const selectSubcategoria = (e) => {
     console.log("VALUE!!!", e.target.value)
-      setForm({
-        ...form,
-        types: e.target.value
-      });
-};
+    setForm({
+      ...form,
+      types: e.target.value
+    });
+  };
 
   return (
     <div>
       <NavBar />
-      <form>
-        <div>
-          <label>Nombre</label>
-          <input
-            name="name"
-            type="text"
-            placeholder="Nombre.."
-            value={form.name}
-            onChange={handleChange}
-          />
-        </div>
+      <div className={Style.ctn}>
+        <form className={Style.form}>
+          <div className={Style.ctnFlex}>
+            <div>
+              <div className={Style.name}>
+                <label className={Style.title}>Nombre</label>
+                <input className={Style.input}
+                  name="name"
+                  type="text"
+                  placeholder="Nombre.."
+                  value={form.name}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div>
-          <label>Descripcion </label>
-          <input
-            name="description"
-            type="text"
-            placeholder="Descripcion.."
-            value={form.description}
-            onChange={handleChange}
-          />
-        </div>
+              <div className={Style.name}>
+                <label className={Style.title}>Descripcion </label>
+                <input className={Style.input}
+                  name="description"
+                  type="text"
+                  placeholder="Descripcion.."
+                  value={form.description}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div>
-          <label>Precio</label>
-          <input
-            name="price"
-            type="number"
-            placeholder="Precio.."
-            value={form.price}
-            onChange={handleChange}
-          />
-        </div>
+              <div className={Style.name}>
+                <label className={Style.title}>Precio</label>
+                <input className={Style.input}
+                  name="price"
+                  type="number"
+                  placeholder="Precio.."
+                  value={form.price}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div>
-          <label>Color</label>
-          <input
-            name="color"
-            type="text"
-            placeholder="Color.."
-            value={form.color}
-            onChange={handleChange}
-          />
-        </div>
+              <div className={Style.name}>
+                <label className={Style.title}>Color</label>
+                <input className={Style.input}
+                  name="color"
+                  type="text"
+                  placeholder="Color.."
+                  value={form.color}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div>
-          <label>Talle</label>
-          <input
-            name="talle"
-            type="text"
-            placeholder="Talle..."
-            value={form.talle}
-            onChange={handleChange}
-          />
-        </div>
+            </div>
+          </div>
 
-        <div>
-          <label>Imagen</label>
-          <input
-            name="image"
-            type="text"
-            placeholder="Imagen.."
-            value={form.image}
-            onChange={handleChange}
-          />
-        </div>
+          <div>
+            <div className={Style.name}>
+              <label className={Style.title}>Talle</label>
+              <input className={Style.input}
+                name="talle"
+                type="text"
+                placeholder="Talle..."
+                value={form.talle}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={Style.name}>
+              <label className={Style.title}>Imagen</label>
+              <input className={Style.input}
+                name="image"
+                type="text"
+                placeholder="Imagen.."
+                value={form.image}
+                onChange={handleChange}
+              />
+            </div>
 
-        <div>
-          <select onChange={selectMarca}>
-            <option selected value={form.brand}>
-              Selecciona la Marca
-            </option>
-            {brands?.map((e) => {
-              return (
-                <option name="brand" value={e.name}>
-                  {e.name}
+            <div className={Style.name}>
+              <select className={Style.sele} onChange={selectMarca}>
+                <option selected value={form.brand}>
+                  Selecciona la Marca
                 </option>
-              );
-            })}
-          </select>
-        </div>
+                {brands?.map((e) => {
+                  return (
+                    <option name="brand" value={e.name}>
+                      {e.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
 
-        <div>
-          <select onChange={selectCategoria}>
-            <option selected value="">
-              Selecciona la Categoria
-            </option>
-            {categories?.map((e) => {
-              return (
-                <option name="categories" value={e.name}>
-                  {e.name}
+            <div className={Style.name}>
+              <select className={Style.sele} onChange={selectCategoria}>
+                <option selected value="">
+                  Selecciona la Categoria
                 </option>
-              );
-            })}
-          </select>
-        </div>
+                {categories?.map((e) => {
+                  return (
+                    <option name="categories" value={e.name}>
+                      {e.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
 
-        <div>
-          <select onChange={selectSubcategoria}>
-            <option selected value="">
-              Selecciona la SubCategoria
-            </option>
-            {subcategories?.map((e) => {
-              return (
-                <option name="types" value={e.name}>
-                  {e.name}
+            <div className={Style.name}>
+              <select className={Style.sele} onChange={selectSubcategoria}>
+                <option selected value="">
+                  Selecciona la SubCategoria
                 </option>
-              );
-            })}
-          </select>
-        </div>
+                {subcategories?.map((e) => {
+                  return (
+                    <option name="types" value={e.name}>
+                      {e.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <button className={Style.button} onClick={handleClick}>Crear</button>
+          </div>
 
-        <button onClick={handleClick}>Crear</button>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
