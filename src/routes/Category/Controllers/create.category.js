@@ -3,15 +3,16 @@ const { verificacionName } = require('./middleware');
 
 const createCategory = async (req, res) => {
     const { name } = req.body;
-    // console.log('name createCategory', name);
+    console.log('name createCategory', name);
     try {
-        let verificacionCategory = await verificacionName(name);
-        // console.log('verificacionCategory createCategory', verificacionCategory);
+        let verificacion = await verificacionName(name);
+        console.log('verificacionCategory createCategory', verificacion);
         if(verificacion.bool)  return res.send(`La categoria ${name} ya existe`);
         
+
         let newCategory = new Category({ name });
         newCategory = await newCategory.save();
-        // console.log('newCategory createCategory', newCategory);
+        console.log('newCategory createCategory', newCategory);
         res.json(newCategory);
     } catch (error) {
         console.log(error);

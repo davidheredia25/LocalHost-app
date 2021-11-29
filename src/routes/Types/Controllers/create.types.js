@@ -1,4 +1,4 @@
-const Types = require('../../../models/Ticket');
+const Types = require('../../../models/Types');
 const { verificacionName } = require('./middleware');
 
 const createTypes = async (req, res) => {
