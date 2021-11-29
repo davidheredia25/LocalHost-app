@@ -1,7 +1,9 @@
 import { 
   GET_PRODUCTS, 
   GET_PRODUCTS_DETAILS,
-  SET_PAGE
+  SET_PAGE,
+  REMOVE_PRODUCT,
+  REMOVE_PRODUCTS
   } from "../actions/products.actions";
 
 const initialState = {
@@ -26,7 +28,16 @@ export function productsReducer(state = initialState, action) {
             ...state,
             page: action.payload
         };
-
+      case REMOVE_PRODUCT:
+        return {
+          ...state,
+          product: null
+        }
+      case REMOVE_PRODUCTS:
+        return {
+          ...state,
+          products: []
+        }
     default:
     return state;
   }

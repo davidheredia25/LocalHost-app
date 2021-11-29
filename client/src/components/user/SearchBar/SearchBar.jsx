@@ -1,22 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../../redux/actions/products.actions'
 import style from "./SearchBar.css";
 import { Button } from '@mui/material';
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+import { setFilterName } from "../../../redux/actions/filters.actions";
 
 
 const SearchBar = () => {
-
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [filteredData, setFilteredData] = useState([])
     const [input, setInput] = useState("")
     const { products } = useSelector(state => state.products)
 
+    useEffect(() => {
+        dispatch(getProducts({}))
+    }, [])
 
     const handleFilter = (e) => {
         setInput(e.target.value)
-        const filterProducts = products.filter((x) => {
+        const filterProducts = products?.filter((x) => {
             return x.name.toLowerCase().includes(e.target.value.toLowerCase())
         });
         if (e.target.value === "") {
@@ -27,7 +31,9 @@ const SearchBar = () => {
     }
     function handleSubmit(e) {
         e.preventDefault()
-        dispatch(getProducts({ name: input }))
+        dispatch(setFilterName(input))
+        navigate("/catalogo")
+        /* dispatch(getProducts({ name: input })) */
         setInput("")
         setFilteredData([])
     }

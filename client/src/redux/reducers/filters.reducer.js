@@ -2,13 +2,15 @@ import {
     SET_FILTER_BRAND, 
     SET_FILTER_CATEGORY,
     SET_FILTER_SUBCATEGORY,
-    RESET_FILTER
+    RESET_FILTER,
+    SET_FILTER_NAME
 } from "../actions/filters.actions";
 
 const initialState = {
   brand: "",
   category: "",
   subcategory: "",
+  name: "",
 }
 
 export function filtersReducer(state = initialState, { type, payload }) {
@@ -27,6 +29,11 @@ export function filtersReducer(state = initialState, { type, payload }) {
         return {
             ...state,
             subcategory: payload
+        }
+    case SET_FILTER_NAME:
+        return {
+            ...state,
+            name: payload
         }
     case RESET_FILTER:
         return {

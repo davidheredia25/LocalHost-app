@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsDetails } from "../../../redux/actions/products.actions";
+import { getProductsDetails, removeProduct } from "../../../redux/actions/products.actions";
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
 import { useParams } from "react-router-dom";
@@ -15,6 +15,7 @@ const Details = () => {
 
   useEffect(() => {
     dispatch(getProductsDetails(id))
+    return () => dispatch(removeProduct())
   }, [dispatch, id])
 
   return (

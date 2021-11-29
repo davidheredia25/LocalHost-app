@@ -4,6 +4,7 @@ import FilterByBrand from "./FilterByBrand";
 import FilterByCategory from "./FilterByCategory";
 import FilterBySubcategory from "./FilterBySubcategory";
 import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
+import styles from "./filtersCatalogo.module.css";
 
 const FiltersContainer = () => {
 
@@ -19,9 +20,9 @@ const FiltersContainer = () => {
     return (
         (brands?.length !== 0 && categories?.length !== 0 && subcategories?.length !== 0) 
             ?
-            <div>
-                <FilterByBrand brands={brands} />
-                <FilterByCategory categories={categories} />
+            <div className={styles.filtersContainer}>
+                <FilterByBrand brands={brands} /><br/>
+                <FilterByCategory categories={categories} /><br/>
                 <FilterBySubcategory subcategories={subcategories} />
             </div>
             :

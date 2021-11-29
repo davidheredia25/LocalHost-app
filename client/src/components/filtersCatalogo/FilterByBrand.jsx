@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterBrand } from "../../redux/actions/filters.actions";
 import { getProducts } from "../../redux/actions/products.actions";
+import styles from "./filtersCatalogo.module.css";
 
 const FilterByBrand = ({ brands }) => {
     
@@ -17,14 +18,14 @@ const FilterByBrand = ({ brands }) => {
 
     return (
         <div>
-            <button onClick={() => setOpen(!open)}>MARCAS</button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>MARCAS</strong></button>
             {
                 open ? 
-                    <div>
+                    <div className={styles.filtersList}>
                     {
                         brands && brands.map(x => {
                             return (
-                                <button value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
+                                <button className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                             )
                         })
                     }
