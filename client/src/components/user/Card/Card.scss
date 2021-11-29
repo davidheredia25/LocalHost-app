@@ -52,6 +52,7 @@
   font-family: "Roboto", sans-serif;
 }
 
+
 .card_price,
 .card_name {
   margin: 0 auto;
@@ -59,4 +60,53 @@
 
 .card_ctn_modal {
   display: flex;
+}
+
+.card_ctn_btn_modal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_ctn_info{
+  display: flex;
+  flex-direction: column;
+}
+
+.card_btn_modal {
+  margin: 0px 10px 0px 10px;
+  padding: 1em 2em;
+  border: 1px solid black;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background-color: #000000;
+  cursor: pointer;
+  width: 200px;
+}
+
+.card_btn_modal:hover {
+  background-color: rgba(255, 255, 255, 0.383);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+}
+
+
+.card_name_modal{
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.card_price__modal{
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.card_price__modal,
+.card_name_modal{
+  margin: 0;
 }

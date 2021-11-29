@@ -3,20 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Card.scss';
 import { MdOutlineAddShoppingCart, MdFavoriteBorder } from 'react-icons/md';
-import { addItemToCart, setCount } from '../../../redux/actions/cart.actions.js';
-import { setTalle, setProduct } from "../../../redux/actions/cart.actions";
+import { addItemToCart, setCount, setTalle, setProduct } from '../../../redux/actions/cart.actions.js';
 import { Button } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Modal from 'react-modal';
 
 
 const Card = ({ product }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
-    const dispatch=useDispatch();
-    const { cartProduct } = useSelector(state => state.cart) 
-    const { cart } = useSelector(state => state.cart) 
-    console.log('carrito', cart)
-    console.log('cartProduct',cartProduct)
+    const dispatch = useDispatch();
+
     const [num, setNum] = useState(1);
     const { talle } = useSelector(state => state.cart.cartProduct)
 
@@ -27,7 +22,7 @@ const Card = ({ product }) => {
     }
 
     const subtraction = () => {
-        setNum(num -1)
+        setNum(num - 1)
         dispatch(setCount(num - 1))
     }
     const addition = () => {
@@ -55,8 +50,6 @@ const Card = ({ product }) => {
             right: 'auto',
             bottom: 'auto',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: '#EEEEEE',
-            color: '#000000',
         },
     };
 
@@ -79,46 +72,45 @@ const Card = ({ product }) => {
             <Modal
                 isOpen={modalIsOpen}
                 style={customStyles}
-
             >
-
                 <div className='card_ctn_modal'>
                     <img className='card_image' src={product.image} alt={product.name} />
 
-                    <div >
-                        <p className='card_name'>{product.name}</p>
-                        <p className='card_price'>${product.price}</p>
+                    <div className='card_ctn_info' >
+                        <p className='card_name_modal'>{product.name}</p>
+                        <p className='card_price__modal'>${product.price}</p>
                         <div className='info_talles'>
-                    {
-                        product.talle ?
-                            product.talle.map(t => {
-                                return (
-                                    <Button
-                                        value={t}
-                                        onClick={onClick}
-                                        variant={talle === t ? 'outlined' : 'text'}
-                                        style={{ 'color': '#000000' }}
-                                    >
-                                        {t}
-                                    </Button>
-                                )
-                            }) : null
-                    }
-                </div>
-                        <div >
-                            <Button variant='outlined' style={{ 'color': '#000000', 'width' : 10, 'margin': 10}} disabled={num === 1} onClick={subtraction}>
-                                -
-                            </Button>
-                            <span>{num}</span>
-                            <Button variant='outlined' style={{ 'color': '#000000', 'width' : 5   , 'margin': 10}}  onClick={addition}>
-                                +
-                            </Button>
-                     </div>
-                        <button onClick={closeModal}> CANCELAR</button>
-                        <button onClick={addCart}> AGREGAR </button>
-                    </div>
+                            {
+                                product.talle ?
+                                    product.talle.map(t => {
+                                        return (
+                                            <Button
+                                                value={t}
+                                                onClick={onClick}
+                                                variant={talle === t ? 'outlined' : 'text'}
+                                                style={{ 'color': '#000000' }}
+                                            >
+                                                {t}
+                                            </Button>
+                                        )
+                                    }) : null
+                            }
+                            <div>
+                                <Button variant='outlined' style={{ 'color': '#000000', 'width': 10, 'margin': 10 }} disabled={num === 1} onClick={subtraction}>
+                                    -
+                                </Button>
+                                <span>{num}</span>
+                                <Button variant='outlined' style={{ 'color': '#000000', 'width': 5, 'margin': 10 }} onClick={addition}>
+                                    +
+                                </Button>
+                            </div>
+                        </div>
+                        <div className='card_ctn_btn_modal'>
 
-                   
+                            <button className='card_btn_modal' onClick={closeModal}> CANCELAR</button>
+                            <button className='card_btn_modal' onClick={addCart}> AGREGAR </button>
+                        </div>
+                    </div>
                 </div>
 
             </Modal>
