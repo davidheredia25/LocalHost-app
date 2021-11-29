@@ -21,7 +21,7 @@ const Details = () => {
     product
       ?
       <div>
-        <NavBar />
+         <NavBar />
         <div className='details_container'>
           <div className='details_image'>
             <ProductImage
