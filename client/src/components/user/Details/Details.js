@@ -1,27 +1,27 @@
-import React, {useEffect} from "react";
-import {useState}  from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React, { useEffect } from "react";
+import { useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import { getProductsDetails } from "../../../redux/actions/products.actions";
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
-import {useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NavBar from '../NavBar/NavBar';
-import './Details.scss';  
+import './Details.scss';
 
-const Details= () => {
+const Details = () => {
   const dispatch = useDispatch();
-  const {product} = useSelector((state) => state.products)
+  const { product } = useSelector((state) => state.products)
   const { id } = useParams();
 
   useEffect(() => {
-      dispatch(getProductsDetails(id))
+    dispatch(getProductsDetails(id))
   }, [dispatch, id])
 
   return (
-    product 
+    product
       ?
       <div>
-        <NavBar/>
+        <NavBar />
         <div className='details_container'>
           <div className='details_image'>
             <ProductImage
@@ -29,9 +29,7 @@ const Details= () => {
               product={product}
             />
           </div>
-          <div className='details_image'>
-            <ProductInfo product={product} />
-          </div>
+          <ProductInfo product={product} />
         </div>
       </div>
       :

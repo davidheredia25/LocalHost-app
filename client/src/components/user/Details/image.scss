@@ -1,18 +1,10 @@
-.image_carousel {
-    height: 600px;
-    width: 85%;
-    
-
+.ctn {
+  width: 800px;
+  margin: 0px 10px 0px 10px;
 }
 
-.product_image_container{
-    height: 600px;
-    width: 100%;
-    margin-right: 8rem;
-}
-
-.product_image{
-    height: 600px;
-    // width: 750px; 
-    object-fit: cover;
+.product_image {
+  height: 800px;
+  width: 800px;
+  object-fit: cover;
 }
