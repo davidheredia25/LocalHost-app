@@ -5,6 +5,7 @@ import style from "./SearchBar.css";
 import { Button } from '@mui/material';
 import {Link, useNavigate} from "react-router-dom"
 import { setFilterName } from "../../../redux/actions/filters.actions";
+import SearchIcon from '@material-ui/icons/Search';
 
 
 const SearchBar = () => {
@@ -61,7 +62,7 @@ const SearchBar = () => {
                         </div> :
                         null
                 }
-                <Button variant='text' style={{'color' : '#EEEEEE'}} className="button">Enviar</Button>
+                <Button variant='text' style={{'color' : '#EEEEEE'}} className="button"><SearchIcon/></Button>
             </form>
         </div>
     )
