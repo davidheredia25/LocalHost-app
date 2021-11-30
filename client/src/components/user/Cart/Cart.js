@@ -2,7 +2,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import NavBar from '../NavBar/NavBar';
 import CartCard from "./cartCard";
 import style from './carrito.module.scss';
 import { Button } from '@mui/material';
@@ -25,7 +24,6 @@ const Cart= () => {
 
     return (
         <div className={style.cart}>
-           <NavBar />
             <div className={style.cards}>
                 {cart.length?
                  cart.map(x => {
