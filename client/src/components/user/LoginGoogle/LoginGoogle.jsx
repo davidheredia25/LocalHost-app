@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom'
 import { loginGoogle } from '../../../redux/actions/login.actions'
+import { useDispatch } from 'react-redux';
 
 
 const LoginGoogle = () => {
-
+    const dispatch = useDispatch()
     const navigate = useNavigate();
 
     const googleResponse = (response) => {

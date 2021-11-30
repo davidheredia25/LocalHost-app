@@ -4,7 +4,6 @@ const initialState = {
     user: null
 }
 
-
 export default function loginReducer(state = initialState, { type, payload }) {
     switch (action) {
         case GET_USER:

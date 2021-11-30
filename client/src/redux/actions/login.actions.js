@@ -1,7 +1,12 @@
+import axios from "axios"
+
+
 export const GET_USER = "GET_USER"
 
 
-export const loginGoogle = (tokenId) = async dispatch => {
+
+
+export const loginGoogle = ({tokenId}) => async dispatch => {
     try {
         const { data } = await axios.post("/login", { tokenId })
         return dispatch({
