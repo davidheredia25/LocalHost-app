@@ -7,7 +7,6 @@ import {Home, Card, Cards, Details, Cart, NavBar, SearchBar, BrandContainer, Cre
 
 
 
-
 function App () {
 	return (
 		<Routes>
