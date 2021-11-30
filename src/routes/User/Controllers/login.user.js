@@ -2,7 +2,7 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const User = require('../../../models/User');
 const { OAuth2Client } = require("google-auth-library");
-const config = require("../../config.js");
+const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
 
 

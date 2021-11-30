@@ -1,3 +1,4 @@
+import { LOGIN_LOCAL, REGISTER_LOCAL } from "../actions/login.actions";
 import {GET_USER} from "../actions/products.actions"
 
 const initialState = {
@@ -12,6 +13,17 @@ export default function loginReducer(state = initialState, { type, payload }) {
                 ...state,
                 user: payload
             }
+
+        case REGISTER_LOCAL:
+            return {
+                ...state, 
+                user: payload
+            }
+        case LOGIN_LOCAL:
+            return {
+                ...state,
+                user: payload
+            }   
         default:
             return state;
     }
