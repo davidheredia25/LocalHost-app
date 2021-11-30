@@ -6,7 +6,6 @@ import {
   getCategories,
   getSubcategories,
 } from "../../../redux/actions/brand.actions.js";
-import NavBar from "../../user/NavBar/NavBar";
 import Style from "./Style/CreateProduct.module.scss"
 
 const CreateProduct = () => {
@@ -88,7 +87,6 @@ const CreateProduct = () => {
 
   return (
     <div>
-      <NavBar />
       <div className={Style.ctn}>
         <form className={Style.form}>
           <div className={Style.ctnFlex}>

@@ -1,0 +1,40 @@
+@import "./MixinsProfile.scss";
+
+.ctnSup {
+  text-align: center;
+}
+
+.titlePrin {
+  @include title;
+}
+
+.ctnDetail {
+  @include ctnMedida;
+  
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.title1 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 10px;
+}
+
+.ctnText {
+  margin: 0px 50px 0px 50px;
+}
+
+.icon{
+ cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}

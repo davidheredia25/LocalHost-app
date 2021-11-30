@@ -4,7 +4,6 @@ import style from "./Login.module.scss";
 import { Link } from "react-router-dom";
 import Google from "../LoginGoogle/LoginGoogle";
 import { Button ,TextField } from '@mui/material';
-import NavBar from '../NavBar/NavBar';
 import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
@@ -58,7 +57,6 @@ const Login = () => {
 
   return (
     <div className={style.container}>
-        <NavBar/>
         <div className={style.test}>
         <div className={style.imagen}>
           <img className={style.image} src={Imagen} alt='' />

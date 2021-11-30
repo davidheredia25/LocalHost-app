@@ -10,3 +10,7 @@ export {default as CreateProduct} from "./admin/ProductCRUD/CreateProduct"
 export { default as Catalogo } from "./user/Catalogo/Catalogo";
 export { default as Login } from "./user/Login/Login";
 export { default as Register } from "./user/Register/Register";
+export { default as Profile } from "./user/Profile/Profile";
+export { default as Favorites } from "./user/Profile/Favorites";
+export { default as Ordens } from "./user/Profile/Ordens";
+
