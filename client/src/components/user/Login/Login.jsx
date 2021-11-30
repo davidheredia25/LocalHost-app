@@ -8,6 +8,7 @@ import NavBar from '../NavBar/NavBar';
 import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
+import { loginLocal } from "../../../redux/actions/login.actions";
  
 const Login = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!error.email && !error.contraseña) {
-        //dispatch de login local
+        dispatch(loginLocal(input))
         //history.push('/');
     }
     else { alert("The form is required"); }
@@ -68,27 +69,27 @@ const Login = () => {
         <p className={style.titleLogin}>INGRESAR</p>
         <div className={style.username}>
 
-          {/*<input
+          <input
             className={style.input}
             type="text"
             name='email'
             placeholder="Su usuario o email..."
             value={input.email}
             onChange={handleChange}
-          />*/}
+          />
           <TextField id="standard-basic" style={{'width': '250px'}}  label={<EmailIcon/> } variant="standard" />
           <p className={style.error}>{error.email}</p>
         </div>
         <div className={style.password}>
           
-          {/*<input
+          <input
             className={style.input}
             type="password"
             name='contraseña'
             placeholder="Su contraseña..."
             value={input.contraseña}
             onChange={handleChange}
-          />*/}
+          />
           <TextField id="standard-basic" style={{'width': '250px'}} label={<VpnKeyIcon/>}variant="standard" />
           <p className={style.error}>{error.contraseña}</p>
         </div>

@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom'
-import { loginGoogle } from '../../../redux/actions/login.actions'
+// import { loginGoogle } from '../../../redux/actions/login.actions'
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const LoginGoogle = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch()
 
     const googleResponse = (response) => {
         const { tokenId } = response;
-        dispatch(loginGoogle(tokenId))
+        // dispatch(loginGoogle(tokenId))
         navigate("/")
     }
 
