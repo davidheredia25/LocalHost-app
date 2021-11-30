@@ -123,6 +123,7 @@ class NavBar extends React.Component {
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
     const user=false;
     
+    
 
     const renderMenu = (
       <Menu

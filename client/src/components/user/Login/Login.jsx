@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./Login.module.scss";
 import { Link } from "react-router-dom";
 import Google from "../LoginGoogle/LoginGoogle";
@@ -11,6 +11,8 @@ import { loginLocal } from "../../../redux/actions/login.actions";
  
 const Login = () => {
   const dispatch = useDispatch();
+  const usuario = useSelector(state => state.user.user)
+  console.log('usuario', usuario)
   const [input, setInput] = useState({
     email: "",
     contraseña: "",
@@ -67,28 +69,38 @@ const Login = () => {
         <p className={style.titleLogin}>INGRESAR</p>
         <div className={style.username}>
 
-          <input
+         {/*} <input
             className={style.input}
             type="text"
             name='email'
             placeholder="Su usuario o email..."
             value={input.email}
             onChange={handleChange}
-          />
-          <TextField id="standard-basic" style={{'width': '250px'}}  label={<EmailIcon/> } variant="standard" />
+  /> */}
+          <TextField id="standard-basic" type="text"
+            name='email' value={input.email}
+            onChange={handleChange}
+             style={{'width': '250px'}} 
+              label={<EmailIcon/> }
+               variant="standard" />
           <p className={style.error}>{error.email}</p>
         </div>
         <div className={style.password}>
           
-          <input
+          {/*<input
             className={style.input}
             type="password"
             name='contraseña'
             placeholder="Su contraseña..."
             value={input.contraseña}
             onChange={handleChange}
-          />
-          <TextField id="standard-basic" style={{'width': '250px'}} label={<VpnKeyIcon/>}variant="standard" />
+          />*/}
+          <TextField id="standard-basic"  type="password"
+            name='contraseña' 
+            value={input.contraseña}
+            onChange={handleChange}
+             style={{'width': '250px'}} 
+             label={<VpnKeyIcon/>}variant="standard" />
           <p className={style.error}>{error.contraseña}</p>
         </div>
         <div className={style.ctnGoogle}>
