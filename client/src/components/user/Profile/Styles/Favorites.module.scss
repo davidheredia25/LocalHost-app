@@ -1,0 +1,17 @@
+@import "./MixinsProfile.scss";
+
+
+
+.titlePrin {
+  @include title;
+  text-align: center;
+}
+
+.ctnSup {
+  @include centerCnt;
+}
+
+.ctnDetail{
+    @include ctnMedida;
+    
+}

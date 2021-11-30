@@ -5,7 +5,6 @@ import { getProductsDetails, removeProduct } from "../../../redux/actions/produc
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
 import { useParams } from "react-router-dom";
-import NavBar from '../NavBar/NavBar';
 import './Details.scss';
 
 const Details = () => {
@@ -22,7 +21,6 @@ const Details = () => {
     product
       ?
       <div>
-         <NavBar />
         <div className='details_container'>
           <div className='details_image'>
             <ProductImage

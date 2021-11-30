@@ -5,8 +5,6 @@ import FiltersContainer from "../../filtersCatalogo/FiltersContainer";
 import AppliedFilters from "../../filtersCatalogo/AppliedFilters";
 import { getProducts } from "../../../redux/actions/products.actions";
 import styles from "./Catalogo.module.scss";
-
- import NavBar from "../NavBar/NavBar";
 //  import Pagination from '../Pagination/Pagination'
 
 
@@ -22,7 +20,6 @@ const Catalogo = () => {
 
     return (
         <div>
-            <NavBar />
             <div>
                 <AppliedFilters filters={filters} />
             </div>

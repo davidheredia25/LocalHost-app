@@ -1,0 +1,22 @@
+@mixin title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+@mixin centerCnt {
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@mixin ctnMedida {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}

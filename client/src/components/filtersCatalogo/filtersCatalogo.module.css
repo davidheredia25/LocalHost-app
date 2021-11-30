@@ -4,7 +4,7 @@
 }
 
 .filtersContainer {
-    width: 20vw; 
+    width: 10vw; 
     margin-top: 4%;
 }
 
@@ -17,6 +17,7 @@
 
 .button {
     background-color: Transparent;
+    
 }
 .button:hover {
     background-color: black;
@@ -51,4 +52,5 @@
 
 .h5 {
     padding-top: 2px;
+    
 }

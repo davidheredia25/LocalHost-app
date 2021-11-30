@@ -1,0 +1,29 @@
+.ctnNavBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctnUl {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text{
+    margin-top: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.imgUser {
+  height: 250px;
+  width: 250px;
+  border-radius: 200px;
+}
