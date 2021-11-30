@@ -1,14 +1,15 @@
 const pkg = require('mongoose');
+const bcrypt = require("bcrypt");
 const { Schema, model } = pkg;
 
 const userSchema = new Schema({
     fristName: {
         type: String,
-        required: true
+       // required: true
     },
     lastName: {
         type: String,
-        required: true
+        //required: true
     },
     email: {
         type: String,
@@ -69,17 +70,17 @@ const userSchema = new Schema({
 });
 
 //DAVID Q ONDA CON ESTO PA? No sabemos que pija hace por eso lo comentamos. 
-/* UserSchema.pre('save', async function (next) {
-    const hash = await bcrypt.hash(this.contraseña, 10);
-    this.contraseña = hash;
+userSchema.pre('save', async function (next) {
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash;
     next();
 })
 
-UserSchema.methods.isValidContraseña = async function (contraseña) {
+userSchema.methods.isValidContraseña = async function (password) {
     const user = this;
-    const compara = await bcrypt.compare(contraseña, user.contraseña);
+    const compara = await bcrypt.compare(password, user.password);
     return compara;
-} */ /* tkm marquito */
+} 
 
 userSchema.plugin(require('mongoose-autopopulate'));
 

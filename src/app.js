@@ -13,6 +13,7 @@ const TicketRoutes = require('./routes/Ticket/index.ticket');
 const ReviewRoutes = require('./routes/Review/index.review');
 
 const app = express();
+require("./routes/User/Controllers/middleware")
 
 
 //Setings
