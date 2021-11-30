@@ -1,5 +1,5 @@
 @import '../../styles/mixins.scss';
-
+@import '../../styles/media-queries.scss';
 
 .container{
     display: flex;
@@ -8,26 +8,68 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 100px;
+    @include xs{
+        display: block
+    }
+    @include sm{
+        display: block
+    }
+    
+    
    
+}
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10vh;
+    margin-bottom: 100px;
+    width: 70%;
+    height: 80vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.329);
+    @include xs{
+        display: flex;
+        box-shadow : 0px 0px 0px 0px;
+        flex-direction: column-reverse;
+    }
+    @include sm{
+        display: flex;
+        box-shadow : 0px 0px 0px 0px;
+        flex-direction: column-reverse;
+    }
+    
 }
 
 .contenedor{
     @include centerDiv;
-    margin-top: 5rem;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.329);
-    width: 30%;
+    width: 50%;
     padding: 0;
-    height: 600px;
+    height: 100%;
+    @include xs {
+        margin-left: 40%;
+    }
+    @include sm {
+        margin-left: 40%;
+    }
+    
     
 }
 
 .imagen{
-    width: 30%;
-    height: 600px; 
+    width: 50%;
+    height: 100%; 
     margin-right: 0px;  
-    margin-top: 5rem;
     padding: 0;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.329);  
+    
+    @include xs{
+        display: none;
+    }
+    @include sm{
+        display: none;
+    }
+     
 }
 
 .image{

@@ -59,6 +59,7 @@ const Login = () => {
   return (
     <div className={style.container}>
         <NavBar/>
+        <div className={style.test}>
         <div className={style.imagen}>
           <img className={style.image} src={Imagen} alt='' />
         </div>
@@ -104,6 +105,7 @@ const Login = () => {
          <p>  Olvidaste tu contraseña? <Link to="/forgot">Cambiala ahora</Link></p>
         </div>
   </form>
+  </div>
   </div>
   </div>
   
