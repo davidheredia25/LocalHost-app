@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import {Home, Card, Cards, Details, Cart, NavBar, SearchBar, BrandContainer, CreateProduct, Catalogo} from "./components";
+import {Home, Card, Cards, Details, Cart, NavBar, SearchBar, BrandContainer, CreateProduct, Catalogo, Login, Register} from "./components";
 
 
 
@@ -11,7 +11,9 @@ function App () {
 	return (
 		<Routes>
 			<Route path="/" element={<Home />} /> 
-			<Route path="/" element={<NavBar />} /> 
+			<Route path="/" element={<NavBar />} />
+			<Route path="/login" element={<Login />} />
+			<Route path="/register" element={<Register />} />  
 			<Route path='/cart' element={<Cart/>} />
 			<Route path="/detail/:id" element={<Details />}/>
 			<Route path="/admin/brand" element={<BrandContainer />} /> 

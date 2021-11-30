@@ -8,3 +8,5 @@ export { default as SearchBar} from "./user/SearchBar/SearchBar.jsx";
 export { default as BrandContainer } from "./admin/Brand/BrandContainer";
 export {default as CreateProduct} from "./admin/ProductCRUD/CreateProduct"
 export { default as Catalogo } from "./user/Catalogo/Catalogo";
+export { default as Login } from "./user/Login/Login";
+export { default as Register } from "./user/Register/Register";

@@ -20,6 +20,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import SearchBar from '../SearchBar/SearchBar';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './NavBar.scss';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 const styles = theme => ({
@@ -120,7 +121,7 @@ class NavBar extends React.Component {
     const { classes } = this.props;
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  
+    const user=false;
     
 
     const renderMenu = (
@@ -187,6 +188,9 @@ class NavBar extends React.Component {
                   <ShoppingCartIcon />
               </IconButton>
               </Link>
+              {
+                user?
+
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
@@ -195,6 +199,10 @@ class NavBar extends React.Component {
               >
                 <AccountCircle />
               </IconButton>
+              : <Link to='/login' className='link_login'>
+                <p><LoginIcon/>   Log in</p>
+              </Link>
+              } 
             </div>
             <div className={classes.sectionMobile}>
               <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
