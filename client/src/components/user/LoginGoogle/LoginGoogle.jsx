@@ -1,17 +1,19 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom'
+import { loginGoogle } from '../../../redux/actions/login.actions'
 
 
 const LoginGoogle = () => {
 
     const navigate = useNavigate();
-    
+
     const googleResponse = (response) => {
-        console.log(response);
+        const { tokenId } = response;
+        dispatch(loginGoogle(tokenId))
+        navigate("/")
     }
- 
+
     return (
         <div>
             <GoogleLogin
