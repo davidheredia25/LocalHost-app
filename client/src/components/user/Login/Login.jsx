@@ -7,6 +7,7 @@ import { Button ,TextField } from '@mui/material';
 import NavBar from '../NavBar/NavBar';
 import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import Imagen from './1.png';
  
 const Login = () => {
   const dispatch = useDispatch();
@@ -58,6 +59,9 @@ const Login = () => {
   return (
     <div className={style.container}>
         <NavBar/>
+        <div className={style.imagen}>
+          <img className={style.image} src={Imagen} alt='' />
+        </div>
         <div className={style.contenedor}>
       <form className={style.form} onSubmit={handleSubmit}>
         <p className={style.titleLogin}>INGRESAR</p>
