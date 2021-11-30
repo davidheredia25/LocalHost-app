@@ -1,5 +1,5 @@
 const pkg = require('mongoose');
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { Schema, model } = pkg;
 
 const userSchema = new Schema({

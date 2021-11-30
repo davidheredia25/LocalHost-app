@@ -1,0 +1,49 @@
+@import '../../styles/mixins.scss';
+
+
+.contenedor{
+    @include centerDiv;
+    margin-top: 7rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.329);
+    width: 30%;
+    margin-left: 35%;
+}
+
+.ctnGoogle{
+    @include centerDiv;
+    margin:40px;
+    margin-bottom: 50px;
+}
+.btnGoogle{
+    width: 100%;
+}
+
+.google{
+    width: 200px;
+    @include centerDiv;
+    margin-top: 10px
+}
+
+.username{
+    @include centerDiv;
+    
+}
+
+.password{
+    @include centerDiv;
+}
+
+
+.titleLogin{
+    @include centerDiv;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 3rem;
+}
+
+.link{
+    
+    width: 100%;
+}
+
