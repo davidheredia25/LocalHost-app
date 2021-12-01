@@ -9,10 +9,11 @@ const NavBarProfile = () => {
 
         <div className={style.ctnNavBar}>
             <img className={style.imgUser} src={img} alt={img} />
+            <h1 className={style.name}>Hola! David Heredia</h1>
             <ul className={style.ctnUl}>
-                <Link className={style.link} to="/profile"><li className={style.text}>Mis Datos</li></Link>
-                <Link className={style.link} to="/profile/misordenes"><li className={style.text}>Mis Ordenes</li></Link>
-                <Link className={style.link} to="/profile/favoritos"><li className={style.text}>Productos favoritos</li></Link>
+                <Link className={style.link} to="/profile"><li><button className={style.btn}> Mis Datos</button> </li></Link>
+                <Link className={style.link} to="/profile/misordenes"><li><button className={style.btn}> Mis ordenes</button> </li> </Link>
+                <Link className={style.link} to="/profile/favoritos"><li><button className={style.btn}> Productos favoritos</button> </li> </Link>
             </ul>
         </div>
     )
