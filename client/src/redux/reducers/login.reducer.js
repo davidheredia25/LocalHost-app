@@ -1,30 +1,38 @@
-import { LOGIN_LOCAL, REGISTER_LOCAL } from "../actions/login.actions";
-import {GET_USER} from "../actions/products.actions"
+import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT} from "../actions/login.actions";
 
-const initialState = {
-    user: null
+
+let initialState = {
+    user: JSON.parse(localStorage.getItem('user'))
 }
 
 
-export default function loginReducer(state = initialState, { type, payload }) {
-    switch (action) {
+export  function loginReducer(state = initialState, { type, payload }) {
+    switch (type) {
         case GET_USER:
             return {
                 ...state,
-                user: payload
-            }
+                user : JSON.parse(localStorage.getItem('user'))
+            } 
 
         case REGISTER_LOCAL:
+            const usuario = localStorage.setItem("user", JSON.stringify(payload))
             return {
                 ...state, 
-                user: payload
+                user: usuario
             }
         case LOGIN_LOCAL:
             return {
                 ...state,
                 user: payload
-            }   
+            } 
+        case LOG_OUT : 
+            return {
+                ...state,
+                user: localStorage.clear()
+            }      
         default:
             return state;
     }
-}
+};
+
+

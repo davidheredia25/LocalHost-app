@@ -51,6 +51,7 @@ const loginGoogle = async (req, res) => {
               }
               const token = jwt.sign({ user: newUser }, "top_secret");
               const { _id, email } = newUser;
+              console.log(email, name)
               res.json({
                 id: _id,
                 email: email,
@@ -83,8 +84,8 @@ const postLogin = async (req, res) => {
           
           const body = { id: user._id, email: user.email };
           const token = jwt.sign({ user: body }, "top_secret");
-          
-          return res.json(user);
+
+          return res.json(body);
         });
     } catch (error) {
         console.log(error);
@@ -104,7 +105,7 @@ const postLogin = async (req, res) => {
 };
 
 const postUser = async (req, res) => {
-    res.json({ message: "Se registro correctamente", user: req.user });
+    res.json({  user: req.user });
   };
 
 
