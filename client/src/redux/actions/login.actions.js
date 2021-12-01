@@ -46,16 +46,10 @@ export const loginAuth = (token) => async (dispatch) => {
 
 export const loginLocal = (input) => async (dispatch) => {
     try {
-        const {data} = await axios.post("/user/login", input)
-        // return dispatch({
-        //     type: LOGIN_LOCAL,
-        //     payload: res.data.token
-        // })
-        // console.log("data", (data))
+        const { data } = await axios.post("/user/login", input)
         const userinfo = (await axios.post(`/user/profile?secret_token=${data.token}`)).data
-        console.log("userinfo", (userinfo))
         return dispatch({
-            type: LOGIN_LOCAL,
+            type: GET_USER,
             payload: userinfo
         })
     } catch (error) {

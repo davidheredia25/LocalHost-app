@@ -14,7 +14,7 @@ import {loginAuth} from "../../../redux/actions/login.actions"
 const Login = () => {
   const dispatch = useDispatch();
 
-  const usuario = useSelector(state => state.user.user)
+  const usuario = useSelector(state => state.login.user)
 
   console.log('usuario', usuario)
   const [input, setInput] = useState({
