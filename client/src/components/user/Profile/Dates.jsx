@@ -5,7 +5,9 @@ import { useSelector } from 'react-redux';
 
 
 const Dates = () => {
+
     const {user}=useSelector(state => state.user)
+
     
     return (
         <div className={style.ctnSup}>
