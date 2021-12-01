@@ -4,6 +4,7 @@ import { BsPencilSquare } from "react-icons/bs";
 
 
 const Dates = () => {
+    
     return (
         <div className={style.ctnSup}>
             <h3 className={style.titlePrin}>Mis datos <BsPencilSquare className={style.icon} /></h3>
