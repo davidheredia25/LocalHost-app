@@ -13,7 +13,7 @@ const router = Router();
 router.get('/', getReview);
 router.get('/:id', getReviewById);
 router.post('/create', createReview);
-router.put('/update/:id', updateReview);
-router.delete('/delete/:id', deleteReview);
+router.put('/update', updateReview);
+router.delete('/delete', deleteReview);
 
 module.exports = router;
