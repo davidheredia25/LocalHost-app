@@ -2,6 +2,7 @@ import axios from "axios"
 export const GET_USER = "GET_USER"
 export const REGISTER_LOCAL = "REGISTER_LOCAL"
 export const LOGIN_LOCAL = "LOGIN_LOCAL"
+export const LOG_OUT = 'LOG_OUT'
 
 
 
@@ -21,6 +22,7 @@ export const LOGIN_LOCAL = "LOGIN_LOCAL"
 export const registerLocal = (values) => async (dispatch) => {
     try {
         const res = await axios.post("/user/register", values)
+        console.log('dataaaa', res.data)
         return dispatch({
             type: "REGISTER_LOCAL",
             payload: res.data
@@ -43,3 +45,17 @@ export const loginLocal = (input) => async (dispatch) => {
         console.log(error);
     }
 };
+
+
+export const getUser = () => {
+    return {
+        type: GET_USER
+    }
+}
+
+
+export const logOut = () => {
+    return {
+        type: LOG_OUT
+    }
+}

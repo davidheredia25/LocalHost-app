@@ -1,9 +1,13 @@
 import React from 'react';
 import style from './Styles/Dates.module.scss'
 import { BsPencilSquare } from "react-icons/bs";
+import { useSelector } from 'react-redux';
 
 
 const Dates = () => {
+
+    const {user}=useSelector(state => state.user)
+
     
     return (
         <div className={style.ctnSup}>
@@ -12,17 +16,17 @@ const Dates = () => {
                 <div className={style.ctnText}>
                     <div className={style.data}>
                         <p className={style.title1} >Nombre:</p>
-                        <p className={style.user}> David</p>
+                        <p className={style.user}> {user?.user?.fristName}</p>
                     </div>
 
                     <div className={style.data}>
                         <p className={style.title1} >Apellido:</p>
-                        <p className={style.user}> David</p>
+                        <p className={style.user}> {user?.user?.lastName}</p>
                     </div>
 
                     <div className={style.data}>
                         <p className={style.title1} >Email:</p>
-                        <p className={style.user}> David</p>
+                        <p className={style.user}> {user?.user?.email}</p>
                     </div>
 
                     <div className={style.data}>
