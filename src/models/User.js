@@ -22,6 +22,9 @@ const userSchema = new Schema({
     document: {
         type: String
     },
+    telephone:{
+        type: Number
+    },
     image: {
         type: String
     },

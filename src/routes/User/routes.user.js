@@ -6,6 +6,7 @@ const {
     getUser,
     getUserById,
     updateUser,
+    editDateUser
 
  } = require('./Controllers/all.controllers');
 const {
@@ -19,6 +20,7 @@ const router = Router();
 router.get('/', getUser);
 router.get('/:id', getUserById);
 router.post('/create', createUser);
+router.put('/edit/:id', editDateUser);
 router.put('/update/:id', updateUser);
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
