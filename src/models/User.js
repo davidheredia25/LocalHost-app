@@ -1,5 +1,5 @@
 const pkg = require('mongoose');
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcrypt');
 const { Schema, model } = pkg;
 
 const userSchema = new Schema({
@@ -68,8 +68,7 @@ const userSchema = new Schema({
     versionKey: false,
     timestamps: false
 });
-
-//DAVID Q ONDA CON ESTO PA? No sabemos que pija hace por eso lo comentamos. 
+ 
 userSchema.pre('save', async function (next) {
     const hash = await bcrypt.hash(this.password, 10);
     this.password = hash;

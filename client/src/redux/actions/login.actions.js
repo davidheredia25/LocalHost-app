@@ -2,6 +2,7 @@ import axios from "axios"
 export const GET_USER = "GET_USER"
 export const REGISTER_LOCAL = "REGISTER_LOCAL"
 export const LOGIN_LOCAL = "LOGIN_LOCAL"
+export const LOGIN_AUTH = "LOGIN_AUTH"
 
 
 
@@ -31,15 +32,34 @@ export const registerLocal = (values) => async (dispatch) => {
     }
 }
 
+export const loginAuth = (token) => async (dispatch) => {
+    try {
+        const res = (await axios.post(`/user/profile/${token}`)).data
+        return dispatch({
+            type: LOGIN_AUTH,
+            payload: res
+        })
+    } catch (error){
+        console.log(error)
+    }
+}
 
 export const loginLocal = (input) => async (dispatch) => {
     try {
-        const res = await axios.post("/user/login", input)
+        const {data} = await axios.post("/user/login", input)
+        // return dispatch({
+        //     type: LOGIN_LOCAL,
+        //     payload: res.data.token
+        // })
+        // console.log("data", (data))
+        const userinfo = (await axios.post(`/user/profile?secret_token=${data.token}`)).data
+        console.log("userinfo", (userinfo))
         return dispatch({
             type: LOGIN_LOCAL,
-            payload: res.data
+            payload: userinfo
         })
     } catch (error) {
         console.log(error);
     }
 };
+

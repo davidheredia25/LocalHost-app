@@ -8,25 +8,31 @@ import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
+import {loginAuth} from "../../../redux/actions/login.actions"
+
  
 const Login = () => {
   const dispatch = useDispatch();
+
   const usuario = useSelector(state => state.user.user)
+
   console.log('usuario', usuario)
   const [input, setInput] = useState({
     email: "",
-    contraseña: "",
+    password: "",
   });
   const [error, setError] = useState({})
 
   let validateEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+
   let validateContraseña = /^.{4,12}$/
+
   const validateLogin = () => {
     let errors = {};
     if (!validateEmail.test(input.email)) {
       errors.email = "Email requerido";
     }
-    if (!validateContraseña.test(input.contraseña)) {
+    if (!validateContraseña.test(input.password)) {
       errors.contraseña = "Desde 4 a 14 digitos";
     }
     return errors;
@@ -34,16 +40,17 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!error.email && !error.contraseña) {
+    if (!error.email && !error.password) {
         dispatch(loginLocal(input))
         //history.push('/');
     }
     else { alert("The form is required"); }
     setInput({
       email: "",
-      contraseña: "",
+      password: "",
     })
   }
+
 
   const handleChange = (e) => {
     setInput({
@@ -61,8 +68,8 @@ const Login = () => {
   return (
     <div className={style.container}>
         <div className={style.test}>
-        <div className={style.imagen}>
-          <img className={style.image} src={Imagen} alt='' />
+        <div className={style.imagen}> 
+           <img className={style.image} src={Imagen} alt='' /> 
         </div>
         <div className={style.contenedor}>
       <form className={style.form} onSubmit={handleSubmit}>
@@ -96,15 +103,17 @@ const Login = () => {
             onChange={handleChange}
           />*/}
           <TextField id="standard-basic"  type="password"
-            name='contraseña' 
-            value={input.contraseña}
+            name='password' 
+            value={input.password}
             onChange={handleChange}
              style={{'width': '250px'}} 
              label={<VpnKeyIcon/>}variant="standard" />
-          <p className={style.error}>{error.contraseña}</p>
+          <p className={style.error}>{error.password}</p>
         </div>
         <div className={style.ctnGoogle}>
-          <Button variant='contained' size="x-large" style={{'backgroundColor': '#000000', 'width': 200}}  type="submit" className={style.btn}>
+          <Button 
+           
+          variant='contained' size="x-large" style={{'backgroundColor': '#000000', 'width': 200}}  type="submit" className={style.btn}>
             INGRESÁ
           </Button>
           <div className={style.google}>
