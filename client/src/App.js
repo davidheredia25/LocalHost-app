@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import { Home, Details, Cart, NavBar, BrandContainer, CreateProduct, Catalogo, Login, Register, Profile, Favorites, Ordens } from "./components";
+import { Home, Details, Cart, NavBar, BrandContainer, CreateProduct, Catalogo, Login, Register, Profile, Favorites, Ordens, Checkout } from "./components";
 
 
 
@@ -19,6 +19,7 @@ function App() {
 				<Route path='/cart' element={<Cart />} />
 				<Route path="/detail/:id" element={<Details />} />
 				<Route path="/catalogo" element={<Catalogo />} />
+				<Route path="/checkout" element={<Checkout />} />
 
 				{/* ADMIN */}
 				<Route path="/admin/brand" element={<BrandContainer />} />

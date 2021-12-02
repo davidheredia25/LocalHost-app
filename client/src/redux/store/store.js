@@ -5,6 +5,7 @@ import {productsReducer} from "../reducers/products.reducer.js";
 import { brandReducer } from "../reducers/brand.reducer.js";
 import { filtersReducer } from "../reducers/filters.reducer.js";
 import { loginReducer } from "../reducers/login.reducer.js";
+import { mercadoReducer	} from "../reducers/mercadoPago.reducer.js"
 import thunk from "redux-thunk" ;
 
 
@@ -16,7 +17,8 @@ const store= createStore(
 		products: productsReducer,
 		user: loginReducer,
 		brand: brandReducer,
-		filters: filtersReducer
+		filters: filtersReducer,
+		mercadoPago: mercadoReducer
 	}), composeWithDevTools(
 		applyMiddleware(thunk) 
 	));

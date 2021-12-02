@@ -11,9 +11,14 @@ const ProductsRoutes = require('./routes/Product/index.product');
 const UserRoutes = require('./routes/User/index.user');
 const TicketRoutes = require('./routes/Ticket/index.ticket');
 const ReviewRoutes = require('./routes/Review/index.review');
+const MercadoPago = require('./routes/MercadoPago/index')
 
 const app = express();
 require("./routes/User/Controllers/middleware")
+
+
+
+
 
 
 //Setings
@@ -34,5 +39,6 @@ app.use('/', ReviewRoutes);
 app.use('/', TicketRoutes);
 app.use('/', UserRoutes);
 app.use('/', TypesRoutes);
+app.use('/', MercadoPago);
 
 module.exports = app;
