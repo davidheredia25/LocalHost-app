@@ -97,12 +97,11 @@ const Dates = () => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <FormEdit />
+                    <FormEdit handleClose={handleClose} />
 
                 </Modal.Body>
                 <Modal.Footer className={style.ctnBtn}>
-                    <button className={style.btn} onClick={handleClose}>Aceptar</button>
-                    <button className={style.btn} onClick={handleClose}>Cancelar</button>
+                    
                 </Modal.Footer>
             </Modal>
         </div>
