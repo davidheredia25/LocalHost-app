@@ -12,7 +12,7 @@ const SubcategoryForm = () => {
     });
     const [input, setInput] = useState("");
 
-    const { brandInfo, subcategories } = useSelector(state => state.brand);
+    const { brandInfo, existent, subcategories } = useSelector(state => state.brand);
 
     const handleEdit = (e) => {
         setObject({
@@ -84,6 +84,7 @@ const SubcategoryForm = () => {
                             </div>
                             <select onChange={handleSelect}>
                                 <option selected value="">-subcategorías-</option>
+                                
                                 {
                                     subcategories.map(e => {
                                         return (

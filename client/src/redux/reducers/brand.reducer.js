@@ -12,6 +12,7 @@ const initialState = {
     brands: [],
     categories: [],
     subcategories: [],
+    existent: false,
     brandInfo: {
         name: "",
         categories: [] // [{ name: "Indumentaria", subcategories: ["remeras", "buzos"] }, {}, {}, ...]
@@ -22,7 +23,6 @@ export function brandReducer(state = initialState, { type, payload }) {
     switch (type) {
 
         case GET_BRANDS:
-            console.log( "maldito samu" ,payload)
             return {
                 ...state,
                 brands: payload
@@ -43,7 +43,8 @@ export function brandReducer(state = initialState, { type, payload }) {
                 brandInfo: {
                     ...state.brandInfo,
                     name: payload
-                }
+                },
+                existent: false
             }
         case SET_BRAND_CATEGORIES:
             let categoryObj = {
@@ -85,7 +86,7 @@ export function brandReducer(state = initialState, { type, payload }) {
             brandFound.categories.forEach(x => {
                 let sub = x.types.map(el => el.name)
                 let object = {
-                    name: x.name.name, // zapatillas //zapatillas
+                    name: x.name[0].name, // zapatillas //zapatillas
                     subcategories: sub // ["Running", "Skate, Court" etc...]  
                 }
                 arrayCategories.push(object)
@@ -96,7 +97,8 @@ export function brandReducer(state = initialState, { type, payload }) {
             }
             return {
                 ...state,
-                brandInfo: finalObject
+                brandInfo: finalObject,
+                existent: true
             }
         default:
             return state;

@@ -8,12 +8,13 @@ import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
-import {loginAuth} from "../../../redux/actions/login.actions"
+import {loginAuth} from "../../../redux/actions/login.actions";
+import { useNavigate } from "react-router-dom";
 
  
 const Login = () => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const usuario = useSelector(state => state.login.user)
 
   console.log('usuario', usuario)
@@ -42,7 +43,7 @@ const Login = () => {
     e.preventDefault();
     if (!error.email && !error.password) {
         dispatch(loginLocal(input))
-        //history.push('/');
+        navigate("/")
     }
     else { alert("The form is required"); }
     setInput({

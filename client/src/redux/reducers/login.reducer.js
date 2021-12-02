@@ -9,7 +9,7 @@ export function loginReducer(state = initialState, { type, payload }) {
         case GET_USER:
             return {
                 ...state,
-                user : JSON.parse(localStorage.getItem('user'))
+                user: JSON.parse(localStorage.getItem('user'))
             }
         case REGISTER_LOCAL:
             const usuario = localStorage.setItem("user", JSON.stringify(payload))

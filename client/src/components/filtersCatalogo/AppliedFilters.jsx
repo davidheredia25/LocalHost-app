@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resetFilter, filterProducts } from "../../redux/actions/filters.actions";
+import { getProducts } from "../../redux/actions/products.actions";
 import styles from "./filtersCatalogo.module.css";
 
 const AppliedFilters = ({ filters }) => {
@@ -9,7 +10,7 @@ const AppliedFilters = ({ filters }) => {
 
     const handleClick = (e) => {
         dispatch(resetFilter(e.target.value))
-        dispatch(filterProducts({ ...filters, [e.target.value]: "" }))
+        dispatch(getProducts({ ...filters, [e.target.value]: "" }))
     }
 
     return (

@@ -167,11 +167,17 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
     </Menu>
   );
-  const {user}=useSelector(state => state.user)
+  const {user}=useSelector(state => state.login)
 
+  /* 
+  
   useEffect(() => {
     dispatch(getUser())
-  }, [dispatch, user])
+  }, [dispatch, user]) 
+  
+  Lo comenté porque el getUser() nos está borrando el user que cargamos en REGISTER_LOCAL
+  
+  */
 
   return (
     <Box sx={{ flexGrow: 1 }}>
