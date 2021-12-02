@@ -18,11 +18,13 @@ export function loginReducer(state = initialState, { type, payload }) {
                 user: usuario
             }
         case LOGIN_LOCAL:
+            const login = localStorage.setItem("user", JSON.stringify(payload));
             return {
                 ...state,
                 user: payload
             } 
         case LOG_OUT : 
+
             return {
                 ...state,
                 user: localStorage.clear()
