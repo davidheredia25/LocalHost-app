@@ -11,7 +11,7 @@ const Dates = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { user } = useSelector(state => state.login)
-    
+
 
     return (
         <div className={style.ctnSup}>
@@ -39,14 +39,16 @@ const Dates = () => {
                     </div>
 
                     <div className={style.data}>
+                        <p className={style.title1} >Fecha de nacimiento:</p>
+                        <p className={style.user}> {user?.user?.dateOfBirth}</p>
+                    </div>
+
+                    <div className={style.data}>
                         <p className={style.title1} >Telefono:</p>
                         <p className={style.user}>{user?.user?.telephone} </p>
                     </div>
 
-                    <div className={style.data}>
-                        <p className={style.title1} >Fecha de nacimiento:</p>
-                        <p className={style.user}> {user?.user?.dateOfBirth}</p>
-                    </div>
+
                 </div>
 
                 <div className={style.ctnText}>
@@ -80,7 +82,7 @@ const Dates = () => {
                     </div>
                 </div>
 
-                
+
             </div>
 
 
@@ -91,18 +93,9 @@ const Dates = () => {
                 size="lg"
                 centered
             >
-                <Modal.Header>
-                    <Modal.Title className={style.TitleModal} >
-                      Editar datos
-                    </Modal.Title>
-                </Modal.Header>
                 <Modal.Body>
                     <FormEdit handleClose={handleClose} />
-
                 </Modal.Body>
-                <Modal.Footer className={style.ctnBtn}>
-                    
-                </Modal.Footer>
             </Modal>
         </div>
     )
