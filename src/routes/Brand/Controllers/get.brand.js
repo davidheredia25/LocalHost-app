@@ -3,44 +3,40 @@ const Product = require("../../../models/Product");
 const { verificacionId } = require('./middleware');
 
 const getBrand = async (req, res) => {
-    const { name } = req.query;
-    // console.log('name getBrand', name);
     try {
         let brands = await Brand.find();
-        console.log("brands", brands);
         let products = await Product.find().populate("brand", ["name"]).populate("category", ["name"]).populate("type")
-        let brandCategories;
+        let array = [];
         brands.forEach(b => {
             let brandName = b.name;
-            let productsFiltered = products.filter(x => x.brand.name === brandName);
-            /* brandCategories = products.map(x => x.category[0])
+            let brandProducts = products.filter(x => x.brand.name === brandName);
+            let brandCategories = brandProducts.map(x => x.category.name)
             brandCategories = [...new Set(brandCategories)]
-            console.log("17", brandCategories)
-            brandCategories = brandCategories.map(x => {
-                return {
-                    name: x,
-                    types: []
-                }
-            })
-            // brandCategories = [{name: "indumentaria", types: []}, {}, {}, ...]
-            productsFiltered.forEach(el => {
-                let productCategory = el.category;
-                let productType = el.types;
-                brandCategories = brandCategories.map(x => {
-                    if(x.name === productCategory) {
-                        x.types = [...x.types, productType]
+            let brandObject = {
+                name: brandName,
+                categories: brandCategories.map(x => {
+                    return { 
+                        name: x, 
+                        types: [] 
                     }
                 })
-            }) */
+            }
+            brandProducts.forEach(x => {
+                let productCategory = x.category.name;
+                let productType = x.type.name;
+                brandObject.categories.forEach(obj => {
+                    if(obj.name === productCategory) {
+                        obj.types = 
+                            !obj.types.length 
+                                ? [productType] 
+                                : [...obj.types, productType];
+                        obj.types = [...new Set(obj.types)];
+                    }
+                })
+            })
+            array.push(brandObject);
         })
-        return res.json(brandCategories);
-
-        /* console.log('getAll getBrand', getAllBrand); */
-        if(!name)  return res.json(brands);
-        
-        let getBrandByName = getAllBrand.filter(b => b.name.toLowerCase().includes(name.toLowerCase()));
-        // console.log('getByName getBrand', getBrandByName);
-        res.json(getBrandByName);
+        return res.json(array);
     } catch (error) {
         console.log(error);
     }
