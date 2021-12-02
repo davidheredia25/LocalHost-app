@@ -3,16 +3,15 @@ import style from './Styles/Dates.module.scss'
 import { BsPencilSquare } from "react-icons/bs";
 import { useSelector } from 'react-redux';
 import Modal from 'react-bootstrap/Modal';
-import FormEdit from './FormEdit'
+import FormEdit from './FormEdit';
 
 
 const Dates = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    const { user } = useSelector(state => state.user)
-
+    const { user } = useSelector(state => state.login)
+    
 
     return (
         <div className={style.ctnSup}>

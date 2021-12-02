@@ -13,7 +13,7 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 const Register = () => {
     const navigate= useNavigate();
     const dispatch = useDispatch()
-    const { user } = useSelector(state => state.user)
+    const { user } = useSelector(state => state.login)
     console.log('register', user)
     const [values, setValues] = useState({
         fristName : '',
