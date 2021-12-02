@@ -2,6 +2,8 @@ const express = require('express');
 const passport = require('passport');
 const morgan = require('morgan');
 const cors = require('cors');
+const bodyParser = require('body-parser')
+
 const config = require('./config');
 // IMPORTS ROUTES
 const BrandRoutes = require('./routes/Brand/index.brand');
@@ -20,6 +22,7 @@ require("./routes/User/Controllers/middleware")
 app.set('port', config.PORT);
 
 //Middlewares
+app.use(bodyParser.json())
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());

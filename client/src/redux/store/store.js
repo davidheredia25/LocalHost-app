@@ -14,7 +14,7 @@ const store= createStore(
 	combineReducers({
 		cart: cartReducer,
 		products: productsReducer,
-		user: loginReducer,
+		login: loginReducer,
 		brand: brandReducer,
 		filters: filtersReducer
 	}), composeWithDevTools(

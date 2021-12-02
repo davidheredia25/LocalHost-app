@@ -1,7 +1,13 @@
+const express = require('express');
+const router = express.Router();
+
+
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
+
 const User = require('../../../models/User');
 const { OAuth2Client } = require("google-auth-library");
+
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
 
@@ -69,44 +75,57 @@ const loginGoogle = async (req, res) => {
 };
 
 
+const postUser = async (req, res, next) => {
+  res.json({ 
+    message: "Se registro correctamente", 
+    user: req.user 
+  });
+};
 
 
-const postLogin = async (req, res) => {
+
+const postLogin = async (req, res, next) => {
+  try {
     passport.authenticate("login", async (err, user, info) => {
         try {
         if (err || !user) {
-            const error = new Error("New Error");
+            const error = new Error("error");
           return error;
         }
         
         req.login(user, { session: false }, async (err) => {
-          if (err) return err;
+          try {
+            if (err) return next(err);
           
           const body = { id: user._id, email: user.email };
           const token = jwt.sign({ user: body }, "top_secret");
-
-          return res.json(body);
+          return res.json({token});
+          } catch (error) {
+            console.log(error);
+          }
         });
     } catch (error) {
-        console.log(error);
+      return next(error)
+        // console.log(error)
+        ;
       }
-    })(req, res);
+    })(req, res, next);
+    } catch(error) {
+      console.log(error);
+    }
   };
   
 
 
 
-  const profileAuthenticate = (req, res) => {
+  const profileAuthenticate = (req, res, next) => {
+    console.log('token profile', req.query.secret_token);
       res.json({
-          message: "Dale que sos vos",
-      user: req.user,
-      token: req.query.secret_token,
-    });
+        message: "Dale que sos vos",
+        user: req.user,
+        token: req.query.secret_token
+      });
 };
-
-const postUser = async (req, res) => {
-    res.json({  user: req.user });
-  };
 
 
 

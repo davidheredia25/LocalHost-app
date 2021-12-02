@@ -1,6 +1,6 @@
 const passport = require("passport");
-const User = require("../../../models/User");
 const localStrategy = require('passport-local').Strategy;
+const User = require("../../../models/User");
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
@@ -51,6 +51,6 @@ passport.use(new JWTStrategy({
     try {
         return done(null, token.user);
     } catch (e) {
-        done(error);
+        done(e);
     }
 }));

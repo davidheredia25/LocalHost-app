@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const passport = require("passport");
+const jwt = require('jsonwebtoken');
 const { 
     createUser,
     deleteUser,
@@ -25,7 +26,7 @@ router.put('/update/:id', updateUser);
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);
-router.get('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
+router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 
 
 module.exports = router;
