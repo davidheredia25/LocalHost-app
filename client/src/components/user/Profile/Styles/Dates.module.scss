@@ -6,6 +6,7 @@
 
 .titlePrin {
   @include title;
+  text-align: center
 }
 
 .ctnDetail {
@@ -17,6 +18,7 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+  font-size: 18px;
 }
 
 .title1 {
@@ -28,7 +30,7 @@
 }
 
 .ctnText {
-  margin: 0px 50px 0px 50px;
+  margin: 30px 50px 0px 50px;
 }
 
 .icon{
@@ -37,4 +39,34 @@
 
 .icon:hover {
   transform: scale(1.1);
+}
+
+.ctnBtn{
+  justify-content: center;
+}
+
+.TitleModal{
+  @include title;
+  border: none;
+  color: #000000;
+  text-align: center
+}
+
+.btn {
+  margin: 10px 30px 10px 30px;
+  padding: 1em 1em;
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.383);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
 }

@@ -1,7 +1,7 @@
 import React, {useState}from "react";
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { registerLocal } from "../../../redux/actions/login.actions";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { Button ,TextField } from '@mui/material';
 import style from './Register.module.scss';
 import Imagen from './1.png';
@@ -11,7 +11,10 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 
 
 const Register = () => {
+    const navigate= useNavigate();
     const dispatch = useDispatch()
+    const { user } = useSelector(state => state.user)
+    console.log('register', user)
     const [values, setValues] = useState({
         fristName : '',
         lastName: '',
@@ -31,6 +34,7 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(registerLocal(values))
+        navigate('/');
 
     }
     

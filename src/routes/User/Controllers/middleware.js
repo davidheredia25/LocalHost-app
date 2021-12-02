@@ -12,8 +12,11 @@ passport.use('register', new localStrategy({
 }, async (req, email, password, done) => {
     try {
         const { fristName, lastName } = req.body;
+        
         const user = await User.create({ fristName, lastName, email, password });
-        return done(null, user);
+        console.log('usuario', user)
+    return done(null, user);
+        
     } catch (e) {
         return done(e);
     }
@@ -34,7 +37,8 @@ passport.use("login", new localStrategy({
             return done(null, false, { message: "No se econtro la validacion" });
         }
 
-        return done(null, user, { message: "Se logueo Correctamente" });
+    return done(null, user, { message: "Se logueo Correctamente" });
+        
     } catch (e) {
         return done(e);
     }

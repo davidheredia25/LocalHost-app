@@ -57,6 +57,7 @@ const loginGoogle = async (req, res) => {
               }
               const token = jwt.sign({ user: newUser }, "top_secret");
               const { _id, email } = newUser;
+              console.log(email, name)
               res.json({
                 id: _id,
                 email: email,
@@ -98,9 +99,6 @@ const postLogin = async (req, res, next) => {
           
           const body = { id: user._id, email: user.email };
           const token = jwt.sign({ user: body }, "top_secret");
-          
-          
-
           return res.json({token});
           } catch (error) {
             console.log(error);
@@ -128,7 +126,6 @@ const postLogin = async (req, res, next) => {
         token: req.query.secret_token
       });
 };
-
 
 
 
