@@ -1,13 +1,12 @@
 import {MERCADO_ID} from "../actions/mercadoPago.actions"
 
 const initialstate = {
-    datos: null
+    datos: {}
 };
 
-export function mercadoReducer(state = initialstate, action){
+export function mercadoPago(state = initialstate, action){
     switch(action.type){
-        case MERCADO_ID
-        :
+        case MERCADO_ID:
             return{
                 ...state,
                 datos: action.payload

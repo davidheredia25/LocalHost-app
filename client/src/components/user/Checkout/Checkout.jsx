@@ -1,26 +1,28 @@
 import React, {useState} from "react"
+import {mercadoId} from "../../../redux/actions/mercadoPago.actions"
 import { useEffect} from 'react'
+import { useSelector, useDispatch } from "react-redux";
 // /* import s from './components/Checkout.module.css'; */
-import {useSelector} from "react-redux"
+
 
 const Checkout = () => {
-
+const dispatch = useDispatch();
 const {datos} = useSelector(state => state.mercadoPago)
 
-
-const [data, setData] = useState("")
-
+useEffect(() => {
+  dispatch(mercadoId())
+  console.log("DATOS MERCADO PAGO", datos)
+},[dispatch])
 
 useEffect(()=>{
     const script = document.createElement('script'); //Crea un elemento html script
-    console.log("DATOS MERCADO PAGO", datos)
   
-  const attr_data_preference = document.createAttribute('data-preference-id') //Crea un nodo atribute
-   attr_data_preference.value = data.id    //Le asigna como valor el id que devuelve MP
+   const attr_datos_preference = document.createAttribute('datos-preference-id') //Crea un nodo atribute
+   attr_datos_preference.value = datos.id  //Le asigna como valor el id que devuelve MP
 
   //Agrega atributos al elemento script
   script.src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js";  
-  script.setAttributeNode(attr_data_preference)  
+  script.setAttributeNode(attr_datos_preference)  
   
   //Agrega el script como nodo hijo del elemento form
   document.getElementById('form1').appendChild(script)
@@ -28,7 +30,7 @@ useEffect(()=>{
     //Elimina el script como nodo hijo del elemento form
     document.getElementById('form1').removeChild(script);
   }
- },[])
+ },[datos])
 
 
  const productos = [
