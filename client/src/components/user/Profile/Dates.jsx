@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Styles/Dates.module.scss'
 import { BsPencilSquare } from "react-icons/bs";
 import { useSelector } from 'react-redux';
+import Modal from 'react-bootstrap/Modal';
+import FormEdit from './FormEdit'
 
 
 const Dates = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-    const {user}=useSelector(state => state.user)
+    const { user } = useSelector(state => state.user)
 
-    
+
     return (
         <div className={style.ctnSup}>
-            <h3 className={style.titlePrin}>Mis datos <BsPencilSquare className={style.icon} /></h3>
+            <h3 className={style.titlePrin}>Mis datos <BsPencilSquare className={style.icon} onClick={handleShow} /></h3>
             <div className={style.ctnDetail} >
                 <div className={style.ctnText}>
                     <div className={style.data}>
@@ -75,10 +80,33 @@ const Dates = () => {
                         <p className={style.user}>{user?.user?.postalCode} </p>
                     </div>
                 </div>
+
+                
             </div>
 
-        </div>
 
+
+
+            <Modal
+                show={show}
+                size="lg"
+                centered
+            >
+                <Modal.Header>
+                    <Modal.Title className={style.TitleModal} >
+                      Editar datos
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <FormEdit />
+
+                </Modal.Body>
+                <Modal.Footer className={style.ctnBtn}>
+                    <button className={style.btn} onClick={handleClose}>Aceptar</button>
+                    <button className={style.btn} onClick={handleClose}>Cancelar</button>
+                </Modal.Footer>
+            </Modal>
+        </div>
     )
 }
 
