@@ -17,8 +17,14 @@ const BrandContainer = () => {
     return (
         <div>
             <BrandForm brands={brands} />
-            <CategoryForm />
-            <SubcategoryForm />
+            {
+                brandInfo.name ?
+                <>
+                    <CategoryForm />
+                    <SubcategoryForm />
+                </>
+                : null
+            }
         </div>
     )
 };

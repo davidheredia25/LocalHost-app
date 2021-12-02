@@ -52,7 +52,7 @@ export const loginLocal = (input) => async (dispatch) => {
         const { data } = await axios.post("/user/login", input)
         const userinfo = (await axios.post(`/user/profile?secret_token=${data.token}`)).data
         return dispatch({
-            type: GET_USER,
+            type: LOGIN_LOCAL,
             payload: userinfo
         })
     } catch (error) {
@@ -63,5 +63,11 @@ export const loginLocal = (input) => async (dispatch) => {
 export const logOut = () => {
     return {
         type: LOG_OUT
+    }
+}
+
+export const getUser = () => {
+    return {
+        type: GET_USER
     }
 }

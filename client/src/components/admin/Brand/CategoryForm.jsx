@@ -10,7 +10,7 @@ const CategoryForm = () => {
         dispatch(getCategories())
     }, [dispatch])
 
-    const { categories } = useSelector(state => state.brand);
+    const { categories, existent, brandInfo } = useSelector(state => state.brand);
 
     const handleSelect = (e) => {
         dispatch(setBrandCategories(e.target.value))
@@ -28,10 +28,15 @@ const CategoryForm = () => {
                 <h3>Seleccionar categorías:</h3>
                 <select onChange={handleSelect}>
                     <option selected value="">-categorías-</option>
-                    {
-                        categories?.map(x => {
-                            return <option value={x.name}>{x.name}</option>
-                        })                        
+                    {   
+                        existent ?
+                            brandInfo.categories.map(x => {
+                                return <option value={x.name}>{x.name}</option>
+                            })
+                            :
+                            categories?.map(x => {
+                                return <option value={x.name}>{x.name}</option>
+                            })                        
                     }
                 </select>
             </div>

@@ -41,12 +41,12 @@ export const resetFilter = (property) => {
     }
 }
 
-export const filterProducts = ({ brand, category, subcategory, name }) => async (dispatch) => {
+/* export const filterProducts = ({ brand, category, subcategory, name }) => async (dispatch) => {
     const { data } = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}
     `)
     return dispatch({
         type: GET_PRODUCTS,
         payload: data
     })
-}
+} */
 
