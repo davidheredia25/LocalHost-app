@@ -43,7 +43,7 @@ const getProducts = async (req, res) => {
         // console.log('filterTypes getProducts', filterTypes);
 
         // Search
-        if(name === "" && filtered.length === 0) return res.json(getAllProducts);
+        if(name === undefined && filtered.length === 0) return res.json(getAllProducts);
         
         if(filtered.length === 0) {
             let getProductsName = await getAllProducts.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));    
