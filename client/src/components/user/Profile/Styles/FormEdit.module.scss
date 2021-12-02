@@ -1,0 +1,21 @@
+@import "./MixinsProfile.scss";
+
+.ctnGrid {
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+}
+.ctnGrid > .InputForm {
+  flex: 4 1 100px;
+  margin: 0px 10px 0px 10px;
+}
+
+.text{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
