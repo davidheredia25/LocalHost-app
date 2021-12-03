@@ -25,6 +25,7 @@ const Dates = () => {
     const [input, setInput] = useState({
         fristName: '',
         lastName: '',
+        image:'',
         document: '',
         dateOfBirth: '',
         telephone: '',
@@ -50,6 +51,7 @@ const Dates = () => {
         setInput({
             fristName: user?.user?.fristName,
             lastName: user?.user?.lastName,
+            image:user?.user?.image,
             document: user?.user?.document,
             dateOfBirth: user?.user?.dateOfBirth,
             telephone: user?.user?.telephone,
@@ -60,6 +62,7 @@ const Dates = () => {
             city: user?.user?.city,
             postalCode: user?.user?.postalCode,
         })
+        
 
     }
 
@@ -67,10 +70,10 @@ const Dates = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(editDateUser(id, input));
-        handleClose();
         setInput({
             fristName: '',
             lastName: '',
+            image:'',
             document: '',
             dateOfBirth: '',
             telephone: '',
@@ -81,7 +84,7 @@ const Dates = () => {
             city: '',
             postalCode: ''
         })
-
+        handleClose();
     }
 
 
@@ -100,6 +103,7 @@ const Dates = () => {
                         <p className={style.title1} >Apellido:</p>
                         <p className={style.user}> {user?.user?.lastName}</p>
                     </div>
+                    
 
                     <div className={style.data}>
                         <p className={style.title1} >Email:</p>
@@ -178,6 +182,11 @@ const Dates = () => {
                             <div className={style.InputForm} >
                                 <label className={style.text}>Apellido</label >
                                 <input className={style.input} name="lastName" type="text" value={input.lastName} onChange={onChange} />
+
+                            </div>
+                            <div className={style.InputForm} >
+                                <label className={style.text}>Foto</label >
+                                <input className={style.input} name="image" type="text" value={input.image} onChange={onChange} />
 
                             </div>
                         </div>
