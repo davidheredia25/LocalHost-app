@@ -12,22 +12,22 @@ export function loginReducer(state = initialState, { type, payload }) {
                 user: JSON.parse(localStorage.getItem('user'))
             }
         case REGISTER_LOCAL:
-            const usuario = localStorage.setItem("user", JSON.stringify(payload));
+             localStorage.setItem("user", JSON.stringify(payload));
             return {
                 ...state, 
-                user: usuario
+                user: payload
             }
         case LOGIN_LOCAL:
-            const login = localStorage.setItem("user", JSON.stringify(payload));
+             localStorage.setItem("user", JSON.stringify(payload));
             return {
                 ...state,
                 user: payload
             } 
         case LOG_OUT : 
-
+        localStorage.clear()
             return {
                 ...state,
-                user: localStorage.clear()
+                user: null
             }   
         case EDIT_DATE_USER: 
         localStorage.setItem("user", JSON.stringify(payload))

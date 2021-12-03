@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './Styles/Dates.module.scss'
 import { BsPencilSquare } from "react-icons/bs";
 import { useSelector } from 'react-redux';
@@ -11,8 +11,16 @@ const Dates = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { user } = useSelector(state => state.login)
+    const [usuario, setUsuario] = useState(JSON.parse(localStorage.getItem('user'))) 
+    console.log('uuser', user.user._id)
+    
 
 
+    useEffect(() => {
+        console.log(user);
+    }, [user])
+
+ 
     return (
         <div className={style.ctnSup}>
             <h3 className={style.titlePrin}>Mis datos <BsPencilSquare className={style.icon} onClick={handleShow} /></h3>

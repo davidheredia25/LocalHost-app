@@ -4,9 +4,10 @@ import style from './Styles/FormEdit.module.scss'
 import { editDateUser } from '../../../redux/actions/login.actions';
 
 const FormEdit = ({ handleClose }) => {
-
+    const {user} = useSelector(state => state.login)
+    const id= user?.user?._id;
+    console.log('id', id)
     const dispatch = useDispatch();
-    // const { user } = useSelector(state => state.login)
     const [input, setInput] = useState({
         fristName: '',
         lastName: '',
@@ -22,7 +23,7 @@ const FormEdit = ({ handleClose }) => {
 
     })
     //console.log('check', input.fristName)
-    const onChange = (e) => {
+    const onChange = (e) => { 
 
         setInput({
             ...input,
@@ -34,7 +35,7 @@ const FormEdit = ({ handleClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(editDateUser(input));
+        dispatch(editDateUser(id, input));
         handleClose();
 
     }

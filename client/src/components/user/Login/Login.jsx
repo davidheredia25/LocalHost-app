@@ -113,7 +113,7 @@ const Login = () => {
         </div>
         <div className={style.ctnGoogle}>
           <Button 
-           
+           onClick={handleSubmit}
           variant='contained' size="x-large" style={{'backgroundColor': '#000000', 'width': 200}}  type="submit" className={style.btn}>
             INGRESÁ
           </Button>
