@@ -5,7 +5,7 @@ import { editDateUser } from '../../../redux/actions/login.actions';
 
 const FormEdit = ({ handleClose }) => {
     const {user} = useSelector(state => state.login)
-    const id= user?.user?._id;
+    const id= user?.user?.id;
     console.log('id', id)
     const dispatch = useDispatch();
     const [input, setInput] = useState({
@@ -81,16 +81,16 @@ const FormEdit = ({ handleClose }) => {
                 <div className={style.ctnGrid}>
                     <div className={style.InputForm} >
                         <label className={style.text}>Direccion</label >
-                        <input className={style.input} name="document" type="text" value={input.direction} onChange={onChange} />
+                        <input className={style.input} name="direccion" type="text" value={input.direction} onChange={onChange} />
                     </div>
                     <div className={style.InputForm} >
                         <label className={style.text}>Piso</label >
-                        <input className={style.input} name="dateOfBirth" type="text" value={input.floor} onChange={onChange} />
+                        <input className={style.input} name="floor" type="text" value={input.floor} onChange={onChange} />
 
                     </div>
                     <div className={style.InputForm} >
                         <label className={style.text}>Departamento</label >
-                        <input className={style.input} name="telephone" type="text" value={input.department} onChange={onChange} />
+                        <input className={style.input} name="departament" type="text" value={input.department} onChange={onChange} />
 
                     </div>
                 </div>
@@ -98,16 +98,16 @@ const FormEdit = ({ handleClose }) => {
                 <div className={style.ctnGrid}>
                     <div className={style.InputForm} >
                         <label className={style.text}>Estado/Provincia</label >
-                        <input className={style.input} name="document" type="text" value={input.location} onChange={onChange} />
+                        <input className={style.input} name="location" type="text" value={input.location} onChange={onChange} />
                     </div>
                     <div className={style.InputForm} >
                         <label className={style.text}>Ciudad</label >
-                        <input className={style.input} name="dateOfBirth" type="text" value={input.city} onChange={onChange} />
+                        <input className={style.input} name="city" type="text" value={input.city} onChange={onChange} />
 
                     </div>
                     <div className={style.InputForm} >
                         <label className={style.text}>Codigo postal</label >
-                        <input className={style.input} name="telephone" type="text" value={input.postalCode} onChange={onChange} />
+                        <input className={style.input} name="postalCode" type="text" value={input.postalCode} onChange={onChange} />
 
                     </div>
                 </div>

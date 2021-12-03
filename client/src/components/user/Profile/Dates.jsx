@@ -12,7 +12,7 @@ const Dates = () => {
     const handleShow = () => setShow(true);
     const { user } = useSelector(state => state.login)
     const [usuario, setUsuario] = useState(JSON.parse(localStorage.getItem('user'))) 
-    console.log('uuser', user.user._id)
+    console.log('uuser', user?.user?._id)
     
 
 
