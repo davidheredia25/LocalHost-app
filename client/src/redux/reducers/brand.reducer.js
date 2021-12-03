@@ -33,9 +33,10 @@ export function brandReducer(state = initialState, { type, payload }) {
                 categories: payload
             }
         case GET_SUBCATEGORIES:
+            let sc = payload.map(e => e.name)
             return {
                 ...state,
-                subcategories: payload
+                subcategories: sc
             }
         case SET_BRAND_NAME: 
             return {
@@ -80,7 +81,7 @@ export function brandReducer(state = initialState, { type, payload }) {
                     ]
                 }
             }
-        case SET_EXISTENT_BRAND:
+        /* case SET_EXISTENT_BRAND:
             let brandFound = state.brands.find(x => x.name === payload);
             let arrayCategories = [];
             brandFound.categories.forEach(x => {
@@ -98,6 +99,13 @@ export function brandReducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 brandInfo: finalObject,
+                existent: true
+            } */
+        case SET_EXISTENT_BRAND:
+            let brandSelected = state.brands.find(x => x.name === payload);
+            return {
+                ...state,
+                brandInfo: brandSelected,
                 existent: true
             }
         default:

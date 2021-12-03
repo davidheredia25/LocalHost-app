@@ -1,23 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { saveBrand, setBrandSubcategories } from "../../../redux/actions/brand.actions"
+import { saveBrand, setBrandSubcategories, getSubcategories } from "../../../redux/actions/brand.actions"
 
 const SubcategoryForm = () => {
 
    const dispatch = useDispatch();
 
+    useEffect(() => {
+        dispatch(getSubcategories())
+    }, [])
+
     const [object, setObject] = useState({
         category: "",
-        subcategories: []
+        types: []
     });
     const [input, setInput] = useState("");
 
-    const { brandInfo, existent, subcategories } = useSelector(state => state.brand);
+    const { brandInfo, subcategories, existent } = useSelector(state => state.brand);
 
     const handleEdit = (e) => {
         setObject({
             category: "",
-            subcategories: []
+            types: []
         })
         let arrayCategories = brandInfo.categories.map(x => {
             return {
@@ -33,26 +37,26 @@ const SubcategoryForm = () => {
         setObject({
             ...object,
             category: e.target.value,
-            subcategories: brandInfo.categories.subcategories
+            types: brandInfo.categories.types
         })
     }
 
     const handleX = (e) => {
         let array = brandInfo.categories.map(x => {
-            let filtered = x.subcategories.filter(el => el !== e.target.value)
+            let filtered = x.types.filter(el => el !== e.target.value)
             return filtered;
         })
         setObject({
             ...object,
-            subcategories: array,
+            types: array,
         })
     }
 
     const handleSelect = (e) => {
-        if (!object.subcategories.includes(e.target.value)) {
+        if (!object.types.includes(e.target.value)) {
             setObject({
                 ...object,
-                subcategories: [...object.subcategories, e.target.value]
+                types: [...object.types, e.target.value]
             })
         }
     }
@@ -60,7 +64,7 @@ const SubcategoryForm = () => {
     const handleAdd = () => {
         setObject({
             ...object,
-            subcategories: [...object.subcategories, input]
+            types: [...object.types, input]
         })
     }
 
@@ -71,22 +75,27 @@ const SubcategoryForm = () => {
     
     return (
         <div>
-            <div>
+            {/* <div>
                 {object.subcategories}
-            </div>
+            </div> */}
             {
                 brandInfo.categories.map(x => {
                     return (
                         <div>
                             <div>
-                                <h3>{x.name}</h3>
-                                <button value={x.name} onClick={handleEdit}>EDIT</button>
+                                <h3>{x.name.toUpperCase()}</h3>
+                                <button 
+                                    value={x.name} 
+                                    onClick={handleEdit}
+                                >
+                                    EDIT
+                                </button>
                             </div>
                             <select onChange={handleSelect}>
                                 <option selected value="">-subcategorías-</option>
                                 
                                 {
-                                    subcategories.map(e => {
+                                    subcategories?.map(e => {
                                         return (
                                             <option value={e}>{e}</option>
                                         )
@@ -94,16 +103,25 @@ const SubcategoryForm = () => {
                                 }
                             </select>
                             <div>
-                                <input value={input} type="text" onChange={(e) => setInput(e.target.value)} />
+                                <input 
+                                    value={input} 
+                                    type="text" 
+                                    onChange={(e) => setInput(e.target.value)} 
+                                />
                                 <button onClick={handleAdd}>AGREGAR</button>
                             </div>
                             <div>
                                 {
-                                   x.subcategories?.map(e => {
+                                   x.types?.map(e => {
                                         return (
                                             <div>
                                                 <span>{e}</span>
-                                                <button value={e} onClick={handleX}>X</button>
+                                                <button 
+                                                    value={e} 
+                                                    onClick={handleX}
+                                                >
+                                                    X
+                                                </button>
                                             </div>
                                         )
                                     })

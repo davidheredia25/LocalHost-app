@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import BrandForm from "./BrandForm";
-import CategoryForm from "./CategoryForm";
-import SubcategoryForm from "./SubcategoryForm";
-import { getBrands } from "../../../redux/actions/brand.actions";
+import BrandForm from "../BrandCreate";
+import CategoryForm from "../CategoryForm";
+import SubcategoryForm from "../SubcategoryForm";
+import { getBrands, getCategories } from "../../../../redux/actions/brand.actions";
 
 const BrandContainer = () => {
 
     const dispatch = useDispatch();
-    const { brands, brandInfo } = useSelector(state => state.brand)
 
     useEffect(() => {
         dispatch(getBrands())
-    }, [dispatch])
+        dispatch(getCategories())
+    }, [])
+
+    const { brands, categories, brandInfo } = useSelector(state => state.brand)
 
     return (
         <div>
@@ -20,8 +22,8 @@ const BrandContainer = () => {
             {
                 brandInfo.name ?
                 <>
-                    <CategoryForm />
-                    <SubcategoryForm />
+                    <CategoryForm categories={categories} />
+                    <SubcategoryForm />    
                 </>
                 : null
             }
