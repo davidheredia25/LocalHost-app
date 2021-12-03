@@ -49,9 +49,10 @@ const userSchema = new Schema({
     dateOfBirth: {
         type: String
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
+    Role: {
+        type: String,
+        enum: ["user", "amdin", "superAdmin"],
+        default: "user"
     },
     isDelivery: {
         type: Boolean,
