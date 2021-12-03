@@ -1,0 +1,16 @@
+[{
+    "_id": {
+        "$oid": "619ecde06a92375a826aa8e2"
+    },
+    "name": "zapatillas"
+}, {
+    "_id": {
+        "$oid": "619ecde06a92375a826aa8e3"
+    },
+    "name": "indumentaria"
+}, {
+    "_id": {
+        "$oid": "619ecde06a92375a826aa8e4"
+    },
+    "name": "accesorios"
+}]

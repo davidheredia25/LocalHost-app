@@ -1,0 +1,59 @@
+@import "./MixinsProfile.scss";
+
+.titleModal {
+  @include title;
+  border: none;
+  color: #000000;
+  text-align: center;
+}
+
+.formu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctnGrid {
+  display: flex;
+}
+.ctnGrid > .InputForm {
+  flex: 1 1 100px;
+  margin: 20px 10px 0px 10px;
+}
+
+.text {
+  margin-bottom: 5px;
+  font-weight: 600;
+  width: 200px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.input {
+  width: 100%;
+  height: 60%;
+}
+
+.ctnBtn {
+  justify-content: center;
+}
+
+.btn {
+  margin: 40px 30px 10px 30px;
+  padding: 0.8em;
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+  cursor: pointer;
+  width: 150px;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.383);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+}

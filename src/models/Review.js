@@ -6,17 +6,20 @@ const reviewSchema = new Schema({
         type: Number,
         required: true
     },
-    comentario: {
+    comment: {
         type: String
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true 
+        required: true,
+        autopopulate: true
     }
 }, {
     versionKey: false,
     timestamps: false
 });
+
+reviewSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = model('Review', reviewSchema);

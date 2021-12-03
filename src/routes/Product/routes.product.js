@@ -3,17 +3,19 @@ const {
     createProduct,
     deleteProduct,
     getProductById,
-    getProduct,
-    updateProduct
+    getProducts,
+    updateProduct,
+    updateRating
 } = require('./Controllers/all.controllers');
 
 const router = Router();
 
 //         /product
-router.get('/', getProduct);
+router.get('/', getProducts);
 router.get('/:id', getProductById);
-router.get('/create', createProduct);
-router.get('/update/:id', updateProduct);
-router.get('/delete/:id', deleteProduct);
+router.post('/create', createProduct);
+router.put('/update/:id', updateProduct);
+router.put('/update/rating/:id', updateRating);
+router.delete('/delete/:id', deleteProduct);
 
 module.exports = router;

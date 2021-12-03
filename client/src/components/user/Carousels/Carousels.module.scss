@@ -1,0 +1,43 @@
+.ctnTxt {
+  margin-bottom: 10%;
+}
+
+.btn {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0.8em 2em;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: #00000000;
+  cursor: pointer;
+}
+
+.link{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    background-color: rgba(141, 137, 137, 0.541);
+  }
+}
+
+.btn:hover {
+  background-color: rgba(141, 137, 137, 0.541);
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.txt {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+}

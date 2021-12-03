@@ -9,33 +9,40 @@ const productSchema = new Schema({
     brand: {
         type: Schema.Types.ObjectId,
         ref: 'Brand',
-        required: true
+        required: true,
+        // autopopulate: true
     },
-    category: [{
+    category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
-        required: true
-    }],
-    sexo: {
-        type: String,
-        required: true
+        required: true,
+        // autopopulate: true
+    },
+    type: {
+        type: Schema.Types.ObjectId,
+        ref: 'Types',
+        required: true,
+        // autopopulate: true
     },
     price: {
         type: Number,
         required: true
     },
-    color: {        
+    color: [{        
         type: String,
         required: true
+    }],
+    description : {    
+        type:String,
     },
-    material: {
+    talle: [{
         type: String,
         required: true
-    },
-    size: {
+    }],
+    image: [{
         type: String,
         required: true
-    },
+    }],
     numReviews: {
         uno: {
             type: Number,
@@ -58,13 +65,25 @@ const productSchema = new Schema({
             default: 1
         },
     },
-    reviews: {
+    rating: {
+        type: Number,
+        default: 3
+    },
+    reviews: [{
         type: Schema.Types.ObjectId,
-        ref: 'Review'
+        ref: 'Review',
+        autopopulate: true
+    }],
+    stock: {
+        type: Number,
+        default: 1,
+        required: true
     }
 }, {
     versionKey: false,
     timestamps: false
 });
+
+productSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = model('Product', productSchema);

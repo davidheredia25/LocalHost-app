@@ -1,0 +1,26 @@
+
+
+@mixin centerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+
+
+@mixin flexCenter ($direction) {
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+
+
+@mixin buttonType ($backgroundcolor, $color) {
+    background-color: $backgroundcolor;
+    color: $color;
+}

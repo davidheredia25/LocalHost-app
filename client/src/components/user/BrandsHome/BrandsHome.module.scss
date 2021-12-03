@@ -1,0 +1,39 @@
+.ctnBrands {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px 10px 0px;
+ 
+  
+}
+
+// .imgIcon:hover{
+//     height: 120px;
+// }
+
+.imgIcon {
+  
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+  height: 70px;
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 2%;
+  }
+
+  to {
+    margin-left: 0%;
+    animation-duration: 1s;
+  }
+}
+
+.imgIcon:hover {
+  transform: scale(1.2);
+
+}

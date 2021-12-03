@@ -1,0 +1,56 @@
+.filtersList {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtersContainer {
+    width: 10vw; 
+    margin-top: 4%;
+}
+
+.buttonTitle {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.button {
+    background-color: Transparent;
+    
+}
+.button:hover {
+    background-color: black;
+    color: black;
+}
+
+.appliedContainer {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    margin: 2px;
+}
+
+.x {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-style: none;
+    color: white;
+}
+.bcsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.h5 {
+    padding-top: 2px;
+    
+}
