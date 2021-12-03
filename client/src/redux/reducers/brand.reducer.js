@@ -6,6 +6,7 @@ import {
     SET_BRAND_CATEGORIES,
     SET_BRAND_SUBCATEGORIES,
     SET_EXISTENT_BRAND,
+    SET_NEW_CATEGORY
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -107,6 +108,14 @@ export function brandReducer(state = initialState, { type, payload }) {
                 ...state,
                 brandInfo: brandSelected,
                 existent: true
+            }
+        case SET_NEW_CATEGORY:
+            return{
+                ...state, 
+                brandInfo:{ 
+                    ...state.brandInfo, //nos copiamos lo que habia en brandInfo 
+                    categories: [...state.brandInfo.categories, payload] //le modificamos el categories, como es un arreglo utilizamos el spread para copiarnos y luego se le agrega el payload que es lo que le agregamos al array
+                }
             }
         default:
             return state;

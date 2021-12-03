@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setBrandName } from "../../../redux/actions/brand.actions";
-import CategoryForm from "./CategoryForm";
-import SubcategoryCreate from "./SubcategoryCreate";
+import { setBrandName } from "../../../../redux/actions/brand.actions";
+import CategoryCreate from "./CategoryCreate";
 
 const BrandCreate = () => {
 
@@ -29,26 +28,26 @@ const BrandCreate = () => {
             {
                 brandInfo.name ?
                     <>
-                        <CategoryForm />
+                        <CategoryCreate />
                     </>
                     : null
             }
             <div>
-                <span>{brandInfo.name}</span>
+                <span>Nombre de la marca: {brandInfo.name}</span>
+                <span>Categorías:</span>
                 {
                     brandInfo.categories.map(e => {
                         return (
                             <div>
-                                <h5>{e.name}</h5>
+                                <h5>{e.name}</h5> {/*  se muestran las categorias de la marca. */}
                                 {
-                                    e.subcategories?.map(x => <p>{x}</p>)
+                                    e.subcategories?.map(x => <p>{x}</p>) //se muestran las subcategorias de las categorias mapeadas anteriormente.
                                 }
                             </div>
                         )
                     })
                 }
             </div>
-         
         </div>
     )
 }

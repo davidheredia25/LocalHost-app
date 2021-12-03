@@ -5,7 +5,6 @@ import {
 	Details, 
 	Cart, 
 	NavBar, 
-	CreateProduct, 
 	Catalogo, 
 	Login, 
 	Register, 
@@ -35,7 +34,6 @@ function App() {
 
 				{/* ADMIN */}
 				<Route path="/admin" element={<Admin />} />
-				<Route path="/admin/crud" element={<CreateProduct />} />
 
 				{/* PROFILE */}
 				<Route path="/profile" element={<Profile />} />

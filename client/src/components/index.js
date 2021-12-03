@@ -5,7 +5,6 @@ export { default as Cart} from "./user/Cart/Cart.js";
 export { default as Details} from "./user/Details/Details.js";
 export { default as NavBar} from "./user/NavBar/NavBar.js";
 export { default as SearchBar} from "./user/SearchBar/SearchBar.jsx";
-export {default as CreateProduct} from "./admin/ProductCRUD/CreateProduct"
 export { default as Catalogo } from "./user/Catalogo/Catalogo";
 export { default as Login } from "./user/Login/Login";
 export { default as Register } from "./user/Register/Register";

@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setExistentBrand } from "../../../redux/actions/brand.actions";
-import CategoryForm from "./CategoryForm";
-import SubcategoryForm from "./SubcategoryForm";
+import { setExistentBrand } from "../../../../redux/actions/brand.actions";
+import CategoryForm from "../CategoryForm";
+import SubcategoryForm from "../SubcategoryForm";
 
 const BrandEdit = () => {
 
