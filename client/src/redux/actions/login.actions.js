@@ -1,25 +1,26 @@
 import axios from "axios"
-export const GET_USER = "GET_USER"
+export const LOGIN_GOOGLE = "LOGIN_GOOGLE"
 export const REGISTER_LOCAL = "REGISTER_LOCAL"
 export const LOGIN_LOCAL = "LOGIN_LOCAL"
 export const LOGIN_AUTH = "LOGIN_AUTH"
 export const LOG_OUT = 'LOG_OUT'
+export const GET_USER = "GET_USER"
 
 
 
 
-// // export const loginGoogle = (tokenId) = async dispatch => {
-// //     try {
-// //         const { data } = await axios.post("/login", { tokenId })
-// //         return dispatch({
-// //             type: GET_USER,
-// //             payload: data
-// //         })
-// //     }
-// //     catch (error) {
-// //         console.log(error)
-// //     }
-// // }
+ export const loginGoogle = (tokenId) => async (dispatch) => {
+     try {
+         const { data } = await axios.post("/user/login",  tokenId )
+         return dispatch({
+             type: LOGIN_GOOGLE,
+             payload: data
+         })
+     }
+     catch (error) {
+         console.log(error)
+     }
+ }
 
 export const registerLocal = (values) => async (dispatch) => {
     try {

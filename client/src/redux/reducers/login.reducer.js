@@ -1,4 +1,4 @@
-import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT} from "../actions/login.actions";
+import { LOGIN_LOCAL, REGISTER_LOCAL, LOGIN_GOOGLE, LOG_OUT} from "../actions/login.actions";
 
 let initialState = {
     user: JSON.parse(localStorage.getItem('user'))
@@ -6,10 +6,11 @@ let initialState = {
 
 export function loginReducer(state = initialState, { type, payload }) {
     switch (type) {
-        case GET_USER:
+        case LOGIN_GOOGLE:
+            localStorage.setItem("user", JSON.stringify({...payload}));
             return {
                 ...state,
-                user: JSON.parse(localStorage.getItem('user'))
+                user: payload
             }
         case REGISTER_LOCAL:
             const usuario = localStorage.setItem("user", JSON.stringify(payload))
@@ -21,7 +22,7 @@ export function loginReducer(state = initialState, { type, payload }) {
             const login = localStorage.setItem("user", JSON.stringify(payload));
             return {
                 ...state,
-                user: payload
+                user: login
             } 
         case LOG_OUT : 
 
