@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { productDelete } from "../../../redux/actions/Crud.actions";
 import { getProductsDetails } from "../../../redux/actions/products.actions";
 
-const EditDeleteProducts = ({ products }) => {
+const EditProducts = ({ products }) => {
     
     const dispatch = useDispatch();
 
@@ -34,4 +34,4 @@ const EditDeleteProducts = ({ products }) => {
     )
 }
 
-export default EditDeleteProducts;
+export default EditProducts;

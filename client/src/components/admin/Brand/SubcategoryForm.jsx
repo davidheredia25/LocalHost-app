@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { saveBrand, setBrandSubcategories, getSubcategories } from "../../../redux/actions/brand.actions"
+import { saveBrand, setBrandSubcategories } from "../../../redux/actions/brand.actions"
+import style from "./Brand.module.css";
 
 const SubcategoryForm = () => {
 
    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getSubcategories())
-    }, [])
 
     const [object, setObject] = useState({
         category: "",
@@ -16,7 +13,7 @@ const SubcategoryForm = () => {
     });
     const [input, setInput] = useState("");
 
-    const { brandInfo, subcategories, existent } = useSelector(state => state.brand);
+    const { brandInfo, subcategories } = useSelector(state => state.brand);
 
     const handleEdit = (e) => {
         setObject({
@@ -74,7 +71,7 @@ const SubcategoryForm = () => {
     }
     
     return (
-        <div>
+        <div className={style.subcategoryContainer}>
             {/* <div>
                 {object.subcategories}
             </div> */}

@@ -1,0 +1,14 @@
+.adminContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.indexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.subsection {
+    display: flex;
+    flex-direction: column;
+}

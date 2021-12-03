@@ -1,13 +1,26 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import BrandEdit from "./Brand/BrandEdit";
 import BrandCreate from "./Brand/BrandCreate";
 import UsersSection from "./Users/UsersSection";
 import CreateProduct from "./ProductCRUD/CreateProduct";
 import EditProducts from "./ProductCRUD/EditProducts";
+import { getUsers } from "../../redux/actions/admin.actions";
+import { getProducts } from "../../redux/actions/products.actions";
+import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
 
 const AdminSection = () => {
     
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getUsers())
+        dispatch(getProducts({}))
+        dispatch(getBrands())
+        dispatch(getCategories())
+        dispatch(getSubcategories())
+    }, [])
+
     const { section } = useSelector(state => state.admin)
     
     return (

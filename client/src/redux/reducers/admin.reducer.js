@@ -4,7 +4,7 @@ const initialState = {
     section: ""
 }
 
-export function adimnReducer(state = initialState, action){
+export function adminReducer(state = initialState, action){
     switch(action.type){
         case SET_SECTION:
             return {

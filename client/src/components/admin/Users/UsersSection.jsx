@@ -7,7 +7,7 @@ const UsersSection = () => {
     const dispatch = useDispatch();
     const { users } = useSelector(state => state.admin);
 
-    const handleRol = () => {
+    const handleRol = (e) => {
         dispatch(changeRol(e.target.value))
     }
 
@@ -19,10 +19,10 @@ const UsersSection = () => {
                         <div>
                             <h3>{u.email}</h3>
                             <button 
-                                value={x._id}
+                                value={u._id}
                                 onClick={handleRol}
                             >
-                                {u.admin ? "Hacer Usuario" : "Hacer Admin"}
+                                {u.isAdmin ? "Hacer Usuario" : "Hacer Admin"}
                             </button>
                         </div>
                     )

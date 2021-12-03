@@ -1,10 +1,14 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setExistentBrand } from "../../../redux/actions/brand.actions"
+import { useDispatch, useSelector } from "react-redux";
+import { setExistentBrand } from "../../../redux/actions/brand.actions";
+import CategoryForm from "./CategoryForm";
+import SubcategoryForm from "./SubcategoryForm";
 
 const BrandEdit = () => {
 
     const dispatch = useDispatch();
+
+    const { brands } = useSelector(state => state.brand)
 
     const handleSelect = (e) => {
         e.preventDefault();
@@ -24,7 +28,10 @@ const BrandEdit = () => {
                     }
                 </select>
             </div>
-            
+            <CategoryForm />
+            <SubcategoryForm />
         </div>
     )
 }
+
+export default BrandEdit;

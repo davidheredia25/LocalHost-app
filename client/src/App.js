@@ -1,6 +1,19 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import { Home, Details, Cart, NavBar, BrandContainer, CreateProduct, Catalogo, Login, Register, Profile, Favorites, Ordens } from "./components";
+import { 
+	Home, 
+	Details, 
+	Cart, 
+	NavBar, 
+	CreateProduct, 
+	Catalogo, 
+	Login, 
+	Register, 
+	Profile, 
+	Favorites, 
+	Ordens,
+	Admin
+} from "./components";
 
 
 
@@ -21,7 +34,7 @@ function App() {
 				<Route path="/catalogo" element={<Catalogo />} />
 
 				{/* ADMIN */}
-				<Route path="/admin/brand" element={<BrandContainer />} />
+				<Route path="/admin" element={<Admin />} />
 				<Route path="/admin/crud" element={<CreateProduct />} />
 
 				{/* PROFILE */}
