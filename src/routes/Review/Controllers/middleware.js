@@ -4,7 +4,8 @@ const Product = require('../../../models/Product');
 
 const verificacionId = async (id) => {
     try {
-        let find = await Review.findById(id);
+        let find = await Review.findById(id)
+        .populate('user', ['fristName', 'lastName', 'email']);
         let obj = { bool: false };
         if(find !== null)  return obj = { bool: true, review: find };
         return obj;     
@@ -24,11 +25,14 @@ const verificacionU = async (email) => {
     }
 };
 
-const verificacionExis = async (email) => {
+const verificacionExis = async (id, email) => {
     try {
-        let find = await Product.find();
-        let veri = find.filter(p => p.reviews?.user.email === email);
+        let find = await Product.findById(id);
+        // console.log('find verificacionExis', find.reviews);
         let obj = { bool: false };
+        let veri = [];
+        if (find.reviews && find.reviews !== null)  veri = find.reviews.filter(r => r.user.email === email);
+        // console.log('veri verificacionExis', veri);
         if(veri.length !== 0)  return obj = { bool: true };
         return obj;
     } catch (error) {

@@ -23,9 +23,7 @@ const verificacionId = async (id) => {
         .populate('type', ['name']);
         // console.log('find verificacionId', find);
         let obj = { bool: false };
-
         if(find !== null) return obj = { bool: true, product: find };
-
         return obj;
     } catch (error) {
         console.log(error);

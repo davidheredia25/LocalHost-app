@@ -6,7 +6,7 @@ const reviewSchema = new Schema({
         type: Number,
         required: true
     },
-    comentario: {
+    comment: {
         type: String
     },
     user: {
