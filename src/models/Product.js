@@ -65,11 +65,15 @@ const productSchema = new Schema({
             default: 1
         },
     },
-    reviews: {
+    rating: {
+        type: Number,
+        default: 3
+    },
+    reviews: [{
         type: Schema.Types.ObjectId,
         ref: 'Review',
         autopopulate: true
-    },
+    }],
     stock: {
         type: Number,
         default: 1,
