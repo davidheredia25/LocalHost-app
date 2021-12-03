@@ -5,7 +5,7 @@ import { editDateUser } from '../../../redux/actions/login.actions';
 
 const FormEdit = ({ handleClose }) => {
     const {user} = useSelector(state => state.login)
-    const id= user?.user?.id;
+    const id= user?.user?._id;
     console.log('id', id)
     const dispatch = useDispatch();
     const [input, setInput] = useState({
