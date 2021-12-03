@@ -37,7 +37,8 @@ const editDateUser = async (req, res) => {
         }, { new: true });
 
         editUser = await edit.save();
-        res.json(edit);
+        console.log(editUser)
+        res.json({message: "Dale que sos vos", user: editUser});
 
     } catch (error) {
         console.log(error);

@@ -4,6 +4,7 @@ export const REGISTER_LOCAL = "REGISTER_LOCAL"
 export const LOGIN_LOCAL = "LOGIN_LOCAL"
 export const LOGIN_AUTH = "LOGIN_AUTH"
 export const LOG_OUT = 'LOG_OUT'
+export const EDIT_DATE_USER ='EDIT_DATE_USER'
 
 
 
@@ -69,5 +70,18 @@ export const logOut = () => {
 export const getUser = () => {
     return {
         type: GET_USER
+    }
+}
+
+export const editDateUser = (id, input) => async (dispatch) => {
+    try {
+        const res = (await axios.put(`/user/edit/${id}`, input)).data
+        return dispatch({
+            type: EDIT_DATE_USER,
+            payload: res
+        })
+    }
+    catch (error) {
+        console.log(error)
     }
 }

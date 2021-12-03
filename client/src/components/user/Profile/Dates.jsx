@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './Styles/Dates.module.scss'
 import { BsPencilSquare } from "react-icons/bs";
 import { useSelector } from 'react-redux';
@@ -11,8 +11,16 @@ const Dates = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { user } = useSelector(state => state.login)
+    const [usuario, setUsuario] = useState(JSON.parse(localStorage.getItem('user'))) 
+    console.log('uuser', user?.user?._id)
     
 
+
+    useEffect(() => {
+        console.log(user);
+    }, [user])
+
+ 
     return (
         <div className={style.ctnSup}>
             <h3 className={style.titlePrin}>Mis datos <BsPencilSquare className={style.icon} onClick={handleShow} /></h3>
@@ -39,14 +47,16 @@ const Dates = () => {
                     </div>
 
                     <div className={style.data}>
+                        <p className={style.title1} >Fecha de nacimiento:</p>
+                        <p className={style.user}> {user?.user?.dateOfBirth}</p>
+                    </div>
+
+                    <div className={style.data}>
                         <p className={style.title1} >Telefono:</p>
                         <p className={style.user}>{user?.user?.telephone} </p>
                     </div>
 
-                    <div className={style.data}>
-                        <p className={style.title1} >Fecha de nacimiento:</p>
-                        <p className={style.user}> {user?.user?.dateOfBirth}</p>
-                    </div>
+
                 </div>
 
                 <div className={style.ctnText}>
@@ -80,7 +90,7 @@ const Dates = () => {
                     </div>
                 </div>
 
-                
+
             </div>
 
 
@@ -91,19 +101,9 @@ const Dates = () => {
                 size="lg"
                 centered
             >
-                <Modal.Header>
-                    <Modal.Title className={style.TitleModal} >
-                      Editar datos
-                    </Modal.Title>
-                </Modal.Header>
                 <Modal.Body>
-                    <FormEdit />
-
+                    <FormEdit handleClose={handleClose} />
                 </Modal.Body>
-                <Modal.Footer className={style.ctnBtn}>
-                    <button className={style.btn} onClick={handleClose}>Aceptar</button>
-                    <button className={style.btn} onClick={handleClose}>Cancelar</button>
-                </Modal.Footer>
             </Modal>
         </div>
     )

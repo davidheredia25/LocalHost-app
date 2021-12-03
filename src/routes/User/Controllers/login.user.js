@@ -97,7 +97,7 @@ const postLogin = async (req, res, next) => {
           try {
             if (err) return next(err);
           
-          const body = { id: user._id, email: user.email };
+          const body = { id: user._id, email: user.email, fristName: user.fristName, lastName: user.lastName, document: user.document, telephone: user.telephone, image: user.image, floor: user.floor, departament: user.departament, direction: user.direction, location: user.location, city: user.city, postalCode: user.postalCode, dateOfBirth: user.dateOfBirth, ticket: user.ticket  };
           const token = jwt.sign({ user: body }, "top_secret");
           return res.json({token});
           } catch (error) {
