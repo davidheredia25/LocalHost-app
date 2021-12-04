@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import style from "../Brand.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setNewCategory } from "../../../../redux/actions/brand.actions";
+import ShowBrandInfo from "./ShowBrandInfo";
+import style from "./CategoryCreate.module.css";
 
 const CategoryCreate = () => {
     
@@ -42,57 +43,103 @@ const CategoryCreate = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSave = (e) => {
         e.preventDefault();
         dispatch(setNewCategory(categoryObj))
+        setCategoryObj({
+            name: "",
+            subcategories: []
+        })
+        setInputSub("");
+    }
+
+    const handleDeleteCat = () => {
+        setCategoryObj({
+            ...categoryObj,
+            name: "",
+            subcategories: []
+        })
+    }
+
+    const handleDeleteSub = (e) => {
+        let filtered = categoryObj.subcategories.filter(sub => sub !== e.target.value)
+        setCategoryObj({
+            ...categoryObj,
+            subcategories: filtered
+        })
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className={style.cf_container}>  
+        <div className={style.container}>
+            <div className={style.form}>   
                 <div>
-                    <h3>Seleccionar categorías:</h3> {/* le agregamos categorías existentes a la nueva marca */}
-                    <select onChange={handleSelectCat}>
-                        <option selected value="">-categorías-</option>
-                        {
-                                categories?.map(x => {
-                                    return <option value={x.name}>{x.name.toUpperCase()}</option>
-                                })                  
-                        }
-                    </select>
+                    <h3>Categoría:</h3>
+                    {
+                        categoryObj.name 
+                            ?
+                            <div className={style.categoryName}>
+                                <h4>{categoryObj.name}</h4>
+                                <button onClick={handleDeleteCat}>X</button>
+                            </div>
+                            :
+                            <div>
+                                <select onChange={handleSelectCat}>
+                                    <option selected value="">-selecciona una categoría-</option>
+                                    {
+                                            categories?.map(x => {
+                                                return <option value={x.name}>{x.name.toUpperCase()}</option>
+                                            })                  
+                                    }
+                                </select>
+                                <div>
+                                    <input 
+                                        value={inputCat} 
+                                        type="text" 
+                                        onChange={(e) => setInputCat(e.target.value)}
+                                    />
+                                    <button onClick={handleAddCat}>+</button>
+                                </div>
+                            </div>
+                    }   
                 </div>
                 <div>
-                    <h3>Nueva categoría:</h3> {/* agregamos una categoria nueva si el admin lo desea */}
-                    <input 
-                        value={inputCat} 
-                        type="text" 
-                        onChange={(e) => setInputCat(e.target.value)}
-                    />
-                    <button onClick={handleAddCat}>AGREGAR</button>
-                </div> 
-                <div>
-                    <h3>Seleccionar subcategorías:</h3>
-                    <select onChange={handleSelectSub}>
-                        <option selected value="">-subcategorías-</option>
+                    <div>
+                        <h3>Subcategorías:</h3>
+                        <select onChange={handleSelectSub}>
+                            <option selected value="">-selecciona subcategorías-</option>
+                            {
+                                subcategories?.map(e => {
+                                    return (
+                                        <option value={e}>{e}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                        <div>
+                            <input 
+                                value={inputSub} 
+                                type="text" 
+                                onChange={(e) => setInputSub(e.target.value)} 
+                            />
+                            <button onClick={handleAddSub}>+</button>
+                        </div>
+                    </div>
+                    <div>
                         {
-                            subcategories?.map(e => {
+                            categoryObj.subcategories.map(sub => {
                                 return (
-                                    <option value={e}>{e}</option>
+                                    <div>
+                                        <p>{sub}</p>
+                                        <button value={sub} onClick={handleDeleteSub}>X</button>
+                                    </div>
                                 )
                             })
                         }
-                    </select>
-                    <div>
-                        <input 
-                            value={inputSub} 
-                            type="text" 
-                            onChange={(e) => setInputSub(e.target.value)} 
-                        />
-                        <button onClick={handleAddSub}>AGREGAR</button>
                     </div>
                 </div>
-                <button type="submit">GUARDAR CATEGORÍA</button>
-            </form>
+                <button onClick={handleSave}>GUARDAR</button>
+            </div>
+            <ShowBrandInfo />
         </div>
     )
 }

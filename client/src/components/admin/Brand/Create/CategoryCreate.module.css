@@ -1,0 +1,13 @@
+.container { /* contiene FORM y ShowBrandInfo */
+    display: flex;
+    flex-direction: row;
+}
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .categoryName {
+            display: flex;
+            flex-direction: row;
+        }

@@ -1,27 +1,53 @@
+import { Style } from "@material-ui/icons";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import style from "./ShowBrandInfo.module.css";
 
 const ShowBrandInfo = () => {
+
+  const dispatch = useDispatch();
   const { brandInfo } = useSelector((state) => state.brand);
+
+  const handleDeleteCat = (e) => {
+    
+  }
+
+  const handleDeleteSub = (e) => {
+    
+  }
+
+  const handleSave = () => {
+
+  }
 
   return (
     <div>
-      <h2>Categorias</h2>
-      {brandInfo.categories?.map((c) => {
-        return (
-          <div>
-            <h4>{c.name}</h4>
-            {c.subcategories?.map((s) => {
-              return (
-                <div>
-                  <h2>SubCategorias</h2>
-                  <h4>{s}</h4>
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
+      <h2>{brandInfo.name?.toUpperCase()}</h2>
+      {
+        brandInfo.categories?.map((c) => {
+          return (
+            <div>
+              <div className={style.category}>
+                <h4>{c.name.toUpperCase()}</h4>
+                <button value={c.name} onClick={handleDeleteCat}>X</button>
+              </div>
+              <div>
+              {
+                c.subcategories?.map((sub) => {
+                  return (
+                    <div className={style.subcategory}>
+                      <h5>{sub}</h5>
+                      <button value={sub} onClick={handleDeleteSub}>X</button>
+                    </div>
+                  );
+                })
+              }
+              </div>
+            </div>
+          )
+        })
+      }
+      <button onClick={handleSave}>GUARDAR MARCA</button>
     </div>
   );
 };

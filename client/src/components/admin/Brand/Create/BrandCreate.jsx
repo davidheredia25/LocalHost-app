@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setBrandName } from "../../../../redux/actions/brand.actions";
 import CategoryCreate from "./CategoryCreate";
@@ -13,41 +13,38 @@ const BrandCreate = () => {
         setInput(e.target.value);
     }
 
-    const handleClick = () => {
+    const handleAdd = () => {
         dispatch(setBrandName(input));
         setInput("");
+    }
+
+    const handleX = () => {
+        dispatch(setBrandName(""));
     }
 
     return (
         <div>
             <div>
-                <h3>Añadir Marca:</h3>
-                <input name="brand" value={input} type="text" onChange={handleChange} />
-                <button onClick={handleClick}>GUARDAR</button>
+            {
+                brandInfo.name !== "" 
+                    ?
+                    <div>
+                        <h2>{brandInfo.name}</h2>
+                        <button onClick={handleX}>X</button>
+                    </div>
+                    :
+                    <div>
+                        <h3>Nueva Marca:</h3>
+                        <input name="brand" value={input} type="text" onChange={handleChange} />
+                        <button onClick={handleAdd}>+</button>
+                    </div>
+            }
             </div>
             {
                 brandInfo.name ?
-                    <>
-                        <CategoryCreate />
-                    </>
+                    <CategoryCreate />
                     : null
             }
-            <div>
-                <span>Nombre de la marca: {brandInfo.name}</span>
-                <span>Categorías:</span>
-                {
-                    brandInfo.categories.map(e => {
-                        return (
-                            <div>
-                                <h5>{e.name}</h5> {/*  se muestran las categorias de la marca. */}
-                                {
-                                    e.subcategories?.map(x => <p>{x}</p>) //se muestran las subcategorias de las categorias mapeadas anteriormente.
-                                }
-                            </div>
-                        )
-                    })
-                }
-            </div>
         </div>
     )
 }
