@@ -6,6 +6,7 @@ import {
     SET_BRAND_CATEGORIES,
     SET_BRAND_SUBCATEGORIES,
     SET_EXISTENT_BRAND,
+    SET_NEW_CATEGORY
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -33,9 +34,10 @@ export function brandReducer(state = initialState, { type, payload }) {
                 categories: payload
             }
         case GET_SUBCATEGORIES:
+            let sc = payload.map(e => e.name)
             return {
                 ...state,
-                subcategories: payload
+                subcategories: sc
             }
         case SET_BRAND_NAME: 
             return {
@@ -80,7 +82,7 @@ export function brandReducer(state = initialState, { type, payload }) {
                     ]
                 }
             }
-        case SET_EXISTENT_BRAND:
+        /* case SET_EXISTENT_BRAND:
             let brandFound = state.brands.find(x => x.name === payload);
             let arrayCategories = [];
             brandFound.categories.forEach(x => {
@@ -99,6 +101,21 @@ export function brandReducer(state = initialState, { type, payload }) {
                 ...state,
                 brandInfo: finalObject,
                 existent: true
+            } */
+        case SET_EXISTENT_BRAND:
+            let brandSelected = state.brands.find(x => x.name === payload);
+            return {
+                ...state,
+                brandInfo: brandSelected,
+                existent: true
+            }
+        case SET_NEW_CATEGORY:
+            return{
+                ...state, 
+                brandInfo:{ 
+                    ...state.brandInfo, //nos copiamos lo que habia en brandInfo 
+                    categories: [...state.brandInfo.categories, payload] //le modificamos el categories, como es un arreglo utilizamos el spread para copiarnos y luego se le agrega el payload que es lo que le agregamos al array
+                }
             }
         default:
             return state;

@@ -9,6 +9,7 @@ export const SET_BRAND_CATEGORIES = "SET_BRAND_CATEGORIES";
 export const SET_BRAND_SUBCATEGORIES = "SET_BRAND_SUBCATEGORIES"; 
 export const SET_EXISTENT_BRAND = "SET_EXISTENT_BRAND";
 export const SAVE_BRAND = "SAVE_BRAND";
+export const SET_NEW_CATEGORY = "SET_NEW_CATEGORY"
 
 // ACTION CREATORS
 export const getBrands = () => async (dispatch) => {
@@ -86,3 +87,9 @@ export const deleteSubcategory = () => async dispatch => {
     })
 }
 
+export const setNewCategory = (cat) => {
+    return{
+        type: SET_NEW_CATEGORY,
+        payload: cat
+    }
+}
