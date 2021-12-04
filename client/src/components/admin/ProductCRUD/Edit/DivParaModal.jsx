@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getBrands, getCategories, getSubcategories } from "../../../redux/actions/brand.actions";
-import { productEdit } from "../../../redux/actions/Crud.actions";
+import { getBrands, getCategories, getSubcategories } from "../../../../redux/actions/brand.actions";
+import { productEdit } from "../../../../redux/actions/Crud.actions";
 
 const DivParaModal = () => {
     

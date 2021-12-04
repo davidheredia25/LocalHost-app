@@ -1,0 +1,9 @@
+.subcategory {
+    display: flex;
+    flex-direction: row;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+}

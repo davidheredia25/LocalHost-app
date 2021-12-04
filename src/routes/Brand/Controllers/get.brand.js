@@ -1,17 +1,42 @@
 const Brand = require('../../../models/Brand');
+const Product = require('../../../models/Product');
 const { verificacionId } = require('./middleware');
 
 const getBrand = async (req, res) => {
-    const { name } = req.query;
-    // console.log('name getBrand', name);
     try {
-        let getAllBrand = await Brand.find();
-        // console.log('getAll getBrand', getAllBrand);
-        if(!name)  return res.json(getAllBrand);
-        
-        let getBrandByName = getAllBrand.filter(b => b.name.toLowerCase().includes(name.toLowerCase()));
-        // console.log('getByName getBrand', getBrandByName);
-        res.json(getBrandByName);
+        let brands = await Brand.find();
+        let products = await Product.find().populate("brand", ["name"]).populate("category", ["name"]).populate("type")
+        let array = [];
+        brands.forEach(b => {
+            let brandName = b.name;
+            let brandProducts = products.filter(x => x.brand.name === brandName);
+            let brandCategories = brandProducts.map(x => x.category.name)
+            brandCategories = [...new Set(brandCategories)]
+            let brandObject = {
+                name: brandName,
+                categories: brandCategories.map(x => {
+                    return { 
+                        name: x, 
+                        types: [] 
+                    }
+                })
+            }
+            brandProducts.forEach(x => {
+                let productCategory = x.category.name;
+                let productType = x.type.name;
+                brandObject.categories.forEach(obj => {
+                    if(obj.name === productCategory) {
+                        obj.types = 
+                            !obj.types.length 
+                                ? [productType] 
+                                : [...obj.types, productType];
+                        obj.types = [...new Set(obj.types)];
+                    }
+                })
+            })
+            array.push(brandObject);
+        })
+        return res.json(array);
     } catch (error) {
         console.log(error);
     }
