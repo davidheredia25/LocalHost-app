@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { productDelete } from "../../../../redux/actions/Crud.actions";
@@ -30,6 +31,7 @@ const EditProducts = ({ products }) => {
 
     const handleDelete = (id) => {
         dispatch(productDelete(id))
+
     }
 
     const handleEdit = (id) => {

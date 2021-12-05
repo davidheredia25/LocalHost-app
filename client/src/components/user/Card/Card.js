@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Card.scss';
 import { MdOutlineAddShoppingCart, MdFavoriteBorder } from 'react-icons/md';
-import { addItemToCart, setCount, setTalle, setProduct } from '../../../redux/actions/cart.actions.js';
+import { addItemToCart, setCount, setTalle, setProduct, addEmptyCart } from '../../../redux/actions/cart.actions.js';
 import { Button } from '@mui/material';
 import Modal from 'react-modal';
 
@@ -31,7 +31,7 @@ const Card = ({ product }) => {
     }
 
     const addCart = () => {
-        dispatch(addItemToCart());
+        dispatch(addEmptyCart(product));
         closeModal();
     }
 
