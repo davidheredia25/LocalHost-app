@@ -6,7 +6,7 @@
   height: 100%;
   .cards {
     @include flexCenter(column);
-    margin: 50px;
+    margin-top: 20px;
     @include xs {
       display: block;
       margin: 0px;
