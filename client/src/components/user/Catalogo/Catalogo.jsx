@@ -5,6 +5,7 @@ import FiltersContainer from "../../filtersCatalogo/FiltersContainer";
 import AppliedFilters from "../../filtersCatalogo/AppliedFilters";
 import { getProducts } from "../../../redux/actions/products.actions";
 import styles from "./Catalogo.module.scss";
+import { resetAllFilters } from "../../../redux/actions/filters.actions";
 //  import Pagination from '../Pagination/Pagination'
 
 
@@ -16,6 +17,7 @@ const Catalogo = () => {
 
     useEffect(() => {
         dispatch(getProducts({ ...filters }))
+        return () => dispatch(resetAllFilters())
     }, [])
 
     return (
