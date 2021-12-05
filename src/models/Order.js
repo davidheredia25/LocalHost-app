@@ -1,23 +1,23 @@
  const pkg = require('mongoose');
  const { Schema, model } = pkg;
 
-const paymentSchema = new Schema({
+const orderSchema = new Schema({
        status:{  
             type: String,
             enum: ['created', 'processing', 'cancelled', 'completed'],
             default: "created"
          },
          payment_id:{
-            type: Number,
-             default: 0
+            type: String,
+             default: ""
          },
          payment_status:{
              type: String,
              default: ""
          },
          merchant_order_id: {
-            type: Number,
-            default: 0
+            type: String,
+            default: ""
          }
 
 
@@ -27,4 +27,4 @@ const paymentSchema = new Schema({
     timestamps: false
  });
 
- module.exports = model('Payment', paymentSchema);
+ module.exports = model('Order', orderSchema);

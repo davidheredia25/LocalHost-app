@@ -3,6 +3,7 @@ const { deleteUser } = require('./delete.user');
 const { getUserById, getUser } = require('./get.user');
 const { updateUser } = require('./update.user');
 const { editDateUser } = require('./editDate.user');
+const { addCartItem } = require('./cart.user');
 
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
     getUser,
     getUserById,
     updateUser,
-    editDateUser
+    editDateUser,
+    addCartItem
 };

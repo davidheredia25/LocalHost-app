@@ -6,7 +6,8 @@ const {
     getUser,
     getUserById,
     updateUser,
-    editDateUser
+    editDateUser,
+    addCartItem
 
  } = require('./Controllers/all.controllers');
 const {
@@ -26,6 +27,7 @@ router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);
 router.get('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
+router.post('/addItem', addCartItem);
 
 
 module.exports = router;
