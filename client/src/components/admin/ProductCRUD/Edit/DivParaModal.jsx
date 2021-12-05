@@ -4,18 +4,17 @@ import { getBrands, getCategories, getSubcategories } from "../../../../redux/ac
 import { productEdit } from "../../../../redux/actions/Crud.actions";
 import style from '../Style/DivParaModal.module.scss'
 
-const DivParaModal = ({ handleClose }) => {
+const DivParaModal = ({ handleClose, product }) => {
 
     const [form, setForm] = useState({
-        name: "",
-        price: "",
-        brand: "",
-        category: "",
-        type: "",
+        name: product.name,
+        price: product.price,
+        brand: product.brand.name,
+        category: product.category.name,
+        type: product.type.name,
         color: [],
         talle: [],
     })
-
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -24,22 +23,21 @@ const DivParaModal = ({ handleClose }) => {
         dispatch(getSubcategories())
     }, [])
 
-    // useEffect(() => {
-    //     setForm({
-    //         name: product.name,
-    //         price: product.price,
-    //         brand: product.brand,
-    //         category: product.category,
-    //         type: product.type,
-    //         color: product.color,
-    //         talle: product.talle,
-    //     })
-    // }, [])
+   /*  useEffect(() => {
+           if (product) {
+             setForm({
+                name: product.name,
+                price: product.price,
+                brand: product.brand,
+                category: product.category,
+                type: product.type,
+                color: product.color,
+                talle: product.talle,
+             })
+           }
+    }, [product]) */
 
     const { brands, categories, subcategories } = useSelector(state => state.brand)
-    const { product } = useSelector(state => state.products)
-
-    console.log( "holaaaa" , product)
 
     const handleSelectBrand = (e) => {
         setForm({
@@ -99,13 +97,13 @@ const DivParaModal = ({ handleClose }) => {
             <div className={style.ctnGrid}>
                 <div className={style.InputForm} >
                     <p className={style.text}>Marca</p>
-                    <p >{form.brand}</p>
+                    <p >{form.brand.toUpperCase()}</p>
                     <select className={style.input} onChange={handleSelectBrand}>
                         <option selected value={form.brand}>Seleccione marca</option>
                         {
                             brands?.map(x => {
                                 return (
-                                    <option value={x.name}>{x.name}</option>
+                                    <option value={x.name}>{x.name.toUpperCase()}</option>
                                 )
                             })
                         }
@@ -114,13 +112,13 @@ const DivParaModal = ({ handleClose }) => {
 
                 <div className={style.InputForm} >
                     <p className={style.text}>Categoría</p>
-                    <p>{form.category}</p>
+                    <p>{form.category.toUpperCase()}</p>
                     <select className={style.input} onChange={handleSelectCategory}>
                         <option selected value={form.category}>Seleccione categoría</option>
                         {
                             categories?.map(x => {
                                 return (
-                                    <option value={x.name}>{x.name}</option>
+                                    <option value={x.name}>{x.name.toUpperCase()}</option>
                                 )
                             })
                         }
@@ -129,13 +127,13 @@ const DivParaModal = ({ handleClose }) => {
 
                 <div className={style.InputForm}>
                     <p className={style.text}>Tipo</p>
-                    <p>{form.type}</p>
+                    <p>{form.type.toUpperCase()}</p>
                     <select className={style.input} onChange={handleSelectType}>
                         <option selected value={form.type}>seleccione tipo</option>
                         {
                             subcategories?.map(x => {
                                 return (
-                                    <option value={x.name}>{x.name}</option>
+                                    <option value={x}>{x.toUpperCase()}</option>
                                 )
                             })
                         }

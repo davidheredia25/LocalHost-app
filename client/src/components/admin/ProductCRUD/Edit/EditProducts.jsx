@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { productDelete } from "../../../../redux/actions/Crud.actions";
-import { getProductsDetails } from "../../../../redux/actions/products.actions";
+import { getProducts, getProductsDetails } from "../../../../redux/actions/products.actions";
 import Table from 'react-bootstrap/Table';
 import { BsPencilSquare } from "react-icons/bs";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -14,6 +14,7 @@ import DivParaModal from './DivParaModal.jsx'
 const EditProducts = ({ products }) => {
 
     const dispatch = useDispatch();
+    const { product } = useSelector(state => state.products)
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -23,20 +24,26 @@ const EditProducts = ({ products }) => {
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
 
-    const handleDelete = (e) => {
-        dispatch(productDelete(e.target.value))
+    const handleInputChange = (e) => {
+        dispatch(getProducts({ name: e.target.value}))
     }
 
-    const handleEdit = (e) => {
-        handleShow()
-        dispatch(getProductsDetails(e.target.value))
+    const handleDelete = (id) => {
+        dispatch(productDelete(id))
+    }
 
+    const handleEdit = (id) => {
+        console.log(id)
+        dispatch(getProductsDetails(id))
+        handleShow()
     }
 
 
     return (
         <div>
-
+            <div>
+                <input value="" onChange={handleInputChange} type="text" />
+            </div>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -51,7 +58,8 @@ const EditProducts = ({ products }) => {
                 </thead>
                 <tbody>
                     {
-                        products?.map(x => {
+                        products?.length ? products.map(x => {
+                            let id = x._id
                             return (
                                 <tr>
                                     <td> <img className={style.image} src={x.image} alt={x.name} /></td>
@@ -60,18 +68,19 @@ const EditProducts = ({ products }) => {
                                     <td>{x.category.name.charAt(0).toUpperCase() + x.category.name.slice(1)}</td>
                                     <td>{x.type.name.charAt(0).toUpperCase() + x.type.name.slice(1)}</td>
                                     <td> $ {x.price}</td>
-
-                                    <td> <BsPencilSquare className={style.icon} value={x._id} onClick={handleEdit} />
-                                        <RiDeleteBinLine className={style.icon} value={x._id} onClick={handleShow1} />
+                                    <td>
+                                        <button onClick={() => handleEdit(x._id)}>
+                                            <BsPencilSquare className={style.icon} />
+                                        </button>
+                                        <button onClick={() => handleShow1(x._id)}>
+                                            <RiDeleteBinLine className={style.icon} />
+                                        </button>
                                     </td>
 
                                 </tr>
                                 
                             )
-                        })
-                        
-                        
-                        
+                        }) : null
                     }
                 </tbody>
             </Table>
@@ -80,12 +89,15 @@ const EditProducts = ({ products }) => {
                 show={show}
                 size="lg"
                 centered
-            >
-                <Modal.Body>
-                    <DivParaModal handleClose={handleClose} />
-                </Modal.Body>
-
-
+            >   
+                        <Modal.Body>
+                        {
+                    product
+                        ?
+                            <DivParaModal product={product} handleClose={handleClose} />
+                           : null
+                }
+                        </Modal.Body>
             </Modal>
 
             <Modal
