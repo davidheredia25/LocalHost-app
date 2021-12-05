@@ -8,10 +8,11 @@ export const SET_BRAND_NAME = "SET_BRAND_NAME";
 export const SET_BRAND_CATEGORIES = "SET_BRAND_CATEGORIES";
 export const SET_BRAND_SUBCATEGORIES = "SET_BRAND_SUBCATEGORIES"; 
 export const SET_EXISTENT_BRAND = "SET_EXISTENT_BRAND";
-export const SAVE_BRAND = "SAVE_BRAND";
 export const SET_NEW_CATEGORY = "SET_NEW_CATEGORY"
+export const DELETE_BRAND_CATEGORY = "DELETE_BRAND_CATEGORY"
+export const DELETE_BRAND_SUBCATEGORY = "DELETE_BRAND_SUBCATEGORY";
 
-// ACTION CREATORS
+// ---------------- ACCIONES EN EL BACK ---------------- //
 export const getBrands = () => async (dispatch) => {
     try {
         const { data } = await axios.get(`/brand`)
@@ -25,28 +26,7 @@ export const getBrands = () => async (dispatch) => {
     }
 }
 
-export const setBrandName = (brand) => {
-    return {
-        type: SET_BRAND_NAME,
-        payload: brand
-    }
-}
-
-export const setBrandCategories = (category) => {
-    return {
-        type: SET_BRAND_CATEGORIES,
-        payload: category
-    }
-}
-
-export const setBrandSubcategories = (object) => { // object = { category: "Indumentaria", subcategory: "Remeras" } 
-    return {
-        type: SET_BRAND_SUBCATEGORIES,
-        payload: object
-    }
-}
-
-export const saveBrand = (object) => async (dispatch) => {
+export const saveNewBrand = (object) => async (dispatch) => {
     try {
         const res = await axios.post(`/brand/create`, object)    
         return dispatch(getBrands())
@@ -57,13 +37,6 @@ export const saveBrand = (object) => async (dispatch) => {
 
 } 
 
-export const setExistentBrand = (brand) => {
-    return {
-        type: SET_EXISTENT_BRAND,
-        payload: brand
-    }
-}
-
 export const getCategories = () => async dispatch => {
     const { data } = await axios.get("/category")
     return dispatch({
@@ -71,7 +44,6 @@ export const getCategories = () => async dispatch => {
         payload: data
     })
 }
-
 export const getSubcategories = () => async dispatch => {
     const { data } = await axios.get("/types")
     return dispatch({
@@ -86,10 +58,53 @@ export const deleteSubcategory = () => async dispatch => {
         payload: data
     })
 }
+// ------------------------------------------------ //
+
+// ---------------- SETERS EN EL REDUCER ---------------- //
+export const setBrandName = (brand) => {
+    return {
+        type: SET_BRAND_NAME,
+        payload: brand
+    }
+}
+export const setBrandCategories = (category) => {
+    return {
+        type: SET_BRAND_CATEGORIES,
+        payload: category
+    }
+}
+export const setBrandSubcategories = (object) => { 
+    return {
+        type: SET_BRAND_SUBCATEGORIES,
+        payload: object
+    }
+}
+
+export const setExistentBrand = (brand) => {
+    return {
+        type: SET_EXISTENT_BRAND,
+        payload: brand
+    }
+}
 
 export const setNewCategory = (cat) => {
-    return{
+    return {
         type: SET_NEW_CATEGORY,
         payload: cat
+    }
+}
+// ------------------------------------------------ //
+
+// ---------------- DELETES EN EL REDUCER ---------------- //
+export const deleteBrandCategory = (category) => {
+    return {
+        type: DELETE_BRAND_CATEGORY,
+        payload: category
+    }
+}
+export const deleteBrandSubcategory = (categoryObj) => {
+    return {
+        type: DELETE_BRAND_SUBCATEGORY,
+        payload: categoryObj
     }
 }
