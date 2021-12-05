@@ -22,6 +22,7 @@ const AdminSection = () => {
     }, [])
 
     const { section } = useSelector(state => state.admin)
+    const { products } = useSelector(state => state.products)
     
     return (
         <div>
@@ -37,7 +38,7 @@ const AdminSection = () => {
             }   
             {
                section === "productedit" 
-                    ? <EditProducts />
+                    ? <EditProducts products={products} />
                     : null
             }   
             {

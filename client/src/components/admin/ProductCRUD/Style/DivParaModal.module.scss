@@ -1,12 +1,4 @@
-@import "../Style/mixin.module.scss";
-
-.ctn {
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+@import "./mixin.module.scss";
 
 .btn {
   @include btn;
@@ -25,8 +17,8 @@
   align-items: center;
 }
 
-.titleModal {
-  @include titleFormu;
+.titleModal{
+    @include titleFormu;
 }
 
 .ctnGrid {

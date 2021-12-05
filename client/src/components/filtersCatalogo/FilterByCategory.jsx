@@ -6,12 +6,12 @@ import styles from "./filtersCatalogo.module.css";
 import { Button } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const FilterByCategory = ({ categories }) => {
+const FilterByCategory = ({ brands, categories }) => {
     
     const dispatch = useDispatch();
     const { brand, subcategory } = useSelector(state => state.filters)
-
     const [open, setOpen] = useState(false);
+    let brandFound;
 
     const handleClick = (e) => {
         dispatch(setFilterCategory(e.target.value))
@@ -25,12 +25,35 @@ const FilterByCategory = ({ categories }) => {
                 open ?
                 <div className={styles.filtersList}>
                 {
+                    brand ? 
+                    (brands.find(b => b.name === brand)).categories.map(c => {
+                        return (
+                            <Button 
+                                style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} 
+                                className={styles.button} 
+                                value={c.name} 
+                                onClick={handleClick}
+                            >
+                                {c.name}
+                            </Button>
+                        )
+                    }) : null
+                }
+                {
+                    !brand ?
                     categories?.map(x => {
                         return (
-                            <Button  style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</Button>
+                            <Button 
+                                style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} 
+                                className={styles.button} 
+                                value={x.name} 
+                                onClick={handleClick}
+                            >
+                                {x.name.toUpperCase()}
+                            </Button>
                         )
-                    })
-                }
+                    }) : null
+                }    
                 </div> : null
             }
         </div>

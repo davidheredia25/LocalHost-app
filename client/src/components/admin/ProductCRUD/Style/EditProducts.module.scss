@@ -1,0 +1,32 @@
+@import "./mixin.module.scss";
+
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.icon {
+  height: 25px;
+  margin: 0px 15px 0px 15px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.08);
+}
+
+.btn {
+  @include btn;
+}
+
+.btn:hover {
+  @include btnHover;
+}
+.ctnBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.titleDelete {
+  @include titleFormu;
+}
