@@ -1,7 +1,7 @@
-import { Style } from "@material-ui/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./ShowBrandInfo.module.css";
+import { deleteBrandCategory, saveNewBrand } from "../../../redux/actions/brand.actions";
 
 const ShowBrandInfo = () => {
 
@@ -9,15 +9,11 @@ const ShowBrandInfo = () => {
   const { brandInfo } = useSelector((state) => state.brand);
 
   const handleDeleteCat = (e) => {
-    
-  }
-
-  const handleDeleteSub = (e) => {
-    
+    dispatch(deleteBrandCategory(e.target.value))
   }
 
   const handleSave = () => {
-
+    dispatch(saveNewBrand(brandInfo))
   }
 
   return (
@@ -33,11 +29,10 @@ const ShowBrandInfo = () => {
               </div>
               <div>
               {
-                c.subcategories?.map((sub) => {
+                c.types?.map((sub) => {
                   return (
                     <div className={style.subcategory}>
                       <h5>{sub}</h5>
-                      <button value={sub} onClick={handleDeleteSub}>X</button>
                     </div>
                   );
                 })

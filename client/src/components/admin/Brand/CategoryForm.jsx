@@ -11,7 +11,7 @@ const CategoryForm = () => {
 
     const [categoryObj, setCategoryObj] = useState({
         name: "",
-        subcategories: []
+        types: []
     })
         
     const [inputCat, setInputCat] = useState("")
@@ -25,10 +25,13 @@ const CategoryForm = () => {
         })
     }
     const handleAddSub = () => {
+        let typesUpdated = [...categoryObj.types, inputSub]
+        typesUpdated = [...new Set(typesUpdated)]
         setCategoryObj({
             ...categoryObj,
-            subcategories: [...categoryObj.subcategories, inputSub]
+            types: typesUpdated
         })
+        setInputSub("")
     }
     const handleSelectCat = (e) => {
         let objectFound = brandInfo.categories.find(obj => obj.name === e.target.value)
@@ -36,7 +39,7 @@ const CategoryForm = () => {
             setCategoryObj({
                 ...categoryObj,
                 name: objectFound.name,
-                subcategories: objectFound.subcategories
+                types: objectFound.types
             })
         }
         else {
@@ -47,9 +50,11 @@ const CategoryForm = () => {
         }
     }
     const handleSelectSub = (e) => {
+        let typesUpdated = [...categoryObj.types, e.target.value]
+        typesUpdated = [...new Set(typesUpdated)]
         setCategoryObj({
             ...categoryObj,
-            subcategories: [...categoryObj.subcategories, e.target.value]
+            types: typesUpdated
         })
     }
 
@@ -58,7 +63,7 @@ const CategoryForm = () => {
         dispatch(setNewCategory(categoryObj))
         setCategoryObj({
             name: "",
-            subcategories: []
+            types: []
         })
         setInputSub("");
     }
@@ -67,15 +72,15 @@ const CategoryForm = () => {
         setCategoryObj({
             ...categoryObj,
             name: "",
-            subcategories: []
+            types: []
         })
     }
 
     const handleDeleteSub = (e) => {
-        let filtered = categoryObj.subcategories.filter(sub => sub !== e.target.value)
+        let filtered = categoryObj.types.filter(sub => sub !== e.target.value)
         setCategoryObj({
             ...categoryObj,
-            subcategories: filtered
+            types: filtered
         })
     }
 
@@ -136,7 +141,7 @@ const CategoryForm = () => {
                     </div>
                     <div>
                         {
-                            categoryObj.subcategories.map(sub => {
+                            categoryObj.types.map(sub => {
                                 return (
                                     <div>
                                         <p>{sub}</p>

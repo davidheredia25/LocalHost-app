@@ -6,7 +6,9 @@ import {
     SET_BRAND_CATEGORIES,
     SET_BRAND_SUBCATEGORIES,
     SET_EXISTENT_BRAND,
-    SET_NEW_CATEGORY
+    SET_NEW_CATEGORY,
+    DELETE_BRAND_CATEGORY,
+    DELETE_BRAND_SUBCATEGORY
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -34,10 +36,10 @@ export function brandReducer(state = initialState, { type, payload }) {
                 categories: payload
             }
         case GET_SUBCATEGORIES:
-            let sc = payload.map(e => e.name)
+            let arrayTypes = payload.map(e => e.name)
             return {
                 ...state,
-                subcategories: sc
+                subcategories: arrayTypes
             }
         case SET_BRAND_NAME: 
             return {
@@ -51,7 +53,7 @@ export function brandReducer(state = initialState, { type, payload }) {
         case SET_BRAND_CATEGORIES:
             let categoryObj = {
                 name: payload,
-                subcategories: []
+                types: []
             }
             return {
                 ...state,
@@ -67,9 +69,9 @@ export function brandReducer(state = initialState, { type, payload }) {
             let objectFound = state.brandInfo.categories.find(x => x.name === payload.category)
             objectFound = {
                 ...objectFound, 
-                subcategories: [
-                    ...objectFound.subcategories, 
-                    payload.subcategory
+                types: [
+                    ...objectFound.types, 
+                    payload.type
                 ]
             }
             return {
@@ -82,26 +84,6 @@ export function brandReducer(state = initialState, { type, payload }) {
                     ]
                 }
             }
-        /* case SET_EXISTENT_BRAND:
-            let brandFound = state.brands.find(x => x.name === payload);
-            let arrayCategories = [];
-            brandFound.categories.forEach(x => {
-                let sub = x.types.map(el => el.name)
-                let object = {
-                    name: x.name[0].name, // zapatillas //zapatillas
-                    subcategories: sub // ["Running", "Skate, Court" etc...]  
-                }
-                arrayCategories.push(object)
-            })
-            let finalObject = {
-                name: payload,
-                categories: arrayCategories
-            }
-            return {
-                ...state,
-                brandInfo: finalObject,
-                existent: true
-            } */
         case SET_EXISTENT_BRAND:
             let brandSelected = state.brands.find(x => x.name === payload);
             return {
@@ -110,12 +92,49 @@ export function brandReducer(state = initialState, { type, payload }) {
                 existent: true
             }
         case SET_NEW_CATEGORY:
+            let categFound = state.brandInfo.categories.find(obj => obj.name === payload.name)
+            if (categFound) {
+                let updatedTypes = categFound.types.concat(payload.types)
+                updatedTypes = [...new Set(updatedTypes)]
+                categFound.types = updatedTypes
+                let array = state.brandInfo.categories.filter(obj => obj.name !== payload.name)
+                return {
+                    ...state, 
+                    brandInfo: { 
+                        ...state.brandInfo, //nos copiamos lo que habia en brandInfo 
+                        categories: [...array, categFound] 
+                    }
+                }
+            }
             return{
                 ...state, 
                 brandInfo:{ 
                     ...state.brandInfo, //nos copiamos lo que habia en brandInfo 
                     categories: [...state.brandInfo.categories, payload] //le modificamos el categories, como es un arreglo utilizamos el spread para copiarnos y luego se le agrega el payload que es lo que le agregamos al array
                 }
+            }
+        case DELETE_BRAND_CATEGORY:
+            let filtered = state.brandInfo.categories.filter(obj => obj.name !== payload)
+            return {
+                ...state,
+                brandInfo: {
+                    ...state.brandInfo,
+                    categories: filtered
+                }
+            }
+        case DELETE_BRAND_SUBCATEGORY:
+            let catObj = state.brandInfo.categories.find(obj => obj.name === payload.category)
+            let typesUpdated = [...catObj.types, payload.subcategory]
+            typesUpdated = [...new Set(typesUpdated)]
+            catObj = {
+                ...catObj,
+                types: typesUpdated
+            }
+            let array = state.brandInfo.categories.filter(obj => obj.name !== payload.category)
+            array = [...array, catObj]
+            return {
+                ...state,
+                categories: array
             }
         default:
             return state;
