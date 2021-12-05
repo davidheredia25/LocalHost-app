@@ -10,7 +10,7 @@ import { Button } from '@mui/material';
 
 
 const Cart= () => {
-    const {cart} = useSelector(state=> state.cart)
+    const {cart} = useSelector(state => state.cart)
     console.log('cart', cart);
     function total(){
         let calculo=0;

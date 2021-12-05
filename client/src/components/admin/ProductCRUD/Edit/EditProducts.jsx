@@ -1,12 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { productDelete } from "../../../../redux/actions/Crud.actions";
-import { getProductsDetails } from "../../../../redux/actions/products.actions";
+import { getProductsDetails, getProducts } from "../../../../redux/actions/products.actions";
 
-const EditProducts = ({ products }) => {
-    
+const EditProducts = () => {
+    const {products} = useSelector(state=> state.products);
+    console.log(products);
     const dispatch = useDispatch();
-
     const handleDelete = (e) => {
         // confirmación de borrar
         dispatch(productDelete(e.target.value))

@@ -20,6 +20,7 @@ const getUserById = async (req, res) => {
 
 const getUserByID = async (req, res) => {
     const { userId } = req.params;
+    console.log(userId)
     try {
       let user = await User.findById(userId)
       res.json(user);
@@ -30,5 +31,5 @@ const getUserByID = async (req, res) => {
 
 module.exports = {
     getUser,
-    getUserById
+    getUserByID
 };
