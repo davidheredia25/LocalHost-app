@@ -12,7 +12,7 @@ const NavBarProfile = () => {
 
         <div className={style.ctnNavBar}>
             {
-                user.user.image !== "" ? (
+                user?.user?.image !== "" ? (
                     <img className={style.iconUser} src={user?.user?.image} />
                 ) :
                     (

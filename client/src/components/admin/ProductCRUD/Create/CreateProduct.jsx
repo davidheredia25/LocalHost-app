@@ -6,7 +6,7 @@ import {
   getCategories,
   getSubcategories,
 } from "../../../../redux/actions/brand.actions.js";
-import Style from "../Style/CreateProduct.module.scss"
+import style from "../Style/CreateProduct.module.scss"
 
 const CreateProduct = () => {
   const dispatch = useDispatch();
@@ -86,130 +86,102 @@ const CreateProduct = () => {
   };
 
   return (
-    <div>
-      <div className={Style.ctn}>
-        <form className={Style.form}>
-          <div className={Style.ctnFlex}>
-            <div>
-              <div className={Style.name}>
-                <label className={Style.title}>Nombre</label>
-                <input className={Style.input}
-                  name="name"
-                  type="text"
-                  placeholder="Nombre.."
-                  value={form.name}
-                  onChange={handleChange}
-                />
-              </div>
 
-              <div className={Style.name}>
-                <label className={Style.title}>Descripcion </label>
-                <input className={Style.input}
-                  name="description"
-                  type="text"
-                  placeholder="Descripcion.."
-                  value={form.description}
-                  onChange={handleChange}
-                />
-              </div>
+    <div className={style.ctn}>
 
-              <div className={Style.name}>
-                <label className={Style.title}>Precio</label>
-                <input className={Style.input}
-                  name="price"
-                  type="number"
-                  placeholder="Precio.."
-                  value={form.price}
-                  onChange={handleChange}
-                />
-              </div>
+      <form className={style.formu}>
 
-              <div className={Style.name}>
-                <label className={Style.title}>Color</label>
-                <input className={Style.input}
-                  name="color"
-                  type="text"
-                  placeholder="Color.."
-                  value={form.color}
-                  onChange={handleChange}
-                />
-              </div>
-
-            </div>
+        <div className={style.ctnGrid}>
+          <div className={style.InputForm} >
+            <label className={style.text}>Nombre</label>
+            <input className={style.input} name="name" type="text" placeholder="Nombre.." value={form.name} onChange={handleChange} />
           </div>
 
-          <div>
-            <div className={Style.name}>
-              <label className={Style.title}>Talle</label>
-              <input className={Style.input}
-                name="talle"
-                type="text"
-                placeholder="Talle..."
-                value={form.talle}
-                onChange={handleChange}
-              />
-            </div>
-            <div className={Style.name}>
-              <label className={Style.title}>Imagen</label>
-              <input className={Style.input}
-                name="image"
-                type="text"
-                placeholder="Imagen.."
-                value={form.image}
-                onChange={handleChange}
-              />
-            </div>
+          <div className={style.InputForm}>
+            <label className={style.text}>Descripcion </label>
+            <input className={style.input} name="description" type="text" placeholder="Descripcion.." value={form.description} onChange={handleChange} />
+          </div>
+        </div>
 
-            <div className={Style.name}>
-              <select className={Style.sele} onChange={selectMarca}>
-                <option selected value={form.brand}>
-                  Selecciona la Marca
-                </option>
-                {brands?.map((e) => {
-                  return (
-                    <option name="brand" value={e.name}>
-                      {e.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
 
-            <div className={Style.name}>
-              <select className={Style.sele} onChange={selectCategoria}>
-                <option selected value="">
-                  Selecciona la Categoria
-                </option>
-                {categories?.map((e) => {
-                  return (
-                    <option name="categories" value={e.name}>
-                      {e.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-
-            <div className={Style.name}>
-              <select className={Style.sele} onChange={selectSubcategoria}>
-                <option selected value="">
-                  Selecciona la SubCategoria
-                </option>
-                {subcategories?.map((e) => {
-                  return (
-                    <option name="types" value={e.name}>
-                      {e.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <button className={Style.button} onClick={handleClick}>Crear</button>
+        <div className={style.ctnGrid}>
+          <div className={style.InputForm}>
+            <label className={style.text}>Precio</label>
+            <input className={style.input} name="price" type="number" placeholder="Precio.." value={form.price} onChange={handleChange} />
           </div>
 
-        </form>
-      </div>
-    </div>
+          <div className={style.InputForm}>
+            <label className={style.text}>Color</label>
+            <input className={style.input} name="color" type="text" placeholder="Color.." value={form.color} onChange={handleChange} />
+          </div>
+
+        </div>
+
+
+        <div className={style.ctnGrid}>
+          <div className={style.InputForm}>
+            <label className={style.text}>Talle</label>
+            <input className={style.input} name="talle" type="text" placeholder="Talle..." value={form.talle} onChange={handleChange} />
+          </div>
+
+          <div className={style.InputForm}>
+            <label className={style.text}>Imagen</label>
+            <input className={style.input} name="image" type="text" placeholder="Imagen.." value={form.image} onChange={handleChange} />
+          </div>
+        </div>
+
+        <div className={style.ctnGrid}>
+          <div className={style.InputForm}>
+            <select  onChange={selectMarca}>
+              <option selected value={form.brand}>
+                Selecciona la Marca
+              </option>
+              {brands?.map((e) => {
+                return (
+                  <option name="brand" value={e.name}>
+                    {e.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <div className={style.InputForm}>
+            <select onChange={selectCategoria}>
+              <option selected value="">
+                Selecciona la Categoria
+              </option>
+              {categories?.map((e) => {
+                return (
+                  <option name="categories" value={e.name}>
+                    {e.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <div className={style.InputForm}>
+            <select  onChange={selectSubcategoria}>
+              <option selected value="">
+                Selecciona la SubCategoria
+              </option>
+              {subcategories?.map((e) => {
+                return (
+                  <option name="types" value={e.name}>
+                    {e.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </div>
+
+        <button className={style.btn} onClick={handleClick}>Crear</button>
+
+      </form>
+    </div >
+
   );
 };
 
