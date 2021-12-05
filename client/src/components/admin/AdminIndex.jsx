@@ -26,6 +26,8 @@ const AdminIndex = () =>{
         <div className={style.indexContainer}>
             <button value="users"onClick={onClick}>Users</button>
             <br/>
+            <button value="tickets"onClick={onClick}>Tickets</button>
+            <br/>
             <button name="product"  onClick={handleClick}>Products</button>
             {
                 button.product

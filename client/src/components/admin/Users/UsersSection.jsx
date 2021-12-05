@@ -10,6 +10,10 @@ const UsersSection = () => {
     const handleRol = (e) => {
         dispatch(changeRol(e.target.value))
     }
+    useEffect(() => {
+        console.log(users)
+        dispatch(getUsers())
+      }, [dispatch]);
 
     return (
         <div>

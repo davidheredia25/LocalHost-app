@@ -1,7 +1,9 @@
-import { SET_SECTION } from "../actions/admin.actions";
+import { SET_SECTION, GET_USERS, GET_TICKETS } from "../actions/admin.actions";
 
 const initialState = {
-    section: ""
+    section: "",
+    users: null,
+    tickets: null
 }
 
 export function adminReducer(state = initialState, action){
@@ -10,6 +12,16 @@ export function adminReducer(state = initialState, action){
             return {
                 ...state,
                 section : action.payload
+            }
+            case GET_USERS:
+            return{
+                ...state,
+                users: action.payload
+            }
+        case GET_TICKETS:
+            return{
+                ...state,
+                tickets: action.payload
             }
         default:
             return state
