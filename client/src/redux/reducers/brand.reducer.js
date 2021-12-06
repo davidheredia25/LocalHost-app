@@ -8,7 +8,8 @@ import {
     SET_EXISTENT_BRAND,
     SET_NEW_CATEGORY,
     DELETE_BRAND_CATEGORY,
-    DELETE_BRAND_SUBCATEGORY
+    DELETE_BRAND_SUBCATEGORY,
+    GET_BRANDS_LIST
 } from "../actions/brand.actions.js";
 
 const initialState = {
@@ -16,6 +17,7 @@ const initialState = {
     categories: [],
     subcategories: [],
     existent: false,
+    brandsList: [],
     brandInfo: {
         name: "",
         categories: [] // [{ name: "Indumentaria", subcategories: ["remeras", "buzos"] }, {}, {}, ...]
@@ -29,6 +31,11 @@ export function brandReducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 brands: payload
+            }
+        case GET_BRANDS_LIST:
+            return {
+                ...state,
+                brandsList: payload
             }
         case GET_CATEGORIES:
             return {

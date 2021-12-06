@@ -1,6 +1,5 @@
 const { Router } = require('express');
 const passport = require("passport");
-const jwt = require('jsonwebtoken');
 const { 
     createUser,
     deleteUser,
@@ -8,15 +7,14 @@ const {
     getUserByID,
     updateUser,
     editDateUser,
-    addCart
-
- } = require('./Controllers/all.controllers');
-const {
+    addCart,
     postUser,
     postLogin,
-    profileAuthenticate
-} = require("./Controllers/login.user")
-const router = Router();
+    profileAuthenticate,
+    loginGoogle
+ } = require('./Controllers/all.controllers');
+
+ const router = Router();
 
 //          /user
 router.get('/', getUser);
@@ -29,7 +27,7 @@ router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
-
+router.post('/loginG', loginGoogle);
 
 
 module.exports = router;
