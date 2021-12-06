@@ -1,0 +1,38 @@
+@import "../../StyleAdmin/mixin.module.scss";
+
+.titleSup {
+  @include titlePrincipal;
+}
+
+.titleInput {
+  @include textFormu;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.btnMas {
+  @include btnMas;
+  margin-left: 5px;
+}
+
+.btnX {
+  @include btndelete;
+}
+
+.btnX:hover {
+  @include btnMasHover;
+}
+
+.btnMas:hover {
+  @include btnMasHover;
+}
+
+.nameBrand {
+  @include textFormu;
+  font-size: 18px;
+}
+
+.ctnNameBrand {
+  margin-left: 22px;
+  margin-bottom: 20px;
+}

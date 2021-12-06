@@ -13,13 +13,11 @@ const NavBarProfile = () => {
         <div className={style.ctnNavBar}>
             {
                 user?.user?.image !== "" ? (
-                    <img className={style.iconUser} src={user?.user?.image} />
+                    <img className={style.iconUser} src={user.user.image} />
                 ) :
                     (
                         <BsPersonCircle className={style.iconUser} />
-
                     )
-
             }
 
             <h1 className={style.name}>Hola! {user?.user?.fristName} {user?.user?.lastName}</h1>

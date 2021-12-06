@@ -97,8 +97,8 @@ const DivParaModal = ({ handleClose, product }) => {
             <div className={style.ctnGrid}>
                 <div className={style.InputForm} >
                     <p className={style.text}>Marca</p>
-                    <p >{form.brand.toUpperCase()}</p>
-                    <select className={style.input} onChange={handleSelectBrand}>
+                    <p className={style.text1} >{form.brand.toUpperCase()}</p>
+                    <select className={style.input1} onChange={handleSelectBrand}>
                         <option selected value={form.brand}>Seleccione marca</option>
                         {
                             brands?.map(x => {
@@ -112,8 +112,8 @@ const DivParaModal = ({ handleClose, product }) => {
 
                 <div className={style.InputForm} >
                     <p className={style.text}>Categoría</p>
-                    <p>{form.category.toUpperCase()}</p>
-                    <select className={style.input} onChange={handleSelectCategory}>
+                    <p className={style.text1}>{form.category.toUpperCase()}</p>
+                    <select className={style.input1} onChange={handleSelectCategory}>
                         <option selected value={form.category}>Seleccione categoría</option>
                         {
                             categories?.map(x => {
@@ -127,8 +127,8 @@ const DivParaModal = ({ handleClose, product }) => {
 
                 <div className={style.InputForm}>
                     <p className={style.text}>Tipo</p>
-                    <p>{form.type.toUpperCase()}</p>
-                    <select className={style.input} onChange={handleSelectType}>
+                    <p className={style.text1}>{form.type.toUpperCase()}</p>
+                    <select className={style.input1} onChange={handleSelectType}>
                         <option selected value={form.type}>seleccione tipo</option>
                         {
                             subcategories?.map(x => {
@@ -142,8 +142,8 @@ const DivParaModal = ({ handleClose, product }) => {
             </div>
 
             <div className={style.ctnBtn}>
-                <button className={style.btn} onClick={handleSaveEdition} >Guardar</button>
-                <button className={style.btn} onClick={closeModal} >Cancelar</button>
+                <button className={style.btn} onClick={handleSaveEdition} >GUARDAR</button>
+                <button className={style.btn} onClick={closeModal} >CANCELAR</button>
             </div>
 
         </div>

@@ -1,0 +1,42 @@
+@import "../../StyleAdmin/mixin.module.scss";
+
+.ctnBrand {
+  @include tarjet;
+  
+}
+
+.title {
+  @include textFormu;
+  font-size: 30px;
+}
+
+.categoryName{
+  @include textFormu;
+  font-size: 15px;
+}
+
+.subcategory {
+  display: flex;
+  flex-direction: row;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+}
+.btnX {
+  @include btndelete;
+}
+
+.btnX:hover {
+  @include btnMasHover;
+}
+
+
+.btn{
+  @include btnGuardar;
+}
+
+.btn:hover{
+  @include btnGuardarHover;
+}

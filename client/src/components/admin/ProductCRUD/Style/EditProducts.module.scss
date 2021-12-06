@@ -1,7 +1,8 @@
-@import "./mixin.module.scss";
+@import "../../StyleAdmin/mixin.module.scss";
 
 .titleSup {
   @include titlePrincipal;
+  margin-bottom: 30px;
 }
 
 .image {

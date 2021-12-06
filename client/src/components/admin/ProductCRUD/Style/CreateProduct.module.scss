@@ -1,25 +1,24 @@
-@import "../Style/mixin.module.scss";
+@import "../../StyleAdmin/mixin.module.scss";
 
-
-.titleform{
+.titleform {
   @include titlePrincipal;
 }
 
 .btn {
   @include btn;
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 40px;
+  
 }
 
 .btn:hover {
   @include btnHover;
 }
-.ctnBtn {
-  justify-content: center;
-}
 
 .formu {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .titleModal {
@@ -41,4 +40,11 @@
 .input {
   width: 100%;
   height: 60%;
+  padding: 2px;
+}
+
+.input1 {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
 }
