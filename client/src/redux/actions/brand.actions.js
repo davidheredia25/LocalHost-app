@@ -11,6 +11,7 @@ export const SET_EXISTENT_BRAND = "SET_EXISTENT_BRAND";
 export const SET_NEW_CATEGORY = "SET_NEW_CATEGORY"
 export const DELETE_BRAND_CATEGORY = "DELETE_BRAND_CATEGORY"
 export const DELETE_BRAND_SUBCATEGORY = "DELETE_BRAND_SUBCATEGORY";
+export const GET_BRANDS_LIST = "GET_BRANDS_LIST";
 
 // ---------------- ACCIONES EN EL BACK ---------------- //
 export const getBrands = () => async (dispatch) => {
@@ -55,6 +56,14 @@ export const deleteSubcategory = () => async dispatch => {
     const { data } = await axios.delete("/brand/delete")
     return dispatch({
         type: GET_SUBCATEGORIES,
+        payload: data
+    })
+}
+
+export const getBrandsList = () => async (dispatch) => {
+    const { data } = await axios.get(`/brand/list`)
+    return dispatch({
+        type: GET_BRANDS_LIST,
         payload: data
     })
 }
