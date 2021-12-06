@@ -9,18 +9,35 @@
 }
 
 .buttonTitle {
-  background-color: black;
-  color: white;
-  width: 100px;
-  height: 50px;
+  padding-bottom: 0.2em;
+  text-align: start;
+  font-weight: 800;
+  border: none;
+  border-bottom: 1px solid black;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #00000000;
+  cursor: pointer;
+  width: 150px;
+
 }
 
 .button {
+  margin-left: 3px;
+  text-align: start;
+  padding-top: 0.4em;
+  font-size: 11px;
   background-color: Transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
 }
+
 .button:hover {
-  background-color: black;
-  color: black;
+  transform: scale(1.03);
+  font-weight: 600;
+
 }
 
 .appliedContainer {
