@@ -5,8 +5,9 @@ import {
 } from "../actions/favorite.actions";
   
   const initialState = {
+
     favorites: JSON.parse(localStorage.getItem('favorites')) 
-  };
+    }
   
   export function favoriteReducer(state = initialState, { type, payload }) {
   
@@ -17,6 +18,7 @@ import {
             favorites: payload
           }
         case ADD_FAVORITE:
+
           if(state.favorites){
           let array= [];
           array = [...state.favorites, payload]
@@ -36,6 +38,7 @@ import {
           return {
             ...state,
             favorites: JSON.parse(localStorage.getItem('favorites')) 
+
           }
         default:
           return state;

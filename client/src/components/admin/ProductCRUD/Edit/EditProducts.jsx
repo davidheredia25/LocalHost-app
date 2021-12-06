@@ -17,20 +17,29 @@ const EditProducts = ({ products }) => {
     const dispatch = useDispatch();
     const { product } = useSelector(state => state.products)
 
+    const [idProduct, setIdProduct] = useState("")
+
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     const [show1, setShow1] = useState(false);
     const handleClose1 = () => setShow1(false);
-    const handleShow1 = () => setShow1(true);
 
+    const handleShow1 = (id) => {
+        setIdProduct(id);
+        setShow1(true);
+    }
+    const [input, setInput] = useState("");
     const handleInputChange = (e) => {
+        setInput(e.target.value)
         dispatch(getProducts({ name: e.target.value }))
     }
 
-    const handleDelete = (id) => {
-        dispatch(productDelete(id))
+    const handleDelete = () => {
+        dispatch(productDelete(idProduct))
+        handleClose1()
 
     }
 
@@ -45,7 +54,9 @@ const EditProducts = ({ products }) => {
         <div>
             <h1 className={style.titleSup}>Editar/Eliminar productos</h1>
             <div>
-                <input value="" onChange={handleInputChange} type="text" />
+
+                <input value={input} onChange={handleInputChange} type="text" />
+
             </div>
             <Table    striped bordered hover>
                 <thead >

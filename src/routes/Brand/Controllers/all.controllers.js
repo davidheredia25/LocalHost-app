@@ -11,4 +11,6 @@ module.exports = {
     getBrandById,
     getBrand,
     getBrandsList
+
 };
+

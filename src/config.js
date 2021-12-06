@@ -9,4 +9,6 @@ module.exports = {
 	PORT: process.env.PORT || 3000,
 	STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || 'Secrete key',
 	GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || 'Client ID'
+
 }
+

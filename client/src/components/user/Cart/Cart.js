@@ -11,7 +11,9 @@ import {deleteCart} from '../../../redux/actions/cart.actions';
 
 
 const Cart= () => {
+
     const dispatch=useDispatch();
+
     const {cart} = useSelector(state => state.cart)
     console.log('cart', cart);
     function total(){
