@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeRol } from "../../../redux/actions/admin.actions.js";
+import { changeRol, getUsers } from "../../../redux/actions/admin.actions.js";
 
 const UsersSection = () => {
 
@@ -10,6 +10,10 @@ const UsersSection = () => {
     const handleRol = (e) => {
         dispatch(changeRol(e.target.value))
     }
+    useEffect(() => {
+        console.log(users)
+        dispatch(getUsers())
+      }, [dispatch]);
 
     return (
         <div>
