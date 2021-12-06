@@ -1,5 +1,9 @@
 @import "./mixin.module.scss";
 
+.titleSup {
+  @include titlePrincipal;
+}
+
 .image {
   height: 100px;
   width: 100px;
@@ -8,7 +12,7 @@
 .icon {
   height: 25px;
   margin: 0px 15px 0px 15px;
-  cursor: pointer;
+
 }
 
 .icon:hover {
@@ -17,6 +21,7 @@
 
 .btn {
   @include btn;
+ 
 }
 
 .btn:hover {
@@ -29,4 +34,10 @@
 
 .titleDelete {
   @include titleFormu;
+}
+
+.btnIcon{
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }

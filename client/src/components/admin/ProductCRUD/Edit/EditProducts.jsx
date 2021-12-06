@@ -26,7 +26,7 @@ const EditProducts = ({ products }) => {
     const handleShow1 = () => setShow1(true);
 
     const handleInputChange = (e) => {
-        dispatch(getProducts({ name: e.target.value}))
+        dispatch(getProducts({ name: e.target.value }))
     }
 
     const handleDelete = (id) => {
@@ -43,11 +43,12 @@ const EditProducts = ({ products }) => {
 
     return (
         <div>
+            <h1 className={style.titleSup}>Editar/Eliminar productos</h1>
             <div>
                 <input value="" onChange={handleInputChange} type="text" />
             </div>
-            <Table striped bordered hover>
-                <thead>
+            <Table    striped bordered hover>
+                <thead >
                     <tr>
                         <th  >Imagen</th>
                         <th >Nombre</th>
@@ -58,29 +59,29 @@ const EditProducts = ({ products }) => {
                         <th >Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {
                         products?.length ? products.map(x => {
                             let id = x._id
                             return (
-                                <tr>
+                                <tr >
                                     <td> <img className={style.image} src={x.image} alt={x.name} /></td>
-                                    <td>{x.name}</td>
+                                    <td  >{x.name}</td>
                                     <td>{x.brand.name.charAt(0).toUpperCase() + x.brand.name.slice(1)}</td>
                                     <td>{x.category.name.charAt(0).toUpperCase() + x.category.name.slice(1)}</td>
                                     <td>{x.type.name.charAt(0).toUpperCase() + x.type.name.slice(1)}</td>
                                     <td> $ {x.price}</td>
                                     <td>
-                                        <button onClick={() => handleEdit(x._id)}>
+                                        <button className={style.btnIcon} onClick={() => handleEdit(x._id)}>
                                             <BsPencilSquare className={style.icon} />
                                         </button>
-                                        <button onClick={() => handleShow1(x._id)}>
+                                        <button className={style.btnIcon} onClick={() => handleShow1(x._id)}>
                                             <RiDeleteBinLine className={style.icon} />
                                         </button>
                                     </td>
 
                                 </tr>
-                                
+
                             )
                         }) : null
                     }
@@ -91,15 +92,15 @@ const EditProducts = ({ products }) => {
                 show={show}
                 size="lg"
                 centered
-            >   
-                        <Modal.Body>
-                        {
-                    product
-                        ?
+            >
+                <Modal.Body>
+                    {
+                        product
+                            ?
                             <DivParaModal product={product} handleClose={handleClose} />
-                           : null
-                }
-                        </Modal.Body>
+                            : null
+                    }
+                </Modal.Body>
             </Modal>
 
             <Modal

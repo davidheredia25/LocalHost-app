@@ -1,14 +1,69 @@
 .adminContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 2%;
 }
 
 .indexContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100vh;
+  width: 200px;
 }
 
 .subsection {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
+.ctnSec {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnNav {
+  margin-top: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(126, 0, 0, 0.842);
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.btnNav:hover,
+.btnNav:active,
+.btnNav:focus {
+  transform: scale(1.03);
+  font-weight: 800;
+  color: rgb(126, 0, 0);
+  border-bottom: 2px solid rgb(126, 0, 0);
+}
+
+.btnSub {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  padding: 1px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(126, 0, 0, 0.842);
+  cursor: pointer;
+}
+
+.btnSub:hover,
+.btnSub:active,
+.btnSub:focus {
+  transform: scale(1.03);
+  font-weight: 800;
+  color: rgb(126, 0, 0);
+}
+
