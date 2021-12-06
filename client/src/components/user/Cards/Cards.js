@@ -7,6 +7,7 @@ import './Cards.scss';
 
 const Cards = ({products}) => {
     const dispatch = useDispatch();
+    const { favorites } = useSelector(state => state.favorite)
     /* const { brand, category, subcategory } = useSelector(state => state.filters) */
 
 /*     useEffect(() => {
@@ -17,12 +18,12 @@ const Cards = ({products}) => {
 
         <div className='container'>
            {
-            !products?.length 
+            !products?.length && !favorites
                 ? <p>Loading...</p> 
                 : (
                     <div className='cards'>
                         {
-                                products && products.map(product => <Card key={product._id} product={product} />)
+                                products && products.map(product => <Card key={product._id} product={product} favorites={favorites} />)
                             }
                         
     

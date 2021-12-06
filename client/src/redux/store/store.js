@@ -6,6 +6,7 @@ import { brandReducer } from "../reducers/brand.reducer.js";
 import { filtersReducer } from "../reducers/filters.reducer.js";
 import { loginReducer } from "../reducers/login.reducer.js";
 import { adminReducer } from "../reducers/admin.reducer.js";
+import { favoriteReducer } from "../reducers/favorite.reducer.js";
 import thunk from "redux-thunk" ;
 
 
@@ -18,7 +19,8 @@ const store= createStore(
 		login: loginReducer,
 		brand: brandReducer,
 		filters: filtersReducer,
-		admin: adminReducer
+		admin: adminReducer,
+		favorite: favoriteReducer
 	}), composeWithDevTools(
 		applyMiddleware(thunk) 
 	));
