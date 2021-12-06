@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemToCart, setCount } from '../../../redux/actions/cart.actions.js';
+import { addItemToCart, setCount, addEmptyCart } from '../../../redux/actions/cart.actions.js';
 import { Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { AddShoppingCart } from "@material-ui/icons";
@@ -24,7 +24,7 @@ const AddToCart = () => {
     }
 
     const addCart = () => {
-        dispatch(addItemToCart())
+        dispatch(addEmptyCart(cartProduct))
     }
     
     return (
