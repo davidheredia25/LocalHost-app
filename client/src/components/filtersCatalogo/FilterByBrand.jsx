@@ -20,14 +20,14 @@ const FilterByBrand = ({ brands }) => {
 
     return (
         <div>
-            <Button variant='contained' size="large" style={{'backgroundColor': '#000000', 'width': 150, 'marginBottom':10, 'marginLeft': 3 }} className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>MARCAS </strong> <ArrowDropDownIcon /> </Button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>MARCAS </strong> <ArrowDropDownIcon /> </button>
             {
                 open ? 
                     <div className={styles.filtersList}>
                     {
                         brands && brands.map(x => {
                             return (
-                                <Button  style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}}  className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</Button>
+                                <button   className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                             )
                         })
                     }

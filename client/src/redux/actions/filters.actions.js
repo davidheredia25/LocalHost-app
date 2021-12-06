@@ -5,6 +5,7 @@ export const SET_FILTER_CATEGORY = "SET_FILTER_CATEGORY";
 export const SET_FILTER_SUBCATEGORY = "SET_FILTER_SUBCATEGORY"; 
 export const SET_FILTER_NAME = "SET_FILTER_NAME";
 export const RESET_FILTER = "RESET_FILTER";
+export const RESET_ALL_FILTERS = "RESET_ALL_FILTERS";
 
 export const setFilterBrand = (string) => {
   return{
@@ -38,6 +39,12 @@ export const resetFilter = (property) => {
     return {
         type: RESET_FILTER,
         payload: property
+    }
+}
+
+export const resetAllFilters = () => {
+    return {
+        type: RESET_ALL_FILTERS
     }
 }
 

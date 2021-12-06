@@ -6,12 +6,12 @@ import styles from "./filtersCatalogo.module.css";
 import { Button } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const FilterByCategory = ({ categories }) => {
+const FilterByCategory = ({ brands, categories }) => {
     
     const dispatch = useDispatch();
     const { brand, subcategory } = useSelector(state => state.filters)
-
     const [open, setOpen] = useState(false);
+    let brandFound;
 
     const handleClick = (e) => {
         dispatch(setFilterCategory(e.target.value))
@@ -20,17 +20,38 @@ const FilterByCategory = ({ categories }) => {
 
     return (
         <div>
-            <Button variant='contained' size="large" style={{'backgroundColor': '#000000', 'width': 150, 'marginBottom':10, 'marginLeft': 3 }} className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>CATEGORIAS</strong><ArrowDropDownIcon /></Button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>CATEGORIAS</strong><ArrowDropDownIcon /></button>
             {
                 open ?
                 <div className={styles.filtersList}>
                 {
+                    brand ? 
+                    (brands.find(b => b.name === brand)).categories.map(c => {
+                        return (
+                            <button 
+                                className={styles.button} 
+                                value={c.name} 
+                                onClick={handleClick}
+                            >
+                                {c.name.toUpperCase()}
+                            </button>
+                        )
+                    }) : null
+                }
+                {
+                    !brand ?
                     categories?.map(x => {
                         return (
-                            <Button  style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</Button>
+                            <button  
+                                className={styles.button} 
+                                value={x.name} 
+                                onClick={handleClick}
+                            >
+                                {x.name.toUpperCase()}
+                            </button>
                         )
-                    })
-                }
+                    }) : null
+                }    
                 </div> : null
             }
         </div>

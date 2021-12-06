@@ -5,7 +5,7 @@ const { Schema, model } = pkg;
 const userSchema = new Schema({
     fristName: {
         type: String,
-       // required: true
+        // required: true
     },
     lastName: {
         type: String,
@@ -22,11 +22,12 @@ const userSchema = new Schema({
     document: {
         type: String
     },
-    telephone:{
+    telephone: {
         type: Number
     },
     image: {
-        type: String
+        type: String,
+        default: ""
     },
     direction: {
         type: String
@@ -63,15 +64,21 @@ const userSchema = new Schema({
         autopopulate: true
     }],
     cart: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Product',
-        autopopulate: true
+        cart: {
+            type: Schema.Types.ObjectId,
+            ref: 'Product',
+            autopopulate: true
+        },
+        qtyCart: {
+            type: Number,
+            default: 1
+        }
     }]
 }, {
     versionKey: false,
     timestamps: false
 });
- 
+
 userSchema.pre('save', async function (next) {
     const hash = await bcrypt.hash(this.password, 10);
     this.password = hash;
@@ -82,7 +89,7 @@ userSchema.methods.isValidContraseña = async function (password) {
     const user = this;
     const compara = await bcrypt.compare(password, user.password);
     return compara;
-} 
+}
 
 userSchema.plugin(require('mongoose-autopopulate'));
 

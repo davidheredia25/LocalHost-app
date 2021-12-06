@@ -22,8 +22,8 @@ const FiltersContainer = () => {
             ?
             <div className={styles.filtersContainer}>
                 <FilterByBrand brands={brands} /><br/>
-                <FilterByCategory categories={categories} /><br/>
-                <FilterBySubcategory subcategories={subcategories} />
+                <FilterByCategory categories={categories} brands={brands} /><br/>
+                <FilterBySubcategory subcategories={subcategories} brands={brands} />
             </div>
             :
             "Loading..."

@@ -1,7 +1,7 @@
 const { updateBrand } = require('./update.brand');
 const { createBrand } = require('./create.brand');
 const { deleteBrand } = require('./delete.brand');
-const { getBrand, getBrandById } = require('./get.brand');
+const { getBrand, getBrandById, getBrandsList } = require('./get.brand');
 
 
 module.exports = {
@@ -9,5 +9,6 @@ module.exports = {
     createBrand,
     deleteBrand,
     getBrandById,
-    getBrand
-};
+    getBrand,
+    getBrandsList
+}; 

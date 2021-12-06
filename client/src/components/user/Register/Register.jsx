@@ -88,7 +88,7 @@ const Register = () => {
                 
                     <TextField 
                     variant="standard"
-                    type="password"
+                    type="text"
                     name="password"
                     label={<VpnKeyIcon/>}
                     value={values.password}

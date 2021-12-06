@@ -1,0 +1,10 @@
+@import '../../StyleAdmin/mixin.module.scss';
+
+.titleSup{
+    @include titlePrincipal;
+}
+
+.input{
+    margin: 25px;
+    width: 43%;
+}
