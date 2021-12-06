@@ -34,8 +34,9 @@ const EditProducts = ({ products }) => {
         dispatch(getProducts({ name: e.target.value }))
     }
 
-    const handleDelete = (id) => {
-        dispatch(productDelete(id))
+    const handleDelete = () => {
+        dispatch(productDelete(idProduct))
+        handleClose1()
     }
 
     const handleEdit = (id) => {
