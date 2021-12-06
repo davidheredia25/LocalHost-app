@@ -12,64 +12,41 @@ const loginGoogle = async (req, res) => {
     client
       .verifyIdToken({ idToken: tokenId, audience: config.GOOGLE_CLIENT_ID })
       .then((response) => {
-        const { email_verified, email, picture, name } = response.payload;
+        const { email_verified, email } = response.payload;
         if (email_verified) {
           User.findOne({ email }).exec(async (err, user) => {
-            if (err) {
-              return res.status(400).json({
-                error: "Something went wrong",
-              });
-            } else {
-              if (user) {
-                const { _id } = user;
-                const token = jwt.sign({ user: { id: _id, email } }, "top_secret");
-                //  const userFront = {
-                //    id: _id,
-                //    email: email,
-                //    imagen: picture,
-                //    nombre: name,
-                //    token
-                //  }
-                user.token = token;
-                await user.save();
-                return res.json(user);
-              } else {
-                let contraseña = email + "top_secret";
-                let newUser = new User({
-                  email: email,
-                  password: contraseña,
-                  fristName: name,
-                  image: picture
+              if (err) {
+                return res.status(400).json({
+                  error: "Something went wrong",
                 });
-
-                // newUser.save((err, data) => {
-                //   if (err) {
-                //     return res.status(400).json({
-                //       error: "Something went wrong...",
-                //     });
-                //   }
-                //   const token = jwt.sign({ user: newUser }, "top_secret");
-                //   const { _id, email } = newUser;
-                //   console.log('newUser: ',email, _id)
-                //   res.json({
-                //     id: _id,
-                //     email: email,
-                //     imagen: picture,
-                //     nombre: name,
-                //     token,
-                //   });
-                // });
-                await newUser.save();
-                console.log('newUser loginGoogle: ', newUser);
-                const token = jwt.sign({ user: newUser }, "top_secret");
-                const { _id, email } = newUser;
-                console.log('newUser datos loginGoogle: ', email, _id);
-                let find = await User.findById(_id);
-                console.log('find loginGoogle: ', find);
-                if (find !== null) return res.json(find);
-                return res.send('Hubo un problema');
+              } else {
+                // console.log('user loginGoogle', user);
+                if (user) {
+                  const { _id } = user;
+                  const token = jwt.sign({ user: { id: _id, email } }, "top_secret");
+                  user.token = token;
+                  await user.save();
+                  return res.json(user);
+                } else {
+                  const { email, picture, name } = response.payload;
+                  // console.log('email', email);
+                  let contraseña = email + "top_secret";
+                  let newUser = new User({
+                    email: email,
+                    password: contraseña,
+                    fristName: name,
+                    image: picture
+                  });
+                  await newUser.save();
+                  // console.log('newUser loginGoogle: ', newUser);
+                  const token = jwt.sign({ user: newUser }, "top_secret");
+                  // console.log('newUser datos loginGoogle: ', newUser.email, newUser._id);
+                  let find = await User.findById(newUser._id);
+                  // console.log('find loginGoogle: ', find);
+                  if (find !== null) return res.json(find);
+                  return res.send('Hubo un problema');
+                }
               }
-            }
           });
         }
       })
@@ -124,9 +101,7 @@ const postLogin = async (req, res, next) => {
           }
         });
       } catch (error) {
-        return next(error)
-          // console.log(error)
-          ;
+        return next(error);
       }
     })(req, res, next);
   } catch (error) {
@@ -150,4 +125,4 @@ module.exports = {
   profileAuthenticate,
   postUser,
   loginGoogle
-}
+};

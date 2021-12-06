@@ -6,23 +6,23 @@ import { BsPersonCircle } from 'react-icons/bs';
 
 
 const NavBarProfile = () => {
-
-    const { user } = useSelector(state => state.login)
+    const { user } = useSelector(state => state.login);
+    let User;
+    if (user.image) User = user
+    else User = user.user;
     return (
 
         <div className={style.ctnNavBar}>
             {
-                user?.user?.image !== "" ? (
-                    <img className={style.iconUser} src={user?.user?.image} />
-                ) :
+                User.image !== "" ? (
+                    <img className={style.iconUser} src={User.image} alt=''/>
+                ) : 
                     (
                         <BsPersonCircle className={style.iconUser} />
-
                     )
-
             }
 
-            <h1 className={style.name}>Hola! {user?.user?.fristName} {user?.user?.lastName}</h1>
+            <h1 className={style.name}>Hola! {User.fristName} {User.lastName}</h1>
             <ul className={style.ctnUl}>
                 <Link className={style.link} to="/profile"><li><button className={style.btn}> Mis Datos</button> </li></Link>
                 <Link className={style.link} to="/profile/misordenes"><li><button className={style.btn}> Mis ordenes</button> </li> </Link>

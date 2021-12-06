@@ -7,9 +7,10 @@ let initialState = {
 export function loginReducer(state = initialState, { type, payload }) {
     switch (type) {
         case GET_USER_GOOGLE:
+            localStorage.setItem("user", JSON.stringify(payload));
             return {
                 ...state,
-                user: JSON.parse(localStorage.getItem('user'))
+                user: payload
             }
         case GET_USER:
             return {
