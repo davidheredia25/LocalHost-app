@@ -167,8 +167,10 @@ const CreateProduct = () => {
             </option>
             {subcategories?.map((e) => {
               return (
+
                 <option name="types" value={e}>
                   {e}
+
                 </option>
               );
             })}

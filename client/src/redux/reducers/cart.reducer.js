@@ -3,7 +3,11 @@ import {
   SET_TALLE,
   SET_COUNT,
   ADD_ITEM_CART,
-  ADD_EMPTY_CART
+
+  ADD_EMPTY_CART,
+  DELETE_CART_ALL,
+  
+
 } from "../actions/cart.actions";
 
 const initialState = {
@@ -153,6 +157,11 @@ export function cartReducer(state = initialState, { type, payload }) {
           ...state.cartProduct,
           count: payload
         }
+      }
+    case DELETE_CART_ALL:
+      return {
+        ...state, 
+        cart: localStorage.clear()
       }
 
     default:

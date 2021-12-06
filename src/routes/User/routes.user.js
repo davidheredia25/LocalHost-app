@@ -14,7 +14,9 @@ const {
     loginGoogle
  } = require('./Controllers/all.controllers');
 
+
  const router = Router(); 
+
 
 //          /user
 router.get('/', getUser);

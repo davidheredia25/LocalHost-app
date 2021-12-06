@@ -1,5 +1,5 @@
 import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT, EDIT_DATE_USER, GET_USER_GOOGLE} from "../actions/login.actions";
- 
+
 let initialState = {
     user: JSON.parse(localStorage.getItem('user'))
 }

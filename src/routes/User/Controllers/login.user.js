@@ -44,7 +44,9 @@ const loginGoogle = async (req, res) => {
                   let find = await User.findById(newUser._id);
                   // console.log('find loginGoogle: ', find);
                   if (find !== null) return res.json(find);
+
                   return res.send('Hubo un problema');  
+
                 }
               }
           });

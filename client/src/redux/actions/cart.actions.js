@@ -6,6 +6,8 @@ export const SET_TALLE = "SET_TALLE";
 export const SET_COUNT = "SET_COUNT";
 export const DELETE_CART_ITEM = 'DELETE_CART_ITEM ';
 export const ADD_EMPTY_CART='ADD_EMPTY_CART';
+export const DELETE_CART_ALL = 'DELETE_CART_ALL';
+
 
 
 
@@ -60,5 +62,12 @@ export const setCount = (number) => {
     return {
         type: SET_COUNT,
         payload: number
+    }
+}
+
+
+export const deleteCart = () => {
+    return {
+        type: DELETE_CART_ALL
     }
 }
