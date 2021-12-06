@@ -4,10 +4,10 @@ const Types = require('../../../models/Types');
 
 const verificacionName = async (name) => {
     try {
-        let find = await Brand.find({name: name});
-        // console.log('find.length verificacionName', find.length);
+        let find = await Brand.findOne({name: name});
+        // console.log('find.length verificacionName: ', find);
         let obj = { bool: false };
-        if(find.lenght !== 0) return obj = { bool: true };
+        if(find !== null) return obj = { bool: true };
         return obj;
     } catch (error) {
         console.log(error);

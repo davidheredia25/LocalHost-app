@@ -7,5 +7,6 @@ module.exports = {
 	MONGO_PASSWORD: process.env.MONGO_PASSWORD || "admin",
 	MONGO_HOST: process.env.MONGO_HOST || "localhost",
 	PORT: process.env.PORT || 3000,
-	STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || 'Secrete key'
+	STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || 'Secrete key',
+	GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || 'Client ID'
 }

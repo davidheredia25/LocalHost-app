@@ -13,7 +13,6 @@ import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -142,7 +141,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
        
          <Link to='/cart' className='link_carrito'>
-          <Badge badgeContent={cart.length ? cart.length : 0} color="error">
+          <Badge badgeContent={cart?.length ? cart?.length : 0} color="error">
               <IconButton size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -167,13 +166,14 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
     </Menu>
   );
+  
   const {user}=useSelector(state => state.login)
 
   
   
   useEffect(() => {
-    dispatch(getUser())
-  }, [dispatch, user]) 
+   // dispatch(getUser())
+  }, []) 
   
   //Lo comenté porque el getUser() nos está borrando el user que cargamos en REGISTER_LOCAL
   
@@ -206,7 +206,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Link to='/cart' className='link_cart'>
-          <Badge badgeContent={cart.length ? cart.length : 0} color="error">
+          <Badge badgeContent={cart?.length ? cart?.length : 0} color="error">
               <IconButton color="inherit">
                   <ShoppingCartIcon />
               </IconButton>

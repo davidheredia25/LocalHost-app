@@ -3,7 +3,8 @@ import {
     SET_FILTER_CATEGORY,
     SET_FILTER_SUBCATEGORY,
     RESET_FILTER,
-    SET_FILTER_NAME
+    SET_FILTER_NAME,
+    RESET_ALL_FILTERS
 } from "../actions/filters.actions";
 
 const initialState = {
@@ -39,6 +40,14 @@ export function filtersReducer(state = initialState, { type, payload }) {
         return {
             ...state,
             [payload]: ""
+        }
+    case RESET_ALL_FILTERS:
+        return {
+            ...state,
+            brand: "",
+            category: "",
+            subcategory: "",
+            name: ""
         }
     default:
         return state;

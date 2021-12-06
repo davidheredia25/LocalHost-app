@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom'
 import { loginGoogle } from '../../../redux/actions/login.actions'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 
 const LoginGoogle = () => {
@@ -12,9 +12,8 @@ const LoginGoogle = () => {
 
     const googleResponse = (response) => {
         const { tokenId } = response;
-       dispatch(loginGoogle({tokenId}))
-       console.log("tokennn", tokenId) //esto esta trayendo bien.
-         navigate("/") 
+        dispatch(loginGoogle(tokenId))
+        navigate("/")
     }
     const googleFailure = (err) => {
         console.log(err);
