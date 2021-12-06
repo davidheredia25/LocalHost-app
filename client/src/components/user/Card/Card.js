@@ -6,14 +6,22 @@ import { MdOutlineAddShoppingCart, MdFavoriteBorder } from 'react-icons/md';
 import { addItemToCart, setCount, setTalle, setProduct, addEmptyCart } from '../../../redux/actions/cart.actions.js';
 import { Button } from '@mui/material';
 import Modal from 'react-modal';
+import { verifyFavorite } from './verifyFavorite';
+import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.actions";
 
 
-const Card = ({ product }) => {
+
+const Card = ({ product, favorites }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
 
     const [num, setNum] = useState(1);
     const { talle } = useSelector(state => state.cart.cartProduct)
+    const { user } = useSelector(state => state.login)
+
+    const boolean = verifyFavorite(favorites, product._id)
+
+    const [favBool, setFavBool] = useState(boolean)
 
     function onClick(e) {
         e.preventDefault();
@@ -53,11 +61,27 @@ const Card = ({ product }) => {
         },
     };
 
+    const handleFavorite = () => {
+        let isFav = !favBool
+        setFavBool(!favBool)
+        if(!isFav) {
+            dispatch(removeFavorite(product._id))
+        }
+        else {
+            dispatch(addFavorite(product))
+        }
+    }
+
     return (
         <div className='container_card'>
-
             <div className='ctn_icons'>
-                <MdFavoriteBorder className='card_icon' />
+                {
+                    user ?
+                    <button value={product._id} onClick={handleFavorite}>
+                        <MdFavoriteBorder className={favBool ? 'card_icon_true' : 'card_icon'} />
+                    </button>
+                    : null
+                }
                 <MdOutlineAddShoppingCart className='card_icon' onClick={openModal} />
             </div>
             <Link to={`/detail/${product._id}`} className='card_link'>
