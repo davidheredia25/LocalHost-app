@@ -14,9 +14,14 @@ const NavBarProfile = () => {
 
         <div className={style.ctnNavBar}>
             {
-                User.image !== "" ? (
-                    <img className={style.iconUser} src={User.image} alt=''/>
-                ) : 
+                user?.user?.image !== "" ? (
+                    <img className={style.iconUser} src={user.user.image} />
+                ) :
+
+                //User.image !== "" ? (
+                //    <img className={style.iconUser} src={User.image} alt=''/>
+                // ) : 
+                
                     (
                         <BsPersonCircle className={style.iconUser} />
                     )

@@ -110,8 +110,8 @@ const EditProducts = ({ products }) => {
                 <Modal.Body>
                     <h1 className={style.titleDelete}> Seguro desea eliminar el Producto?</h1>
                     <div className={style.ctnBtn}>
-                        <button className={style.btn} onClick={handleDelete} >Aceptar</button>
-                        <button className={style.btn} onClick={handleClose1} >Cancelar</button>
+                        <button className={style.btn} onClick={handleDelete} >ACEPTAR</button>
+                        <button className={style.btn} onClick={handleClose1} >CANCELAR</button>
                     </div>
                 </Modal.Body>
 

@@ -77,7 +77,7 @@ const Card = ({ product, favorites }) => {
             <div className='ctn_icons'>
                 {
                     user ?
-                    <button value={product._id} onClick={handleFavorite}>
+                    <button className='btn_icons' value={product._id} onClick={handleFavorite}>
                         <MdFavoriteBorder className={favBool ? 'card_icon_true' : 'card_icon'} />
                     </button>
                     : null

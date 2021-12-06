@@ -1,0 +1,59 @@
+@import "../../StyleAdmin/mixin.module.scss";
+
+.container {
+  display: flex;
+  width: 800px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form {
+  @include tarjet;
+  justify-content: space-around;
+}
+
+.categoryName {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  @include textFormu;
+  font-size: 15px;
+}
+
+.selectInput {
+  height: 30px;
+  padding: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.ctnInput{
+  width: 87%;
+  padding: 2px;
+}
+
+.btnX {
+  @include btndelete;
+}
+
+.btnMas:hover,
+.btnX:hover {
+  @include btnMasHover;
+}
+
+.btnMas {
+  @include btnMas;
+  margin-left: 10px;
+}
+
+.btn{
+  @include btnGuardar;
+}
+
+.btn:hover{
+  @include btnGuardarHover;
+}
+

@@ -20,7 +20,7 @@ const FilterByCategory = ({ brands, categories }) => {
 
     return (
         <div>
-            <Button variant='contained' size="large" style={{'backgroundColor': '#000000', 'width': 150, 'marginBottom':10, 'marginLeft': 3 }} className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>CATEGORIAS</strong><ArrowDropDownIcon /></Button>
+            <button className={styles.buttonTitle} onClick={() => setOpen(!open)}><strong>CATEGORIAS</strong><ArrowDropDownIcon /></button>
             {
                 open ?
                 <div className={styles.filtersList}>
@@ -28,14 +28,13 @@ const FilterByCategory = ({ brands, categories }) => {
                     brand ? 
                     (brands.find(b => b.name === brand)).categories.map(c => {
                         return (
-                            <Button 
-                                style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} 
+                            <button 
                                 className={styles.button} 
                                 value={c.name} 
                                 onClick={handleClick}
                             >
-                                {c.name}
-                            </Button>
+                                {c.name.toUpperCase()}
+                            </button>
                         )
                     }) : null
                 }
@@ -43,14 +42,13 @@ const FilterByCategory = ({ brands, categories }) => {
                     !brand ?
                     categories?.map(x => {
                         return (
-                            <Button 
-                                style={{'backgroundColor': '#EEEEEE', 'width': 120, 'marginLeft': 17}} 
+                            <button  
                                 className={styles.button} 
                                 value={x.name} 
                                 onClick={handleClick}
                             >
                                 {x.name.toUpperCase()}
-                            </Button>
+                            </button>
                         )
                     }) : null
                 }    

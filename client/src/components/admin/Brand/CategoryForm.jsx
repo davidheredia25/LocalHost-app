@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setNewCategory } from "../../../redux/actions/brand.actions";
 import ShowBrandInfo from "./ShowBrandInfo";
-import style from "./CategoryForm.module.css";
+import style from "./Styles/CategoryForm.module.scss";
 
 const CategoryForm = () => {
-    
+
     const dispatch = useDispatch();
     const { categories, subcategories, brandInfo } = useSelector(state => state.brand)
 
@@ -13,7 +13,7 @@ const CategoryForm = () => {
         name: "",
         types: []
     })
-        
+
     const [inputCat, setInputCat] = useState("")
     const [inputSub, setInputSub] = useState("")
 
@@ -86,57 +86,59 @@ const CategoryForm = () => {
 
     return (
         <div className={style.container}>
-            <div className={style.form}>   
+            <div className={style.form}>
                 <div>
-                    <h3>Categoría:</h3>
+                    <p className={style.title}>Categoría</p>
                     {
-                        categoryObj.name 
+                        categoryObj.name
                             ?
                             <div className={style.categoryName}>
-                                <h4>{categoryObj.name}</h4>
-                                <button onClick={handleDeleteCat}>X</button>
+                                <p>{categoryObj.name.charAt(0).toUpperCase() + categoryObj.name.slice(1)} <button className={style.btnX} onClick={handleDeleteCat}>X</button></p>
+
                             </div>
                             :
                             <div>
-                                <select onChange={handleSelectCat}>
-                                    <option selected value="">-selecciona una categoría-</option>
+                                <select className={style.selectInput} onChange={handleSelectCat}>
+                                    <option selected value="">-Selecciona una categoría-</option>
                                     {
-                                            categories?.map(x => {
-                                                return <option value={x.name}>{x.name.toUpperCase()}</option>
-                                            })                  
+                                        categories?.map(x => {
+                                            return <option value={x.name}>{x.name.charAt(0).toUpperCase() + x.name.slice(1)}</option>
+                                        })
                                     }
                                 </select>
-                                <div>
-                                    <input 
-                                        value={inputCat} 
-                                        type="text" 
+                                <div >
+                                    <input
+                                        className={style.ctnInput}
+                                        value={inputCat}
+                                        type="text"
                                         onChange={(e) => setInputCat(e.target.value)}
                                     />
-                                    <button onClick={handleAddCat}>+</button>
+                                    <button className={style.btnMas} onClick={handleAddCat}>+</button>
                                 </div>
                             </div>
-                    }   
+                    }
                 </div>
                 <div>
                     <div>
-                        <h3>Subcategorías:</h3>
-                        <select onChange={handleSelectSub}>
-                            <option selected value="">-selecciona subcategorías-</option>
+                        <p className={style.title}> Subcategorías</p>
+                        <select className={style.selectInput} onChange={handleSelectSub}>
+                            <option selected value="">-Selecciona subcategorías-</option>
                             {
                                 subcategories?.map(e => {
                                     return (
-                                        <option value={e}>{e}</option>
+                                        <option value={e}>{e.charAt(0).toUpperCase() + e.slice(1)}</option>
                                     )
                                 })
                             }
                         </select>
                         <div>
-                            <input 
-                                value={inputSub} 
-                                type="text" 
-                                onChange={(e) => setInputSub(e.target.value)} 
+                            <input
+                                className={style.ctnInput}
+                                value={inputSub}
+                                type="text"
+                                onChange={(e) => setInputSub(e.target.value)}
                             />
-                            <button onClick={handleAddSub}>+</button>
+                            <button className={style.btnMas} onClick={handleAddSub}>+</button>
                         </div>
                     </div>
                     <div>
@@ -144,15 +146,15 @@ const CategoryForm = () => {
                             categoryObj.types.map(sub => {
                                 return (
                                     <div>
-                                        <p>{sub}</p>
-                                        <button value={sub} onClick={handleDeleteSub}>X</button>
+                                        <p>{sub.charAt(0).toUpperCase() + sub.slice(1)} <button className={style.btnX} value={sub} onClick={handleDeleteSub}>X</button></p>
+
                                     </div>
                                 )
                             })
                         }
                     </div>
                 </div>
-                <button onClick={handleSave}>GUARDAR</button>
+                <button className={style.btn} onClick={handleSave}>GUARDAR</button>
             </div>
             <ShowBrandInfo />
         </div>

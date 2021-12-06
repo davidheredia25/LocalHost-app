@@ -131,7 +131,7 @@ const CreateProduct = () => {
 
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
-          <select onChange={selectMarca}>
+          <select className={style.input1} onChange={selectMarca}>
             <option selected value={form.brand}>
               Selecciona la Marca
             </option>
@@ -146,7 +146,7 @@ const CreateProduct = () => {
         </div>
 
         <div className={style.InputForm}>
-          <select onChange={selectCategoria}>
+          <select className={style.input1} onChange={selectCategoria}>
             <option selected value="">
               Selecciona la Categoria
             </option>
@@ -161,7 +161,7 @@ const CreateProduct = () => {
         </div>
 
         <div className={style.InputForm}>
-          <select onChange={selectSubcategoria}>
+          <select className={style.input1} onChange={selectSubcategoria}>
             <option selected value="">
               Selecciona la SubCategoria
             </option>
@@ -176,7 +176,7 @@ const CreateProduct = () => {
         </div>
       </div>
 
-      <button className={style.btn} onClick={handleClick}>Crear</button>
+      <button className={style.btn} onClick={handleClick}>CREAR</button>
 
     </form>
 

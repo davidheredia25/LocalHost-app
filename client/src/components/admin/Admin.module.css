@@ -8,20 +8,24 @@
 .indexContainer {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  align-items: flex-start;
   height: 100vh;
-  width: 200px;
+  padding: 20px;
 }
 
 .subsection {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
 }
 
 .ctnSec {
-  width: 1200px;
+  width: 160vh;
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .btnNav {
@@ -66,4 +70,3 @@
   font-weight: 800;
   color: rgb(126, 0, 0);
 }
-
