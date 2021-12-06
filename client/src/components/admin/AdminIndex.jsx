@@ -2,17 +2,18 @@ import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 import { setSection } from "../../redux/actions/admin.actions";
 import style from "./Admin.module.css";
+import { BsChevronDown } from 'react-icons/bs';
 
-const AdminIndex = () =>{
+const AdminIndex = () => {
 
     const dispatch = useDispatch()
 
-    const [button, setButton] = useState ({
-        product:false,
-        brand:false
+    const [button, setButton] = useState({
+        product: false,
+        brand: false
     })
 
-    const handleClick = (e) =>{
+    const handleClick = (e) => {
         setButton({
             [e.target.name]: !button[e.target.name]
         })
@@ -24,30 +25,28 @@ const AdminIndex = () =>{
 
     return (
         <div className={style.indexContainer}>
-            <button value="users"onClick={onClick}>Users</button>
-            <br/>
-            <button name="product"  onClick={handleClick}>Products</button>
+            <button className={style.btnNav} value="users" onClick={onClick}>Usuarios</button>
+            <button  className={style.btnNav}  name="product" onClick={handleClick}>Productos <BsChevronDown  /></button>
             {
                 button.product
-                ?
-                <div className={style.subsection}>
-                    <button onClick={onClick} value="productcreate">Crear</button>
-                    <button onClick={onClick} value="productedit">Editar/Eliminar</button>
-                </div>
-                :
-             null
+                    ?
+                    <div className={style.subsection}>
+                        <button className={style.btnSub} onClick={onClick} value="productcreate">Crear</button>
+                        <button className={style.btnSub} onClick={onClick} value="productedit">Editar/Eliminar</button>
+                    </div>
+                    :
+                    null
             }
-            <br/>
-            <button  name="brand"  onClick={handleClick}>Brands</button>
+            <button className={style.btnNav} name="brand" onClick={handleClick}>Marcas <BsChevronDown /></button>
             {
                 button.brand
-                ?
-                <div className={style.subsection}>
-                    <button onClick={onClick} value="brandcreate">Nueva</button>
-                    <button onClick={onClick} value="brandedit">Editar</button>
-                </div>
-                :
-             null
+                    ?
+                    <div className={style.subsection}>
+                        <button className={style.btnSub} onClick={onClick} value="brandcreate">Nueva</button>
+                        <button className={style.btnSub} onClick={onClick} value="brandedit">Editar</button>
+                    </div>
+                    :
+                    null
             }
         </div>
     )

@@ -8,6 +8,7 @@ import EditProducts from "./ProductCRUD/Edit/EditProducts";
 import { getUsers } from "../../redux/actions/admin.actions";
 import { getProducts } from "../../redux/actions/products.actions";
 import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
+import style from "./Admin.module.css";
 
 const AdminSection = () => {
     
@@ -25,7 +26,7 @@ const AdminSection = () => {
     const { products } = useSelector(state => state.products)
     
     return (
-        <div>
+        <div className={style.ctnSec} >
             {
                section === "users" 
                     ? <UsersSection />

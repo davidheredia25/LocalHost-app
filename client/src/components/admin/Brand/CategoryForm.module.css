@@ -1,13 +1,15 @@
-.container { /* contiene FORM y ShowBrandInfo */
-    display: flex;
-    flex-direction: row;
+.container {
+  /* contiene FORM y ShowBrandInfo */
+  display: flex;
+  flex-direction: row;
+  background-color: red;
 }
-    .form {
-        display: flex;
-        flex-direction: column;
-    }
+.form {
+  display: flex;
+  flex-direction: column;
+}
 
-        .categoryName {
-            display: flex;
-            flex-direction: row;
-        }
+.categoryName {
+  display: flex;
+  flex-direction: row;
+}

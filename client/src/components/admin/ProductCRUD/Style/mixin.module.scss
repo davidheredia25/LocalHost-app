@@ -11,6 +11,21 @@
   width: 150px;
 }
 
+@mixin titlePrincipal {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(126, 0, 0);
+  border-bottom: 2px solid rgb(126, 0, 0);
+  height: 40px;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
 @mixin btnHover {
   background-color: rgba(255, 255, 255, 0.383);
   border: 1px solid black;
