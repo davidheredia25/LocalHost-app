@@ -5,7 +5,7 @@ export const LOGIN_LOCAL = "LOGIN_LOCAL"
 export const LOGIN_AUTH = "LOGIN_AUTH"
 export const LOG_OUT = 'LOG_OUT'
 export const EDIT_DATE_USER ='EDIT_DATE_USER'
-export const GET_USER_GOOGLE = 'GET_USER_GOOGLE'
+export const GET_USER_GOOGLE = 'GET_USER_GOOGLE' 
 
 
 

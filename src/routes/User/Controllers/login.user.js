@@ -4,7 +4,7 @@ const User = require('../../../models/User');
 const { OAuth2Client } = require("google-auth-library");
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
-
+ 
 
 const loginGoogle = async (req, res) => {
   const { tokenId } = req.body;
@@ -44,7 +44,7 @@ const loginGoogle = async (req, res) => {
                   let find = await User.findById(newUser._id);
                   // console.log('find loginGoogle: ', find);
                   if (find !== null) return res.json(find);
-                  return res.send('Hubo un problema');
+                  return res.send('Hubo un problema');  
                 }
               }
           });
