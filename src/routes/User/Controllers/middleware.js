@@ -54,3 +54,19 @@ passport.use(new JWTStrategy({
         done(e);
     }
 }));
+
+const verificacionId = async (id) => {
+    try {
+        let find = await User.findById(id);
+        let obj = { bool: false };
+        if(find !== null) return obj = { bool: true, user: find };
+        return obj;
+    } catch(error) {
+        console.log(error);
+    }
+};
+
+
+module.exports = {
+    verificacionId
+}
