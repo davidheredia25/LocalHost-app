@@ -1,6 +1,6 @@
 import React, {useEffect}from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTickets } from "../../../redux/actions/admin.actions.js";
+import { getTickets, changeStatus } from "../../../redux/actions/admin.actions.js";
 import Loading from "../../user/Loading/Loading"
 
 const UsersSection = () => {
@@ -11,18 +11,18 @@ const UsersSection = () => {
 
     useEffect(() => {
         console.log(tickets)
-        dispatch(getUsers())
+        dispatch(getTickets())
       }, [dispatch]);
 
     
-      const handleClick = (samu) =>{
-          dispatch(changeStatus(samu))
+      const handleClick = (obj) =>{
+          dispatch(changeStatus(obj))
       }
 
     return (
         <div>
             {
-                tickets.lenght 
+                tickets?.lenght 
                 ?
                 <div>
                  {tickets?.map(t => {
