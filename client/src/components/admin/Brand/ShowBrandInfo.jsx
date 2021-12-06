@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import style from "./ShowBrandInfo.module.css";
+import style from "./Styles/ShowBrandInfo.module.scss";
 import { deleteBrandCategory, saveNewBrand } from "../../../redux/actions/brand.actions";
 
 const ShowBrandInfo = () => {
@@ -17,22 +17,22 @@ const ShowBrandInfo = () => {
   }
 
   return (
-    <div>
-      <h2>{brandInfo.name?.toUpperCase()}</h2>
+    <div className={style.ctnBrand}> 
+      <h2 className={style.title}>{brandInfo.name?.toUpperCase()}</h2>
       {
         brandInfo.categories?.map((c) => {
           return (
             <div>
               <div className={style.category}>
-                <h4>{c.name.toUpperCase()}</h4>
-                <button value={c.name} onClick={handleDeleteCat}>X</button>
+                <p className={style.categoryName}>  {c.name.toUpperCase()}  <button className={style.btnX}  value={c.name} onClick={handleDeleteCat}>X</button></p>
+               
               </div>
               <div>
               {
                 c.types?.map((sub) => {
                   return (
                     <div className={style.subcategory}>
-                      <h5>{sub}</h5>
+                      <p className={style.categoryName}>{sub.charAt(0).toUpperCase() + sub.slice(1)}</p>
                     </div>
                   );
                 })
@@ -42,7 +42,7 @@ const ShowBrandInfo = () => {
           )
         })
       }
-      <button onClick={handleSave}>GUARDAR MARCA</button>
+      <button className={style.btn} onClick={handleSave}>GUARDAR MARCA</button>
     </div>
   );
 };

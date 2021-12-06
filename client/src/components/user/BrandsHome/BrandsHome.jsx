@@ -2,17 +2,17 @@ import React, { useEffect } from 'react';
 import style from './BrandsHome.module.scss'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getBrands } from "../../../redux/actions/brand.actions";
+import { getBrandsList } from "../../../redux/actions/brand.actions";
 import { setFilterBrand } from "../../../redux/actions/filters.actions";
 
 const BrandsHome = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { brands } = useSelector(state => state.brand)
+    const { brandsList } = useSelector(state => state.brand)
 
     useEffect(() => {
-        dispatch(getBrands())
+        dispatch(getBrandsList())
     }, [])
 
     const handleClick = (e) => {
@@ -24,7 +24,7 @@ const BrandsHome = () => {
     return (
         <div className={style.ctnBrands}>
             {
-                brands?.map(x => {
+                brandsList?.map(x => {
                     return (
                             <img
                                 onClick={(e) => handleClick(e)}

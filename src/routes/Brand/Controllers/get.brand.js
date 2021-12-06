@@ -2,6 +2,16 @@ const Brand = require('../../../models/Brand');
 const Product = require('../../../models/Product');
 const { verificacionId } = require('./middleware');
 
+const getBrandsList = async (req, res) => {
+    try {
+        let brandsList = await Brand.find();
+        res.json(brandsList)
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
 const getBrand = async (req, res) => {
     try {
         let brands = await Brand.find();
@@ -58,5 +68,6 @@ const getBrandById = async (req, res) => {
 
 module.exports = {
     getBrand,
-    getBrandById
+    getBrandById,
+    getBrandsList
 };

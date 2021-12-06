@@ -5,7 +5,7 @@ import { getProducts } from "../../redux/actions/products.actions";
 import styles from "./filtersCatalogo.module.css";
 
 const AppliedFilters = ({ filters }) => {
-    
+
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
@@ -15,35 +15,35 @@ const AppliedFilters = ({ filters }) => {
 
     return (
         <div className={styles.bcsContainer}>
-        {
-            filters.name && 
+            {
+                filters.name &&
                 <div className={styles.appliedContainer}>
-                    <h5 className={styles.h5}>{filters.name.toUpperCase()}</h5>
-                    <button className={styles.x} value="name" onClick={handleClick}>X</button>
+                    <h5 className={styles.h5}>{filters.name.toUpperCase()}  <button className={styles.x} value="name" onClick={handleClick}>X</button></h5>
+
                 </div>
-        }
-        {
-            filters.brand && 
+            }
+            {
+                filters.brand &&
                 <div className={styles.appliedContainer}>
-                    <h5 className={styles.h5}>{filters.brand.toUpperCase()}</h5>
-                    <button className={styles.x} value="brand" onClick={handleClick}>X</button>
+                    <h5 className={styles.h5}>{filters.brand.toUpperCase()}  <button className={styles.x} value="brand" onClick={handleClick}>X</button></h5>
+
                 </div>
-        }
-        {   
-            filters.category && 
-                <div className={styles.appliedContainer}> 
-                    <h5 className={styles.h5}>{filters.category.toUpperCase()}</h5>
-                    <button className={styles.x} value="category" onClick={handleClick}>X</button>
-                </div>
-        }
-        {
-            filters.subcategory && 
+            }
+            {
+                filters.category &&
                 <div className={styles.appliedContainer}>
-                    <h5 className={styles.h5}>{filters.subcategory.toUpperCase()}</h5>
-                    <button className={styles.x} value="subcategory" onClick={handleClick}>X</button>
+                    <h5 className={styles.h5}>{filters.category.toUpperCase()}  <button className={styles.x} value="category" onClick={handleClick}>X</button></h5>
+
                 </div>
-        }
-        </div>    
+            }
+            {
+                filters.subcategory &&
+                <div className={styles.appliedContainer}>
+                    <h5 className={styles.h5}>{filters.subcategory.toUpperCase()}  <button className={styles.x} value="subcategory" onClick={handleClick}>X</button></h5>
+
+                </div>
+            }
+        </div>
     )
 }
 

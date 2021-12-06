@@ -6,7 +6,7 @@ const UsersSection = () => {
 
     const dispatch = useDispatch();
     const { users } = useSelector(state => state.admin);
-
+    console.log(users);
     const handleRol = (e) => {
         dispatch(changeRol(e.target.value))
     }

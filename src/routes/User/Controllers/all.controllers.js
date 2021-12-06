@@ -1,15 +1,22 @@
 const { createUser } = require('./create.user');
 const { deleteUser } = require('./delete.user');
-const { getUserById, getUser } = require('./get.user');
+const { getUserByID, getUser } = require('./get.user');
 const { updateUser } = require('./update.user');
 const { editDateUser } = require('./editDate.user');
+const { addCart } = require('./cart.user');
+const { postUser, postLogin, profileAuthenticate, loginGoogle } = require('./login.user');
 
 
 module.exports = {
     createUser,
     deleteUser,
     getUser,
-    getUserById,
+    getUserByID,
     updateUser,
-    editDateUser
+    editDateUser,
+    addCart,
+    postUser,
+    postLogin,
+    profileAuthenticate,
+    loginGoogle
 };

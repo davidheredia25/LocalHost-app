@@ -1,0 +1,44 @@
+@import "../../StyleAdmin/mixin.module.scss";
+
+.titleSup {
+  @include titlePrincipal;
+  margin-bottom: 30px;
+}
+
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.icon {
+  height: 25px;
+  margin: 0px 15px 0px 15px;
+
+}
+
+.icon:hover {
+  transform: scale(1.08);
+}
+
+.btn {
+  @include btn;
+ 
+}
+
+.btn:hover {
+  @include btnHover;
+}
+.ctnBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.titleDelete {
+  @include titleFormu;
+}
+
+.btnIcon{
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}

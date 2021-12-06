@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setExistentBrand } from "../../../../redux/actions/brand.actions";
 import CategoryForm from "../CategoryForm"
+import style from '../Styles/BrandEdit.module.scss'
 
 const BrandEdit = () => {
 
@@ -17,9 +18,9 @@ const BrandEdit = () => {
     return (
         <div>
             <div>
-                <h3>Editar Marca:</h3>
-                <select onChange={handleSelect}>
-                    <option selected value="">-selecciona una marca-</option>
+                <h1 className={style.titleSup}>Editar Marca</h1>
+                <select className={style.input} onChange={handleSelect}>
+                    <option selected value="">-Selecciona una marca-</option>
                     {
                         brands?.map(x => {
                             return <option value={x.name}>{x.name.toUpperCase()}</option>

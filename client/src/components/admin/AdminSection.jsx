@@ -9,6 +9,7 @@ import TicketsSection from "./Tickets/TicketsSection"
 import { getUsers } from "../../redux/actions/admin.actions";
 import { getProducts } from "../../redux/actions/products.actions";
 import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
+import style from "./Admin.module.css";
 
 const AdminSection = () => {
     
@@ -23,9 +24,10 @@ const AdminSection = () => {
     }, [])
 
     const { section } = useSelector(state => state.admin)
+    const { products } = useSelector(state => state.products)
     
     return (
-        <div>
+        <div className={style.ctnSec} >
             {
                section === "users" 
                     ? <UsersSection />
@@ -43,7 +45,7 @@ const AdminSection = () => {
             }   
             {
                section === "productedit" 
-                    ? <EditProducts />
+                    ? <EditProducts products={products} />
                     : null
             }   
             {
