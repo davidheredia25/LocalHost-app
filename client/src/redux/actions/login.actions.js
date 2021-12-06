@@ -5,22 +5,22 @@ export const LOGIN_LOCAL = "LOGIN_LOCAL"
 export const LOGIN_AUTH = "LOGIN_AUTH"
 export const LOG_OUT = 'LOG_OUT'
 export const EDIT_DATE_USER ='EDIT_DATE_USER'
+export const GET_USER_GOOGLE = 'GET_USER_GOOGLE'
 
 
 
-
-// // export const loginGoogle = (tokenId) = async dispatch => {
-// //     try {
-// //         const { data } = await axios.post("/login", { tokenId })
-// //         return dispatch({
-// //             type: GET_USER,
-// //             payload: data
-// //         })
-// //     }
-// //     catch (error) {
-// //         console.log(error)
-// //     }
-// // }
+export const loginGoogle = (tokenId) => async dispatch => {
+    try {
+        const { data } = await axios.post("/user/loginG", { tokenId })
+        return dispatch({
+            type: GET_USER_GOOGLE,
+            payload: data
+        });
+    }
+    catch (error) {
+        console.log(error);
+    }
+};
 
 export const registerLocal = (values) => async (dispatch) => {
     try {
