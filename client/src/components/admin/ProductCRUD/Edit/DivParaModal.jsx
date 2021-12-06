@@ -72,9 +72,7 @@ const DivParaModal = ({ handleClose, product }) => {
     }
 
     const handleSaveEdition = () => {
-        /*  dispatch(productEdit({ id: product._id, form })) 
-            closeModal()
-        */
+        dispatch(productEdit({ id: product._id, form })) 
         closeModal()
     }
 
