@@ -1,4 +1,4 @@
-/* import React, {useEffect}from "react";
+import React, {useEffect}from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTickets, changeStatus } from "../../../redux/actions/admin.actions.js";
 import Loading from "../../user/Loading/Loading"
@@ -52,4 +52,4 @@ const UsersSection = () => {
     )
 }
 
-export default UsersSection; */
+export default UsersSection;

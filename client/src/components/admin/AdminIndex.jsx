@@ -26,7 +26,7 @@ const AdminIndex = () => {
     return (
         <div className={style.indexContainer}>
             <button className={style.btnNav} value="users" onClick={onClick}>Usuarios</button>
-          {/*   <button className={style.btnNav} value="tickets" onClick={onClick}>Tickets</button> */}
+            <button className={style.btnNav} value="tickets" onClick={onClick}>Tickets</button>
             <button  className={style.btnNav}  name="product" onClick={handleClick}>Productos <BsChevronDown  /></button>
             {
                 button.product
