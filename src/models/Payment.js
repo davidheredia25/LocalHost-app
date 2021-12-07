@@ -1,7 +1,7 @@
  const pkg = require('mongoose');
  const { Schema, model } = pkg;
 
-const orderSchema = new Schema({
+const paymentSchema = new Schema({
        status:{  
             type: String,
             enum: ['created', 'processing', 'cancelled', 'completed'],
@@ -27,4 +27,4 @@ const orderSchema = new Schema({
     timestamps: false
  });
 
- module.exports = model('Order', orderSchema);
+ module.exports = model('Order', paymentSchema);

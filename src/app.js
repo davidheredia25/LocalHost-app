@@ -2,6 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const morgan = require('morgan');
 const cors = require('cors');
+const bodyParser = require('body-parser')
 const config = require('./config');
 // IMPORTS ROUTES
 const BrandRoutes = require('./routes/Brand/index.brand');
@@ -30,6 +31,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //Routes
 app.use('/', BrandRoutes);
