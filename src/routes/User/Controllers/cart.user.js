@@ -59,7 +59,7 @@ const addCart = async (req, res) => {
 };
 
 const getCartUser = async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.params;
     console.log('id getCartUser: ', id);
     try {
         let verificacion = await verificacionId(id);

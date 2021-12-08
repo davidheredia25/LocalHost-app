@@ -78,8 +78,12 @@ export const deleteCart = () => {
 }
 
 
-export const getCart = () => {
-    return {
-        type: GET_CART
-    }
-}
+export const getCart = (id) => async (dispatch) => { 
+   
+    let {data}  = await axios.get(`user/get/cart/${id}`)
+    console.log('data', data)
+    return dispatch({
+        type: ADD_ITEM_CART,
+        payload: data
+    })
+}  
