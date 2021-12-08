@@ -14,7 +14,7 @@ import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.act
 const Card = ({ product, favorites }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
-
+    console.log('product',product)
     const [num, setNum] = useState(1);
     //const { talle } = useSelector(state => state.cart.cartProduct)
     const { user } = useSelector(state => state.login)
@@ -26,6 +26,7 @@ const Card = ({ product, favorites }) => {
     const [favBool, setFavBool] = useState(boolean)
 
     function onClick(e) {
+        console.log('clicked')
         e.preventDefault();
         dispatch(setProduct(product))
         //dispatch(setTalle(e.target.value))
@@ -41,14 +42,19 @@ const Card = ({ product, favorites }) => {
     }
 
     const addCart = () => {
+        if(user) { 
         let obj = {
             userId: userId,
             productId: product._id,
             qty: num
-            
-        }
+              }
         dispatch(addItemToCart(obj));
         closeModal();
+            }else{
+              dispatch(addEmptyCart(product));
+              closeModal();  
+            }
+
     }
 
     function openModal() {

@@ -6,6 +6,7 @@ import {
   GET_CART,
   ADD_EMPTY_CART,
   DELETE_CART_ALL,
+  GET_EMPTY_CART
   
 
 } from "../actions/cart.actions";
@@ -169,7 +170,12 @@ export function cartReducer(state = initialState, { type, payload }) {
       return {
         ...state,
         cart: state.cart
-      }  
+      }
+    case GET_EMPTY_CART:
+      return {
+        ...state,
+        emptyCart : state.emptyCart
+      }    
 
     default:
       return state;

@@ -9,7 +9,7 @@ export const DELETE_CART_ITEM = 'DELETE_CART_ITEM ';
 export const ADD_EMPTY_CART='ADD_EMPTY_CART';
 export const DELETE_CART_ALL = 'DELETE_CART_ALL';
 export const  GET_CART =' GET_CART';
-
+export const GET_EMPTY_CART ='GET_EMPTY_CART'
 
 
 
@@ -74,6 +74,12 @@ export const setCount = (number) => {
 export const deleteCart = () => {
     return {
         type: DELETE_CART_ALL
+    }
+}
+
+export const getEmptyCart = () => {
+    return {
+        type: GET_EMPTY_CART
     }
 }
 
