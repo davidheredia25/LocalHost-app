@@ -11,7 +11,8 @@ const {
     postUser,
     postLogin,
     profileAuthenticate,
-    loginGoogle
+    loginGoogle,
+    getCartUser
  } = require('./Controllers/all.controllers');
 
 
@@ -24,6 +25,7 @@ router.get('/', getUser);
 router.post('/create', createUser);
 router.put('/edit/:id', editDateUser);
 router.put('/update/:id', updateUser);
+router.get('/get/cart/:id', getCartUser);
 router.put('/cart/:userId', addCart);
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);

@@ -58,8 +58,18 @@ const addCart = async (req, res) => {
     }
 };
 
-
-
+const getCartUser = async (req, res) => {
+    const { id } = req.body;
+    console.log('id getCartUser: ', id);
+    try {
+        let verificacion = await verificacionId(id);
+        console.log('verificacion getCartUser: ', verificacion);
+        if(verificacion.bool)  return res.json(verificacion.user.cart);
+        res.send('No se encontro el usuario');
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 // const addCart = async( req, res) => {
 //     //const{ idUser,idItem } =req.params;
@@ -105,5 +115,6 @@ const addCart = async (req, res) => {
 
 
 module.exports = {
-    addCart
+    addCart,
+    getCartUser
 };
