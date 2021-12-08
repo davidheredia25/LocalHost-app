@@ -21,7 +21,7 @@ export const getUsers = () => async (dispatch) => {
 }
 
 export const changeRol = (id) => async (dispatch) => {
-    await axios.put(`/user/rol/${id}`)
+    await axios.put(`/user/update/${id}`)
     return dispatch(getUsers())
 }
 export const getTickets = () => async (dispatch) => {

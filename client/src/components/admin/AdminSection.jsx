@@ -5,6 +5,8 @@ import BrandCreate from "./Brand/Create/BrandCreate";
 import UsersSection from "./Users/UsersSection";
 import CreateProduct from "./ProductCRUD/Create/CreateProduct";
 import EditProducts from "./ProductCRUD/Edit/EditProducts";
+import AdminWelcome from "../admin/AdminWelcome/AdminWelcome"
+import TicketsSection from "../admin/Tickets/TicketsSection"
 import { getUsers, getTickets } from "../../redux/actions/admin.actions";
 import { getProducts } from "../../redux/actions/products.actions";
 import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
@@ -33,11 +35,11 @@ const AdminSection = () => {
                     ? <UsersSection />
                     : null
             }
-          {/*   {
+            {
                section === "tickets" 
-                    ? <UsersSection />
+                    ? <TicketsSection />
                     : null
-            } */}
+            }
             {
                section === "productcreate" 
                     ? <CreateProduct />
@@ -56,6 +58,11 @@ const AdminSection = () => {
             {
                section === "brandedit" 
                     ? <BrandEdit />
+                    : null
+            }      
+            {
+               section === "" 
+                    ? <AdminWelcome />
                     : null
             }      
         </div>
