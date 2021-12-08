@@ -12,4 +12,5 @@ export { default as Register } from "./user/Register/Register";
 export { default as Profile } from "./user/Profile/Profile";
 export { default as Favorites } from "./user/Profile/Favorites";
 export { default as Ordens } from "./user/Profile/Ordens";
+export {default as RecuperarPassword} from "./user/RecuperarPassword/RecuperarPassword";
 
