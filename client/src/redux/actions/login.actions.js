@@ -6,6 +6,8 @@ export const LOGIN_AUTH = "LOGIN_AUTH"
 export const LOG_OUT = 'LOG_OUT'
 export const EDIT_DATE_USER ='EDIT_DATE_USER'
 export const GET_USER_GOOGLE = 'GET_USER_GOOGLE'
+export const FORGOT_PASSWORD = "FORGOT_PASSWORD"
+export const CHANGUES_PASSWORD = "CHANGUES_PASSWORD"
 
 
 
@@ -83,6 +85,18 @@ export const editDateUser = (id, input) => async (dispatch) => {
         })
     }
     catch (error) {
+        console.log(error)
+    }
+}
+
+export const forgotPassword = ({id}) => async (dispatch) => {
+    try {
+        const res = await axios.put(`/user/login/password:${id}`)
+        return dispatch({
+            type: FORGOT_PASSWORD,
+            payload: res.data
+        })
+    } catch (error) {
         console.log(error)
     }
 }

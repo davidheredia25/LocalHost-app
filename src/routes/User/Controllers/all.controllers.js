@@ -5,6 +5,7 @@ const { updateUser } = require('./update.user');
 const { editDateUser } = require('./editDate.user');
 const { addCart } = require('./cart.user');
 const { postUser, postLogin, profileAuthenticate, loginGoogle } = require('./login.user');
+const {forgotPassword} = require("./passwordUser")
 
 
 module.exports = {
@@ -18,5 +19,6 @@ module.exports = {
     postUser,
     postLogin,
     profileAuthenticate,
-    loginGoogle
+    loginGoogle,
+    forgotPassword
 };

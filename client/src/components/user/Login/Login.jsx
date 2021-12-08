@@ -123,7 +123,7 @@ const Login = () => {
         </div>
         <div className={style.link}>
          <p> No tenes cuenta? <Link to="/register">Registrate</Link></p>
-         <p>  Olvidaste tu contraseña? <Link to="/forgot">Cambiala ahora</Link></p>
+         <p>  Olvidaste tu contraseña? <Link to="/login/password">Cambiala ahora</Link></p>
         </div>
   </form>
   </div>
