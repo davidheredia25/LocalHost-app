@@ -2,13 +2,13 @@ const Review = require('../../../models/Review');
 const { verificacionId } = require('./middleware');
 
 const deleteReview = async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.params;
     console.log('id deleteReview', id);
     try {
         let verificacion = await verificacionId(id);
         console.log('verificacion deleteReview', verificacion);
         
-        if(verificaion.bool) {
+        if(verificacion.bool) {
             let deleted = await Review.findByIdAndDelete(id);
             console.log('deleted deleteReview', deleted);
             res.json(deleted);

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsDetails, removeProduct } from "../../../redux/actions/products.actions";
 import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
+import CreateReview from "./CreateReview";
 import { useParams } from "react-router-dom";
 import './Details.scss';
 
@@ -29,6 +29,7 @@ const Details = () => {
             />
           </div>
           <ProductInfo product={product} />
+          <CreateReview id={id}/>
         </div>
       </div>
       :
