@@ -17,7 +17,7 @@ const NavBarProfile = () => {
 
               
                     User.image !== "" ? (
-                    <img className={style.iconUser} src={User.image} alt=''/>
+                    <img className={style.iconUser} src={User.image} alt={User.fristName}/>
                     ) : 
 
                 
