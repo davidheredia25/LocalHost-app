@@ -37,16 +37,18 @@ const addCart = async (req, res) => {
                         else verificacionUser.user.cart[i].qtyCart++;
                         
                         let save = await verificacionUser.user.save();
-                        console.log('save addCart: ', save);
-                        return res.json(save);
+                        let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image'])
+                        console.log('save addCart: ', test);
+                        return res.json(test);
                     }
                 }
                 let add = await User.findByIdAndUpdate(userId, {
                     cart: [...verificacionUser.user.cart, objCart]
                 }, { new: true });
                 add = await add.save();
-                console.log('add addCart: ', add);
-                return res.json(add);
+                let test= await User.findById(add._id).populate('cart.cart', ['price','name', 'image'])
+                console.log('add addCart: ', test.cart[0].cart);
+                return res.json(test.cart);
             }
             return res.send('No se encontro el producto');
         }

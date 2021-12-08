@@ -1,11 +1,11 @@
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "./cartCard";
 import style from './carrito.module.scss';
 import { Button } from '@mui/material';
-import {deleteCart} from '../../../redux/actions/cart.actions';
+import {deleteCart, getCart} from '../../../redux/actions/cart.actions';
 
 
 
@@ -15,6 +15,8 @@ const Cart= () => {
     const dispatch=useDispatch();
 
     const {cart} = useSelector(state => state.cart)
+    const {user} =useSelector(state => state.login)
+    console.log('user', user)
     console.log('cart', cart);
     function total(){
         let calculo=0;
@@ -22,13 +24,15 @@ const Cart= () => {
             calculo = calculo + (cart[i].product.price * cart[i].count)
         } 
        return calculo 
-    }
+    } 
 
     const Limpiar = () => {
         dispatch(deleteCart());
     }
     let pago= total();
-
+    useEffect(() => {
+      return dispatch(getCart())
+    }, [dispatch])
     return (
         <div className={style.cart}>
             <div className={style.cards}>
@@ -64,7 +68,7 @@ const Cart= () => {
                 <Button variant='contained' onClick={Limpiar} size="large" style={{'backgroundColor': 'red'}} >Limpiar</Button>
                 </div> 
             } 
-            </div>
+            </div> 
         </div>
     )
 }
