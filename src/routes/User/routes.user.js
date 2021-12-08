@@ -24,7 +24,7 @@ router.get('/', getUser);
 router.post('/create', createUser);
 router.put('/edit/:id', editDateUser);
 router.put('/update/:id', updateUser);
-router.put('/cart/:idUser/:idItem', addCart);
+router.put('/cart/:userId', addCart);
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);
