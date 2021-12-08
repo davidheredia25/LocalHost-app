@@ -25,7 +25,15 @@ const ProductInfo = ({ product }) => {
                     <h1 className='info_name'>{product.name}</h1>
                     <h2 className='info_price'>$ {product.price}</h2>
                     <h2 className='info_description'>{product.description}</h2>
-                    <h4 className='info_review'>{product.reviews[0].rating}</h4>
+                    {
+                        product.reviews.map(r => (
+                            <div>
+                                <h3 className='info_review_rating'>{r.rating}</h3>
+                                <p className='info_review_comment'>{r.comment}</p>
+                                <p className='info_review_user'>{r.user.email}</p>
+                            </div>
+                        ))
+                    }
                 </div>
 
                 <div className='info_talles'>
