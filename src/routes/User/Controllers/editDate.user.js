@@ -9,7 +9,6 @@ const editDateUser = async (req, res) => {
         email,
         document,
         telephone,
-        image,
         direction,
         floor,
         department,
@@ -19,6 +18,7 @@ const editDateUser = async (req, res) => {
         dateOfBirth
     } = req.body;
 
+   
     try {
         let edit = await User.findByIdAndUpdate(id, {
             fristName: fristName,
@@ -26,7 +26,6 @@ const editDateUser = async (req, res) => {
             email: email,
             document: document,
             telephone: telephone,
-            image: image,
             direction: direction,
             floor: floor,
             department: department,
@@ -36,9 +35,14 @@ const editDateUser = async (req, res) => {
             dateOfBirth: dateOfBirth
         }, { new: true });
 
+        if (req.file) {
+            const { filename } = req.file
+            edit.setImage(filename)
+        }
+
         editUser = await edit.save();
         console.log(editUser)
-        res.json({message: "Dale que sos vos", user: editUser});
+        res.json({ message: "Dale que sos vos", user: editUser });
 
     } catch (error) {
         console.log(error);

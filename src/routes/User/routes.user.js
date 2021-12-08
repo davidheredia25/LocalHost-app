@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const passport = require("passport");
-const { 
+const uploadFile = require('../Multer/Middleware.js');
+const {
     createUser,
     deleteUser,
     getUser,
@@ -12,17 +13,17 @@ const {
     postLogin,
     profileAuthenticate,
     loginGoogle
- } = require('./Controllers/all.controllers');
+} = require('./Controllers/all.controllers');
 
 
- const router = Router(); 
+const router = Router();
 
 
 //          /user
 router.get('/', getUser);
 //router.get('/:userId', getUserByID);
 router.post('/create', createUser);
-router.put('/edit/:id', editDateUser);
+router.put('/edit/:id', uploadFile(), editDateUser);
 router.put('/update/:id', updateUser);
 router.put('/cart/:idUser/:idItem', addCart);
 router.delete('/delete/:id', deleteUser);
