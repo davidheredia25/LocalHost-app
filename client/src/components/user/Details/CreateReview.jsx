@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import StarRatings from 'react-star-ratings';
 import { createReview } from '../../../redux/actions/review.actions';
+import { getProductsDetails } from '../../../redux/actions/products.actions';
 
 const CreateReview = ({ id }) => {
     const [rating, setRating] = useState(0);
@@ -9,17 +10,26 @@ const CreateReview = ({ id }) => {
     const dispatch = useDispatch();
     const { user } = useSelector(state => state.login);
     // const { product } = useSelector(state => state.products);
+    console.log('id: ', id);
+
+    let User;
+    if(user.email)  User = user;
+    else User = user.user;
 
     const handleChange = (e) => {
         setComment(e.target.value);
     };
+
+    useEffect(() => {
+        dispatch(getProductsDetails(id));
+    },[dispatch, id]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(createReview({
             rating: rating,
             comment: comment,
-            user: user.email,
+            user: User.email,
             id: id
         }));
         setRating(0);

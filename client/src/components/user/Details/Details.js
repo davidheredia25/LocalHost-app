@@ -9,7 +9,9 @@ import './Details.scss';
 
 const Details = () => {
   const dispatch = useDispatch();
-  const { product } = useSelector((state) => state.products)
+  const { product } = useSelector((state) => state.products);
+  const { user } = useSelector(state => state.login);
+  console.log('user: ', user);
   const { id } = useParams();
 
   useEffect(() => {
@@ -29,7 +31,11 @@ const Details = () => {
             />
           </div>
           <ProductInfo product={product} />
-          <CreateReview id={id}/>
+          {
+            user !== null ? (
+              <CreateReview id={id} />
+            ) : null
+          }
         </div>
       </div>
       :
