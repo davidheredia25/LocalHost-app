@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "./cartCard";
-import style from './carrito.module.scss';
+import style from './cart.module.scss';
 import { Button } from '@mui/material';
 import {deleteCart, getCart} from '../../../redux/actions/cart.actions';
 import  CartUser from "./CartUser/CartUser";
@@ -26,7 +26,7 @@ const Cart= () => {
     
     
     return (
-        <div>
+        <div className={style.container}>
             {user?
             <CartUser id={id} />  
             :

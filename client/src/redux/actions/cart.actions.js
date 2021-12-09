@@ -9,7 +9,8 @@ export const DELETE_CART_ITEM = 'DELETE_CART_ITEM ';
 export const ADD_EMPTY_CART='ADD_EMPTY_CART';
 export const DELETE_CART_ALL = 'DELETE_CART_ALL';
 export const  GET_CART =' GET_CART';
-export const GET_EMPTY_CART ='GET_EMPTY_CART'
+export const GET_EMPTY_CART ='GET_EMPTY_CART';
+export const DELETE_EMPTY_ONE = 'DELETE_EMPTY_ONE';
 
 
 
@@ -28,10 +29,11 @@ export const addItemToCart = (obj) => async (dispatch) => {
     })
 }  
 
-export const addEmptyCart = (product) => {
+export const addEmptyCart = (obj) => {
+    console.log('obj', obj)
     return {
         type: ADD_EMPTY_CART,
-        payload: product
+        payload: obj
     }
 }
 
@@ -93,3 +95,11 @@ export const getCart = (id) => async (dispatch) => {
         payload: data
     })
 }  
+
+
+export const deleteEmptyOne = (id) =>  {
+    return {
+        type : DELETE_EMPTY_ONE,
+        payload: id
+    }
+}

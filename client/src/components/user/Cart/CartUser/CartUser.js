@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CartCard from "../cartCard";
 import { Button } from '@mui/material';
 import {deleteCart, getCart} from '../../../../redux/actions/cart.actions';
+import style from '../carrito.module.scss';
 
 
 
@@ -36,8 +37,8 @@ const CartUser = ({id}) => {
 
 
     return (
-        <div >
-            <div >
+        <div style={{marginTop: '150px', marginBottom: '10%'}} className={style.cart} >
+            <div  className={style.cart}>
                 {cart?.length ?
                  cart.map(x => {
                      return(
