@@ -50,7 +50,7 @@ const { products } = req.body;
                 items: items_ml,
                 external_reference: `${id_orden}`,
                 payment_methods: {
-                    excluded_payment_types: [
+                excluded_payment_types: [
                         {
                             id: "atm"
                         }
