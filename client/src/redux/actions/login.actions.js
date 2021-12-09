@@ -7,7 +7,6 @@ export const LOG_OUT = 'LOG_OUT'
 export const EDIT_DATE_USER ='EDIT_DATE_USER'
 export const GET_USER_GOOGLE = 'GET_USER_GOOGLE'
 export const FORGOT_PASSWORD = "FORGOT_PASSWORD"
-export const CHANGUES_PASSWORD = "CHANGUES_PASSWORD"
 
 
 
@@ -89,9 +88,9 @@ export const editDateUser = (id, input) => async (dispatch) => {
     }
 }
 
-export const forgotPassword = ({id}) => async (dispatch) => {
+export const forgotPassword = () => async (dispatch) => {
     try {
-        const res = await axios.put(`/user/login/password:${id}`)
+        const res = await axios.put(`/user/login/password`)
         return dispatch({
             type: FORGOT_PASSWORD,
             payload: res.data

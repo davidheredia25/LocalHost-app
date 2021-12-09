@@ -5,6 +5,7 @@ import {forgotPassword} from "../../../redux/actions/login.actions"
 
 const RecuperarPassword = () => {
 
+    const { user } = useSelector(state => state.login);
     const dispatch = useDispatch();
     const [input, setInput] = useState({
         email: "",
@@ -22,7 +23,10 @@ const RecuperarPassword = () => {
         e.preventDefault()
         dispatch(forgotPassword(input))
     }
-    
+
+    // const validatePassword = (e) => {
+
+    // }    
 
     return (
         <div>
