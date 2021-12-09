@@ -13,7 +13,8 @@ const {
     postLogin,
     profileAuthenticate,
     loginGoogle,
-    getCartUser
+    getCartUser,
+    checkoutMp
  } = require('./Controllers/all.controllers');
 
 
@@ -33,6 +34,7 @@ router.post('/register', passport.authenticate("register", { session: false }), 
 router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
+router.post('/checkoutMp/:userId', checkoutMp);
 
 
 module.exports = router;
