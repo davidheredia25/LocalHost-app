@@ -31,7 +31,7 @@ const verificacionExis = async (id, email) => {
         console.log('find verificacionExis', find.reviews);
         let obj = { bool: false };
         let veri = [];
-        if (find.reviews && find.reviews !== null)  veri = find.reviews.filter(r => r.user?.email === email);
+        if (find.reviews && find.reviews !== null)  veri = find.reviews.filter(r => r.user.email === email);
         console.log('veri verificacionExis', veri);
         if(veri.length !== 0)  return obj = { bool: true };
         return obj;
