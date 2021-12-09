@@ -29,6 +29,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
 
+//Multer
+app.use('/public', express.static(`${__dirname}/public/imgs/`))
+
 //Routes
 app.use('/', BrandRoutes);
 app.use('/', CategoryRoutes);
