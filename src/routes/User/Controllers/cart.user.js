@@ -39,6 +39,7 @@ const addCart = async (req, res) => {
                         let save = await verificacionUser.user.save();
                         let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image'])
                         console.log('save addCart: ', test);
+                        console.log('test addCart: ', test.cart);
                         return res.json(test);
                     }
                 }

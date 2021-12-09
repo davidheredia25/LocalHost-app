@@ -1,4 +1,7 @@
-import axios from "axios"
+import axios from "axios";
+import React from 'react';
+import { addItemToCart } from "./cart.actions";
+import { useSelector } from "react-redux";
 export const GET_USER = "GET_USER"
 export const REGISTER_LOCAL = "REGISTER_LOCAL"
 export const LOGIN_LOCAL = "LOGIN_LOCAL"
@@ -7,11 +10,12 @@ export const LOG_OUT = 'LOG_OUT'
 export const EDIT_DATE_USER ='EDIT_DATE_USER'
 export const GET_USER_GOOGLE = 'GET_USER_GOOGLE'
 
-
+const emptyCart = JSON.parse(localStorage.getItem('cart'))
 
 
 export const loginGoogle = (tokenId) => async dispatch => {
     try {
+       
         const { data } = await axios.post("/user/loginG", { tokenId })
         return dispatch({
             type: GET_USER_GOOGLE,
