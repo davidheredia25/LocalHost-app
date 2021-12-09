@@ -14,19 +14,22 @@ import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.act
 const Card = ({ product, favorites }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
-
+    console.log('product',product)
     const [num, setNum] = useState(1);
-    const { talle } = useSelector(state => state.cart.cartProduct)
+    //const { talle } = useSelector(state => state.cart.cartProduct)
     const { user } = useSelector(state => state.login)
+    const userId = user?._id;
+
 
     const boolean = verifyFavorite(favorites, product._id)
 
     const [favBool, setFavBool] = useState(boolean)
 
     function onClick(e) {
+        console.log('clicked')
         e.preventDefault();
         dispatch(setProduct(product))
-        dispatch(setTalle(e.target.value))
+        //dispatch(setTalle(e.target.value))
     }
 
     const subtraction = () => {
@@ -39,8 +42,19 @@ const Card = ({ product, favorites }) => {
     }
 
     const addCart = () => {
-        dispatch(addEmptyCart(product));
+        if(user) { 
+        let obj = {
+            userId: userId,
+            productId: product._id,
+            qty: num
+              }
+        dispatch(addItemToCart(obj));
         closeModal();
+            }else{
+              dispatch(addEmptyCart(product));
+              closeModal();  
+            }
+
     }
 
     function openModal() {
@@ -111,7 +125,7 @@ const Card = ({ product, favorites }) => {
                                             <Button
                                                 value={t}
                                                 onClick={onClick}
-                                                variant={talle === t ? 'outlined' : 'text'}
+                                                variant={ 'text'}
                                                 style={{ 'color': '#000000' }}
                                             >
                                                 {t}

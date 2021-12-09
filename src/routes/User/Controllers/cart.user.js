@@ -37,16 +37,19 @@ const addCart = async (req, res) => {
                         else verificacionUser.user.cart[i].qtyCart++;
                         
                         let save = await verificacionUser.user.save();
-                        console.log('save addCart: ', save);
-                        return res.json(save);
+                        let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image'])
+                        console.log('save addCart: ', test);
+                        console.log('test addCart: ', test.cart);
+                        return res.json(test);
                     }
                 }
                 let add = await User.findByIdAndUpdate(userId, {
                     cart: [...verificacionUser.user.cart, objCart]
                 }, { new: true });
                 add = await add.save();
-                console.log('add addCart: ', add);
-                return res.json(add);
+                let test= await User.findById(add._id).populate('cart.cart', ['price','name', 'image'])
+                console.log('add addCart: ', test.cart[0].cart);
+                return res.json(test.cart);
             }
             return res.send('No se encontro el producto');
         }
@@ -56,8 +59,18 @@ const addCart = async (req, res) => {
     }
 };
 
-
-
+const getCartUser = async (req, res) => {
+    const { id } = req.params;
+    console.log('id getCartUser: ', id);
+    try {
+        let verificacion = await verificacionId(id);
+        console.log('verificacion getCartUser: ', verificacion);
+        if(verificacion.bool)  return res.json(verificacion.user.cart);
+        res.send('No se encontro el usuario');
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 // const addCart = async( req, res) => {
 //     //const{ idUser,idItem } =req.params;
@@ -103,5 +116,6 @@ const addCart = async (req, res) => {
 
 
 module.exports = {
-    addCart
+    addCart,
+    getCartUser
 };

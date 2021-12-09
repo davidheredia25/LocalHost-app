@@ -3,15 +3,16 @@ import {
   SET_TALLE,
   SET_COUNT,
   ADD_ITEM_CART,
-
+  GET_CART,
   ADD_EMPTY_CART,
   DELETE_CART_ALL,
+  GET_EMPTY_CART
   
 
 } from "../actions/cart.actions";
 
 const initialState = {
-  cart: JSON.parse(localStorage.getItem('cart')), // [{id: 1, talle: "S", count: 2}, {id: 1, talle: "M", count: 1}]
+  cart: null, // [{id: 1, talle: "S", count: 2}, {id: 1, talle: "M", count: 1}]
   cartProduct: {
     product: null,
     talle: "", // "S"
@@ -129,8 +130,10 @@ export function cartReducer(state = initialState, { type, payload }) {
         cart: JSON.parse(localStorage.getItem('cart'))
       } */
     case ADD_ITEM_CART:
+      console.log('payload', payload)
       return {
-        emptyCart: product
+        ...state,
+        cart: payload
       }  
     case SET_PRODUCT:
       return {
@@ -163,6 +166,16 @@ export function cartReducer(state = initialState, { type, payload }) {
         ...state, 
         cart: localStorage.clear()
       }
+    case GET_CART :
+      return {
+        ...state,
+        cart: state.cart
+      }
+    case GET_EMPTY_CART:
+      return {
+        ...state,
+        emptyCart : state.emptyCart
+      }    
 
     default:
       return state;
