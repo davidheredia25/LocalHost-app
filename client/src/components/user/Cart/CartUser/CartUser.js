@@ -18,7 +18,7 @@ const CartUser = ({id}) => {
     function total(){
         let calculo=0;
         for(var i=0; i< cart?.length; i++) {
-            calculo = calculo + (cart[i].cart.price * cart[i].qtyCart)
+            calculo = calculo + (cart[i].cart?.price * cart[i].qtyCart)
         } 
        return calculo 
     } ;
