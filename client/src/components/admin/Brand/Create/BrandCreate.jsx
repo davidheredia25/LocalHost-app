@@ -1,51 +1,48 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setBrandName } from "../../../../redux/actions/brand.actions";
+import { useDispatch } from "react-redux";
+import { createBrand } from "../../../../redux/actions/brand.actions";
 import style from '../Styles/BrandCreate.module.scss';
-import CategoryForm from "../CategoryForm";
 
 const BrandCreate = () => {
 
     const dispatch = useDispatch();
-    const { brandInfo } = useSelector(state => state.brand);
 
-    const [input, setInput] = useState("");
+    const [form, setForm] = useState({
+        brand: "",
+        logo: ""
+    });
+
     const handleChange = (e) => {
-        setInput(e.target.value);
+        const { name, value } = e.target;
+        setForm({
+            ...form,
+            [name]: value
+        });
     }
 
-    const handleAdd = () => {
-        dispatch(setBrandName(input));
-        setInput("");
+    const handleSave = () => {
+        dispatch(createBrand(form))
     }
-
-    const handleX = () => {
-        dispatch(setBrandName(""));
-    }
-
+    
     return (
-        <div  >
+        <div>
             <h1 className={style.titleSup}>Crear nueva marca</h1>
             <div className={style.ctnNameBrand}>
-                {
-                    brandInfo.name !== ""
-                        ?
-                        <div>
-                            <p className={style.nameBrand}> Tu marca: {brandInfo.name.toUpperCase()}   <button className={style.btnX} onClick={handleX}>X</button></p>
-                        </div>
-                        :
-                        <div>
-                            <h3 className={style.titleInput}>Nueva Marca:</h3>
-                            <input name="brand" value={input} type="text" onChange={handleChange} />
-                            <button className={style.btnMas} onClick={handleAdd}>+</button>
-                        </div>
-                }
+                <div>
+                    <h3 className={style.titleInput}>Nombre:</h3>
+                    <input name="brand" value={form.brand} type="text" onChange={handleChange} />
+                    <h3 className={style.titleInput}>Logo:</h3>
+                    <input name="logo" value={form.logo} type="text" onChange={handleChange} />
+                </div>
+                <div>
+                    <h3>{form.brand}</h3>
+                    {
+                        form.logo &&
+                            <img src={form.logo} alt="img not found" />
+                    }
+                    <button onClick={handleSave}>GUARDAR</button>
+                </div>
             </div>
-            {
-                brandInfo.name ?
-                    <CategoryForm />
-                    : null
-            }
         </div>
     )
 }

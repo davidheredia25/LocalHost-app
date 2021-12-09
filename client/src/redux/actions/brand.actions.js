@@ -27,16 +27,22 @@ export const getBrands = () => async (dispatch) => {
     }
 }
 
-export const saveNewBrand = (object) => async (dispatch) => {
+export const createBrand = (object) => async (dispatch) => {
     try {
-        const res = await axios.post(`/brand/create`, object)    
+        await axios.post(`/brand/create`, object)    
         return dispatch(getBrands())
     } 
     catch (error) {
         console.log(error)
     }
+}
 
-} 
+export const editBrand = (object) => async (dispatch) => {
+    await axios.put(`/brand/update`, object)
+    return dispatch(getBrands())
+}
+
+
 
 export const getCategories = () => async dispatch => {
     const { data } = await axios.get("/category")
@@ -52,12 +58,22 @@ export const getSubcategories = () => async dispatch => {
         payload: data
     })
 }
-export const deleteSubcategory = () => async dispatch => {
-    const { data } = await axios.delete("/brand/delete")
-    return dispatch({
-        type: GET_SUBCATEGORIES,
-        payload: data
-    })
+
+export const deleteBrand = (string) => async (dispatch) => {
+    await axios.delete(`/brand/delete`, { data: { brand: string } })
+    return dispatch(getBrands())
+}
+
+export const deleteCategory = (object) => async (dispatch) => {
+    await axios.delete(`/category/delete`, { data: object })
+    dispatch(getCategories())
+    return dispatch(getBrands())
+}
+
+export const deleteSubcategory = (object) => async dispatch => {
+    await axios.delete("/types/delete", { data: object })
+    dispatch(getSubcategories())
+    return dispatch(getBrands())
 }
 
 export const getBrandsList = () => async (dispatch) => {

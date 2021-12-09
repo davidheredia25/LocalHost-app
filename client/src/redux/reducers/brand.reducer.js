@@ -26,7 +26,6 @@ const initialState = {
   
 export function brandReducer(state = initialState, { type, payload }) {
     switch (type) {
-
         case GET_BRANDS:
             return {
                 ...state,

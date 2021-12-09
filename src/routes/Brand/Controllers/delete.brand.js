@@ -2,7 +2,10 @@ const Brand = require('../../../models/Brand');
 const { verificacionId } = require('./middleware');
 
 const deleteBrand = async (req, res) => {
-    const { id } = req.params;
+    const { brand } = req.body;
+    // Acá se eliminarían todos los productos de esa marca y también la marca del modelo Brand
+    
+    /*  const { id } = req.params;
     // console.log('id deleteBrand', id);
     try {
         let verificacion = await verificacionId(id);
@@ -16,7 +19,7 @@ const deleteBrand = async (req, res) => {
         res.send('No se encontro la marca');
     } catch (error) {
         console.log(error);
-    }
+    } */
 };
 
 module.exports = {

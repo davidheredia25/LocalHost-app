@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setExistentBrand } from "../../../../redux/actions/brand.actions";
-import CategoryForm from "../CategoryForm"
+import ShowBrandInfo from "../ShowBrandInfo"
 import style from '../Styles/BrandEdit.module.scss'
 
 const BrandEdit = () => {
@@ -28,7 +28,8 @@ const BrandEdit = () => {
                     }
                 </select>
             </div>
-            <CategoryForm />
+            <ShowBrandInfo />
+            {/* <CategoryForm /> */}
         </div>
     )
 }
