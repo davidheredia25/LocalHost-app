@@ -13,7 +13,7 @@ const {
     profileAuthenticate,
     loginGoogle,
     forgotPassword,
-    nodemailer
+    enviarMail
  } = require('./Controllers/all.controllers');
 
 
@@ -33,7 +33,7 @@ router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
 router.put("/login/password/:id", forgotPassword);
-router.post('/nodemailer', nodemailer);
+router.post('/nodemailer', enviarMail);
 
 
 module.exports = router;
