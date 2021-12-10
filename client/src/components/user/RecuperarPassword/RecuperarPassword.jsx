@@ -40,7 +40,7 @@ const RecuperarPassword = () => {
                         <form action="/user/nodemailer" method="POST">
                             <div class="form-group">
                                 <input type="text" 
-                                name="email" 
+                                name="email"
                                 class="form-control" 
                                 placeholder="Ingrese su contraseña"
                                 autofocus />
