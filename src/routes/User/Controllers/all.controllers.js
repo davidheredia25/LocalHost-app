@@ -5,7 +5,8 @@ const { updateUser } = require('./update.user');
 const { editDateUser } = require('./editDate.user');
 const { addCart } = require('./cart.user');
 const { postUser, postLogin, profileAuthenticate, loginGoogle } = require('./login.user');
-const {forgotPassword} = require("./passwordUser")
+const {forgotPassword} = require("./passwordUser");
+const { nodemailer } = require('./nodemailer.user');
 
 
 module.exports = {
@@ -20,5 +21,6 @@ module.exports = {
     postLogin,
     profileAuthenticate,
     loginGoogle,
-    forgotPassword
+    forgotPassword,
+    nodemailer
 };

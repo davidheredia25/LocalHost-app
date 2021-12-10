@@ -29,27 +29,35 @@ const RecuperarPassword = () => {
     // }    
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-               <div>
-                   <label>Email</label>
-                   <input type="text"
-                    name="email"
-                    value={input.email}
-                    onChange={handleChange}
-                    />
-               </div>
-               <div>
-                   <label>Password</label>
-                   <input type="text"
-                    name="password"
-                    value={input.password}
-                    onChange={handleChange}
-                    />
-               </div>
-               <button type="submit">Enviar</button>
-            </form>
+        <div class="container p-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5 col-lg-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Formulario de recuperación de contraseña</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/nodemailer" method="POST">
+                            <div class="form-group">
+                                <input type="text" 
+                                name="name" 
+                                class="form-control" 
+                                placeholder="Ingrese su nombre"
+                                autofocus />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" 
+                                name="email" 
+                                class="form-control" 
+                                placeholder="Ingrese su e-mail" />
+                            </div>
+                            <button class="btn btn-primary btn-block"> Enviar </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     )
 }
 
