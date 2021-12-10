@@ -6,24 +6,24 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    brand: [{
+    brand: {
         type: Schema.Types.ObjectId,
         ref: 'Brand',
         required: true,
         // autopopulate: true
-    }],
-    category: [{
+    },
+    category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
         required: true,
         // autopopulate: true
-    }],
-    type: [{
+    },
+    type: {
         type: Schema.Types.ObjectId,
         ref: 'Types',
         required: true,
         // autopopulate: true
-    }],
+    },
     price: {
         type: Number,
         required: true
