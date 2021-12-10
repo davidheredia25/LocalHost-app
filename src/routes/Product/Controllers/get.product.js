@@ -13,10 +13,7 @@ const getProducts = async (req, res) => {
         category, 
         type
     } = req.query;
-    console.log('name getProducts', name);
-    console.log('brand getProducts', brand);
-    console.log('category getProducts', category);
-    console.log('type getProducts', type);
+    // console.log('body getProducts: ', name, brand, category, type);
     try {
         let getAllProducts = await Product.find()
         .populate('brand', ['name'])
