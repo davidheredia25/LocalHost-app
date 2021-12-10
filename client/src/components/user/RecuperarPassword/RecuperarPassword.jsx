@@ -34,22 +34,22 @@ const RecuperarPassword = () => {
             <div class="col-sm-12 col-md-8 col-lg-5 col-lg-5">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h1>Formulario de recuperación de contraseña</h1>
+                        <h2>Formulario de recuperación de contraseña</h2>
                     </div>
                     <div class="card-body">
-                        <form action="/nodemailer" method="POST">
-                            <div class="form-group">
-                                <input type="text" 
-                                name="name" 
-                                class="form-control" 
-                                placeholder="Ingrese su nombre"
-                                autofocus />
-                            </div>
+                        <form action="/user/nodemailer" method="POST">
                             <div class="form-group">
                                 <input type="text" 
                                 name="email" 
                                 class="form-control" 
-                                placeholder="Ingrese su e-mail" />
+                                placeholder="Ingrese su email"
+                                autofocus />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" 
+                                name="email-dos" 
+                                class="form-control" 
+                                placeholder="Ingrese otra vez su e-mail" />
                             </div>
                             <button class="btn btn-primary btn-block"> Enviar </button>
                         </form>
