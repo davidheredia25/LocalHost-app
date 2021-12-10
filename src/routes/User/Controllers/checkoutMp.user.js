@@ -68,7 +68,7 @@ const { products } = req.body;
             const response = await mercadopago.preferences.create(preference)
             console.log('response', response)
             global.id = response.id
-            return res.redirect(response.init_point)
+            return res.json(response)
             // .then(function (response) {
             //     console.info('respondio', response.body.init_point)
             //     //Este valor reemplazará el string"<%= global.id %>" en tu HTML

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "../cartCard";
 import { Button } from '@mui/material';
-import {deleteCart, getCart, getEmptyCart} from '../../../../redux/actions/cart.actions';
+import {deleteCart, getEmptyCart, deleteEmptyOne} from '../../../../redux/actions/cart.actions';
+import style from '../carrito.module.scss';
 
 
 
@@ -11,19 +12,25 @@ import {deleteCart, getCart, getEmptyCart} from '../../../../redux/actions/cart.
 const EmptyCart = () => {
 
     const  dispatch = useDispatch()
-    const emptyCart = JSON.parse(localStorage.getItem('cart'))
+    const {emptyCart} = useSelector(state => state.cart)
 
     function total(){
         let calculo=0;
         for(var i=0; i< emptyCart?.length; i++) {
-            calculo = calculo + (emptyCart[i]?.product.price * emptyCart[i].count)
+            calculo = calculo + (emptyCart[i]?.product.price * emptyCart[i].qty)
         } 
        return calculo 
     } 
 
+    const onClose = (id) => {
+        console.log(id)
+        console.log('onclose')
+       return  dispatch(deleteEmptyOne(id))
+    }
+
     const Limpiar = () => {
         dispatch(deleteCart());
-    }
+    }   
     let pago = total();
 
     useEffect(() => {
@@ -31,8 +38,8 @@ const EmptyCart = () => {
     }, [emptyCart, dispatch])
 
     return (
-        <div >
-            <div >
+        <div className={style.cart}>
+            <div style={{marginTop: '200px'}} className={style.cart} >
                 {!emptyCart?.length ?
                 <p>No hay PProductos</p>  
                  : emptyCart?.map(x => {
@@ -40,10 +47,11 @@ const EmptyCart = () => {
                   <CartCard
                    key={x.product._id} 
                    name={x.product.name}
-                   price={x.product.price * x.count}
+                   price={x.product.price * x.qty}
                    talle={x.talle}
-                   count={x.count}
+                   count={x.qty}
                    image={x.product.image}
+                   onClose={() => onClose(x.product._id)}
                   /> 
                 )})
             } 
@@ -56,7 +64,7 @@ const EmptyCart = () => {
             } 
         
             </div>
-            <div>
+            <div className={style.buttons}>
             {!emptyCart?.length?
                 
            <Link to='/'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>

@@ -14,8 +14,8 @@ import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.act
 const Card = ({ product, favorites }) => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
-    console.log('product',product)
     const [num, setNum] = useState(1);
+    const [talle, setTalle] = useState('');
     //const { talle } = useSelector(state => state.cart.cartProduct)
     const { user } = useSelector(state => state.login)
     const userId = user?._id;
@@ -24,21 +24,22 @@ const Card = ({ product, favorites }) => {
     const boolean = verifyFavorite(favorites, product._id)
 
     const [favBool, setFavBool] = useState(boolean)
-
+    
     function onClick(e) {
         console.log('clicked')
         e.preventDefault();
-        dispatch(setProduct(product))
+        setTalle(e.target.value)
+        //dispatch(setProduct(product))
         //dispatch(setTalle(e.target.value))
     }
 
     const subtraction = () => {
         setNum(num - 1)
-        dispatch(setCount(num - 1))
+       // dispatch(setCount(num - 1))
     }
     const addition = () => {
         setNum(num + 1)
-        dispatch(setCount(num + 1))
+        //dispatch(setCount(num + 1))
     }
 
     const addCart = () => {
@@ -49,10 +50,20 @@ const Card = ({ product, favorites }) => {
             qty: num
               }
         dispatch(addItemToCart(obj));
+        
         closeModal();
+        setNum(1)
             }else{
-              dispatch(addEmptyCart(product));
-              closeModal();  
+                let obj= {
+                    product: product,
+                    qty: num,
+                    talle: talle
+                }
+              dispatch(addEmptyCart(obj));
+              
+              closeModal(); 
+              setNum(1) 
+              setTalle('')  
             }
 
     }
@@ -125,7 +136,7 @@ const Card = ({ product, favorites }) => {
                                             <Button
                                                 value={t}
                                                 onClick={onClick}
-                                                variant={ 'text'}
+                                                variant={ talle === t ? 'outlined' : 'text'}
                                                 style={{ 'color': '#000000' }}
                                             >
                                                 {t}

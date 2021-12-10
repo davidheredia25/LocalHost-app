@@ -6,7 +6,8 @@ import {
   GET_CART,
   ADD_EMPTY_CART,
   DELETE_CART_ALL,
-  GET_EMPTY_CART
+  GET_EMPTY_CART,
+  DELETE_EMPTY_ONE
   
 
 } from "../actions/cart.actions";
@@ -25,110 +26,59 @@ export function cartReducer(state = initialState, { type, payload }) {
 
   switch(type){
 
-    /* case ADD_ITEM_CART:
-      if (state.cart.length) {
-        let item = { ...state.cartProduct }
-        let filtered = state.cart.filter(x => 
-          (x.product._id === state.cartProduct.product._id) 
-          && 
-          (x.talle === state.cartProduct.talle)
-        );
-        if (filtered.length === 0) {
-          return {
-            ...state,
-            cart: [...state.cart, item]
-          }
-        }
-        if (filtered.length === 1) {
-          item = filtered[0];
-          item = {
-            ...item,
-            count: item.count + state.cartProduct.count
-          }
-          let array = [];
-          state.cart.forEach(x => {
-            if ((x.product._id !== item.product.id) && (x.talle !== item.talle)) {
-              array.push(x)
-            }
-          })
-          array = [...array, item]
-          console.log(array)
-          return {
-            ...state,
-            cart: array
-          }
-        }
-      }
-      return {
-        ...state,
-        cart: [state.cartProduct]
-      }
- */
+    
     case ADD_EMPTY_CART:
-      let product = []
-      if (state.emptyCart) {
-        let item = { ...state.cartProduct }
-        let filtered = state.emptyCart.filter(x => 
-          (x.product._id === state.cartProduct.product._id) 
-          && 
-          (x.talle === state.cartProduct.talle)
-        );
-        if (filtered.length === 0) {
-          product = [...state.emptyCart, item]
-          localStorage.setItem("cart", JSON.stringify(product));
-          return {
-            ...state,
-            emptyCart: JSON.parse(localStorage.getItem('cart')),
-            cart: JSON.parse(localStorage.getItem('cart')) 
-          }
-
+      let item = payload
+      let empty = JSON.parse(localStorage.getItem('cart'))
+      console.log('empty', empty);
+      let array=[item]
+      if( !empty ||empty.length === 0 ) { 
+        return {
+          ...state,
+          emptyCart : localStorage.setItem("cart", JSON.stringify(array))
         }
-        if (filtered.length === 1) {
-          item = filtered[0];
-          item = {
-            ...item,
-            count: item.count + state.cartProduct.count
+      }else{
+        console.log('empty', empty)
+        console.log('entro aca 1')
+        let filtered = empty.filter(x => (x.product._id === item.product._id) && (x.talle === item.talle));
+        console.log('filtered', filtered)
+        if(filtered?.length > 0){
+          console.log('entro aca 2 ')
+          let itemFilter= filtered[0] 
+          console.log('itemFilter', itemFilter)
+          /* itemFilter= {
+            ...itemFilter,
+            qty: itemFilter.qty + item.qty
+          } */
+          /* let newArray = empty.filter(x => (x.product._id !== item.product._id) && (x.talle !== item.talle)); */
+          let newArray= [];
+          let index = empty.indexOf(itemFilter);
+          console.log('empty2', empty)
+          console.log('index', index)
+          newArray = empty.splice(index, 1)
+          console.log('newArray', newArray)
+          itemFilter= {
+            ...itemFilter,
+            qty: itemFilter.qty + item.qty
           }
-          let array = [];
-          state.emptyCart.forEach(x => {
-            if ((x.product._id !== item.product.id) && (x.talle !== item.talle)) {
-              array.push(x)
-            }
-          })
-          array = [...array, item]
-          console.log(array)
-          localStorage.setItem("cart", JSON.stringify(array));
+          
+          let definitivo = [...empty, itemFilter]
           return {
             ...state,
-            emptyCart: JSON.parse(localStorage.getItem('cart')),
-            cart: JSON.parse(localStorage.getItem('cart')) 
+            emptyCart: localStorage.setItem("cart", JSON.stringify(definitivo))
+          }
+        }else {
+          console.log('entro aca 4 ')
+          let newArray = [...empty, item]
+          return{
+            ...state,
+            emptyCart: localStorage.setItem("cart", JSON.stringify(newArray))
           }
         }
       }
-      product= [state.cartProduct]
-      localStorage.setItem("cart", JSON.stringify(product));
-      return {
-        ...state,
-        emptyCart: JSON.parse(localStorage.getItem('cart')),
-        cart: JSON.parse(localStorage.getItem('cart')) 
-      }  
 
-      /*let product =[];
-      let carritoVacio= JSON.parse(localStorage.getItem('cart'));
-      console.log(carritoVacio)
-      if(carritoVacio) {
-        console.log('marito')
-        product = [...carritoVacio, payload ]
-        localStorage.setItem("cart", JSON.stringify(product));
-       
-      }else {
-        product = [payload]
-        localStorage.setItem("cart", JSON.stringify(product));
-      }
-      return {
-        emptyCart: JSON.parse(localStorage.getItem('cart')),
-        cart: JSON.parse(localStorage.getItem('cart'))
-      } */
+     
+      
     case ADD_ITEM_CART:
       console.log('payload', payload)
       return {
@@ -164,8 +114,9 @@ export function cartReducer(state = initialState, { type, payload }) {
     case DELETE_CART_ALL:
       return {
         ...state, 
-        cart: localStorage.clear()
+        emptyCart: localStorage.clear()
       }
+      
     case GET_CART :
       return {
         ...state,
@@ -175,7 +126,17 @@ export function cartReducer(state = initialState, { type, payload }) {
       return {
         ...state,
         emptyCart : state.emptyCart
-      }    
+      }  
+    case DELETE_EMPTY_ONE:
+      let carrito = state.emptyCart;
+      let filtered = carrito.filter(x => x.product._id  !== payload);
+      console.log(filtered)
+      localStorage.setItem("cart", JSON.stringify(filtered));
+      return {
+        ...state, 
+        emptyCart: filtered
+      }
+
 
     default:
       return state;
