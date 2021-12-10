@@ -11,6 +11,7 @@ export const DELETE_CART_ALL = 'DELETE_CART_ALL';
 export const  GET_CART =' GET_CART';
 export const GET_EMPTY_CART ='GET_EMPTY_CART';
 export const DELETE_EMPTY_ONE = 'DELETE_EMPTY_ONE';
+export const PAGAR = 'PAGAR';
 
 
 
@@ -102,4 +103,10 @@ export const deleteEmptyOne = (id) =>  {
         type : DELETE_EMPTY_ONE,
         payload: id
     }
+}
+
+
+export const Pagar = (userId) => async() => {
+   let data =await  axios.post(`user/checkoutMp/${userId}`);
+   return data;
 }
