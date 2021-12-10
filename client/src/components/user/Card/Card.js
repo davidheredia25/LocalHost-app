@@ -18,7 +18,10 @@ const Card = ({ product, favorites }) => {
     const [talle, setTalle] = useState('');
     //const { talle } = useSelector(state => state.cart.cartProduct)
     const { user } = useSelector(state => state.login)
-    const userId = user?._id;
+    let User;
+    if(user?.email) User = user
+    else User = user?.user;
+    const userId = User?._id;
 
 
     const boolean = verifyFavorite(favorites, product._id)
@@ -65,6 +68,7 @@ const Card = ({ product, favorites }) => {
               setNum(1) 
               setTalle('')  
             }
+
 
     }
 
