@@ -30,6 +30,7 @@ export const getProducts = ({ name, brand, category, subcategory }) => async (di
 export const getProductsDetails = (id) => async (dispatch) => {
     try {
         const detail = await axios.get(`/product/${id}`)
+        console.log('detalle',detail)
         return dispatch({
             type: GET_PRODUCTS_DETAILS,
             payload: detail.data

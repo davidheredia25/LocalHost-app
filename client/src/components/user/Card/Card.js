@@ -12,6 +12,7 @@ import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.act
 
 
 const Card = ({ product, favorites }) => {
+    console.log('producto', product._id)
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const [num, setNum] = useState(1);
@@ -143,7 +144,7 @@ const Card = ({ product, favorites }) => {
                                                 variant={ talle === t ? 'outlined' : 'text'}
                                                 style={{ 'color': '#000000' }}
                                             >
-                                                {t}
+                                                no hay forma de sacar el name
                                             </Button>
                                         )
                                     }) : null
