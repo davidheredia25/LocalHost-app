@@ -5,12 +5,13 @@
 */
 
 const nodemailer = async (res, req) => {
-    
+
   const { CLIENT_ID, REFRESH_TOKEN, CLIENT_SECRET, REDIRECT_URI } = process.env;
+  const { email } = req.body; 
 
   try {
-      //voy a recibir el email por body para verificar si existe user.
-    const { email } = req.body; 
+    //voy a recibir el email por body para verificar si existe user.
+    
     // const contentHTML = `
     //             <h1>Formulario de nodemailer</h1>
     //             <ul>
@@ -19,7 +20,7 @@ const nodemailer = async (res, req) => {
     //                 <li>Password: ${password} </li>
     //             </ul>`;
 
-    const link = "http://localhost:3000/user/login/password";
+    const link = `http://localhost:3000/user/login/password`;
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
