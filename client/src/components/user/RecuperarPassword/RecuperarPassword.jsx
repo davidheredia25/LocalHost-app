@@ -7,10 +7,49 @@ const RecuperarPassword = () => {
 
     const { user } = useSelector(state => state.login);
     const dispatch = useDispatch();
+    const [errors, setErrors] = useState({});
     const [input, setInput] = useState({
         password: "",
         passwordDos: ""
     })
+
+    const validatePassword = (e) => {
+        let { name, value } = e.target
+        setInput({
+            ...input,
+            [name]: value
+        })
+        if (!/^.{4,12}$/.test(value)) {
+            setErrors({
+                ...errors,
+                [name]: "Debe contener entre 4 y 12 caracteres"
+            })
+        } else {
+            setErrors({
+                ...errors,
+                [name]: ""
+            })
+        }
+    }
+
+    const validatePassword2 = (e) => {
+        let { name, value } = e.target
+        setInput({
+            ...input,
+            [name]: value
+        })
+        if (value !== input.password) {
+            setErrors({
+                ...errors,
+                [name]: "No coincide"
+            })
+        } else {
+            setErrors({
+                ...errors,
+                [name]: "",
+            })
+        }
+    }
 
     const handleChange = (e) => {
         setInput({
@@ -22,6 +61,10 @@ const RecuperarPassword = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(forgotPassword(input))
+        setInput({
+            password: "",
+            passwordDos: ""
+        })
     }
 
     return (
@@ -35,20 +78,26 @@ const RecuperarPassword = () => {
                     <div class="card-body">
                         <form action="/user/nodemailer" method="POST">
                             <div class="form-group">
-                                <input type="text" 
+                                <input type="password" 
                                 name="password" 
+                                value={input.password}
                                 class="form-control" 
                                 placeholder="Ingrese su contraseña"
-                                onChange={handleChange}
-                                autofocus />
+                                onChange={e => {handleChange(e) 
+                                               validatePassword(e)}}
+                                 />
+                                <p>{errors.password}</p>
                             </div>
                             <div class="form-group">
-                                <input type="text" 
+                                <input type="password" 
                                 name="passwordDos" 
+                                value={input.passwordDos}
                                 class="form-control" 
                                 placeholder="Ingrese otra vez su contraseña"
-                                onChange={handleChange}
+                                onChange={e => {handleChange(e)
+                                                validatePassword2(e)}}
                                 />
+                                <p>{errors.passwordDos}</p>
                             </div>
                             <button class="btn btn-primary btn-block" onClick={handleSubmit} > Enviar </button>
                         </form>
