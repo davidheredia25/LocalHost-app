@@ -8,8 +8,8 @@ const RecuperarPassword = () => {
     const { user } = useSelector(state => state.login);
     const dispatch = useDispatch();
     const [input, setInput] = useState({
-        email: "",
         password: "",
+        passwordDos: ""
     })
 
     const handleChange = (e) => {
@@ -24,10 +24,6 @@ const RecuperarPassword = () => {
         dispatch(forgotPassword(input))
     }
 
-    // const validatePassword = (e) => {
-
-    // }    
-
     return (
         <div class="container p-5">
         <div class="row">
@@ -40,18 +36,21 @@ const RecuperarPassword = () => {
                         <form action="/user/nodemailer" method="POST">
                             <div class="form-group">
                                 <input type="text" 
-                                name="email" 
+                                name="password" 
                                 class="form-control" 
                                 placeholder="Ingrese su contraseña"
+                                onChange={handleChange}
                                 autofocus />
                             </div>
                             <div class="form-group">
                                 <input type="text" 
-                                name="email-dos" 
+                                name="passwordDos" 
                                 class="form-control" 
-                                placeholder="Ingrese otra vez su contraseña" />
+                                placeholder="Ingrese otra vez su contraseña"
+                                onChange={handleChange}
+                                />
                             </div>
-                            <button class="btn btn-primary btn-block"> Enviar </button>
+                            <button class="btn btn-primary btn-block" onClick={handleSubmit} > Enviar </button>
                         </form>
                     </div>
                 </div>

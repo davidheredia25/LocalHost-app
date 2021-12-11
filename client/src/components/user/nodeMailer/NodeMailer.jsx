@@ -10,7 +10,8 @@ const NodeMailer = () => {
         email : "",
     })
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         dispatch(enviarMail(input))
     }
 
@@ -21,9 +22,11 @@ const NodeMailer = () => {
                     <input type="text"
                     value={input.email}
                     name="email"
-                    placeholder="Ingrese su email" />
+                    placeholder="Ingrese su email" 
+                    onChange={() => setInput(e.target.value)}
+                    />
                 </div>
-                <button type="submit">Enviar</button>
+                <button type="submit" onClick={handleSubmit} >Enviar</button>
             </form>
         </div>
     )
