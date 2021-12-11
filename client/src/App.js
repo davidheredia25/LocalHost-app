@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import { Home, Details, Cart, NavBar, Admin, Catalogo, Login, Register, Profile, Favorites, Ordens, RecuperarPassword } from "./components";
+import { Home, Details, Cart, NavBar, Admin, Catalogo, Login, Register, Profile, Favorites, Ordens, RecuperarPassword, NodeMailer } from "./components";
 
 
 
@@ -19,7 +19,9 @@ function App() {
 				<Route path='/cart' element={<Cart />} />
 				<Route path="/detail/:id" element={<Details />} />
 				<Route path="/catalogo" element={<Catalogo />} />
-				<Route path="/login/password" element={<RecuperarPassword />} />
+				<Route path="/user/login/password" element={<RecuperarPassword />} />
+				<Route path="/user/nodemailer" element={<NodeMailer />} />
+
 				
 
 				{/* ADMIN */}

@@ -1,17 +1,21 @@
+const nodemailer = require("nodemailer");
+const {google} = require("googleapis");
 
 /* 
     Esta función lo único que hace es enviar un link al mail del user
     enviándole un link para entrar al form de recuperación de contraseña
 */
 
-const nodemailer = async (res, req) => {
-
-  const { CLIENT_ID, REFRESH_TOKEN, CLIENT_SECRET, REDIRECT_URI } = process.env;
-  const { email } = req.body; 
-
-  try {
-    //voy a recibir el email por body para verificar si existe user.
+const enviarMail = async (req, res) => {
     
+  const { CLIENT_ID, REFRESH_TOKEN, CLIENT_SECRET, REDIRECT_URI } = process.env;
+  
+  const {email}  = req.body;
+  
+  try {
+      //voy a recibir el email por body para verificar si existe user.
+   if(email){
+  
     // const contentHTML = `
     //             <h1>Formulario de nodemailer</h1>
     //             <ul>
@@ -52,6 +56,7 @@ const nodemailer = async (res, req) => {
 
         const result = await transporter.sendMail(mailOptions);
         console.log(result);
+        res.status(200).json("Enviado")
       } catch (error) {
         console.log(error);
       }
@@ -62,11 +67,12 @@ const nodemailer = async (res, req) => {
         res.status(200).send("enviado");
       })
       .catch((error) => console.log(error.message));
+    }
   } catch (err) {
     console.log(err);
   }
 };
 
 module.exports = {
-  nodemailer,
+  enviarMail,
 };

@@ -42,14 +42,14 @@ const RecuperarPassword = () => {
                                 <input type="text" 
                                 name="email" 
                                 class="form-control" 
-                                placeholder="Ingrese su email"
+                                placeholder="Ingrese su contraseña"
                                 autofocus />
                             </div>
                             <div class="form-group">
                                 <input type="text" 
                                 name="email-dos" 
                                 class="form-control" 
-                                placeholder="Ingrese otra vez su e-mail" />
+                                placeholder="Ingrese otra vez su contraseña" />
                             </div>
                             <button class="btn btn-primary btn-block"> Enviar </button>
                         </form>
