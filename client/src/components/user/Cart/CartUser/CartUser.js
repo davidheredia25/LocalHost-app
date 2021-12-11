@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "../cartCard";
 import { Button } from '@mui/material';
-import {deleteCart, getCart, Pagar} from '../../../../redux/actions/cart.actions';
+import {deleteCart, getCart, Pagar, deleteAllCart} from '../../../../redux/actions/cart.actions';
 import style from '../carrito.module.scss';
 import axios from "axios";
 
@@ -28,9 +28,10 @@ const CartUser = ({id}) => {
         }
       
           
-    }
+    }    
+    const {cart} = useSelector(state => state.cart);
     
-    const {cart} = useSelector(state => state.cart)
+
     function total(){
         let calculo=0;
         for(var i=0; i< cart?.length; i++) {
@@ -40,14 +41,15 @@ const CartUser = ({id}) => {
     };
 
     const Limpiar = () => {
-        dispatch(deleteCart());
+        dispatch(deleteAllCart(id));
+        dispatch(getCart(id))
     }
 
     let pago = total();
 
     useEffect(() => {
        dispatch(getCart(id))
-    }, [dispatch])
+    },[dispatch, user])
 
 
     return (
@@ -58,6 +60,7 @@ const CartUser = ({id}) => {
                      return(
                    <CartCard
                     key={x.cart._id} 
+                    id={x.cart._id}
                     name={x.cart.name}
                     price={x.cart.price * x.qtyCart}
                     talle={x.talle}

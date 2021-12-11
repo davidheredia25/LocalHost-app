@@ -7,9 +7,10 @@ import {
   ADD_EMPTY_CART,
   DELETE_CART_ALL,
   GET_EMPTY_CART,
-  DELETE_EMPTY_ONE
+  DELETE_EMPTY_ONE,
+  DELETE_CART,
+  DELETE_CART_ONE
   
-
 } from "../actions/cart.actions";
 
 const initialState = {
@@ -136,6 +137,16 @@ export function cartReducer(state = initialState, { type, payload }) {
         ...state, 
         emptyCart: filtered
       }
+    case DELETE_CART :
+      return {
+        ...state,
+        cart: payload
+      }  
+    case DELETE_CART_ONE:
+      return {
+        ...state,
+        cart: payload
+      }  
 
 
     default:
