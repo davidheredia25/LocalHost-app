@@ -1,7 +1,6 @@
 import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT, EDIT_DATE_USER, GET_USER_GOOGLE,
     FORGOT_PASSWORD
 } from "../actions/login.actions";
-import {ENVIAR_MAIL} from "../actions/nodemailer.actions";
 let initialState = {
     user: JSON.parse(localStorage.getItem('user'))
 }
@@ -48,12 +47,6 @@ export function loginReducer(state = initialState, { type, payload }) {
             ...state,
             user: payload
         }
-        case ENVIAR_MAIL:
-            return{
-                ...state,
-                user: payload
-            }
-            
 
         default:
             return state;

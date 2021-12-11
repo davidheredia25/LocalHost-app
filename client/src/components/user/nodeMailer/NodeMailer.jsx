@@ -6,13 +6,11 @@ import {enviarMail} from "../../../redux/actions/nodemailer.actions"
 
 const NodeMailer = () => {
     const dispatch = useDispatch()
-    const [input, setInput] = useState({
-        email : "",
-    })
+    const [email, setEmail] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(enviarMail(input))
+        dispatch(enviarMail(email))
     }
 
     return (
@@ -20,10 +18,10 @@ const NodeMailer = () => {
             <form handleSubmit={handleSubmit}>
                 <div>
                     <input type="text"
-                    value={input.email}
+                    value={email}
                     name="email"
                     placeholder="Ingrese su email" 
-                    onChange={() => setInput(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
                 <button type="submit" onClick={handleSubmit} >Enviar</button>
