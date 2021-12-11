@@ -16,7 +16,10 @@ const {
     getCartUser,
     checkoutMp,
     deleteCart,
-    deleteCartOne
+    deleteCartOne,
+    forgotPassword,
+    enviarMail
+
  } = require('./Controllers/all.controllers');
 
 
@@ -39,6 +42,8 @@ router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
+router.put("/login/password/:id", forgotPassword);
+router.post('/nodemailer', enviarMail);
 
 
 module.exports = router;
