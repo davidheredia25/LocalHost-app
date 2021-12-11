@@ -15,8 +15,11 @@ const {
     loginGoogle,
     getCartUser,
     checkoutMp,
+    deleteCart,
+    deleteCartOne,
     forgotPassword,
     enviarMail
+
  } = require('./Controllers/all.controllers');
 
 
@@ -31,6 +34,8 @@ router.put('/edit/:id', uploadFile(), editDateUser);
 router.put('/update/:id', updateUser);
 router.get('/get/cart/:id', getCartUser);
 router.put('/cart/:userId', addCart);
+router.put('/cart/delete/:id', deleteCart)
+router.put('/cart/deleteOne/:id/:productId', deleteCartOne)
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);

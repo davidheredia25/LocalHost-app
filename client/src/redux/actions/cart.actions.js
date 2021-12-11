@@ -12,6 +12,9 @@ export const  GET_CART =' GET_CART';
 export const GET_EMPTY_CART ='GET_EMPTY_CART';
 export const DELETE_EMPTY_ONE = 'DELETE_EMPTY_ONE';
 export const PAGAR = 'PAGAR';
+export const DELETE_CART_ONE = 'DELETE_CART_ONE';
+export const DELETE_CART = 'DELETE_CART';
+//export const DELETE_CART_ONE = 'DELETE_CART_ONE';
 
 
 
@@ -109,4 +112,24 @@ export const deleteEmptyOne = (id) =>  {
 export const Pagar = (userId) => async() => {
    let data =await  axios.post(`user/checkoutMp/${userId}`);
    return data;
+}
+
+
+export const deleteAllCart = (id) => async(dispatch) => {
+   let data =  await axios.put(`user/cart/delete/${id}`).data
+   return dispatch( {
+       type: DELETE_CART,
+       payload: data
+   })
+} 
+
+
+export const deleteCartOne = (obj) => async (dispatch) => {
+    let productId =obj.productId;
+    console.log('obj', productId)
+    let data = await axios.put(`user/cart/deleteOne/${obj.id}/${obj.productId}`).data;
+    return dispatch({
+        type: DELETE_CART_ONE,
+        payload: data
+    })
 }
