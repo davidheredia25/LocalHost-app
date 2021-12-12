@@ -4,7 +4,8 @@ const { verificacionId } = require('./middleware');
 
 const getBrandsList = async (req, res) => {
     try {
-        let brandsList = await Brand.find({ exis: true});
+        let brandsList = await Brand.find();
+        brandsList = brandsList.filter(x => x.exis)
         res.json(brandsList)
     }
     catch (error) {
@@ -14,8 +15,8 @@ const getBrandsList = async (req, res) => {
 
 const getBrand = async (req, res) => {
     try {
-        let brands = await Brand.find({ exis: true });
-        let products = await Product.find({ exis: true }).populate("brand", ["name"]).populate("category", ["name"]).populate("type")
+        let brands = await Brand.find();
+        let products = await Product.find().populate("brand", ["name"]).populate("category", ["name"]).populate("type")
         let array = [];
         brands.forEach(b => {
             let brandName = b.name;
