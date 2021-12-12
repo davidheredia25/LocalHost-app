@@ -24,31 +24,31 @@ const createProduct = async (req, res) => {
         console.log('verificacion createProduct', verificacion);
         if (verificacion.bool) return res.send(`El producto ${name} ya existe`);
 
-        let brands = [];
+        let brands;
         if (brand !== "") {
-                let verificacionBrand = await verificacionB(brand);
-                console.log('verificacionBrand createProduct', verificacionBrand);
-                if (verificacionBrand.bool) brands = verificacionBrand.brand
-                else return res.json(verificacionBrand.message);
-        } else { return re.send('Se necesita una marca'); }
+            let verificacionBrand = await verificacionB(brand);
+            console.log('verificacionBrand createProduct', verificacionBrand);
+            if (verificacionBrand.bool) brands = verificacionBrand.brand
+            else return res.json(verificacionBrand.message);
+        } else { return res.send('Se necesita marcas'); }
         console.log('brands createProduct', brands);
 
-        let category = [];
+        let category;
         if (categories !== "") {
-                let verificacionCategory = await verificacionC(categories);
-                console.log('verificacionCategory createProduct', verificacionCategory);
-                if (verificacionCategory.bool) category = verificacionCategory.category
-                else return res.json(verificacionCategory.message);
-        } else { return res.send('Se necesita una categoria') }
+            let verificacionCategory = await verificacionC(categories);
+            console.log('verificacionCategory createProduct', verificacionCategory);
+            if (verificacionCategory.bool) category = verificacionCategory.category
+            else return res.json(verificacionCategory.message);
+        } else { return res.send('Se necesita categorias') }
         console.log('category createProduct', category);
 
-        let type = [];
+        let type;
         if (types !== "") {
-                let verificacionTypes = await verificacionT(types);
-                console.log('verificacionTypes createProduct', verificacionTypes);
-                if (verificacionTypes.bool) type = verificacionTypes.type
-                else return res.json(verificacionTypes.message);
-        } else { return res.send('Se necesita una tipos') } 
+            let verificacionTypes = await verificacionT(types);
+            console.log('verificacionTypes createProduct', verificacionTypes);
+            if (verificacionTypes.bool) type = verificacionTypes.type
+            else return res.json(verificacionTypes.message);
+        } else { return res.send('Se necesita tipos') }
         console.log('type createProduct', type);
 
         let sumStock = 0;
