@@ -5,7 +5,7 @@ const getTypes = async (req, res) => {
     const { name } = req.query;
     // console.log('name getTypes', name);
     try {
-        let getAllTypes = await Types.find();
+        let getAllTypes = await Types.find({ exis: true });
         // console.log('getAll getTypes', getAllTypes);
         if(!name)  return res.json(getAllTypes);
         
@@ -25,7 +25,7 @@ const getTypesById = async (req, res) => {
         // console.log('verificacion getTypesById', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.type);
-        res.send('No se encontro el tipo');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

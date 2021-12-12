@@ -55,6 +55,10 @@ const userSchema = new Schema({
         type: Boolean,
         default: false
     },
+    exis: {
+        type: Boolean,
+        default: true
+    },
     isDelivery: {
         type: Boolean,
         default: false

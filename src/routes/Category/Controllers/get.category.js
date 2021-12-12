@@ -5,7 +5,7 @@ const getCategory = async (req, res) => {
     const { name } = req.query;
     // console.log('name getCategory', name);
     try {
-        let getAllCategories = await Category.find();
+        let getAllCategories = await Category.find({ exis: true });
         // console.log('getAll getCategory', getAllCategories);
         if(!name)  return res.json(getAllCategories);
         
@@ -25,7 +25,7 @@ const getCategoryById = async (req, res) => {
         // console.log('verificacion getCategory', verificacion);
         
         if(verificacion.bool) return res.json(verificacion.category);
-        res.send('No se encontro la categoria');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

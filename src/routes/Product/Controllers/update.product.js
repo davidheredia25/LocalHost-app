@@ -29,7 +29,7 @@ const updateProduct = async (req, res) => {
                 let verificacionBrand = await verificacionB(brand);
                 // console.log('verificacionBrand updateProduct', verificacionBrand);
                 if (verificacionBrand.bool) brand = verificacionBrand.brand
-                else return res.send(`No se encontro la marca ${brand}`);
+                else return res.send(`${verificacionBrand.message} la marca ${brand}`);
             }
             // console.log('brand updateProduct', brand);
 
@@ -37,7 +37,7 @@ const updateProduct = async (req, res) => {
                 let verificacionCategory = await verificacionC(categories);
                 // console.log('verificacionCategory updateProduct', verificacionCategory);
                 if (verificacionCategory.bool) categories = verificacionCategory.category
-                else return res.send(`No se encontro la categoria ${categories}`);
+                else return res.send(`${verificacionCategory.message} la categoria ${categories}`);
             }
             // console.log('categories updateProduct', categories);
 
@@ -45,7 +45,7 @@ const updateProduct = async (req, res) => {
                 let verificacionType = await verificacionT(types);
                 // console.log('verificacionType updateProduct', verificacionType);
                 if (verificacionType.bool) types = verificacionType.type
-                else return res.send(`No se encontro el tipo ${types}`);
+                else return res.send(`${verificacionType.message} el tipo ${types}`);
             }
             // console.log('types updateProduct', types);
 
@@ -63,7 +63,7 @@ const updateProduct = async (req, res) => {
             // console.log('update updateProduct', update);
             return res.json(update);
         }
-        res.send('No se encontro el producto para editarlo');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }
@@ -124,7 +124,7 @@ const updateRating = async (req, res) => {
             // console.log('update updateRating: ', update);
             return res.json(update);
         }
-        res.send('No se encontro el producto');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

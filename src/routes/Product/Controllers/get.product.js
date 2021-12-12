@@ -13,12 +13,9 @@ const getProducts = async (req, res) => {
         category, 
         type
     } = req.query;
-    console.log('name getProducts', name);
-    console.log('brand getProducts', brand);
-    console.log('category getProducts', category);
-    console.log('type getProducts', type);
+    // console.log('body getProducts: ', name, brand, category, type);
     try {
-        let getAllProducts = await Product.find()
+        let getAllProducts = await Product.find({ exis: true })
         .populate('brand', ['name'])
         .populate('category', ['name'])
         .populate('type', ['name']);
@@ -67,7 +64,7 @@ const getProductById = async (req, res) => {
         // console.log('verificacion getProducts', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.product);
-        res.send('No se encontro el producto');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }
