@@ -9,15 +9,19 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
 import {loginAuth} from "../../../redux/actions/login.actions";
+import { addItemToCart } from "../../../redux/actions/cart.actions";
 import { useNavigate } from "react-router-dom";
 
  
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const usuario = useSelector(state => state.login.user)
-
-  console.log('usuario', usuario)
+  const emptyCart= JSON.parse(localStorage.getItem('cart'));
+  const {user} = useSelector(state => state.login)
+  let User;
+  if(user?.email) User = user
+  else User = user?.user;
+  let userId = User?._id;
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -39,10 +43,11 @@ const Login = () => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (!error.email && !error.password) {
         dispatch(loginLocal(input))
+       
         navigate("/")
     }
     else { alert("The form is required"); }
@@ -51,6 +56,25 @@ const Login = () => {
       password: "",
     })
   }
+
+  const ensamble = async () => {
+    console.log('entro aca')
+    if(User  && emptyCart?.length) {
+      let obj={}
+      for(var i=0; i<emptyCart.length; i++){
+        obj = {
+          userId: userId,
+          productId: emptyCart[i].product._id,
+          qty: emptyCart[i].qty
+        }
+        await dispatch(addItemToCart(obj))
+      }
+
+    }else {
+      return
+    }
+  } 
+
  
 
   const handleChange = (e) => {

@@ -34,7 +34,7 @@ const addCart = async (req, res) => {
                     console.log('bool addCart: ', bool);
                     if (bool) {
                         if (qty < 1 && verificacionUser.user.cart[i].qtyCart > 1) verificacionUser.user.cart[i].qtyCart--;
-                        else verificacionUser.user.cart[i].qtyCart++;
+                        else verificacionUser.user.cart[i].qtyCart+= qty;
                         
                         let save = await verificacionUser.user.save();
                         let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image'])
@@ -114,8 +114,57 @@ const getCartUser = async (req, res) => {
 // }
 
 
+ const deleteCart = async( req,res) => {
+    const { id } = req.params;
+    console.log('id', id)
+     try {
+        let verificacion = await verificacionId(id);
+        console.log('verificacion getCartUser: ', verificacion);
+        if(verificacion.bool) {
+            let add = await User.findByIdAndUpdate(id, {
+                cart: []
+            }, { new: true });
+            //verificacion.user.cart = []
+           return res.json(add.cart)
+        }
+       res.send('no') 
+     } catch (error) {
+         console.log(error)
+     }
+ }
+
+
+ const deleteCartOne = async(req,res) => {
+     const {id,productId} = req.params;
+     
+     console.log('productId', req.body)
+
+     try {
+        let verificacion = await verificacionId(id);
+        if(verificacion.bool) {
+            let user= await User.findById(id).populate('cart.cart', ['name', 'price'])
+            let filtered= user.cart.filter(x => splitt(JSON.stringify(x.cart._id)) !== productId.toString())
+            
+            //console.log('user', user)
+             let add = await User.findByIdAndUpdate(id, {
+                cart: filtered
+            }, { new: true }); 
+            //verificacion.user.cart = []
+           return res.json(filtered)
+        }
+       res.send('no') 
+
+     } catch (error) {
+         console.log(error)
+     }
+
+ }
+ 
+
 
 module.exports = {
     addCart,
-    getCartUser
+    getCartUser,
+    deleteCart,
+    deleteCartOne
 };
