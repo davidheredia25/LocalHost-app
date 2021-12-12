@@ -66,8 +66,8 @@ export const getTickets = () => {
 }
 // ----------------------
 
-export const changeStatus = ({id, status}) => async (dispatch) => {
-    await axios.put(`/tickets/status/${id}`, {status}) //status es un string, por lo tanto le paso objeto para que marquito haga un destruchafdbsring de status y le llegue un string. Gracias Lucas Morales
+export const changeStatus = (id) => async (dispatch) => {
+    await axios.put(`/tickets/status/${id}`) //status es un string, por lo tanto le paso objeto para que marquito haga un destruchafdbsring de status y le llegue un string. Gracias Lucas Morales
     return dispatch(getTickets())
 }
 
