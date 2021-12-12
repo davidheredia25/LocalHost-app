@@ -8,9 +8,7 @@ const {
 
 const createBrand = async (req, res) => {
     const { name, categories, types } = req.body;
-    // console.log('name createBrand', name);
-    // console.log('categories createBrand', categories);
-    // console.log('types createBrand', types);
+    // console.log('body createBrand', types, categories, name);
     try {
         let verificacionBrand = await verificacionName(name);
         // console.log('verificacion createBrand', verificacionBrand);

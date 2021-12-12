@@ -32,6 +32,10 @@ const ticketSchema = new Schema({
         required: true,
         autopopulate: true
     },
+    exis: {
+        type: Boolean,
+        default: true
+    },
     products: [{
         product: {
             type: Schema.Types.ObjectId,

@@ -9,7 +9,9 @@ const deleteProduct = async (req, res) => {
         // console.log('verificacion deleteProduct', verificacion);
 
         if (verificacion.bool) {
-            let deleted = await Product.findByIdAndDelete(id)
+            let deleted = await Product.findByIdAndUpdate(id, {
+                exis: false
+            }, { new: true })
                 .populate('brand', ['name'])
                 .populate('category', ['name'])
                 .populate('type', ['name']);
@@ -17,7 +19,7 @@ const deleteProduct = async (req, res) => {
             if (deleted) return res.json(deleted);
             return res.send('No se pudo eliminar este producto');
         }
-        res.send('No se pudo encontrar este Producto');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

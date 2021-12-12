@@ -22,8 +22,8 @@ const verificacionId = async (id) => {
         .populate('category', ['name'])
         .populate('type', ['name']);
         // console.log('find verificacionId', find);
-        let obj = { bool: false };
-        if(find !== null) return obj = { bool: true, product: find };
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false' };
+        if(find !== null && find.exis) return obj = { bool: true, product: find };
         return obj;
     } catch (error) {
         console.log(error);
@@ -34,9 +34,8 @@ const verificacionB = async (name) => {
     try {
         let find = await Brand.findOne({name: name}); 
         // console.log('find verificacionB', find);
-        let obj = { bool: false };
-
-        if(find !== null) return obj = { bool: true, brand: find._id };
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false' };
+        if(find !== null && find.exis) return obj = { bool: true, brand: find._id };
 
         return obj;
     } catch (error) {
@@ -48,9 +47,8 @@ const verificacionC = async (name) => {
     try {
         let find = await Category.findOne({name: name}); 
         // console.log('find verificacionC', find);
-        let obj = { bool: false };
-
-        if(find !== null) return obj = { bool: true, category: find._id };
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false' };
+        if(find !== null && find.exis) return obj = { bool: true, category: find._id };
 
         return obj;
     } catch (error) {
@@ -62,9 +60,8 @@ const verificacionT = async (name) => {
     try {
         let find = await Types.findOne({name: name}); 
         // console.log('find verificacionT', find);
-        let obj = { bool: false };
-
-        if(find !== null) return obj = { bool: true, type: find._id };
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false' };
+        if(find !== null && find.exis) return obj = { bool: true, type: find._id };
 
         return obj;
     } catch (error) {

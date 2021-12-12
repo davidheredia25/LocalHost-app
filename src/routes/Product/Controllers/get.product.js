@@ -15,7 +15,7 @@ const getProducts = async (req, res) => {
     } = req.query;
     // console.log('body getProducts: ', name, brand, category, type);
     try {
-        let getAllProducts = await Product.find()
+        let getAllProducts = await Product.find({ exis: true })
         .populate('brand', ['name'])
         .populate('category', ['name'])
         .populate('type', ['name']);
@@ -64,7 +64,7 @@ const getProductById = async (req, res) => {
         // console.log('verificacion getProducts', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.product);
-        res.send('No se encontro el producto');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

@@ -4,7 +4,7 @@ const { verificacionId } = require('./middleware');
 
 const getBrandsList = async (req, res) => {
     try {
-        let brandsList = await Brand.find();
+        let brandsList = await Brand.find({ exis: true});
         res.json(brandsList)
     }
     catch (error) {
@@ -14,8 +14,8 @@ const getBrandsList = async (req, res) => {
 
 const getBrand = async (req, res) => {
     try {
-        let brands = await Brand.find();
-        let products = await Product.find().populate("brand", ["name"]).populate("category", ["name"]).populate("type")
+        let brands = await Brand.find({ exis: true });
+        let products = await Product.find({ exis: true }).populate("brand", ["name"]).populate("category", ["name"]).populate("type")
         let array = [];
         brands.forEach(b => {
             let brandName = b.name;
@@ -60,7 +60,7 @@ const getBrandById = async (req, res) => {
         // console.log('verificacion getBrandById', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.brand);
-        res.send('No se encontro la marca');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }
