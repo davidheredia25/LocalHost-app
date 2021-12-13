@@ -4,9 +4,11 @@ const User = require('../../../models/User');
 
 const forgotPassword = async (req, res) =>  {
     const { email, password} = req.body;
-    const { id } = req.params;
+    // const { id } = req.params;
     try {
-        if(email){
+        const user = await User.findOne({email: email})
+        if(user){
+        let id = user._id;
         let recuperar = await User.findByIdAndUpdate(id, {
             password: password
         }, { new: true })

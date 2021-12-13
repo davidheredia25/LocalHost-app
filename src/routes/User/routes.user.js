@@ -32,7 +32,7 @@ router.post('/register', passport.authenticate("register", { session: false }), 
 router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
-router.put("/login/password/:id", forgotPassword);
+router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
 
 

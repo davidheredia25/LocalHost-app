@@ -6,9 +6,11 @@ import {forgotPassword} from "../../../redux/actions/login.actions"
 const RecuperarPassword = () => {
 
     const { user } = useSelector(state => state.login);
+    console.log("USER", user)
     const dispatch = useDispatch();
     const [errors, setErrors] = useState({});
     const [input, setInput] = useState({
+        email: "",
         password: "",
         passwordDos: ""
     })
@@ -77,6 +79,19 @@ const RecuperarPassword = () => {
                     </div>
                     <div class="card-body">
                         <form action="/user/nodemailer" method="POST">
+                        <div class="form-group">
+                                <input type="text" 
+                                name="email" 
+                                value={input.email}
+                                class="form-control" 
+                                placeholder="Ingrese su email"
+                                onChange={handleChange}
+                                />
+                            </div>
+
+
+
+
                             <div class="form-group">
                                 <input type="password" 
                                 name="password" 

@@ -15,14 +15,6 @@ const enviarMail = async (req, res) => {
   try {
       //voy a recibir el email por body para verificar si existe user.
    if(email){
-  
-    // const contentHTML = `
-    //             <h1>Formulario de nodemailer</h1>
-    //             <ul>
-    //                  </li>
-    //                 <li>Email: ${email} </li>
-    //                 <li>Password: ${password} </li>
-    //             </ul>`;
 
     const link = `http://localhost:3000/user/login/password`;
 
