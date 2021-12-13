@@ -13,6 +13,7 @@ const NodeMailer = () => {
         dispatch(enviarMail(email))
     }
 
+
     return (
         <div>
             <form handleSubmit={handleSubmit}>
