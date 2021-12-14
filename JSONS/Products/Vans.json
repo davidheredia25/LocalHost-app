@@ -1,0 +1,188 @@
+[
+    {
+        "exis": true,
+        "name": "Gafas Vans Dunville Shades",
+        "brand": [
+            {
+                "$oid": "619ecea36a92375a826baf22"
+            }
+        ],
+        "price": 10.282,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eba"
+            },
+        "talle": [
+            {
+                "name": "Unico",
+                "stockTalle": 10
+            }
+        ],
+        "stock": 10,
+        "description": "Protege tus ojos del sol con estilo con las gafas de sol Vans Sunville.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/207293_Main_Thumb_0554438.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/207293_Gallery_1_0554440.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/207293_Gallery_2_0554441.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Gafas Vans Vans Keech",
+        "brand": [
+            {
+                "$oid": "619ecea36a92375a826baf22"
+            }
+        ],
+        "price": 8.400,
+        "color": [
+            "Negro",
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eba"
+            },
+        "talle": [
+            {
+                "name": "Unico",
+                "stockTalle": 10
+            }
+        ],
+        "stock": 10,
+        "description": "Mantén tus ojos a salvo del sol con estilo con las gafas de sol Vans Keech.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/207294_Main_Thumb_0554455.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/207294_Gallery_1_0554456.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/207294_Gallery_2_0554457.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Gafas Vans Spicoli 4 tonos",
+        "brand": [
+            {
+                "$oid": "619ecea36a92375a826baf22"
+            }
+        ],
+        "price": 7.800,
+        "color": [
+            "Negro",
+            "Marron"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eba"
+            },
+        "talle": [
+            {
+                "name": "Unico",
+                "stockTalle": 10
+            }
+        ],
+        "stock": 10,
+        "description": "Las gafas de sol Vans Spicoli 4 cuentan con lentes con protección UV y un logotipo de Vans en relieve en la sien.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/59821_Main_Thumb_0609037.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/59821_Gallery_1_0609038.jpg?imwidth=768",
+        "image2": ""
+    },
+    {
+        "exis": true,
+        "name": "Buzo Vans X Friday The 13th PO",
+        "brand": [
+            {
+                "$oid": "619ecea36a92375a826baf22"
+            }
+        ],
+        "price": 16.200,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Haz una declaración espeluznante con la sudadera con capucha Vans X Friday the 13th en negro, con un estampado de Jason Voorhees que brilla en la oscuridad en el pecho y la marca Vans en las mangas y la parte posterior de la capucha para realzar tu look.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250664_Main_1006874.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250664_Gallery_1_1006875.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/250664_Gallery_3_1006878.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Vans Versa Standard",
+        "brand": [
+            {
+                "$oid": "619ecea36a92375a826baf22"
+            }
+        ],
+        "price": 12.800,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Elige un clásico atemporal con la sudadera con capucha Vans Versa Standard en negro, el jersey versátil que combina bien con todos tus artículos favoritos para brindarte un acabado elegante sin esfuerzo que te deja luciendo y sintiéndote mejor todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/248884_Main_Thumb_0972551.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/248884_Gallery_1_0972555.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/248884_Gallery_3_0972559.jpg?imwidth=768"
+    }
+]
