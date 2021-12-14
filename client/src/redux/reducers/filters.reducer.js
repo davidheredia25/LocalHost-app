@@ -4,7 +4,7 @@ import {
     SET_FILTER_SUBCATEGORY,
     RESET_FILTER,
     SET_FILTER_NAME,
-    RESET_ALL_FILTERS
+    RESET_ALL_FILTERS,
 } from "../actions/filters.actions";
 
 const initialState = {

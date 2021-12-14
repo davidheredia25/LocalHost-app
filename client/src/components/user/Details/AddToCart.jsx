@@ -39,7 +39,7 @@ const AddToCart = () => {
                 </Button>
             </div>
             <div>
-            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  size='large' disabled={cartProduct.talle === ""} onClick={addCart}>   AGREGAR AL CARRITO </Button>
+            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  size='large' disabled={cartProduct.talle === "" } onClick={addCart}>   AGREGAR AL CARRITO </Button>
             </div>
         </div>
     )

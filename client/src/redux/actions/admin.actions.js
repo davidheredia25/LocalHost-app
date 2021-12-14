@@ -41,3 +41,7 @@ export const deleteUser = (id) => async (dispatch) => {
     await axios.delete(`/user/delete/${id}`)
     return dispatch(getUsers())
 }
+
+export const sendNewPassword = (id) => async () => {
+    await axios.put(`/user/newPassword/${id}`)
+}
