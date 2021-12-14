@@ -26,13 +26,14 @@ const loginGoogle = async (req, res) => {
               if (user) {
                 const { _id } = user;
                 const token = jwt.sign(
-                  { user: { id: _id, email } },
+                  { user: { _id: _id, email } },
                   "top_secret"
                 );
                 user.token = token;
                 await user.save();
                 return res.json(user);
               } else {
+
                 const { email, picture, name } = response.payload;
                 // console.log('email', email);
                 let contraseña = email + "top_secret";
@@ -51,6 +52,7 @@ const loginGoogle = async (req, res) => {
                 if (find !== null) return res.json(find);
 
                 return res.send("Hubo un problema");
+
               }
             }
           });

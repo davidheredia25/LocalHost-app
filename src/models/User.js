@@ -81,6 +81,10 @@ const userSchema = new Schema({
         qtyCart: {
             type: Number,
             default: 1
+        },
+        talle: {
+            type: String,
+            default: ''
         }
     }]
 }, {

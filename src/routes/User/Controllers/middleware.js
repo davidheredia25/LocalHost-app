@@ -74,7 +74,7 @@ passport.use(new JWTStrategy({
 
 const verificacionId = async (id) => {
     try {
-        let find = await User.findById(id).populate('cart.cart', ['price','name', 'image']);
+        let find = await User.findById(id).populate('cart.cart', ['price','name', 'image', 'talle']);
         let obj = { bool: false };
         if (find !== null) return obj = { bool: true, user: find };
         return obj;

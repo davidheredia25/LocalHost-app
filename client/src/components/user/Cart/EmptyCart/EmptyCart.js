@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "../cartCard";
@@ -22,36 +23,35 @@ const EmptyCart = () => {
        return calculo 
     } 
 
-    const onClose = (id) => {
-        console.log(id)
-        console.log('onclose')
-       return  dispatch(deleteEmptyOne(id))
-    }
+    
 
     const Limpiar = () => {
         dispatch(deleteCart());
     }   
     let pago = total();
 
+
+
     useEffect(() => {
-        return dispatch(getEmptyCart())
+         dispatch(getEmptyCart())
     }, [emptyCart, dispatch])
 
     return (
         <div className={style.cart}>
             <div style={{marginTop: '200px'}} className={style.cart} >
                 {!emptyCart?.length ?
-                <p>No hay PProductos</p>  
+                <p>No hay Productos</p>  
                  : emptyCart?.map(x => {
                     return(
                   <CartCard
                    key={x.product._id} 
+                   id={x.product._id}
                    name={x.product.name}
                    price={x.product.price * x.qty}
                    talle={x.talle}
                    count={x.qty}
                    image={x.product.image}
-                   onClose={() => onClose(x.product._id)}
+                   
                   /> 
                 )})
             } 
