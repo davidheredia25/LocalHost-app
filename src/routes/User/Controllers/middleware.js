@@ -45,7 +45,7 @@ passport.use("login", new localStrategy({
 }, async (email, password, done) => {
     try {
         const user = await User.findOne({ email });
-        if (!user) {
+        if (!user)  {
             return done(null, false, { message: "No se econtro el usuario" });
         }
 
