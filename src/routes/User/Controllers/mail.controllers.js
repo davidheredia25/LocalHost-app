@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     refreshToken: REFRESH_TOKEN,
+    
     // accessToken: accessToken,
   },
 });
@@ -42,7 +43,7 @@ const sendConfirmationMail = async (email, template) => {
 
 const sendConfirmationEmail = async (req, res) => {
   try {
-    // const { email } = req.body;
+    //  const { email } = req.body;
     sendConfirmationMail()
       .then((res) => {
         res.status(200).send("enviado");
@@ -65,7 +66,7 @@ const getTemplate = (name, token) => {
             <h2>Hola ${name}</h2>
             <p>Para confirmar tu cuenta, ingresa al siguiente enlace</p>
             <a
-                href="http://localhost:4000/src/user/confirm/${token}"
+                href="http://localhost:4000/user/confirm/${token}"
                 target="_blank"
             >Confirmar Cuenta</a>
         </div>

@@ -222,4 +222,5 @@ module.exports = {
   postLogin,
   profileAuthenticate,
   loginGoogle,
+  confirm
 };
