@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from 'react';
+import { Join } from "./cart.actions";
 import { addItemToCart } from "./cart.actions";
 import { useSelector } from "react-redux";
 export const GET_USER = "GET_USER"

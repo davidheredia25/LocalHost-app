@@ -25,7 +25,12 @@ const CartCard = ({key,id, name, price, talle, image, count, onClose}) => {
             dispatch(deleteCartOne(obj))
         }else{
             console.log('deleteempty')
-            dispatch(deleteEmptyOne(id))
+            console.log('id',id)
+            let producto= {
+            id: id,
+            talle: talle
+        }
+            dispatch(deleteEmptyOne(producto))
         }
     }
 

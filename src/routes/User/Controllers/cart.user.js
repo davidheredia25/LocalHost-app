@@ -194,26 +194,36 @@ const getCartUser = async (req, res) => {
 
 
   const Join = async(req,res) => {
-    const{userId} = req.params;
+    const{id} = req.params;
     const {emptyCart} =req.body;
+    console.log('id', id)
+    console.log('emptycART', emptyCart)
+    console.log('body', req.body)
 
     try {
         
         let array=[];
-        for(var i=0 ; i< emptyCart.length ; i++) {
+        for(var i=0 ; i< req.body.length ; i++) {
              
            array.push({
-            cart: emptyCart[i].product,
-            qtyCart: emptyCart[i].qty,
-            talle: emptyCart[i].talle
+            cart: req.body[i].product,
+            qtyCart: req.body[i].qty,
+            talle: req.body[i].talle
         }) 
         }
-
+        console.log('array', array)
+        
+        let user= await User.findById(id).populate('cart.cart', ['name', 'price', 'image'])
+        
+        
         let add = await User.findByIdAndUpdate(id, {
             cart: [...array]
         }, { new: true }); 
+       // add= add.populate('cart.cart', ['name', 'price', 'image'])
         add= await add.save();
-        res.json(add.cart)
+        //let usuario= await User.findById(id).populate('cart.cart', ['name', 'price', 'image'])
+        
+        res.json(array)
 
         
     } catch (error) {
@@ -226,5 +236,6 @@ module.exports = {
     addCart,
     getCartUser,
     deleteCart,
-    deleteCartOne
+    deleteCartOne,
+    Join
 };

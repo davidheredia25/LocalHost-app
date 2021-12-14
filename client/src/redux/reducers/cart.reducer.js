@@ -9,7 +9,8 @@ import {
   GET_EMPTY_CART,
   DELETE_EMPTY_ONE,
   DELETE_CART,
-  DELETE_CART_ONE
+  DELETE_CART_ONE,
+  JOIN
   
 } from "../actions/cart.actions";
 
@@ -129,14 +130,26 @@ export function cartReducer(state = initialState, { type, payload }) {
         emptyCart : state.emptyCart
       }  
     case DELETE_EMPTY_ONE:
-      console.log('entro aca bro')
-      let carrito = state.emptyCart;
-      let filtered = carrito.filter(x => x.product._id  !== payload);
-      console.log(filtered)
-      localStorage.setItem("cart", JSON.stringify(filtered));
+      console.log('entro aca bro', payload)
+      let arreglo=[]
+      for(var i=0; i<state.emptyCart.length; i++) {
+        if(state.emptyCart[i].product._id === payload.id){
+          if(state.emptyCart[i].talle === payload.talle){
+            console.log(arreglo)
+          }else{
+            console.log('state1', state.emptyCart[i])
+            arreglo.push(state.emptyCart[i])
+          }
+        }else {
+          arreglo.push(state.emptyCart[i])
+        console.log('state2', state.emptyCart[i])
+        }
+      }
+      console.log('arreglo', arreglo)
+      localStorage.setItem("cart", JSON.stringify(arreglo));
       return {
         ...state, 
-        emptyCart: filtered
+        emptyCart: arreglo
       }
     case DELETE_CART :
       return {
@@ -147,6 +160,15 @@ export function cartReducer(state = initialState, { type, payload }) {
       return {
         ...state,
         cart: payload
+      }  
+
+    case JOIN :
+      let localempty= [];
+      localStorage.setItem("cart", JSON.stringify(localempty));
+      console.log('payloaaad', payload)
+      return {
+        ...state,
+        cart: [ payload]
       }  
 
 

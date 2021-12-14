@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CartCard from "../cartCard";
 import { Button } from '@mui/material';
-import {deleteCart, getCart, Pagar, deleteAllCart} from '../../../../redux/actions/cart.actions';
+import {deleteCart, getCart, Pagar, deleteAllCart, Join} from '../../../../redux/actions/cart.actions';
 import style from '../carrito.module.scss';
 import axios from "axios";
 
@@ -13,6 +13,7 @@ import axios from "axios";
 const CartUser = ({id}) => {
     const  dispatch = useDispatch();
     const {user} =useSelector(state => state.login)
+   // let emptyCart = JSON.parse(localStorage.getItem('cart'));
     console.log('id', id)
     let userId = id;
     const pagar = async (userId) =>{
@@ -48,6 +49,9 @@ const CartUser = ({id}) => {
     let pago = total();
 
     useEffect(() => {
+        /* if(emptyCart?.length){
+           return  dispatch(Join(id))
+        } */
         dispatch(getCart(id))
     },[ dispatch])
 

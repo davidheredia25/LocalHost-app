@@ -14,7 +14,7 @@ export const DELETE_EMPTY_ONE = 'DELETE_EMPTY_ONE';
 export const PAGAR = 'PAGAR';
 export const DELETE_CART_ONE = 'DELETE_CART_ONE';
 export const DELETE_CART = 'DELETE_CART';
-//export const DELETE_CART_ONE = 'DELETE_CART_ONE';
+export const JOIN = ' JOIN';
 
 
 
@@ -103,10 +103,11 @@ export const getCart = (id) => async (dispatch) => {
 }  
 
 
-export const deleteEmptyOne = (id) =>  {
+export const deleteEmptyOne = (producto) =>  {
+    console.log('producto',producto)
     return {
         type : DELETE_EMPTY_ONE,
-        payload: id
+        payload: producto
     }
 }
 
@@ -136,4 +137,13 @@ export const deleteCartOne = (obj) => async (dispatch) => {
     })
 }
 
+export const Join = (id) => async(dispatch) => {
+    let emptyCart = JSON.parse(localStorage.getItem('cart'));
+    let data= await axios.put(`user/cart/join/${id}`, emptyCart)
+    return dispatch({
+        type: JOIN,
+        payload: data.data
+
+    })
+}  
 
