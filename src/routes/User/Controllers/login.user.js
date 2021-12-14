@@ -6,9 +6,7 @@ const { OAuth2Client } = require("google-auth-library");
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
 const {  getTokenData } = require('./middleware.js');
-const { getTemplate, sendConfirmationEmail } = require('./mail.controllers'); 
-const nodemailer = require("nodemailer");
-const {google} = require("googleapis");
+const { getTemplate, sendConfirmationMail } = require('./mail.controllers'); 
 
 const loginGoogle = async (req, res) => {
   const { tokenId } = req.body;
@@ -80,11 +78,7 @@ const postUser = async (req, res)  => {
 
   // Generar el código
    const code = uuidv4();
-
-  // Crear un nuevo usuario
-  // user = new User({ name, email, code });
-
-  //  // Generar token
+  //   Generar token
     const token = jwt.sign({ user: {  email } }, "top_secret", { expiresIn: '1h' });
     user.token = token;
   
@@ -93,7 +87,7 @@ const postUser = async (req, res)  => {
    const template = getTemplate(name, token);
 
     // Enviar el email
-    await sendConfirmationEmail(email, 'Este es un email de prueba', template);
+    await sendConfirmationMail(email, 'Este es un email de prueba', template);
     await user.save();
   
     res.json({
