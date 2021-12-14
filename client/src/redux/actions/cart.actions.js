@@ -24,7 +24,9 @@ y del usuario. */
 
 export const addItemToCart = (obj) => async (dispatch) => { 
     let {userId} = obj;
-    let producto = { productId : obj.productId, qty: obj.qty }
+    
+    let producto = { productId : obj.productId, qty: obj.qty, talle: obj.talle }
+    console.log('id', producto.talle)
     let data  = await axios.put(`user/cart/${userId}`,producto)
     console.log('data', data)
     return dispatch({
@@ -127,9 +129,11 @@ export const deleteAllCart = (id) => async(dispatch) => {
 export const deleteCartOne = (obj) => async (dispatch) => {
     let productId =obj.productId;
     console.log('obj', productId)
-    let data = await axios.put(`user/cart/deleteOne/${obj.id}/${obj.productId}`).data;
+    let data = await axios.put(`user/cart/deleteOne/${obj.id}/${obj.productId}/${obj.talle}`).data;
     return dispatch({
         type: DELETE_CART_ONE,
         payload: data
     })
 }
+
+

@@ -25,7 +25,7 @@ const EmptyCart = () => {
     const onClose = (id) => {
         console.log(id)
         console.log('onclose')
-       return  dispatch(deleteEmptyOne(id))
+        dispatch(deleteEmptyOne(id))
     }
 
     const Limpiar = () => {
@@ -34,8 +34,8 @@ const EmptyCart = () => {
     let pago = total();
 
     useEffect(() => {
-        return dispatch(getEmptyCart())
-    }, [emptyCart, dispatch])
+         dispatch(getEmptyCart())
+    }, [dispatch])
 
     return (
         <div className={style.cart}>

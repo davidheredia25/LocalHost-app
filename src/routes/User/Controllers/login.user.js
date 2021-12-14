@@ -23,7 +23,7 @@ const loginGoogle = async (req, res) => {
                 // console.log('user loginGoogle', user);
                 if (user) {
                   const { _id } = user;
-                  const token = jwt.sign({ user: { id: _id, email } }, "top_secret");
+                  const token = jwt.sign({ user: { _id: _id, email } }, "top_secret");
                   user.token = token;
                   await user.save();
                   return res.json(user);

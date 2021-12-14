@@ -35,7 +35,7 @@ router.put('/update/:id', updateUser);
 router.get('/get/cart/:id', getCartUser);
 router.put('/cart/:userId', addCart);
 router.put('/cart/delete/:id', deleteCart)
-router.put('/cart/deleteOne/:id/:productId', deleteCartOne)
+router.put('/cart/deleteOne/:id/:productId/:talle', deleteCartOne)
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.post('/login', postLogin);

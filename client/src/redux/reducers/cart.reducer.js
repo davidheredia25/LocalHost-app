@@ -129,6 +129,7 @@ export function cartReducer(state = initialState, { type, payload }) {
         emptyCart : state.emptyCart
       }  
     case DELETE_EMPTY_ONE:
+      console.log('entro aca bro')
       let carrito = state.emptyCart;
       let filtered = carrito.filter(x => x.product._id  !== payload);
       console.log(filtered)

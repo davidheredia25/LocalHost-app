@@ -30,7 +30,7 @@ const CartUser = ({id}) => {
           
     }    
     const {cart} = useSelector(state => state.cart);
-    
+    console.log('cart',cart)
 
     function total(){
         let calculo=0;
@@ -42,14 +42,14 @@ const CartUser = ({id}) => {
 
     const Limpiar = () => {
         dispatch(deleteAllCart(id));
-        dispatch(getCart(id))
+        
     }
 
     let pago = total();
 
     useEffect(() => {
-       dispatch(getCart(id))
-    },[dispatch, user])
+        dispatch(getCart(id))
+    },[ dispatch])
 
 
     return (
@@ -65,6 +65,7 @@ const CartUser = ({id}) => {
                     price={x.cart.price * x.qtyCart}
                     talle={x.talle}
                     count={x.qtyCart}
+                    talle= {x.talle}
                     image={x.cart.image}
                    /> 
                  )})   
