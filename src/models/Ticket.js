@@ -16,7 +16,7 @@ const ticketSchema = new Schema({
     },
     state: {
         type: String,
-        default: "Pending"
+        default: "pending"
     },
     direccion: {
         type: String,
