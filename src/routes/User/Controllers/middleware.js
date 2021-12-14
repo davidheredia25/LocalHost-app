@@ -6,11 +6,7 @@ const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 const jwt = require('jsonwebtoken');
 
-const getToken = (payload) => {
-    return jwt.sign({
-        data: payload
-    }, 'SECRET', { expiresIn: '1h' });
-}
+
 
 
 const getTokenData = (token) => {
@@ -105,7 +101,6 @@ const splitt = (string) => {
 }
 
 module.exports = {
-    getToken,
     getTokenData,
     verificacionId,
     verificacionP,

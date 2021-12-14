@@ -1,33 +1,47 @@
 const nodemailer = require('nodemailer');
+const {google} = require("googleapis");
+const { CLIENT_ID, REFRESH_TOKEN, CLIENT_SECRET, REDIRECT_URI } = process.env;
 
-const mail = {
-    user: 'micorreo@gmail.com',
-    pass: 'micontraseña'
-}
 
-let transporter = nodemailer.createTransport({
-    host: "mail.mhdeploy.com",
-    port: 2525,
-    tls: {
-        rejectUnauthorized: false
-    },
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: mail.user, // generated ethereal user
-      pass: mail.pass, // generated ethereal password
-    },
-  });
 
-  const sendEmail = async (email, subject, html) => {
+// const email = {
+//     user: 'micorreo@gmail.com',
+//     pass: 'micontraseña'
+// }
+const oAuth2Client = new google.auth.OAuth2(
+    CLIENT_ID,
+    CLIENT_SECRET,
+    REDIRECT_URI
+  );
+  oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+
+  const sendConfirmationEmail = async ( req, res, email) => {
+    // const {email}  = req.body;
     try {
+        const accessToken = await oAuth2Client.getAccessToken();
+
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+              type: "OAuth2",
+              user: "tincho20012017@gmail.com",
+              clientId: CLIENT_ID,
+              clientSecret: CLIENT_SECRET,
+              refreshToken: REFRESH_TOKEN,
+              accessToken: accessToken,
+            },
+          });
         
-        await transporter.sendMail({
-            from: `MHCode <${ mail.user }>`, // sender address
-            to: email, // list of receivers
-            subject, // Subject line
-            text: "", // plain text body
-            html, // html body
-        });
+          await transporter.sendConfirmationEmail({
+            from: "VSClothes <tincho20012017@gmail.com>",
+            to: "quintanillaxeneise@gmail.com",
+            subject: "Confirmacion email",
+            text: "warappp",
+          });
+        //   const result = await transporter.sendConfirmationEmail(mailOptions);
+        console.log(result);
+        res.status(200).json("Enviado")
 
     } catch (error) {
         console.log('Algo no va bien con el email', error);
@@ -53,6 +67,6 @@ let transporter = nodemailer.createTransport({
   }
 
   module.exports = {
-    sendEmail,
+    sendConfirmationEmail,
     getTemplate
   }

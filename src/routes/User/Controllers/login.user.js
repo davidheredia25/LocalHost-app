@@ -5,8 +5,10 @@ const User = require('../../../models/User');
 const { OAuth2Client } = require("google-auth-library");
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
-const { getToken, getTokenData } = require('./middleware.js');
-const { getTemplate, sendEmail } = require('./mail.controllers'); 
+const {  getTokenData } = require('./middleware.js');
+const { getTemplate, sendConfirmationEmail } = require('./mail.controllers'); 
+const nodemailer = require("nodemailer");
+const {google} = require("googleapis");
 
 const loginGoogle = async (req, res) => {
   const { tokenId } = req.body;
@@ -67,29 +69,31 @@ const postUser = async (req, res)  => {
   // Obtener la data del usuario: name, email
   const  {name, email } = req.body;
   // Verificar que el usuario no exista
-  let user = await User.findOne({ email }) || null;
+   let user = await User.findOne({ email: email });
 
-  if(user !== null) {
-      return res.json({
-          success: false,
-          msg: 'Usuario ya existe'
-      });
-  }
+  // if(user ) {
+  //     return res.json({
+  //         success: false,
+  //         msg: 'Usuario ya existe'
+  //     });
+  // }
 
   // Generar el código
-  const code = uuidv4();
+   const code = uuidv4();
 
   // Crear un nuevo usuario
-  user = new User({ name, email, code });
+  // user = new User({ name, email, code });
 
-   // Generar token
-   const token = getToken({ email, code });
+  //  // Generar token
+    const token = jwt.sign({ user: {  email } }, "top_secret", { expiresIn: '1h' });
+    user.token = token;
+  
 
    // Obtener un template
    const template = getTemplate(name, token);
 
     // Enviar el email
-    await sendEmail(email, 'Este es un email de prueba', template);
+    await sendConfirmationEmail(email, 'Este es un email de prueba', template);
     await user.save();
   
     res.json({
