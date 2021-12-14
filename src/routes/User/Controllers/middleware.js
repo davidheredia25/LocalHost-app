@@ -4,7 +4,23 @@ const User = require("../../../models/User");
 const Product = require("../../../models/Product");
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
+const jwt = require('jsonwebtoken');
 
+
+
+
+const getTokenData = (token) => {
+    let data = null;
+    jwt.verify(token, 'SECRET', (err, decoded) => {
+        if(err) {
+            console.log('Error al obtener data del token');
+        } else {
+            data = decoded;
+        }
+    });
+
+    return data;
+}
 
 passport.use('register', new localStrategy({
     usernameField: "email",
@@ -67,6 +83,16 @@ const verificacionId = async (id) => {
     }
 };
 
+const verificacionEmail = async (email) => {
+    try {
+        let find = await User.findOne({email: email}).populate('cart.cart', ['price','name', 'image']);
+        let obj = { bool: false, message: 'No se encontro el user o estas baneado' };
+        if (find !== null && find.exis) return obj = { bool: true, user: find };
+        return obj;
+    } catch (error) {
+        console.log(error);
+    }
+};
 const verificacionP = async (id) => {
     try {
         let find = await Product.findById(id);
@@ -85,7 +111,9 @@ const splitt = (string) => {
 }
 
 module.exports = {
+    getTokenData,
     verificacionId,
     verificacionP,
-    splitt
+    splitt,
+    verificacionEmail
 };
