@@ -10,6 +10,7 @@ import './Details.scss';
 const Details = () => {
   const dispatch = useDispatch();
   const { product } = useSelector((state) => state.products);
+  console.log('detailproduct', product)
   const { user } = useSelector(state => state.login);
   console.log('user: ', user);
   const { id } = useParams();

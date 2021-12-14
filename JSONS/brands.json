@@ -4,6 +4,7 @@
             "$oid": "619ecea36a92375a826baf19"
         },
         "name": "adidas Originals",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -109,6 +110,7 @@
             "$oid": "619ecea36a92375a826baf1a"
         },
         "name": "Champion",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -214,6 +216,7 @@
             "$oid": "619ecea36a92375a826baf1b"
         },
         "name": "Converse",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -319,6 +322,7 @@
             "$oid": "619ecea36a92375a826baf1c"
         },
         "name": "Jordan",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -424,6 +428,7 @@
             "$oid": "619ecea36a92375a826baf1d"
         },
         "name": "puma",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -529,6 +534,7 @@
             "$oid": "619ecea36a92375a826baf1e"
         },
         "name": "New Balance",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -630,6 +636,7 @@
             "$oid": "619ecea36a92375a826baf1f"
         },
         "name": "Nike",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -735,6 +742,7 @@
             "$oid": "619ecea36a92375a826baf20"
         },
         "name": "New Era",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -840,6 +848,7 @@
             "$oid": "619ecea36a92375a826baf21"
         },
         "name": "The North Face",
+        "exis": true,
         "categories": [
             {
                 "name":{
@@ -945,6 +954,7 @@
             "$oid": "619ecea36a92375a826baf22"
         },
         "name": "Vans",
+        "exis": true,
         "categories": [
             {
                 "name":{

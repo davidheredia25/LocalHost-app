@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from 'react';
+import { Join } from "./cart.actions";
 import { addItemToCart } from "./cart.actions";
 import { useSelector } from "react-redux";
 export const GET_USER = "GET_USER"
@@ -87,6 +88,14 @@ export const editDateUser = (id, input) => async (dispatch) => {
         })
     }
     catch (error) {
+        console.log(error)
+    }
+}
+
+export const forgotPassword =  (input) => async () =>  {
+    try {
+        await axios.put(`/user/login/password`, input)
+    } catch (error) {
         console.log(error)
     }
 }

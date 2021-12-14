@@ -14,6 +14,6 @@ router.get('/', getTicket);
 router.get('/:id', getTicketById);
 router.post('/create', createTicket);
 router.put('/update/:id', updateTicket);
-router.delete('/delete/:id', deleteTicket);
+router.put('/delete/:id', deleteTicket);
 
 module.exports = router;

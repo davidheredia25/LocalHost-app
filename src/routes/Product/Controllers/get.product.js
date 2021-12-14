@@ -13,30 +13,29 @@ const getProducts = async (req, res) => {
         category, 
         type
     } = req.query;
-    console.log('name getProducts', name);
-    console.log('brand getProducts', brand);
-    console.log('category getProducts', category);
-    console.log('type getProducts', type);
+    console.log('body getProducts: ', name, brand, category, type);
     try {
-        let getAllProducts = await Product.find()
+        let getAllProducts = await Product.find({ exis: true })
         .populate('brand', ['name'])
         .populate('category', ['name'])
         .populate('type', ['name']);
-        // console.log('getAllProducts getProducts', getAllProducts);
+        /* console.log('getAllProducts getProducts', getAllProducts); */
         
         // filter
         let filtered = [];
 
-        if(brand !== "") filtered = await filterB(brand, getAllProducts);
+        if(brand) {
+            filtered = await filterB(brand, getAllProducts);
+        }
         // console.log('filterBrand getProducts', filterBrand);
 
-        if(category !== "") {
+        if(category) {
             if(filtered.length === 0 ) filtered = await filterC(category, getAllProducts);
             else filtered = await filterC(category, filtered);
         } 
         // console.log('filterCategories getProducts', filterCategories);
         
-        if(type !== "") {
+        if(type) {
             if(filtered.length === 0)  filtered = await filterT(type, getAllProducts);
             else filtered = await filterT(type, filtered);
         }
@@ -67,7 +66,7 @@ const getProductById = async (req, res) => {
         // console.log('verificacion getProducts', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.product);
-        res.send('No se encontro el producto');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

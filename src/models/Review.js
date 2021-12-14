@@ -14,7 +14,11 @@ const reviewSchema = new Schema({
         ref: 'User',
         required: true,
         autopopulate: true
-    }
+    },
+    exis: {
+        type: Boolean,
+        default: true
+    },
 }, {
     versionKey: false,
     timestamps: false

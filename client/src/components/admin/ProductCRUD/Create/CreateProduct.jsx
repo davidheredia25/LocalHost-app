@@ -64,21 +64,18 @@ const CreateProduct = () => {
   };
 
   const selectMarca = (e) => {
-    console.log("VALUE!!!", e.target.value)
     setForm({
       ...form,
       brand: e.target.value
     });
   };
   const selectCategoria = (e) => {
-    console.log("VALUE!!!", e.target.value)
     setForm({
       ...form,
       categories: [...form.categories, e.target.value]
     });
   };
   const selectSubcategoria = (e) => {
-    console.log("VALUE!!!", e.target.value)
     setForm({
       ...form,
       types: e.target.value
@@ -90,45 +87,89 @@ const CreateProduct = () => {
 
     <form className={style.formu}>
       <h1 className={style.titleform}>Crear productos</h1>
+      
+      {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm} >
           <label className={style.text}>Nombre</label>
-          <input className={style.input} name="name" type="text" placeholder="Nombre.." value={form.name} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="name" 
+            type="text" 
+            placeholder="Nombre.." 
+            value={form.name} 
+            onChange={handleChange} 
+          />
         </div>
-
+        
         <div className={style.InputForm}>
           <label className={style.text}>Descripcion </label>
-          <input className={style.input} name="description" type="text" placeholder="Descripcion.." value={form.description} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="description" 
+            type="text" 
+            placeholder="Descripcion.." 
+            value={form.description} 
+            onChange={handleChange} 
+          />
         </div>
       </div>
 
-
+      {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
           <label className={style.text}>Precio</label>
-          <input className={style.input} name="price" type="number" placeholder="Precio.." value={form.price} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="price" 
+            type="number" 
+            placeholder="Precio.." 
+            value={form.price} 
+            onChange={handleChange} 
+          />
         </div>
 
         <div className={style.InputForm}>
           <label className={style.text}>Color</label>
-          <input className={style.input} name="color" type="text" placeholder="Color.." value={form.color} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="color" 
+            type="text" 
+            placeholder="Color.." 
+            value={form.color} 
+            onChange={handleChange} 
+          />
         </div>
-
       </div>
 
-
+      {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
           <label className={style.text}>Talle</label>
-          <input className={style.input} name="talle" type="text" placeholder="Talle..." value={form.talle} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="talle" 
+            type="text" 
+            placeholder="Talle..." 
+            value={form.talle} 
+            onChange={handleChange} 
+          />
         </div>
 
         <div className={style.InputForm}>
           <label className={style.text}>Imagen</label>
-          <input className={style.input} name="image" type="text" placeholder="Imagen.." value={form.image} onChange={handleChange} />
+          <input 
+            className={style.input} 
+            name="image" 
+            type="text" 
+            placeholder="Imagen.." 
+            value={form.image} 
+            onChange={handleChange} 
+          />
         </div>
       </div>
 
+      {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
           <select className={style.input1} onChange={selectMarca}>
@@ -158,6 +199,8 @@ const CreateProduct = () => {
               );
             })}
           </select>
+          {/* crea una nueva categoría
+          <input /> */}
         </div>
 
         <div className={style.InputForm}>
@@ -170,11 +213,12 @@ const CreateProduct = () => {
 
                 <option name="types" value={e}>
                   {e}
-
                 </option>
               );
             })}
           </select>
+          {/* crea una nueva subcategoría
+          <input /> */}
         </div>
       </div>
 

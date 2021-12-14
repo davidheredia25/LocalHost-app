@@ -47,7 +47,7 @@ const ProductInfo = ({ product }) => {
                                         variant={talle === t ? 'outlined' : 'text'}
                                         style={{ 'color': '#000000' }}
                                     >
-                                        {t}
+                                        {t.name}
                                     </Button>
                                 )
                             }) : null
@@ -55,7 +55,7 @@ const ProductInfo = ({ product }) => {
                 </div>
 
                 <div className='info__cart'>
-                    <AddToCart />
+                    <AddToCart  product={product}/>
                 </div>
 
             </div >

@@ -1,35 +1,31 @@
 const Category = require('../../../models/Category');
-const Product = require("../../../models/Product")
-const { verificacionId } = require('./middleware');
+const { 
+    verificacionName,
+    setExisP
+} = require('./middleware');
 
 const deleteCategory = async (req, res) => {
-    
     const { brand, category } = req.body; 
-    
-    // Acá hay que borrar todos los productos que coincidan con esa marca y categoría conjuntamente
-
-    let verifyCategory = await Product.findOne({ category: category })
-    if (!verifyCategory) {
-        // eliminar ese type de su tabla, 
-        // porque si entra en este if significa que no existen más productos con ese type
-    }
-
-    /* const { id } = req.params;
-    // console.log('id deleteCategory', id);
+    console.log('body deleteCategory: ', brand, category);
     try {
-        let verificacion = await verificacionId(id);
-
-        if(verificacion.bool) {
-            let deleted = await Category.findByIdAndDelete(id);
-            // console.log('deleted deleteCategory', deleted);
-            if(deleted)  return res.json(deleted);
-            return res.send('No se elimino correctamente');
+        let verificacionCategoria = await verificacionName(category);
+        console.log('verificacionCategoria deleteCategory: ', verificacionCategoria);
+        let id = verificacionCategoria.category._id;
+        console.log('id deleteCategory: ', id);
+        if (verificacionCategoria.bool) {
+            let deleteProduct = await setExisP(brand, category);
+            console.log('deleteProduct deleteCategory: ', deleteProduct);
+            let deleted = await Category.findByIdAndUpdate(id, {
+                exis: false
+            }, { new: true });
+            deleted = await deleted.save();
+            console.log('deleted deleteCategory: ', deleted);
+            return res.json(deleted, deleteProduct);
         }
-        res.send('No se encontro la categoria');
+        res.send(verificacionCategoria.message);
     } catch (error) {
         console.log(error);
     }
-    */
 }; 
 
 module.exports = {

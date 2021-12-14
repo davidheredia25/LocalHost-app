@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createBrand } from "../../../../redux/actions/brand.actions";
+import { createBrand, createCategory, createSubcategory } from "../../../../redux/actions/brand.actions";
 import style from '../Styles/BrandCreate.module.scss';
 
 const BrandCreate = () => {
@@ -12,6 +12,9 @@ const BrandCreate = () => {
         logo: ""
     });
 
+    const [category, setCategory] = useState("");
+    const [subcategory, setSubcategory] = useState("");
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm({
@@ -20,8 +23,18 @@ const BrandCreate = () => {
         });
     }
 
-    const handleSave = () => {
+    const handleCreateBrand = () => {
         dispatch(createBrand(form))
+    }
+
+    const handleCreateCategory = (e) => {
+        dispatch(createCategory(e.target.value))
+        setCategory("")
+    }
+
+    const handleCreateSubcategory = (e) => {
+        dispatch(createSubcategory(e.target.value))
+        setSubcategory("")
     }
     
     return (
@@ -40,7 +53,37 @@ const BrandCreate = () => {
                         form.logo &&
                             <img src={form.logo} alt="img not found" />
                     }
-                    <button onClick={handleSave}>GUARDAR</button>
+                    <button onClick={handleCreateBrand}>CREAR MARCA</button>
+                </div>
+            </div>
+            <h1 className={style.titleSup}>Crear nueva categoría</h1>
+            <div className={style.ctnNameBrand}>
+                <div>
+                    <h3 className={style.titleInput}>Nombre:</h3>
+                    <input 
+                        name="category" 
+                        value={category} 
+                        type="text" 
+                        onChange={(e) => setCategory(e.target.value)} 
+                    />
+                </div>
+                <div>
+                    <button onClick={handleCreateCategory}>CREAR CATEGORÍA</button>
+                </div>
+            </div>
+            <h1 className={style.titleSup}>Crear nueva subcategoría</h1>
+            <div className={style.ctnNameBrand}>
+                <div>
+                    <h3 className={style.titleInput}>Nombre:</h3>
+                    <input 
+                        name="type" 
+                        value={subcategory} 
+                        type="text"
+                        onChange={(e) => setSubcategory(e.target.value)} 
+                    />
+                </div>
+                <div>
+                    <button onClick={handleCreateSubcategory}>CREAR SUBCATEGORÍA</button>
                 </div>
             </div>
         </div>

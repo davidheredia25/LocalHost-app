@@ -5,7 +5,11 @@ const typesSchema = new Schema({
     name: {
         type: String,
         required: true
-    }
+    },
+    exis: {
+        type: Boolean,
+        default: true
+    },
 }, {
     versionKey: false,
     timestamps: false

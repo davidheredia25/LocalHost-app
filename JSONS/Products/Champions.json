@@ -1,0 +1,648 @@
+[
+    {
+        "exis": true,
+        "name": "Remera Champion Con Cuello Redondo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 3850,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Usa un clásico con la camiseta Champion Crewneck, confeccionada con algodón suave con una estructura familiar para la comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240692_Main_Thumb_1020836.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240692_Gallery_1_1020838.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240692_Gallery_2_1020839.jpg?imwidth=768"
+      },
+      {
+        "exis": true,
+        "name": "Remera Champion Con Cuello Redondo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 3850,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Usa un clásico con la camiseta Champion Crewner, confeccionada con algodón suave con estructura familiar para la comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240693_Main_Thumb_1020877.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240693_Gallery_1_1020880.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240693_Gallery_2_1020881.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Pantalon Champion ",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 6600,
+        "color": [
+          "Gris"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Compre los pantalones largos Champion en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240705_Main_Thumb_1020962.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240705_Gallery_1_1020964.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240705_Gallery_2_1020966.jpg?imwidth=768"
+      },
+      {
+        "exis": true,
+        "name": "Pantalon Champion Elastic Cuff",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 7700,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Compre los pantalones con puños elásticos Champion en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240691_Main_Thumb_1020737.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240691_Gallery_1_1020738.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240691_Gallery_2_1020739.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Con Capucha",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 7700,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Dale rienda suelta a un clásico de la calle con la sudadera con capucha Champion, confeccionada con algodón suave con una sudadera con capucha familiar para comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240703_Main_Thumb_1022083.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240703_Gallery_1_1022085.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240703_Gallery_2_1022086.jpg?imwidth=768"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Con Capucha",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 8250,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Dale rienda suelta a un clásico de la calle con la sudadera con capucha Champion, confeccionada con algodón suave con una sudadera con capucha familiar para comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240704_Main_Thumb_1022039.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240704_Gallery_1_1022041.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240704_Gallery_2_1022042.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Con Capucha Y Media Cremallera",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 7700,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Compre la sudadera con capucha Champion Half Zip en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de envío. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240697_Main_Thumb_1020849.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240697_Gallery_1_1020852.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240697_Gallery_2_1020854.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Remera Champion Con Cuello Redondo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 3850,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Usa un clásico con la camiseta Champion Crewneck, confeccionada con algodón suave con una estructura familiar para la comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240707_Main_Thumb_1017416.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240707_Gallery_1_1017417.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240707_Gallery_2_1017425.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Remera Champion Con Cuello Redondo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 3850,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Usa un clásico con la camiseta Champion Crewneck, confeccionada con algodón suave con una estructura familiar para la comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240708_Main_Thumb_1017021.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240708_Gallery_1_1017060.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240708_Gallery_2_1017062.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Crew",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 9350,
+        "color": [
+          "Gris"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Adopta el estilo urbano informal con la sudadera Champion Crew.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/V3_1_Main_0357861.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/V3_1_Gallery_1_0359189.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/V3_1_Gallery_2_0357864.jpg?imwidth=768"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Con Capucho",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 12500,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Dale rienda suelta a un clásico de la calle con la sudadera con capucha Champion, confeccionada con algodón suave con una sudadera con capucha familiar para comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240695_Main_Thumb_1002663.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240695_Gallery_1_1002664.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240695_Gallery_2_1002671.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Buzo Champion Con Capucha",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 12500,
+        "color": [
+          "Blanco",
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Dale rienda suelta a un clásico de la calle con la sudadera con capucha Champion, confeccionada con algodón suave con una sudadera con capucha familiar para comodidad durante todo el día, rematada con el icónico logo C.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240689_Main_Thumb_0976313.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240689_Gallery_1_0976314.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240689_Gallery_2_0976315.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Pantalon Champion Rib Cuff",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 2799,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Compre los pantalones Champion Rib Cuff en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240698_Main_Thumb_0980649.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240698_Gallery_1_0980651.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240698_Gallery_2_0980655.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Pantalon Champion",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 10450,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Compre los pantalones largos Champion en beige de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240706_Main_Thumb_1017394.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240706_Gallery_1_1017395.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240706_Gallery_2_1017397.jpg?imwidth=375"
+      },
+      {
+        "exis": true,
+        "name": "Pantalon Champion Con Puños Acanalados",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf1a"
+          },
+        "price": 4800,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Cómodos, informales y con esas vibraciones relajadas de fin de semana que todos disfrutamos, los pantalones con puños acanalados con el logotipo de Champion ofrecen un ajuste cómodo y cuentan con una cintura con cordón elástico para un ajuste ajustable.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/219273_Main_Thumb_0708193.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/219273_Gallery_1_0705712.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/219273_Gallery_2_0705713.jpg?imwidth=375"
+      }
+]

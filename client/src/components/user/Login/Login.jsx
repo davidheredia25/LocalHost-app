@@ -9,15 +9,19 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
 import {loginAuth} from "../../../redux/actions/login.actions";
+import { Join } from "../../../redux/actions/cart.actions";
 import { useNavigate } from "react-router-dom";
 
  
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const usuario = useSelector(state => state.login.user)
-
-  console.log('usuario', usuario)
+  const emptyCart= JSON.parse(localStorage.getItem('cart'));
+  const {user} = useSelector(state => state.login)
+  let User;
+  if(user?.email) User = user
+  else User = user?.user;
+  let userId = User?._id;
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -39,7 +43,7 @@ const Login = () => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (!error.email && !error.password) {
         dispatch(loginLocal(input))
@@ -51,6 +55,9 @@ const Login = () => {
       password: "",
     })
   }
+
+  
+
  
 
   const handleChange = (e) => {
@@ -123,7 +130,7 @@ const Login = () => {
         </div>
         <div className={style.link}>
          <p> No tenes cuenta? <Link to="/register">Registrate</Link></p>
-         <p>  Olvidaste tu contraseña? <Link to="/forgot">Cambiala ahora</Link></p>
+         <p>  Olvidaste tu contraseña? <Link to="/user/nodemailer">Cambiala ahora</Link></p>
         </div>
   </form>
   </div>

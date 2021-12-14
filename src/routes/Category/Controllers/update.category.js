@@ -18,7 +18,7 @@ const updateCategory = async (req, res) => {
             // console.log('update updateCategory', update);
             return res.json(update);
         }
-        res.send('No se recivio nombre o id de la categoria');
+        res.send(`No se recivio nombre, ${verificacion.message}`);
     } catch (error) {
         console.log(error);
     }

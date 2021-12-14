@@ -5,6 +5,7 @@ const { verificacionId } = require('./middleware');
 const getBrandsList = async (req, res) => {
     try {
         let brandsList = await Brand.find();
+        brandsList = brandsList.filter(x => x.exis)
         res.json(brandsList)
     }
     catch (error) {
@@ -60,7 +61,7 @@ const getBrandById = async (req, res) => {
         // console.log('verificacion getBrandById', verificacion);
 
         if(verificacion.bool) return res.json(verificacion.brand);
-        res.send('No se encontro la marca');
+        res.send(verificacion.message);
     } catch (error) {
         console.log(error);
     }

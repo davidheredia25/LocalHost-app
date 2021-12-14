@@ -16,7 +16,7 @@ const ticketSchema = new Schema({
     },
     state: {
         type: String,
-        default: "Pending"
+        default: "pending"
     },
     direccion: {
         type: String,
@@ -31,6 +31,10 @@ const ticketSchema = new Schema({
         ref: "User",
         required: true,
         autopopulate: true
+    },
+    exis: {
+        type: Boolean,
+        default: true
     },
     products: [{
         product: {

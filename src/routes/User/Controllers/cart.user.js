@@ -7,12 +7,13 @@ const {
 
 const addCart = async (req, res) => {
     const { userId } = req.params;
-    const { productId, qty } = req.body;
+    const { productId, qty, talle } = req.body;
     console.log('userId addCart: ', userId);
     console.log('productId addCart: ', productId);
+    console.log('talle addCart: ', talle);
     try {
         let verificacionUser = await verificacionId(userId);
-        console.log('verificacionUser addCart: ', verificacionUser.user.cart);
+        console.log('verificacionUser addCart: ', verificacionUser.user);
 
         if (verificacionUser.bool) {
             let verificacionProduct = await verificacionP(productId);
@@ -22,32 +23,39 @@ const addCart = async (req, res) => {
                 console.log('verificacionProduct.product addCart: ', verificacionProduct.product._id);
                 let objCart = {
                     cart: verificacionProduct.product._id,
-                    qtyCart: qty
+                    qtyCart: qty,
+                    talle: talle
                 };
-                console.log('objCart addCart: ', objCart);
+                
+                console.log('objCart addCart: ', verificacionUser.user.cart);
 
                 let bool = false;
+                
                 for (let i = 0; i < verificacionUser.user.cart.length; i++) {
                     if (verificacionUser.user.cart.length >= 1) {
-                        if (splitt(JSON.stringify(verificacionUser.user.cart[i].cart._id)) === objCart.cart.toString()) bool = true;
+                        if (splitt(JSON.stringify(verificacionUser.user.cart[i].cart._id)) === objCart.cart.toString() && verificacionUser.user.cart[i].talle === objCart.talle) {
+                           bool = true;   
+                            
+                        }
                     }
                     console.log('bool addCart: ', bool);
                     if (bool) {
                         if (qty < 1 && verificacionUser.user.cart[i].qtyCart > 1) verificacionUser.user.cart[i].qtyCart--;
-                        else verificacionUser.user.cart[i].qtyCart++;
+                        else verificacionUser.user.cart[i].qtyCart+= qty;
                         
                         let save = await verificacionUser.user.save();
-                        let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image'])
+                        let test= await User.findById(save._id).populate('cart.cart', ['price','name', 'image', 'talle'])
                         console.log('save addCart: ', test);
                         console.log('test addCart: ', test.cart);
                         return res.json(test);
                     }
                 }
+
                 let add = await User.findByIdAndUpdate(userId, {
                     cart: [...verificacionUser.user.cart, objCart]
                 }, { new: true });
                 add = await add.save();
-                let test= await User.findById(add._id).populate('cart.cart', ['price','name', 'image'])
+                let test= await User.findById(add._id).populate('cart.cart', ['price','name', 'image', 'talle'])
                 console.log('add addCart: ', test.cart[0].cart);
                 return res.json(test.cart);
             }
@@ -114,8 +122,120 @@ const getCartUser = async (req, res) => {
 // }
 
 
+ const deleteCart = async( req,res) => {
+    const { id } = req.params;
+    console.log('id', id)
+     try {
+        let verificacion = await verificacionId(id);
+        console.log('verificacion getCartUser: ', verificacion);
+        if(verificacion.bool) {
+            let add = await User.findByIdAndUpdate(id, {
+                cart: []
+            }, { new: true });
+            //verificacion.user.cart = []
+           return res.json(add.cart)
+        }
+       res.send('no') 
+     } catch (error) {
+         console.log(error)
+     }
+ }
+
+
+ const deleteCartOne = async(req,res) => {
+     const {id,productId, talle} = req.params;
+     
+
+     try {
+        let verificacion = await verificacionId(id);
+        if(verificacion.bool) {
+            let user= await User.findById(id).populate('cart.cart', ['name', 'price'])
+            /* let filtered= user.cart.filter(x => splitt(JSON.stringify(x.cart._id)) === productId.toString())
+             if(filtered.length> 1 ) {
+                filtered= filtered.filter ( x => x.talle !== talle)
+                let filter2 = user.cart.filter( x=> splitt(JSON.stringify(x.cart._id)) !== productId.toString())
+                let add = await User.findByIdAndUpdate(id, {
+                    cart: [...filtered, filter2]
+                }, { new: true }).populate('cart.cart', ['name', 'price']); 
+                add = await add.save();
+                return res.json(add.cart)
+            }  */
+            let array=[];
+            for(var i=0; i < user.cart.length; i++ ){
+                if(splitt(JSON.stringify(user.cart[i].cart._id)) === productId.toString()){
+                    if(user.cart[i].talle === talle){
+                        console.log('rey')
+                    }else{
+                        array.push(user.cart[i])
+                        
+                    }
+                }else{
+                    array.push(user.cart[i])
+                }
+            }
+
+
+            //console.log('user', user)
+             let add = await User.findByIdAndUpdate(id, {
+                cart: [...array]
+            }, { new: true }); 
+            //verificacion.user.cart = []
+            add = await add.save();
+           return res.json(add.cart)
+        }
+       res.send('no') 
+
+     } catch (error) {
+         console.log(error)
+     }
+
+ }
+ 
+
+
+  const Join = async(req,res) => {
+    const{id} = req.params;
+    const {emptyCart} =req.body;
+    console.log('id', id)
+    console.log('emptycART', emptyCart)
+    console.log('body', req.body)
+
+    try {
+        
+        let array=[];
+        for(var i=0 ; i< req.body.length ; i++) {
+             
+           array.push({
+            cart: req.body[i].product,
+            qtyCart: req.body[i].qty,
+            talle: req.body[i].talle
+        }) 
+        }
+        console.log('array', array)
+        
+        let user= await User.findById(id).populate('cart.cart', ['name', 'price', 'image'])
+        
+        
+        let add = await User.findByIdAndUpdate(id, {
+            cart: [...array]
+        }, { new: true }); 
+       // add= add.populate('cart.cart', ['name', 'price', 'image'])
+        add= await add.save();
+        //let usuario= await User.findById(id).populate('cart.cart', ['name', 'price', 'image'])
+        
+        res.json(array)
+
+        
+    } catch (error) {
+        console.log(error)
+    }
+ }
+
 
 module.exports = {
     addCart,
-    getCartUser
+    getCartUser,
+    deleteCart,
+    deleteCartOne,
+    Join
 };

@@ -6,6 +6,10 @@ const categorySchema = new Schema({
         type: String,
         required: true
     },
+    exis: {
+        type: Boolean,
+        default: true
+    },
     // types:[{
     //     type: Schema.Types.ObjectId,
     //     ref: 'Types',
