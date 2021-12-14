@@ -1,0 +1,1112 @@
+[
+    {
+        "exis": true,
+        "name": "Remera Con Logo New York Yankees MLB",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4299,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 50
+            },
+            {
+                "name": "M",
+                "stockTalle": 40
+            },
+            {
+                "name": "L",
+                "stockTalle": 40
+            }
+        ],
+        "stock": 90,
+        "color": [
+            "Negro"
+        ],
+        "description": "Celebre sus favoritos con la camiseta extragrande con el logo grande de los New York Yankees de la MLB de New Era, que conmemora al equipo con un gráfico en contraste en el pecho.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249938_Main_Thumb_0983317.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249938_Gallery_1_0983321.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249938_Gallery_2_0983324.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Con Estampado New Era",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4299,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 47
+            },
+            {
+                "name": "L",
+                "stockTalle": 60
+            }
+        ],
+        "stock": 158,
+        "color": [
+            "Blanco"
+        ],
+        "description": "Sal a la calle con un estilo elegante con la camiseta con estampado New Era, confeccionada con algodón suave y luce los gráficos de la bola B de New Era.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249933_Main_0980643.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249933_Gallery_1_0980644.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249933_Gallery_2_0980648.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Remera Con Rayas Diplomáticas Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 0
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 43
+            }
+        ],
+        "stock": 63,
+        "color": [
+            "Blanco",
+            "Rojo"
+        ],
+        "description": "Rompe el estilo de béisbol con la camiseta extragrande a rayas de New Era Heritage, confeccionada con algodón suave y con un diseño de rayas retro.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249940_Main_Thumb_0974504.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249940_Gallery_1_0974505.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249940_Gallery_2_0974506.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Remera Con Estampado Flock Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4799,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 50
+            },
+            {
+                "name": "M",
+                "stockTalle": 40
+            },
+            {
+                "name": "L",
+                "stockTalle": 40
+            }
+        ],
+        "stock": 90,
+        "color": [
+            "Blanco"
+        ],
+        "description": "Sal a la calle con un estilo retro con la camiseta New Era Heritage Flock Print, confeccionada con algodón suave y con detalles retro New flocados.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249941_Main_Thumb_0974511.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249941_Gallery_1_0974512.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249941_Gallery_2_0974513.jpg?imwidth=375"
+    },
+    {
+        "name": "Remera Heritage",
+        "exis": true,
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 3599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 90
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 41
+            }
+        ],
+        "stock": 154,
+        "color": [
+            "Negro"
+        ],
+        "description": "Celebre los 100 años de Heritage con la camiseta extragrande Heritage de New Era, que conmemora el año original con un gran gráfico en el pecho, sobre suaves telas de algodón.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249939_Main_Thumb_0974261.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249939_Gallery_1_0974262.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249939_Gallery_2_0974263.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Remera Con Gráfico MLB Los Ángeles Dodgers",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 2999,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 12
+            },
+            {
+                "name": "M",
+                "stockTalle": 41
+            },
+            {
+                "name": "L",
+                "stockTalle": 43
+            }
+        ],
+        "stock": 96,
+        "color": [
+            "Gris"
+        ],
+        "description": "Muestre su apoyo con la camiseta estampada New Era MLB Los Angeles Dodgers, confeccionada con algodón suave y luciendo orgullosos detalles del equipo en la parte delantera y trasera.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249936_Main_Thumb_0974051.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249936_Gallery_1_0974052.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249936_Gallery_2_0974053.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Remera Con Gráfico New York Yankees MLB",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4199,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 48
+            },
+            {
+                "name": "L",
+                "stockTalle": 44
+            }
+        ],
+        "stock": 143,
+        "color": [
+            "Gris"
+        ],
+        "description": "Muestre su apoyo con la camiseta estampada New Era MLB New York Yankees, confeccionada con algodón suave y luciendo orgullosos detalles del equipo en la parte delantera y trasera.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249937_Main_Thumb_0974232.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249937_Gallery_1_0974233.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249937_Gallery_2_0974241.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Remera Essential Script",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 3899,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            }
+        ],
+        "stock": 96,
+        "color": [
+            "Azul"
+        ],
+        "description": "Sal a la calle con un estilo elegante con la camiseta New Era Essential Script, confeccionada con algodón suave y luce un bordado de New Era.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249935_Main_Thumb_0973905.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249935_Gallery_1_0973906.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249935_Gallery_2_0973907.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Gorra NFL Raiders The League",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 1599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb7"
+            },
+        "talle": [
+            {
+                "name": "Unico",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 51,
+        "color": [
+            "Negro"
+        ],
+        "description": "Muestre su apoyo con estilo con la gorra New Era NFL Raiders The League que presenta el diseño de 6 paneles 9FORTY de New Era con una corona contorneada para brindar una comodidad excepcional durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/219332_Main_Thumb_0648854.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/219332_Gallery_1_0648857.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Main/219332_Main_Thumb_0648854.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Trucker NBA Chicago Bulls The League",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 1999,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e4"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb7"
+            },
+        "talle": [
+            {
+                "name": "Unico",
+                "stockTalle": 23
+            }
+        ],
+        "stock": 23,
+        "color": [
+            "Negro"
+        ],
+        "description": "Muestre su apoyo con la camioneta New Era NBA Chicago Bulls The League 9FORTY, con un diseño de camionero de malla transpirable y detalles inconfundibles del equipo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/257287_Main_Thumb_1023219.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/257287_Gallery_1_1023221.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Main/257287_Main_Thumb_1023219.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Cremallera Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 7899,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Rojo"
+        ],
+        "description": "Compre la sudadera roja con cremallera de un cuarto Heritage de New Era de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de envío. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/249932_Main_Thumb_0970575.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/249932_Gallery_1_0970576.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/249932_Gallery_2_0970577.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Estampado Heritage New Work Yankees",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 8599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Blanco"
+        ],
+        "description": "Represente a Nueva York con la camiseta New Era New York Yankees Heritage Script Crew, que cuenta con suaves tejidos de mezcla de algodón y detalles inconfundibles para brindar comodidad y estilo durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/242196_Main_Thumb_0924019.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/242196_Gallery_1_0924020.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/242196_Gallery_2_0924021.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Cuello Redondo MLB Los Ángeles Dodgers Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 10299,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Gris"
+        ],
+        "description": "Compre el equipo New Era MLB Los Angeles Dodgers Heritage Crew en azul marino de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232141_Main_Thumb_0806712.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232141_Gallery_1_0806713.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232141_Gallery_2_0806714.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Técnico MLB New York Yankees Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 12899,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 41
+            },
+            {
+                "name": "L",
+                "stockTalle": 43
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 156,
+        "color": [
+            "Negro"
+        ],
+        "description": "Compra la Crew New Era MLB New York Yankees Heritage en negro de Pro: Direct, la elección del profesional, y elige entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232139_Main_Thumb_0805872.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232139_Gallery_1_0805888.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232139_Gallery_2_0805875.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Bermuda Con Estampado Floral AOP",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 4299,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 18
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 113,
+        "color": [
+            "Beige",
+            "Azul"
+        ],
+        "description": "Traiga algo de clase con usted con la bermuda floral AOP Reverse, confeccionada con un suave tejido de algodón.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/242203_Main_Thumb_0924567.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/242203_Gallery_1_0924570.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/242203_Gallery_2_0924572.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Jogger Essential",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 6199,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 1
+            },
+            {
+                "name": "M",
+                "stockTalle": 10
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 0
+            }
+        ],
+        "stock": 33,
+        "color": [
+            "Azul"
+        ],
+        "description": "Obtén comodidad durante todo el día con el pantalón de chándal New Era Essential.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/204058_Main_Thumb_0569590.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/204058_Gallery_1_0565619.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/204058_Gallery_2_0569592.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Jogger Outdoor Utility Cargo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 5899,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 2
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 94,
+        "color": [
+            "Negro"
+        ],
+        "description": "Compre el Cargo Utility para exteriores New Era en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237163_Main_0898379.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237163_Gallery_1_0898380.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237163_Gallery_2_0898382.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalón De Chádal AOP Outdoor Utility",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 7599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 58
+            },
+            {
+                "name": "M",
+                "stockTalle": 25
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 13
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Gris",
+            "Azul",
+            "Beige"
+        ],
+        "description": "Compre el pantalón deportivo New Era Outdoor Utility AOP en gris de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237162_Main_0898455.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237162_Gallery_1_0898457.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237162_Gallery_2_0898458.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Jogger Essential",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 6199,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 50
+            },
+            {
+                "name": "M",
+                "stockTalle": 11
+            },
+            {
+                "name": "L",
+                "stockTalle": 15
+            },
+            {
+                "name": "XL",
+                "stockTalle": 16
+            }
+        ],
+        "stock": 92,
+        "color": [
+            "Gris"
+        ],
+        "description": "Obtén comodidad durante todo el día con el pantalón Chándal de New Era.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/196673_Main_Thumb_0516900.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/196673_Gallery_1_0516903.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/196673_Gallery_2_0516905.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Jogger Essential",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 6199,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 27
+            },
+            {
+                "name": "L",
+                "stockTalle": 24
+            },
+            {
+                "name": "XL",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 122,
+        "color": [
+            "Negro"
+        ],
+        "description": "Obtén comodidad durante todo el día con el pantalón Chándal de New Era.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/194832_Main_Thumb_0426750.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/194832_Gallery_1_0426752.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/194832_Gallery_2_0426753.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Campera Bomber NBA Orlando Magic",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 14999,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 23
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 25
+            },
+            {
+                "name": "XL",
+                "stockTalle": 32
+            }
+        ],
+        "stock": 101,
+        "color": [
+            "Azul",
+            "Negro"
+        ],
+        "description": "Compre el bombardero azul New Era NBA Orlando Magic de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/224559_Main_Thumb_0763420.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/224559_Gallery_1_0763422.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/224559_Gallery_2_0763424.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo MLB Los Ángeles Dodgers Heritage Con Capucha",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 8499,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 2
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 24
+            },
+            {
+                "name": "XL",
+                "stockTalle": 11
+            }
+        ],
+        "stock": 58,
+        "color": [
+            "Gris"
+        ],
+        "description": "Enfrente su día y apoye a sus favoritos con la sudadera con capucha New Era MLB Los Angeles Dodgers Heritage, con un diseño atemporal de sudadera con capucha y los colores y detalles característicos del equipo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237158_Main_0899212.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237158_Gallery_1_0899213.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237158_Gallery_2_0899214.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Capucha MLB New York Yankees Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 8499,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 41
+            },
+            {
+                "name": "L",
+                "stockTalle": 43
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 156,
+        "color": [
+            "Negro"
+        ],
+        "description": "Enfréntate a tu día y apoya a tus favoritos con la sudadera con capucha New Era MLB New York Yankees Heritage, con un diseño atemporal de sudadera con capucha y los colores y detalles característicos del equipo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237159_Main_0899197.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237159_Gallery_1_0899199.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237159_Gallery_2_0899200.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Capucha MLB Los Ángeles Dodgers Infill",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 7499,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "color": [
+            "Negro"
+        ],
+        "description": "Compra la sudadera con capucha negra con logo infill de New Era MLB Los Angeles Dodgers de Pro: Direct, la elección del profesional, y elige entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232138_Main_Thumb_0805658.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232138_Gallery_1_0805660.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232138_Gallery_2_0805661.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Capucha MLB Los Ángeles Dodgers Infill",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 7499,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Blanco"
+        ],
+        "description": "Compra la sudadera con capucha con logo infill en blanco de New Era MLB New York Yankees de Pro: Direct, la elección del profesional, y elige entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232137_Main_Thumb_0805608.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232137_Gallery_1_0805610.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232137_Gallery_2_0805611.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Técnico Heritage",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 6599,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 45
+            },
+            {
+                "name": "M",
+                "stockTalle": 98
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 7
+            }
+        ],
+        "stock": 171,
+        "color": [
+            "Gris"
+        ],
+        "description": "Compre la tripulación New Era Heritage en azul de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/224550_Main_Thumb_0762469.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/224550_Gallery_1_0762470.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/224550_Gallery_2_0762473.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Con Capucha NFL Oakland Raiders Wordmark",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf20"
+            },
+        "price": 6999,
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "color": [
+            "Negro"
+        ],
+        "description": "Compra la sudadera con capucha con estampado Wordmark de New Era NFL Oakland Raiders en azul marino de Pro: Direct, la elección del profesional, y elige entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/224537_Main_Thumb_0772436.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/224537_Gallery_1_0772438.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/224537_Gallery_2_0772439.jpg?imwidth=768"
+    }
+]

@@ -1,0 +1,971 @@
+[
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star Cx",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 18999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }
+
+],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Compre las Converse Chuck Taylor All Star Cx en negro de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/247852_Main_Thumb_1023394.jpg?imwidth=768",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/247852_Gallery_1_1023398.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/247852_Gallery_2_1023400.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star Cuero Forrado",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 13666,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 100,
+        "color": ["Marron", "Negro"],
+        "description": "Compre las Converse Chuck Taylor All Star Lined Leather en blanco de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/247846_Main_Thumb_1023240.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/247846_Gallery_1_1023256.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/247846_Gallery_2_1023258.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Pro Cuero",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 18999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Blanco", "Celeste"],
+        "description": "Un elegante ícono del baloncesto abandona las canchas y toma las calles con las Converse Pro Leather, reinventado como un diseño urbano listo para la calle que es perfecto para el uso diario cómodo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238629_Main_Thumb_0967666.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238629_Gallery_1_0967667.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238629_Gallery_2_0967670.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Star Player",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 14599,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 100,
+        "color": ["Verde"],
+        "description": "Agregue un toque deportivo a su día con las Converse Star Player, que combinan raíces de baloncesto con un diseño superior clásico y amortiguación para una comodidad elegante donde sea que lo lleven sus pies.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238594_Main_Thumb_0967348.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238594_Gallery_1_0967349.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238594_Gallery_2_0967350.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Pro Leather Ox",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 13999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb2"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Un elegante ícono del baloncesto abandona las canchas y toma las calles con el zapato Converse Pro Leather Ox, reinventado como un diseño urbano listo para la calle que es perfecto para el uso diario cómodo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/224812_Main_Thumb_0741092.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/224812_Gallery_1_0741095.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/224812_Gallery_2_0741096.jpg?imwidth=375"
+    },
+    {
+        "name": "Converse Chuck Taylor All Star Cx",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 16999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Rosa"],
+        "description": "Compre las Converse Chuck Taylor All Star Cx en gris de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/247847_Main_Thumb_1023345.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/247847_Gallery_1_1023348.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/247847_Gallery_2_1023353.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star Cx",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 16999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Blanco"],
+        "description": "Compre las Converse Chuck Taylor All Star Cx en blanco de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/247853_Main_Thumb_1023465.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/247853_Gallery_1_1023468.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/247853_Gallery_2_1023470.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star Hi",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 12999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Los zapatos Converse All Star son una declaración y en su simplicidad, han logrado mantenerse frescos a lo largo de los años.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4642_Main_Thumb_0565027.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4642_Gallery_1_0565028.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4642_Gallery_1_0565028.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Pro Cuero",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 13999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Blanco"],
+        "description": "Un elegante ícono del baloncesto abandona las canchas y toma las calles con las Converse Pro Leather, reinventado como un diseño urbano listo para la calle que es perfecto para el uso diario cómodo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238628_Main_Thumb_1001727.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238628_Gallery_1_1001730.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238628_Gallery_2_1001732.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck 70",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 15799,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Marron", "Rojo"],
+        "description": "Adéntrate en la historia de las Converse con las Converse Chuck 70, inspiradas en su diseño más antiguo y que ofrecen un estilo urbano serio, con lona cosida y un aspecto seguro de caña alta.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238619_Main_Thumb_1001565.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238619_Gallery_1_1001567.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238619_Gallery_2_1001568.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Pro Cuero",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 15699,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Un elegante ícono del baloncesto abandona las canchas y toma las calles con las Converse Pro Leather, reinventado como un diseño urbano listo para la calle que es perfecto para el uso diario cómodo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238620_Main_Thumb_0996898.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238620_Gallery_1_0996900.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238620_Gallery_2_0996901.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 14999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Marron"],
+        "description": "Disfrute de un clásico de todos los días con las Converse Chuck Taylor All Star en Wheat and Vintage White, las zapatillas altas con una parte superior de cuero flexible para una durabilidad liviana y la marca Converse en el tobillo y el talón para una zapatilla casual y versátil.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238589_Main_Thumb_0987961.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238589_Gallery_1_0987962.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238589_Gallery_2_0987963.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 21999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Gris"],
+        "description": "Renueve su guardarropa con las Converse Chuck Taylor All Star, luciendo el clásico diseño de caña alta con nuevos colores y cordones tonales, trayendo un icono a su día a día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238582_Main_Thumb_0985848.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238582_Gallery_1_0985850.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238582_Gallery_2_0985853.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck All Star Winter",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 12999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Actualiza tu guardarropa para los meses más fríos con las Converse Chuck Taylor All Star Winter en blanco y negro, las zapatillas altas con una parte superior de cuero impermeable y cordones que absorben la humedad para mantener tus pies cómodos, secos y protegidos contra los elementos.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238592_Main_Thumb_0983427.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238592_Gallery_1_0983430.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238592_Gallery_2_0983434.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck All Star Dainty",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 20999,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Regálate una zapatilla atemporal y discreta con las Converse Chuck Taylor All Star Dainty en blanco y negro, confeccionadas con una silueta ultrabaja y un perfil delgado con puntera, cordones y lengüeta reducidos para un clásico fresco y minimalista. que completa cualquier atuendo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238607_Main_Thumb_0969532.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238607_Gallery_1_0969533.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238607_Gallery_2_0969534.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Star Player",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 14299,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Beige"],
+        "description": "Agregue un toque deportivo a su día con las Converse Star Player, que combinan raíces de baloncesto con un diseño superior clásico y amortiguación para una comodidad elegante donde sea que lo lleven sus pies.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238593_Main_Thumb_0959221.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238593_Gallery_1_0959224.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238593_Gallery_1_0959224.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 23499,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro"],
+        "description": "Renueve su guardarropa con las Converse Chuck Taylor All Star, luciendo el clásico diseño de caña alta con nuevos colores y cordones tonales, trayendo un ícono a su día a día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238587_Main_Thumb_0959193.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238587_Gallery_1_0959195.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238587_Gallery_2_0959199.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 14799,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Blanco"],
+        "description": "Renueve su guardarropa con las Converse Chuck Taylor All Star, luciendo el clásico diseño de caña alta con nuevos colores y cordones tonales, trayendo un ícono a su día a día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238588_Main_Thumb_0959205.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238588_Gallery_1_0959208.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238588_Gallery_2_0959212.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Space Jam Chuck 70",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 19699,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Negro", "Naranja"],
+        "description": "Alcanza las estrellas con las Converse x Space Jam Chuck 70 Unisex, que combinan el original atemporal que lo inició todo con detalles brillantes inspirados en Space Jam: A New Legacy.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/248706_Main_0948524.jpg?imwidth=375",
+        "image1":"https://www.prodirectselect.com/productimages/V3_1_Gallery_1/248706_Gallery_1_0948527.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/248706_Gallery_2_0948528.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 19699,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Celeste", "Azul"],
+        "description": "Adéntrate en un estilo verdaderamente atemporal con las Converse Chuck Taylor All Star, con una construcción clásica que se ha mantenido prácticamente sin cambios durante 100 años.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232404_Main_Thumb_0930406.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232404_Gallery_1_0930407.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232404_Gallery_2_0930408.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Net All Star",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 12599,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Blanco", "Beige"],
+        "description": "Completa cualquier atuendo con las elegantes y elegantes zapatillas de deporte clásicas Converse Net Star en blanco, rojo equipo y garceta, las zapatillas de bajo perfil inspiradas en los modelos de tenis retro que cuentan con la exclusiva marca Converse y superposiciones de gamuza para un acabado limpio y casual.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232407_Main_Thumb_0921291.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232407_Gallery_1_0921292.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232407_Gallery_2_0921296.jpg?imwidth=375"
+    },
+    {
+        "exis": true,
+        "name": "Converse Chuck Taylor All Star National Parks",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1b"
+        },
+        "price": 21499,
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e2"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eb3"
+        },
+        "talle":[{
+            "name" : "38",
+            "stockTalle": 20
+        },
+        {
+            "name": "39",
+            "stockTalle": 20
+        },
+        {
+            "name": "40",
+            "stockTalle": 20
+        },
+        {
+            "name": "41",
+            "stockTalle": 20
+        },
+        {
+            "name": "42",
+            "stockTalle": 20
+        },
+        {
+            "name": "43",
+            "stockTalle": 20
+        }],
+        "stock": 120,
+        "color": ["Celeste", "Azul", "Amarillo"],
+        "description": "Apoya el medio ambiente con los parques nacionales Converse Chuck Taylor All Star, fabricados con materiales reciclados e inspirados en el diseño sostenible y el entorno natural de Estados Unidos.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/232408_Main_0918050.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/232408_Gallery_1_0918052.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/232408_Gallery_2_0918055.jpg?imwidth=375"
+    }
+]
