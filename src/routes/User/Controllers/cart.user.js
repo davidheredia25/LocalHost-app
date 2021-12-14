@@ -193,6 +193,35 @@ const getCartUser = async (req, res) => {
  
 
 
+  const Join = async(req,res) => {
+    const{userId} = req.params;
+    const {emptyCart} =req.body;
+
+    try {
+        
+        let array=[];
+        for(var i=0 ; i< emptyCart.length ; i++) {
+             
+           array.push({
+            cart: emptyCart[i].product,
+            qtyCart: emptyCart[i].qty,
+            talle: emptyCart[i].talle
+        }) 
+        }
+
+        let add = await User.findByIdAndUpdate(id, {
+            cart: [...array]
+        }, { new: true }); 
+        add= await add.save();
+        res.json(add.cart)
+
+        
+    } catch (error) {
+        console.log(error)
+    }
+ }
+
+
 module.exports = {
     addCart,
     getCartUser,
