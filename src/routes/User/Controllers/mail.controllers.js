@@ -44,6 +44,13 @@ const sendConfirmationEmail = async (req, res) => {
     console.log("Algo no va bien con el email", error);
   }
 }
+
+sendConfirmationMail()
+      .then((res) => {
+        res.status(200).send("enviado");
+      })
+      .catch((error) => console.log(error.message));
+
     } catch (err) {
         console.log(err);
     }
