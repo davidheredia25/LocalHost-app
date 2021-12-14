@@ -1,10 +1,12 @@
 const passport = require("passport");
+const { v4: uuidv4 } = require('uuid');
 const jwt = require("jsonwebtoken");
 const User = require('../../../models/User');
 const { OAuth2Client } = require("google-auth-library");
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
- 
+const { getToken, getTokenData } = require('./middleware.js');
+const { getTemplate, sendEmail } = require('./mail.controllers'); 
 
 const loginGoogle = async (req, res) => {
   const { tokenId } = req.body;
@@ -58,13 +60,102 @@ const loginGoogle = async (req, res) => {
   }
 };
 
-const postUser = (req, res, next) => {
+const postUser = async (req, res)  => {
   console.log('req postUser', req);
-  res.json({
+
+  try{
+  // Obtener la data del usuario: name, email
+  const  {name, email } = req.body;
+  // Verificar que el usuario no exista
+  let user = await User.findOne({ email }) || null;
+
+  if(user !== null) {
+      return res.json({
+          success: false,
+          msg: 'Usuario ya existe'
+      });
+  }
+
+  // Generar el código
+  const code = uuidv4();
+
+  // Crear un nuevo usuario
+  user = new User({ name, email, code });
+
+   // Generar token
+   const token = getToken({ email, code });
+
+   // Obtener un template
+   const template = getTemplate(name, token);
+
+    // Enviar el email
+    await sendEmail(email, 'Este es un email de prueba', template);
+    await user.save();
+  
+    res.json({
+
     message: "Se registro correctamente",
     user: req.user
   });
+} catch (error) {
+  console.log(error);
+  return res.json({
+      success: false,
+      msg: 'Error al registrar usuario'
+  });
+}
 };
+
+const confirm = async (req, res) => {
+  try {
+
+     // Obtener el token
+     const { token } = req.params;
+     
+     // Verificar la data
+     const data = await getTokenData(token);
+
+     if(data === null) {
+          return res.json({
+              success: false,
+              msg: 'Error al obtener data'
+          });
+     }
+
+     console.log(data);
+
+     const { email, code } = data.data;
+
+     // Verificar existencia del usuario
+     const user = await User.findOne({ email }) || null;
+
+     if(user === null) {
+          return res.json({
+              success: false,
+              msg: 'Usuario no existe'
+          });
+     }
+
+     // Verificar el código
+     if(code !== user.code) {
+          return res.redirect('/error.html');
+     }
+
+     // Actualizar usuario
+     user.status = 'VERIFIED';
+     await user.save();
+
+     // Redireccionar a la confirmación
+     return res.redirect('/confirm.html');
+      
+  } catch (error) {
+      console.log(error);
+      return res.json({
+          success: false,
+          msg: 'Error al confirmar usuario'
+      });
+  }
+}
 
 const postLogin = async (req, res, next) => {
   console.log('req postLogin: ', req);
@@ -80,7 +171,7 @@ const postLogin = async (req, res, next) => {
             if (err) return next(err);
 
             const body = { 
-              id: user._id, 
+              _id: user._id, 
               email: user.email, 
               fristName: user.fristName, 
               lastName: user.lastName, 
@@ -123,8 +214,9 @@ const profileAuthenticate = (req, res, next) => {
 
 
 module.exports = {
+  postUser,
+  confirm,
   postLogin,
   profileAuthenticate,
-  postUser,
   loginGoogle
 };

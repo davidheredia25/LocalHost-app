@@ -16,6 +16,11 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    status: {
+        type: String,
+        required: true,
+        default: "UNVERIFIED"
+    },
     password: {
         type: String,
         required: true
