@@ -23,6 +23,7 @@ import './NavBar.scss';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { getUser, logOut } from '../../../redux/actions/login.actions';
+import { useLocation } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -65,6 +66,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+  const location = useLocation();
   const navigate = useNavigate();
   const dispatch=useDispatch();
   const {cart} = useSelector(state=> state.cart)
@@ -202,7 +204,13 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>*/}
-          <SearchBar/>
+          
+            {
+            location.pathname !== "/catalogo" ?
+            <SearchBar/>
+            :
+            null
+            }
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Link to='/cart' className='link_cart'>

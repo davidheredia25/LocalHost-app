@@ -65,7 +65,9 @@ const AddToCart = ({product}) => {
                 </Button>
             </div>
             <div>
+
             <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  size='large'  onClick={addCart}>   AGREGAR AL CARRITO </Button>
+
             </div>
         </div>
     )

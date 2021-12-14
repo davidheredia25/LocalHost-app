@@ -80,7 +80,7 @@ const SearchBar = () => {
         e.preventDefault()
         dispatch(setFilterName(input))
         navigate("/catalogo")
-        /* dispatch(getProducts({ name: input })) */
+        dispatch(getProducts({ name: input }))
         setInput("")
         setFilteredData([])
     }

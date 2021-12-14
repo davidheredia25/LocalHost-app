@@ -13,7 +13,7 @@ const CreateProduct = () => {
   const [form, setForm] = useState({
     name: "",
     brand: "",
-    categories: "",
+    categories: [],
     types: "",
     price: "",
     color: [],
@@ -48,7 +48,7 @@ const CreateProduct = () => {
     setForm({
       name: "",
       brand: "",
-      categories: "",
+      categories: [],
       types: "",
       price: "",
       color: [],
@@ -72,7 +72,7 @@ const CreateProduct = () => {
   const selectCategoria = (e) => {
     setForm({
       ...form,
-      categories: e.target.value
+      categories: [...form.categories, e.target.value]
     });
   };
   const selectSubcategoria = (e) => {
