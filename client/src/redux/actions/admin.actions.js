@@ -78,6 +78,7 @@ export const deleteUser = (id) => async (dispatch) => {
 
 export const sendNewPassword = (id) => async () => {
     await axios.put(`/user/newPassword/${id}`)
+}
 
 export const findTicket = (id) => {
     return {
@@ -96,3 +97,4 @@ export const filterTickets = (status) => {
         type: FILTER_TICKETS,
         payload: status
     }
+}
