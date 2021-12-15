@@ -98,7 +98,7 @@ export const editDateUser = (id, input) => async (dispatch) => {
     }
 }
 
-export const forgotPassword = async (input) => {
+export const forgotPassword =  (input) => async () =>  {
     try {
         await axios.put(`/user/login/password`, input)
     } catch (error) {
