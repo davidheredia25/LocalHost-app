@@ -16,7 +16,11 @@ const enviarMail = async (req, res) => {
       //voy a recibir el email por body para verificar si existe user.
    if(email){
 
-    const link = `http://localhost:3000/user/login/password`;
+    const HTML = `
+        <h1> Hola </h1>
+        <h4> Para recuperar su contraseña, por favor haga click en el siguiente link</h4>
+        <h4><a href="http://localhost:3000/user/login/password"> Click Aquí </a></h4>
+    `;
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
@@ -32,7 +36,7 @@ const enviarMail = async (req, res) => {
           service: "gmail",
           auth: {
             type: "OAuth2",
-            user: "tincho20012017@gmail.com",
+            user: "vsclothes2@gmail.com",
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
             refreshToken: REFRESH_TOKEN,
@@ -40,10 +44,10 @@ const enviarMail = async (req, res) => {
           },
         });
         const mailOptions = {
-          from: "VSClothes <tincho20012017@gmail.com>",
+          from: "VSClothes <vsclothes2@gmail.com>",
           to: email,
           subject: "Recuperación de contraseña",
-          text: link,
+          html: HTML,
         };
 
         const result = await transporter.sendMail(mailOptions);

@@ -14,7 +14,7 @@ const enviarMailTicket = async (req, res) => {
         <h3> Su pago se realizó exitosamente </h3>
         <h5> Le envíamos su facturación, muchas gracias por confiar en nosotros. </h5>
         <p> ${ticket} </p>
-    `;
+            `;
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
