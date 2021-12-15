@@ -17,7 +17,6 @@ const Cart= () => {
     const dispatch=useDispatch();
     const {user} =useSelector(state => state.login)
     let emptyCart = JSON.parse(localStorage.getItem('cart'));
-    
     let User;
     if(user?.email) User = user
     else User = user?.user;

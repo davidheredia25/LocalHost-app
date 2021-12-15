@@ -217,7 +217,7 @@ const getCartUser = async (req, res) => {
         
         
         let add = await User.findByIdAndUpdate(id, {
-            cart: [...array]
+            cart: [...user.cart, ...array]
         }, { new: true }); 
        // add= add.populate('cart.cart', ['name', 'price', 'image'])
         add= await add.save();
