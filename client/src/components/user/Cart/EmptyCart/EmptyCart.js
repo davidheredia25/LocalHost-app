@@ -34,7 +34,7 @@ const EmptyCart = () => {
 
     useEffect(() => {
          dispatch(getEmptyCart())
-    }, [emptyCart, dispatch])
+    }, [])
 
     return (
         <div className={style.cart}>

@@ -16,6 +16,7 @@ const Cart= () => {
 
     const dispatch=useDispatch();
     const {user} =useSelector(state => state.login)
+   
     let emptyCart = JSON.parse(localStorage.getItem('cart'));
     let User;
     if(user?.email) User = user
@@ -23,11 +24,13 @@ const Cart= () => {
     const id= User?._id ? User._id : '';
     //console.log('jesucristo id', id)
     useEffect(() => {
+       /*  if(user){
         if(emptyCart?.length){
              dispatch(Join(id))
-        }
+            }
+        } */
         
-    },[ dispatch])
+    },[ ])
     
     return (
         <div className={style.container}>
