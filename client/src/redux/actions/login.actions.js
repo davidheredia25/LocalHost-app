@@ -60,11 +60,14 @@ export const loginLocal = (input) => async (dispatch) => {
     try {
         const { data } = await axios.post("/user/login", input)
         const userinfo = (await axios.post(`/user/profile?secret_token=${data.token}`)).data
+        
          dispatch({
             type: LOGIN_LOCAL,
             payload: userinfo
         })
-        return dispatch(Join(userinfo._id))
+        console.log('userinfo', userinfo.user._id)
+        console.log('entro aca')
+        return dispatch(Join(userinfo.user._id))
     } catch (error) {
         console.log(error);
     }

@@ -80,7 +80,7 @@ const postLogin = async (req, res, next) => {
             if (err) return next(err);
 
             const body = { 
-              id: user._id, 
+              _id: user._id, 
               email: user.email, 
               fristName: user.fristName, 
               lastName: user.lastName, 

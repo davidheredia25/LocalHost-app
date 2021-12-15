@@ -22,7 +22,8 @@ const Cart= () => {
     if(user?.email) User = user
     else User = user?.user;
     const id= User?._id ? User._id : '';
-    //console.log('jesucristo id', id)
+    
+    console.log('jesucristo id', id)
     useEffect(() => {
        /*  if(user){
         if(emptyCart?.length){
