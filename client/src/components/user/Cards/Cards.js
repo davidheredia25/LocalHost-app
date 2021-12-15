@@ -4,6 +4,8 @@ import { removeProducts } from '../../../redux/actions/products.actions';
 import Card from '../Card/Card';
 import './Cards.scss';
 import Pagination from '../Pagination/Pagination'
+import Orders from '../Orders/Orders';
+import SearchCatalogo from '../SearchCatalogo/SearchCatalogo';
 
 
 const Cards = ({products}) => {
@@ -19,6 +21,8 @@ const Cards = ({products}) => {
 
         <div className='container'>
             <Pagination /> 
+            <Orders/>
+            <SearchCatalogo/>
            {
             !products?.length && !favorites
                 ? <p>Loading...</p> 
