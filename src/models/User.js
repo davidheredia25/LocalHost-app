@@ -1,4 +1,3 @@
-const config = require('../config');
 const pkg = require('mongoose');
 const bcrypt = require('bcrypt');
 const { Schema, model } = pkg;
@@ -82,18 +81,16 @@ const userSchema = new Schema({
         qtyCart: {
             type: Number,
             default: 1
+        },
+        talle: {
+            type: String,
+            default: ''
         }
     }]
 }, {
     versionKey: false,
     timestamps: false
 });
-
-
-userSchema.methods.setImage = function setImage(filename) {
-    const { APP_HOST, PORT } = config
-    this.image = `${APP_HOST}:${PORT}/public/${filename}`
-}
 
 
 userSchema.pre('save', async function (next) {

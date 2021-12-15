@@ -2,118 +2,138 @@
     "_id": {
         "$oid": "619e97976a92375a82169eb2"
     },
+    "exis": true,
     "name": "Running"
 },
 {
     "name": "Skate",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb3"
     }
 },
 {
     "name": "LifeStyle",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb4"
     }
 },
 {
     "name": "Court",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb5"
     }
 },
 {
     "name": "terrace",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb6"
     }
 },
 {
     "name": "chalecos",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169ea6"
     }
 },
 {
     "name": "remeras",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169ea7"
     }
 },
 {
     "name": "Buzos sin capucha",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169ea8"
     }
 },
 {
     "name": "camperas",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eaa"
     }
 },
 {
     "name": "chombas",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eab"
     }
 },
 {
     "name": "pantalones",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eac"
     }
 },
 {
     "name": "pantalones deportivos",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169ead"
     }
 },
 {
     "name": "buzos",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eae"
     }
 },
 {
     "name": "camisetas",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eaf"
     }
 },
 {
     "name": "bermudas",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb0"
     }
 },
 {
     "name": "gorras",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb7"
     }
 },
 {
     "name": "guantes",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eb8"
     }
 },
 {
     "name": "mochilas",
+    "exis": true,
     "_id":{
         "$oid": "619e97976a92375a82169eb9"
     }
 },
 {
     "name": "gafas",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169eba"
     }
 },
 {
     "name": "medias",
+    "exis": true,
     "_id": {
         "$oid": "619e97976a92375a82169ebb"
     }

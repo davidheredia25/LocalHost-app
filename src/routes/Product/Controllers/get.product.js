@@ -13,27 +13,29 @@ const getProducts = async (req, res) => {
         category, 
         type
     } = req.query;
-    // console.log('body getProducts: ', name, brand, category, type);
+    console.log('body getProducts: ', name, brand, category, type);
     try {
         let getAllProducts = await Product.find({ exis: true })
         .populate('brand', ['name'])
         .populate('category', ['name'])
         .populate('type', ['name']);
-        // console.log('getAllProducts getProducts', getAllProducts);
+        /* console.log('getAllProducts getProducts', getAllProducts); */
         
         // filter
         let filtered = [];
 
-        if(brand !== "") filtered = await filterB(brand, getAllProducts);
+        if(brand) {
+            filtered = await filterB(brand, getAllProducts);
+        }
         // console.log('filterBrand getProducts', filterBrand);
 
-        if(category !== "") {
+        if(category) {
             if(filtered.length === 0 ) filtered = await filterC(category, getAllProducts);
             else filtered = await filterC(category, filtered);
         } 
         // console.log('filterCategories getProducts', filterCategories);
         
-        if(type !== "") {
+        if(type) {
             if(filtered.length === 0)  filtered = await filterT(type, getAllProducts);
             else filtered = await filterT(type, filtered);
         }
@@ -70,8 +72,27 @@ const getProductById = async (req, res) => {
     }
 };
 
+const getTalles = async (req, res) => {
+    try {
+        let product = await Product.find({ exis: true })
+        let array = [];
+        product.forEach(p => {
+            p.talle.forEach(obj => {
+                if (obj.name) {
+                    array.push(obj.name)
+                }
+            })
+        })
+        array = [...new Set(array)]
+        res.json(array)
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
 
 module.exports = {
     getProducts,
-    getProductById
+    getProductById,
+    getTalles
 };

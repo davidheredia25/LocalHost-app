@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeProducts } from '../../../redux/actions/products.actions';
 import Card from '../Card/Card';
+import Orders from '../Orders/Orders';
+import SearchCatalogo from '../SearchCatalogo/SearchCatalogo';
 import './Cards.scss';
 
 
@@ -17,6 +19,8 @@ const Cards = ({products}) => {
     return (
 
         <div className='container'>
+            <Orders/>
+            <SearchCatalogo/>
            {
             !products?.length && !favorites
                 ? <p>Loading...</p> 

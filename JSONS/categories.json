@@ -2,15 +2,18 @@
     "_id": {
         "$oid": "619ecde06a92375a826aa8e2"
     },
+    "exis": true,
     "name": "zapatillas"
 }, {
     "_id": {
         "$oid": "619ecde06a92375a826aa8e3"
     },
+    "exis": true,
     "name": "indumentaria"
 }, {
     "_id": {
         "$oid": "619ecde06a92375a826aa8e4"
     },
+    "exis": true,
     "name": "accesorios"
 }]

@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const passport = require("passport");
-const uploadFile = require('../Multer/Middleware.js');
+const upload = require('../Multer/Middleware.js');
 const {
     createUser,
     deleteUser,
@@ -19,7 +19,11 @@ const {
     deleteCartOne,
     forgotPassword,
     enviarMail,
+
     confirm
+
+    Join
+
 
  } = require('./Controllers/all.controllers');
 
@@ -31,12 +35,13 @@ const router = Router();
 router.get('/', getUser);
 //router.get('/:userId', getUserByID);
 router.post('/create', createUser);
-router.put('/edit/:id', uploadFile(), editDateUser);
+router.put('/edit/:id', upload.single('image'), editDateUser);
 router.put('/update/:id', updateUser);
 router.get('/get/cart/:id', getCartUser);
 router.put('/cart/:userId', addCart);
 router.put('/cart/delete/:id', deleteCart)
-router.put('/cart/deleteOne/:id/:productId', deleteCartOne)
+router.put('/cart/deleteOne/:id/:productId/:talle', deleteCartOne)
+router.put('/cart/join/:id', Join)
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
 router.get('/confirm/:token', confirm);

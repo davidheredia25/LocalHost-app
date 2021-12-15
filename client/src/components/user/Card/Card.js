@@ -12,7 +12,7 @@ import { addFavorite, removeFavorite } from "../../../redux/actions/favorite.act
 
 
 const Card = ({ product, favorites }) => {
-    console.log('producto', product._id)
+   
     const [modalIsOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
     const [num, setNum] = useState(1);
@@ -23,7 +23,7 @@ const Card = ({ product, favorites }) => {
     if(user?.email) User = user
     else User = user?.user;
     const userId = User?._id;
-
+    console.log('talle', talle)
 
     const boolean = verifyFavorite(favorites, product._id)
 
@@ -51,7 +51,8 @@ const Card = ({ product, favorites }) => {
         let obj = {
             userId: userId,
             productId: product._id,
-            qty: num
+            qty: num,
+            talle: talle
               }
         dispatch(addItemToCart(obj));
         
@@ -139,12 +140,12 @@ const Card = ({ product, favorites }) => {
                                     product.talle.map(t => {
                                         return (
                                             <Button
-                                                value={t}
+                                                value={t.name}
                                                 onClick={onClick}
-                                                variant={ talle === t ? 'outlined' : 'text'}
+                                                variant={ talle === t.name ? 'outlined' : 'text'}
                                                 style={{ 'color': '#000000' }}
                                             >
-                                                no hay forma de sacar el name
+                                                {t.name}
                                             </Button>
                                         )
                                     }) : null

@@ -9,7 +9,7 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
 import {loginAuth} from "../../../redux/actions/login.actions";
-import { addItemToCart } from "../../../redux/actions/cart.actions";
+import { Join } from "../../../redux/actions/cart.actions";
 import { useNavigate } from "react-router-dom";
 
  
@@ -47,7 +47,6 @@ const Login = () => {
     e.preventDefault();
     if (!error.email && !error.password) {
         dispatch(loginLocal(input))
-       
         navigate("/")
     }
     else { alert("The form is required"); }
@@ -57,23 +56,7 @@ const Login = () => {
     })
   }
 
-  const ensamble = async () => {
-    console.log('entro aca')
-    if(User  && emptyCart?.length) {
-      let obj={}
-      for(var i=0; i<emptyCart.length; i++){
-        obj = {
-          userId: userId,
-          productId: emptyCart[i].product._id,
-          qty: emptyCart[i].qty
-        }
-        await dispatch(addItemToCart(obj))
-      }
-
-    }else {
-      return
-    }
-  } 
+  
 
  
 

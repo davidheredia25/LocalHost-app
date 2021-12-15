@@ -1,0 +1,1525 @@
+[
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 9000,
+        "color": [
+            "Crema",
+            "verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Abraza el legado de los 70 con las New Balance 327, un diseño de corredor clásico que se ha actualizado con nuevos colores y materiales modernos, con paneles contemporáneos y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240506_Gallery_1_1015179.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/240506_Gallery_2_1015180.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/240506_Gallery_3_1015181.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 6400,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 237, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230151_Main_0872852.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230151_Gallery_1_0872860.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230151_Gallery_4_0872872.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 5900,
+        "color": [
+            "Amarillo",
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 237, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230153_Main_Thumb_0981173.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230153_Gallery_1_0981174.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230153_Gallery_4_0981187.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 5470",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 7358,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "No comprometa el estilo con las New Balance 5740, confeccionadas con un aspecto y un tacto modernos en mente, con malla y gamuza de primera calidad con superposiciones icónicas y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240444_Main_Thumb_0981658.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240444_Gallery_1_0981659.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/240444_Gallery_3_0981661.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8460,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 237, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240512_Main_Thumb_0979154.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240512_Gallery_1_0979157.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240512_Gallery_4_0979167.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 547 history class",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8470,
+        "color": [
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574 'History Class', que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240502_Main_Thumb_0979382.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240502_Gallery_1_0979387.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/240502_Gallery_3_0979398.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8470,
+        "color": [
+            "Gris"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574 'History Class', que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240450_Main_Thumb_0980375.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240450_Gallery_1_0980376.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240450_Gallery_4_0980381.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 530",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 6320,
+        "color": [
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Ponte un estilo de correr clásico con las New Balance 530, que mezclan el diseño OG con tecnología moderna y la amortiguación ABZORB de NB, que ofrecen comodidad en un estilo retro fresco.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230172_Main_Thumb_0902416.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230172_Gallery_1_0902417.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/230172_Gallery_3_0902419.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8200,
+        "color": [
+            "Blanco",
+            "crema",
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 237, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230150_Main_0872834.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230150_Gallery_1_0872835.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230150_Gallery_4_0872849.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 530",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 7520,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Ponte un estilo de correr clásico con las New Balance 530, que mezclan el diseño OG con tecnología moderna y la amortiguación ABZORB de NB, que ofrecen comodidad en un estilo retro fresco.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230170_Main_Thumb_0843261.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230170_Gallery_1_0843262.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/230170_Gallery_3_0843266.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 997H",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10000,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Renovadas y listas para la calle, las New Balance 997 llegan con parte superior de malla y superposiciones de gamuza para brindar soporte y estilo de primera. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/198472_Main_Thumb_0439354.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/198472_Gallery_1_0439355.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/198472_Gallery_4_0439358.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 210",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 4100,
+        "color": [
+            "azul",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb3"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Compre el New Balance 210 en azul de Pro: Direct, la elección del profesional, y elija entre una variedad de opciones de entrega. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230148_Main_0915377.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230148_Gallery_1_0915378.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230148_Gallery_4_0915381.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 574",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 6980,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "El New Balance 574 le ofrece los mismos materiales premium y rendimiento que el OG.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/178362_Main_0864594.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/178362_Gallery_1_0864596.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/178362_Gallery_4_0864601.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 373",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 4300,
+        "color": [
+            "gris"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Enfréntate a todos los días con confianza con las New Balance 373, con un diseño para todos los días con una suave amortiguación de EVA, una construcción duradera y una construcción para llevar a cualquier parte que no te defraudará.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230163_Main_0872902.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230163_Gallery_1_0872904.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230163_Gallery_4_0872909.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 574 history class",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10050,
+        "color": [
+            "marron"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574 'History Class', que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240453_Main_Thumb_0979484.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240453_Gallery_1_0979486.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240453_Gallery_4_0979493.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 547 history class",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10000,
+        "color": [
+            "gris"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574 'History Class', que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240450_Main_Thumb_0980375.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240450_Gallery_1_0980376.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240450_Gallery_4_0980381.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10100,
+        "color": [
+            "negro",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Abraza el legado de los 70 con las New Balance 327, un diseño de corredor clásico que se ha actualizado con nuevos colores y materiales modernos, con paneles contemporáneos y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240501_Main_Thumb_0970346.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240501_Gallery_1_0970347.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240501_Gallery_4_0970350.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10200,
+        "color": [
+            "negro",
+            "gris",
+            "rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 327, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230160_Gallery_4_0941146.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230160_Gallery_1_0941143.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Main/230160_Main_0941141.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 5740",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8600,
+        "color": [
+            "rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "9",
+                "stockTalle": 20
+            },
+            {
+                "name": "10",
+                "stockTalle": 20
+            },
+            {
+                "name": "11",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 60,
+        "description": "No comprometa el estilo con las New Balance 5740, confeccionadas con un aspecto y un tacto modernos en mente, con malla y gamuza de primera calidad con superposiciones icónicas y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240443_Main_Thumb_0981588.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240443_Gallery_1_0981589.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240443_Gallery_4_0981593.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance all coasts 574",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 4300,
+        "color": [
+            "gris",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb3"
+            },
+        "talle": [
+            {
+                "name": "7",
+                "stockTalle": 20
+            },
+            {
+                "name": "10",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 40,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574, que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230173_Main_Thumb_0873851.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230173_Gallery_1_0873852.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230173_Gallery_4_0873856.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 574",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8040,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "El New Balance 574 le ofrece los mismos materiales premium y rendimiento que espera de NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/180768_Main_0864651.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/180768_Gallery_1_0864652.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/180768_Gallery_4_0864658.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 9800,
+        "color": [
+            "azul",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Manténgase elegante y cómodo con las New Balance 327, con un diseño de inspiración retro en textil y gamuza para un estilo versátil y serio, sea lo que sea que use.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/22930_Main_0764663.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/22930_Gallery_1_0764664.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/22930_Gallery_4_0764667.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 5740",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 8600,
+        "color": [
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "No comprometa el estilo con las New Balance 5740, confeccionadas con un aspecto y un tacto modernos en mente, con malla y gamuza de primera calidad con superposiciones icónicas y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240442_Main_Thumb_0981562.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240442_Gallery_1_0981563.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240442_Gallery_4_0981581.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 237",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 7000,
+        "color": [
+            "azul",
+            "rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 237, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230152_Main_Thumb_0981159.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230152_Gallery_1_0981161.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230152_Gallery_4_0981164.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 373",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 6100,
+        "color": [
+            "azul",
+            "celeste"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Enfréntate a todos los días con confianza con las New Balance 373, con un diseño para todos los días con una suave amortiguación de EVA, una construcción duradera y una construcción para llevar a cualquier parte que no te defraudará.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230164_Main_Thumb_0902405.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230164_Gallery_1_0902407.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230164_Gallery_4_0902413.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 574 history class",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10050,
+        "color": [
+            "negro",
+            "celeste",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adéntrate en un ícono de colección con las New Balance 574 'History Class', que cuentan con una parte superior de ante clásico y textil TENCEL para un estilo familiar y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240451_Main_Thumb_0980410.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240451_Gallery_1_0980411.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240451_Gallery_4_0980430.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10800,
+        "color": [
+            "azul",
+            "celeste",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Abraza el legado de los 70 con las New Balance 327, un diseño de corredor clásico que se ha actualizado con nuevos colores y materiales modernos, con paneles contemporáneos y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240504_Main_Thumb_1015166.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240504_Gallery_1_1015167.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240504_Gallery_4_1015170.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 7500,
+        "color": [
+            "verde",
+            "naranja",
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte ese look de running de los 70 con las New Balance 327, inspiradas en los diseños tradicionales de NB y que combinan elementos modernos con looks retro versátiles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230157_Main_Thumb_0886196.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230157_Gallery_1_0886197.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/230157_Gallery_4_0886200.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 10050,
+        "color": [
+            "gris",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Abraza el legado de los 70 con las New Balance 327, un diseño de corredor clásico que se ha actualizado con nuevos colores y materiales modernos, con paneles contemporáneos y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240449_Main_Thumb_0981672.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240449_Gallery_1_0981676.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240449_Gallery_4_0981683.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "zapatillas new balance 327",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1e"
+            },
+        "price": 7500,
+        "color": [
+            "rojo",
+            "celeste",
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Abraza el legado de los 70 con las New Balance 327, un diseño de corredor clásico que se ha actualizado con nuevos colores y materiales modernos, con paneles contemporáneos y detalles NB.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/240503_Main_Thumb_0979321.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/240503_Gallery_1_0979323.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_4/240503_Gallery_4_0979376.jpg?imwidth=768"
+    }
+]

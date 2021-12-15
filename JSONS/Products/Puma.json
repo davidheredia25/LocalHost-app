@@ -1,0 +1,1421 @@
+[
+    {
+        "exis": true,
+        "name": "Remera Puma Cassics Boxy",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "beige"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Relájate con estilo con la camiseta Puma Classics Boxy, confeccionada con algodón suave y con prácticas ecológicas como parte de la iniciativa Better Cotton de Puma.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/241694_Main_Thumb_1013044.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/241694_Gallery_1_1013046.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230226_Gallery_2_0861252.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Iconic Slim",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 3.200,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 3
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 1
+            },
+            {
+                "name": "XL",
+                "stockTalle": 22
+            }
+        ],
+        "stock": 47,
+        "description": "Compra la camiseta Iconic Puma de nuestra eleccion profesional. Una textura suave y delicada, conseguida con el algodon",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/229902_Main_0806798.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/229902_Gallery_1_0806799.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/229902_Gallery_2_0806800.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma International",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "blanco, negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 43
+            },
+            {
+                "name": "M",
+                "stockTalle": 3
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 47,
+        "description": "Remera Puma International, relajate y disfruta de la remera mas iconica de PUMA",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230227_Main_Thumb_0865927.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230227_Gallery_1_0865929.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230227_Gallery_2_0865930.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma International",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 0
+            },
+            {
+                "name": "M",
+                "stockTalle": 3
+            },
+            {
+                "name": "L",
+                "stockTalle": 23
+            },
+            {
+                "name": "XL",
+                "stockTalle": 45
+            }
+        ],
+        "stock": 71,
+        "description": "Compre la remera Puma International, la mejor calidad y comodidad para todo momento",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230226_Main_0861249.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230226_Gallery_1_0861251.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230226_Gallery_2_0861252.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma TFS",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "celeste, blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 0
+            },
+            {
+                "name": "M",
+                "stockTalle": 4
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 47,
+        "description": " Elige un nuevo elemento básico de tu guardarropa con la camiseta PUMA Tailored For Sport, que ofrece un diseño de camiseta clásico al que se le ha dado una nueva vida atlética y está listo para representar en las calles.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/213256_Main_Thumb_0723283.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/213256_Gallery_1_0723284.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/213256_Gallery_2_0723285.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Baloncesto Pull Up",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 3.500,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 0
+            },
+            {
+                "name": "M",
+                "stockTalle": 0
+            },
+            {
+                "name": "L",
+                "stockTalle": 0
+            },
+            {
+                "name": "XL",
+                "stockTalle": 0
+            }
+        ],
+        "stock": 0,
+        "description": "Aporta estilo y comodidad con la camiseta de baloncesto Puma Pull Up con suaves tejidos de algodón en un ajuste regular ideal para usar durante todo el día dentro o fuera de la cancha.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/217824_Main_Thumb_0661523.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217824_Gallery_1_0661527.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217824_Gallery_1_0661527.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Baloncesto Pull Up",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 3.500,
+        "color": [
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 22
+            },
+            {
+                "name": "M",
+                "stockTalle": 1
+            },
+            {
+                "name": "L",
+                "stockTalle": 32
+            },
+            {
+                "name": "XL",
+                "stockTalle": 5
+            }
+        ],
+        "stock": 60,
+        "description": "Aporta estilo y comodidad con la camiseta de baloncesto Puma Pull Up con suaves tejidos de algodón en un ajuste regular ideal para usar durante todo el día dentro o fuera de la cancha.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/217825_Main_Thumb_0661552.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217825_Gallery_1_0661554.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/217825_Gallery_2_0661555.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Classics Logo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.500,
+        "color": [
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "Muestra estilo con la remera Puma Classics Logo",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/201299_Main_Thumb_0593568.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Main/201299_Main_Thumb_0593568.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Main/201299_Main_Thumb_0593568.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Iconic Slim Fit",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 74
+            },
+            {
+                "name": "M",
+                "stockTalle": 27
+            },
+            {
+                "name": "L",
+                "stockTalle": 12
+            },
+            {
+                "name": "XL",
+                "stockTalle": 2
+            }
+        ],
+        "stock": 115,
+        "description": "Sientete comodo todo el dia con la camiseta Puma Iconic Slim Fit ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/201308_Main_Thumb_0593696.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/201308_Gallery_1_0593698.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/201308_Gallery_2_0593699.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Remera Puma Classics Logo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 3
+            },
+            {
+                "name": "M",
+                "stockTalle": 6
+            },
+            {
+                "name": "L",
+                "stockTalle": 32
+            },
+            {
+                "name": "XL",
+                "stockTalle": 22
+            }
+        ],
+        "stock": 63,
+        "description": "Muestra estilo con la remera Puma Classics Logo",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/201298_Main_Thumb_0526760.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/201298_Gallery_1_0526763.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/201298_Gallery_2_0526765.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon Deportivo Puma International",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.700,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ead"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 22
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 0
+            },
+            {
+                "name": "XL",
+                "stockTalle": 1
+            }
+        ],
+        "stock": 44,
+        "description": "Compre los pantalones deportivos Puma International Track Pants WV en negro, es la eleccion mas profesional para usted.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230232_Main_Thumb_0881652.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230232_Gallery_1_0881655.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230232_Gallery_2_0881676.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon deportivo Puma Iconic",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 6.800,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 43
+            },
+            {
+                "name": "L",
+                "stockTalle": 11
+            },
+            {
+                "name": "XL",
+                "stockTalle": 1
+            }
+        ],
+        "stock": 87,
+        "description": "De los mejores pantalones para cualquier actividad al aire libre",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230238_Main_0861184.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230238_Gallery_1_0861185.jpg?imwidth=768",
+        "image2": ""
+    },
+    {
+        "exis": true,
+        "name": "Pantalon deportivo Puma Classics",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.500,
+        "color": [
+            "gris"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 2
+            },
+            {
+                "name": "M",
+                "stockTalle": 3
+            },
+            {
+                "name": "L",
+                "stockTalle": 0
+            },
+            {
+                "name": "XL",
+                "stockTalle": 1
+            }
+        ],
+        "stock": 6,
+        "description": "La comodidad que siempre buscaste, %100 algodon",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230234_Main_0861144.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230234_Gallery_1_0861145.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230234_Gallery_2_0861146.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon deportivo Puma Classics",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 1
+            },
+            {
+                "name": "M",
+                "stockTalle": 53
+            },
+            {
+                "name": "L",
+                "stockTalle": 1
+            },
+            {
+                "name": "XL",
+                "stockTalle": 22
+            }
+        ],
+        "stock": 77,
+        "description": "La comodidad que siempre buscaste, %100 algodon",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/220256_Main_Thumb_0769927.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/220256_Gallery_1_0769929.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/220256_Gallery_1_0769929.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon Puma deportivo XTG",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 3.900,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 13
+            },
+            {
+                "name": "M",
+                "stockTalle": 54
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 1
+            }
+        ],
+        "stock": 90,
+        "description": "Elasticidad maxima",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/208185_Main_Thumb_0567508.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/208185_Gallery_1_0567510.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/208185_Gallery_2_0567511.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon deportivo Puma Classics",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "La comodidad que siempre buscaste, %100 algodon",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/201300_Main_Thumb_0530676.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/201300_Gallery_1_0530677.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_3/201300_Gallery_3_0530679.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Puma Classics Oversize Hoodie",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 7.500,
+        "color": [
+            "gris"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "Relájate con estilo con la sudadera con capucha extragrande TR de Puma Classics, confeccionada con una mezcla de algodón suave y que utiliza prácticas respetuosas con el medio ambiente como parte de la iniciativa Better Cotton de Puma.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/241689_Main_0963150.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/241689_Gallery_1_0963151.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/241689_Gallery_2_0963152.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Puma Classics Oversize Hoodie",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 7.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "Relájate con estilo con la sudadera con capucha extragrande TR de Puma Classics, confeccionada con una mezcla de algodón suave y que utiliza prácticas respetuosas con el medio ambiente como parte de la iniciativa Better Cotton de Puma.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/241688_Main_0963112.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/241688_Gallery_1_0963113.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/241688_Gallery_2_0963114.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Puma International Graphic",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 6.500,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 43
+            },
+            {
+                "name": "M",
+                "stockTalle": 53
+            },
+            {
+                "name": "L",
+                "stockTalle": 33
+            },
+            {
+                "name": "XL",
+                "stockTalle": 22
+            }
+        ],
+        "stock": 151,
+        "description": "La comodidad que siempre buscaste, %100 algodon y con una capucha espaciosa",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230217_Main_Thumb_0881623.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230217_Gallery_1_0881624.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230217_Gallery_2_0881628.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo con capucha de baloncesto Puma Drop",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 8.500,
+        "color": [
+            "blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 53
+            },
+            {
+                "name": "M",
+                "stockTalle": 87
+            },
+            {
+                "name": "L",
+                "stockTalle": 12
+            },
+            {
+                "name": "XL",
+                "stockTalle": 43
+            }
+        ],
+        "stock": 195,
+        "description": "Mantente cubierto y cómodo con la sudadera con capucha Puma Tear Drop Basketball con un diseño clásico con capucha cruzada y cordones de dos tonos para un estilo único.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/217815_Main_Thumb_0660749.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217815_Gallery_1_0660751.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/217815_Gallery_2_0660752.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo con capucha de baloncesto Puma Drop",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.500,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 43
+            },
+            {
+                "name": "M",
+                "stockTalle": 23
+            },
+            {
+                "name": "L",
+                "stockTalle": 43
+            },
+            {
+                "name": "XL",
+                "stockTalle": 43
+            }
+        ],
+        "stock": 152,
+        "description": "Mantente cubierto y cómodo con la sudadera con capucha Puma Tear Drop Basketball con un diseño clásico con capucha cruzada y cordones de dos tonos para un estilo único.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/217814_Main_Thumb_0660709.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217814_Gallery_1_0660713.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/217814_Gallery_2_0660714.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo con capucha Classics Logo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 6.700,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 43
+            },
+            {
+                "name": "M",
+                "stockTalle": 32
+            },
+            {
+                "name": "L",
+                "stockTalle": 11
+            },
+            {
+                "name": "XL",
+                "stockTalle": 11
+            }
+        ],
+        "stock": 97,
+        "description": "Mantente abrigado y con estilo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/192412_Main_Thumb_0427646.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/192412_Gallery_1_0427649.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/192412_Gallery_2_0427652.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo con capucha Classics Logo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 6.700,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "Mantente abrigado y con estilo.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/192411_Main_Thumb_0427578.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/192411_Gallery_1_0427579.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/192411_Gallery_2_0427580.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Puma Essentials Hoody",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.600,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 35
+            },
+            {
+                "name": "M",
+                "stockTalle": 32
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 11
+            }
+        ],
+        "stock": 99,
+        "description": "Ponte comodo informal con la susadera con capucha Puma Essentials",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/V3_1_Main_0323740.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/V3_1_Gallery_1_0323741.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/V3_1_Gallery_2_0323742.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Buzo Puma x BALR",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 8.400,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": " Ponte comodo con la sudadera con capucha PUMA X BALR en negro, parte de una colección de edición limitada que combina rendimiento futbolístico y moda premium.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/227287_Main_Thumb_0805683.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/227287_Gallery_1_0805687.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/227287_Gallery_2_0805689.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Puma International AOP Hoodie",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 8.900,
+        "color": [
+            "blanco, naranja, verde, celeste, violeta, negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 116,
+        "description": "El buzo mas original y distinto para un estilo increible",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230216_Main_0861209.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230216_Gallery_1_0861210.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230216_Gallery_2_0861213.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Puma International AOP",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 8.700,
+        "color": [
+            "blanco, naranja, verde, celeste, violeta, negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 76
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 10
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 128,
+        "description": "El buzo mas original y distinto para un estilo increible",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230216_Main_0861209.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230216_Gallery_1_0861210.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230216_Gallery_2_0861213.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Puma Shorts Classics logo",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 3.700,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb0"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 117,
+        "description": "Luce y sientete bien con los pantalones cortos Puma Classics Logo, con un diseño casual clasico  y telas de algodon premium",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230239_Main_0860955.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230239_Gallery_1_0860963.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230239_Gallery_2_0860964.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Pantalon Corto Puma TFS",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 4.700,
+        "color": [
+            "celeste, blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb0"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 72
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 27
+            },
+            {
+                "name": "XL",
+                "stockTalle": 24
+            }
+        ],
+        "stock": 143,
+        "description": "Obten ropa deportiva comoda con los pantalones cortos tejidos Puma TFS, que ofrecen un estilo deportivo clasico con un aire retro de los 90 que es perfecto tanto para el uso diario como para el gimnasio",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/213250_Main_Thumb_0723316.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/213250_Gallery_1_0723317.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/213250_Gallery_2_0723318.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Campera deportiva Puma Iconic T7",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.600,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 51
+            },
+            {
+                "name": "M",
+                "stockTalle": 25
+            },
+            {
+                "name": "L",
+                "stockTalle": 21
+            },
+            {
+                "name": "XL",
+                "stockTalle": 24
+            }
+        ],
+        "stock": 121,
+        "description": "Sientete comodo ctodo el dia con la campera deportiva Puma iconic T7",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/201309_Main_Thumb_0593806.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/201309_Gallery_1_0593807.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/201309_Gallery_2_0593809.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Campera deportiva Puma Iconic T7",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 5.600,
+        "color": [
+            "azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 76
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 22
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 139,
+        "description": "Sientete comodo ctodo el dia con la campera deportiva Puma iconic T7",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/192393_Main_Thumb_0436853.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/192393_Gallery_1_0436855.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/192393_Gallery_2_0436857.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Campera deportiva Puma Iconic MCS",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 7.700,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 54
+            },
+            {
+                "name": "M",
+                "stockTalle": 21
+            },
+            {
+                "name": "L",
+                "stockTalle": 28
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 121,
+        "description": "Adopta el estilo retro con la campera deportiva PUMA iconic MCS",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/192384_Main_Thumb_0411872.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/192384_Gallery_1_0411876.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/192384_Gallery_2_0411878.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Campera Puma Chandal MCS",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1d"
+            },
+        "price": 8.700,
+        "color": [
+            "negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 34
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 45
+            },
+            {
+                "name": "XL",
+                "stockTalle": 21
+            }
+        ],
+        "stock": 120,
+        "description": "La campera deportiva PUMA MCS ofrece comodidad y estilo informal",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/V3_1_Main_0307562.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/V3_1_Gallery_1_0307569.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/V3_1_Gallery_1_0307569.jpg?imwidth=768"
+    }
+]
