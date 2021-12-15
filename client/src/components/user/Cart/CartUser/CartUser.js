@@ -53,7 +53,7 @@ const CartUser = ({id}) => {
            return  dispatch(Join(id))
         } */
         dispatch(getCart(id))
-    },[ dispatch])
+    },[dispatch])
 
 
     return (
@@ -63,25 +63,25 @@ const CartUser = ({id}) => {
                  cart.map(x => {
                      return(
                    <CartCard
-                    key={x.cart._id} 
+                    key={x.cart?._id ? x.cart._id : ''} 
                     id={x.cart?._id? x.cart._id : ''}
-                    name={x.cart.name}
-                    price={x.cart.price * x.qtyCart}
-                    talle={x.talle}
-                    count={x.qtyCart}
-                    talle= {x.talle}
-                    image={x.cart.image}
+                    name={x.cart?.name ? x.cart.name : ''}
+                    price={x.cart?.price ? x.cart.price * x.qtyCart : ''}
+                    talle={x.talle? x.talle : ''}
+                    count={x.qtyCart? x.qtyCart : ''}
+                    image={x.cart?.image? x.cart.image : ''}
                    /> 
                  )})   
                  : <p>No hay Productos</p>
             } 
             </div>
             <div>
-              {cart?.length?
-                
-                <h3>TOTAL : $ {pago}</h3>  
-                : null
-            } 
+              {cart?.length && pago!==NaN? 
+                <div>
+                <h3>TOTAL : $ {pago}</h3> 
+                </div> 
+                :<p></p>
+                } 
         
             </div>
             <div>

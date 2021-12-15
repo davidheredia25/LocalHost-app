@@ -15,12 +15,7 @@ import {
 } from "../actions/cart.actions";
 
 const initialState = {
-  cart: null, // [{id: 1, talle: "S", count: 2}, {id: 1, talle: "M", count: 1}]
-  cartProduct: {
-    product: null,
-    talle: "", // "S"
-    count: 1 // 3
-  },
+  cart: null, // [{id: 1, talle: "S", count: 2}, {id: 1, talle: "M", count: 1}
   emptyCart: JSON.parse(localStorage.getItem('cart'))
 };
 

@@ -131,10 +131,11 @@ export const deleteCartOne = (obj) => async (dispatch) => {
     let productId =obj.productId;
     console.log('obj', productId)
     let data = await axios.put(`user/cart/deleteOne/${obj.id}/${obj.productId}/${obj.talle}`).data;
-    return dispatch({
+     dispatch({
         type: DELETE_CART_ONE,
         payload: data
-    })
+        })
+    
 }
 
 export const Join = (id) => async(dispatch) => {

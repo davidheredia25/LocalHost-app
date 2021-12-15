@@ -38,6 +38,9 @@ const CartCard = ({key,id, name, price, talle, image, count, onClose}) => {
 
     return(
         <div className={style.container}>
+            {
+                name? 
+                 
             <div className={style.card}>
             <p className={style.count}>{count} x </p>
             <img className={style.image} src={image} alt='' />
@@ -45,8 +48,8 @@ const CartCard = ({key,id, name, price, talle, image, count, onClose}) => {
             <p className={style.talle}>{talle}</p>
             <p>$ {price}</p>
             <Button variant='filled' size='large' style={{'backgroundColor': '#000000', 'color': '#FFFFFF', 'width': '10px'}} onClick={onclose}>X</Button>
-            </div>
-
+            </div>  :  <p> cargando </p>
+            }
             
         </div>
     )
