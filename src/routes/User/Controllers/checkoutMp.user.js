@@ -59,8 +59,8 @@ const { products } = req.body;
                 },
                 back_urls: {
                     success: 'http://localhost:3000/profile/misordenes',
-                    failure: 'http://localhost:3000/mercadopago/pagos',
-                    pending: 'http://localhost:3000/mercadopago/pagos',
+                    failure: 'http://localhost:3000/profile/misordenes',
+                    pending: 'http://localhost:3000/profile/misordenes',
                 },
             };
             console.log('preference checkoutMp: ', preference)
