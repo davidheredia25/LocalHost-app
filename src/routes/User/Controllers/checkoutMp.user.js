@@ -67,10 +67,10 @@ const { products } = req.body;
             console.log('preference checkoutMp: ', preference)
 
             const response = await mercadopago.preferences.create(preference)
-            const ticket = await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user })
-            console.log('response', response)
-            global.id = response.id
-            console.log('global.id: ', global.id)
+            await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user });
+            console.log('response', response);
+            global.id = response.id;
+            console.log('global.id: ', global.id);
             return res.json(response);
             // .then(function (response) {
             //     console.info('respondio', response.body.init_point)
