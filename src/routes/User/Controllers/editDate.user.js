@@ -1,4 +1,6 @@
 const User = require('../../../models/User');
+const cloudinary = require('../../Cloudinary/Middleware')
+const fs = require('fs-extra');
 
 const editDateUser = async (req, res) => {
 
@@ -18,8 +20,9 @@ const editDateUser = async (req, res) => {
         dateOfBirth
     } = req.body;
 
-   
+
     try {
+        // const result = await cloudinary.uploader.upload(req.file.path);
         let edit = await User.findByIdAndUpdate(id, {
             fristName: fristName,
             lastName: lastName,
@@ -32,15 +35,15 @@ const editDateUser = async (req, res) => {
             location: location,
             city: city,
             postalCode: postalCode,
-            dateOfBirth: dateOfBirth
+            dateOfBirth: dateOfBirth,
+            // image: result?.url
         }, { new: true });
-
-        if (req.file) {
-            const { filename } = req.file
-            edit.setImage(filename)
-        }
+           
+          
+    
 
         editUser = await edit.save();
+        // await fs.unlink(req.file.path);
         console.log(editUser)
         res.json({ message: "Dale que sos vos", user: editUser });
 

@@ -22,12 +22,12 @@ require("./routes/User/Controllers/middleware")
 app.set('port', config.PORT);
 
 //Middlewares
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '50mb'}))
 app.use(morgan('dev'));
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(passport.initialize());
+app.use(express.json({ limit: '50mb', extended: false }));
+app.use(express.urlencoded({ limit: '50mb', extended: false, parameterLimit: 50000 }));
+app.use(passport.initialize())
 
 //Multer
 app.use('/public', express.static(`${__dirname}/public/imgs`))
