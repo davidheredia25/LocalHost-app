@@ -7,18 +7,17 @@ const ExtractJWT = require('passport-jwt').ExtractJwt;
 const jwt = require('jsonwebtoken');
 
 
-
-
 const getTokenData = (token) => {
     let data = null;
-    jwt.verify(token, 'SECRET', (err, decoded) => {
+    jwt.verify(token, 'top_secret', (err, decoded) => {
+        console.log("TOKEN", token)
         if(err) {
             console.log('Error al obtener data del token');
         } else {
             data = decoded;
         }
     });
-
+    console.log("DATA", data)
     return data;
 }
 
