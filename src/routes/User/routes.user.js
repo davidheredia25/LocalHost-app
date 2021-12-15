@@ -2,7 +2,6 @@ const { Router } = require('express');
 const passport = require("passport");
 const upload = require('../Multer/Middleware.js');
 const {
-    createUser,
     deleteUser,
     getUser,
     getUserByID,
@@ -20,8 +19,7 @@ const {
     forgotPassword,
     enviarMail,
     confirm,
-    Join,
-    enviarMailTicket
+    Join
  } = require('./Controllers/all.controllers');
 
 
@@ -31,7 +29,6 @@ const router = Router();
 //          /user
 router.get('/', getUser);
 //router.get('/:userId', getUserByID);
-router.post('/create', createUser);
 router.put('/edit/:id', upload.single('image'), editDateUser);
 router.put('/update/:id', updateUser);
 router.get('/get/cart/:id', getCartUser);
@@ -48,7 +45,6 @@ router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
 router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
-router.post('/ticketMail', enviarMailTicket);
 
 
 module.exports = router;
