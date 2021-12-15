@@ -67,6 +67,11 @@ const userSchema = new Schema({
         type: Boolean,
         default: false
     },
+    productsBought: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+        // autopopulate: true
+    }],
     ticket: [{
         type: Schema.Types.ObjectId,
         ref: 'Ticket',
