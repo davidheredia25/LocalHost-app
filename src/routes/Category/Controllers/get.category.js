@@ -7,11 +7,13 @@ const getCategory = async (req, res) => {
     try {
         let getAllCategories = await Category.find({ exis: true });
         // console.log('getAll getCategory', getAllCategories);
-        if(!name)  return res.json(getAllCategories);
-        
-        let getCategoriesByName = getAllCategories.filter(c => c.name.toLowerCase().includes(name.toLowerCase()));
-        // console.log('getByName getCategory', getCategoriesByName);
-        res.json(getCategoriesByName);
+        if (getAllCategories.length !== 0) {
+            if(!name)  return res.json(getAllCategories);
+            let getCategoriesByName = getAllCategories.filter(c => c.name.toLowerCase().includes(name.toLowerCase()));
+            // console.log('getByName getCategory', getCategoriesByName);
+            return res.json(getCategoriesByName);
+        }
+        res.send('Hubo un error al traer las categorias');
     } catch (error) {
         console.log(error);
     }

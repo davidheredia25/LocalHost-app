@@ -6,20 +6,20 @@ const {
 
 const deleteCategory = async (req, res) => {
     const { brand, category } = req.body; 
-    console.log('body deleteCategory: ', brand, category);
+    // console.log('body deleteCategory: ', brand, category);
     try {
         let verificacionCategoria = await verificacionName(category);
-        console.log('verificacionCategoria deleteCategory: ', verificacionCategoria);
+        // console.log('verificacionCategoria deleteCategory: ', verificacionCategoria);
         let id = verificacionCategoria.category._id;
-        console.log('id deleteCategory: ', id);
+        // console.log('id deleteCategory: ', id);
         if (verificacionCategoria.bool) {
             let deleteProduct = await setExisP(brand, category);
-            console.log('deleteProduct deleteCategory: ', deleteProduct);
+            // console.log('deleteProduct deleteCategory: ', deleteProduct);
             let deleted = await Category.findByIdAndUpdate(id, {
                 exis: false
             }, { new: true });
             deleted = await deleted.save();
-            console.log('deleted deleteCategory: ', deleted);
+            // console.log('deleted deleteCategory: ', deleted);
             return res.json(deleted, deleteProduct);
         }
         res.send(verificacionCategoria.message);

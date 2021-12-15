@@ -31,18 +31,18 @@ const setExisP = async (brand, category) => {
         let findB = await Brand.findOne({ name: brand })
         let findC = await Category.findOne({ name: category })
         let find = await Product.find({ brand: findB._id, category: findC._id });
-        console.log('find setExisP: ', find);
+        // console.log('find setExisP: ', find);
         if (find.length !== 0) {
             let arrayDelete = [];
             find.forEach(async (p) => {
-                console.log('p setExisP: ', p);
+                // console.log('p setExisP: ', p);
                 let deleted = await Product.findByIdAndUpdate(p._id, {
                     exis: false
                 }, { new: true });
                 deleted = await deleted.save();
                 arrayDelete.push(deleted);
             });
-            console.log('arrayDelete setExisP: ', arrayDelete);
+            // console.log('arrayDelete setExisP: ', arrayDelete);
             return arrayDelete;
         }
         return 'No se encontro nada';
