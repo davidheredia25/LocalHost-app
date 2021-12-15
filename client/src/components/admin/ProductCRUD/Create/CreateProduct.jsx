@@ -23,7 +23,13 @@ const CreateProduct = () => {
     image: [],
   });
 
-  // const {color, size} = useSelector(state => state.prodcuts)
+
+  const [talleObj, setTalleObj] = useState({
+    name: "",
+    stockTalle: 0
+  })
+
+  const { talles } = useSelector(state => state.admin)
   const { brands, categories, subcategories } = useSelector(
     (state) => state.brand
   );
@@ -81,6 +87,25 @@ const CreateProduct = () => {
       types: e.target.value
     });
   };
+
+  const selectTalle = (e) => {
+    setTalleObj({
+      ...talleObj,
+      name: e.target.value
+    })
+  }
+
+  const addTalleObj = () => {
+    setForm({
+      ...form,
+      talle: [...form.talle, talleObj]
+    })
+    setTalleObj({
+      name: "",
+      stockTalle: 0
+    })
+  }
+
 
   return (
 
@@ -145,18 +170,6 @@ const CreateProduct = () => {
       {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
-          <label className={style.text}>Talle</label>
-          <input 
-            className={style.input} 
-            name="talle" 
-            type="text" 
-            placeholder="Talle..." 
-            value={form.talle} 
-            onChange={handleChange} 
-          />
-        </div>
-
-        <div className={style.InputForm}>
           <label className={style.text}>Imagen</label>
           <input 
             className={style.input} 
@@ -220,6 +233,46 @@ const CreateProduct = () => {
           {/* crea una nueva subcategoría
           <input /> */}
         </div>
+        <div className={style.InputForm}>
+          <label className={style.text}>Talle</label>
+          <select className={style.input1} onChange={selectTalle}>
+            <option selected value={form.brand}>
+              Selecciona Talle
+            </option>
+            {talles?.map((e) => {
+              return (
+                <option name="talle" value={e}>
+                  {e}
+                </option>
+              );
+            })}
+          </select>
+          <div>
+            {
+              talleObj.name &&
+                <div>
+                  <h4>{talleObj.name}</h4>
+                  <input 
+                    value={talleObj.stockTalle} 
+                    type="number" 
+                    min="0" 
+                    onChange={(e) => setTalleObj({...talleObj, stockTalle: e.target.value})} 
+                  />
+                  <button onClick={addTalleObj}>GUARDAR</button>
+                </div> 
+            }
+          </div>
+        </div>
+        {
+          form.talle.map(obj => {
+            return (
+              <div>
+                <p>{obj.name}</p>
+                <p>{obj.stockTalle}</p>
+              </div>
+            )
+          })
+        }
       </div>
 
       <button className={style.btn} onClick={handleClick}>CREAR</button>
