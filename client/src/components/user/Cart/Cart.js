@@ -23,14 +23,7 @@ const Cart= () => {
     else User = user?.user;
     const id= User?._id ? User._id : '';
     //console.log('jesucristo id', id)
-    useEffect(() => {
-       /*  if(user){
-        if(emptyCart?.length){
-             dispatch(Join(id))
-            }
-        } */
-        
-    },[ ])
+   
     
     return (
         <div className={style.container}>
