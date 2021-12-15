@@ -64,7 +64,7 @@ const CartUser = ({id}) => {
                      return(
                    <CartCard
                     key={x.cart._id} 
-                    id={x.cart._id}
+                    id={x.cart?._id? x.cart._id : ''}
                     name={x.cart.name}
                     price={x.cart.price * x.qtyCart}
                     talle={x.talle}
