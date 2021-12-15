@@ -1,20 +1,66 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import './info.scss';
 import { Button } from '@mui/material';
-import AddToCart from './AddToCart';
-import { setTalle, setProduct } from "../../../redux/actions/cart.actions";
+import { addItemToCart, setCount, addEmptyCart } from '../../../redux/actions/cart.actions.js';
+
 
 
 const ProductInfo = ({ product }) => {
-
+    const [num, setNum] = useState(1);
+    const [talle, setTalle] = useState('');
+    console.log('talle', talle)
+    const { user } = useSelector(state => state.login)
+    let User;
+    if(user?.email) User = user
+    else User = user?.user;
+    const userId = User?._id;
     const dispatch = useDispatch();
-    const { talle } = useSelector(state => state.cart.cartProduct)
-    console.log('review', product.reviews);
+    console.log('review', product);
+   
+
+    const subtraction = () => {
+        setNum(num -1)
+       
+    }
+    const addition = () => {
+        setNum(num + 1)
+        
+    }
+
     function onClick(e) {
+        console.log('clicked')
         e.preventDefault();
-        dispatch(setProduct(product))
-        dispatch(setTalle(e.target.value))
+        setTalle(e.target.value)
+        //dispatch(setProduct(product))
+        //dispatch(setTalle(e.target.value))
+    }
+
+    const addCart = () => {
+        if(user) { 
+            let obj = {
+                userId: userId,
+                productId: product._id,
+                qty: num,
+                talle: talle
+                  }
+            dispatch(addItemToCart(obj));
+            
+            
+            setNum(1)
+                }else{
+                    let obj= {
+                        product: product,
+                        qty: num,
+                        talle: talle
+                    }
+                  dispatch(addEmptyCart(obj));
+                  
+                  
+                  setNum(1) 
+                  setTalle('')  
+                }
+    
     }
 
     return (
@@ -38,24 +84,39 @@ const ProductInfo = ({ product }) => {
 
                 <div className='info_talles'>
                     {
-                        product.talle ?
+                          product.talle ?
                             product.talle.map(t => {
                                 return (
                                     <Button
-                                        value={t}
+                                        value={t.name}
                                         onClick={onClick}
-                                        variant={talle === t ? 'outlined' : 'text'}
+                                        variant={  'text'}
                                         style={{ 'color': '#000000' }}
                                     >
                                         {t.name}
                                     </Button>
                                 )
-                            }) : null
+                            }) : null  
                     }
                 </div>
 
                 <div className='info__cart'>
-                    <AddToCart  product={product}/>
+                <div>
+            <div >
+                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 10, 'margin': 10}} disabled={num === 1} onClick={subtraction}>
+                    -
+                </Button>
+                <span>{num}</span>
+                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 5   , 'margin': 10}}  onClick={addition}>
+                    +
+                </Button>
+            </div>
+            <div>
+
+            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  size='large'  onClick={addCart}>   AGREGAR AL CARRITO </Button>
+
+            </div>
+        </div>
                 </div>
 
             </div >
