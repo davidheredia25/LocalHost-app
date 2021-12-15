@@ -2,7 +2,6 @@ const { Router } = require('express');
 const passport = require("passport");
 const upload = require('../Multer/Middleware.js');
 const {
-    createUser,
     deleteUser,
     getUser,
     getUserByID,
@@ -19,12 +18,8 @@ const {
     deleteCartOne,
     forgotPassword,
     enviarMail,
-
     confirm,
-
     Join
-
-
  } = require('./Controllers/all.controllers');
 
 
