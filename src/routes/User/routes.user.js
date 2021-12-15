@@ -20,7 +20,7 @@ const {
     enviarMail,
     confirm,
     Join,
-    enviarMailTicket
+  enviarMailTicket
  } = require('./Controllers/all.controllers');
 
 const router = Router();
