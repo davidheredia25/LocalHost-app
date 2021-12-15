@@ -27,7 +27,8 @@ const FilterByBrand = ({ brands }) => {
                     {
                         brands && brands.map(x => {
                             return (
-                                <button   className={styles.button} value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
+                                <button   className={styles.button} 
+                                value={x.name} onClick={handleClick}>{x.name.toUpperCase()}</button>
                             )
                         })
                     }

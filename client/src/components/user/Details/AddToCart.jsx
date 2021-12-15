@@ -4,6 +4,7 @@ import { addItemToCart, setCount, addEmptyCart } from '../../../redux/actions/ca
 import { Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { AddShoppingCart } from "@material-ui/icons";
+import Recomendaciones from '../Recomendaciones/Recomendaciones.jsx';
 import './cart.scss';
 
 
@@ -56,16 +57,25 @@ const AddToCart = ({product}) => {
     return (
         <div>
             <div >
-                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 10, 'margin': 10}} disabled={num === 1} onClick={subtraction}>
+                <Button variant='outlined' 
+                style={{ 'color': '#000000', 'width' : 10, 'margin': 10}} 
+                disabled={num === 1} onClick={subtraction}>
                     -
                 </Button>
                 <span>{num}</span>
-                <Button variant='outlined' style={{ 'color': '#000000', 'width' : 5   , 'margin': 10}}  onClick={addition}>
+                <Button variant='outlined' 
+                style={{ 'color': '#000000', 'width' : 5   , 'margin': 10}}  
+                onClick={addition}>
                     +
                 </Button>
             </div>
             <div>
-            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  size='large'  onClick={addCart}>   AGREGAR AL CARRITO </Button>
+            <Button style={{'backgroundColor': '#000000', 'color': '#EEEEEE',  'margin': 10, 'padding' : 10}}  
+            size='large'  onClick={addCart}>   AGREGAR AL CARRITO </Button>
+            </div>
+            <div>
+            <Recomendaciones />
+
             </div>
         </div>
     )
