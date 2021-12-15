@@ -91,8 +91,25 @@ const getTalles = async (req, res) => {
     }
 }
 
+const recommended = async (req, res) => {
+    try {
+        let find = await Product.find();
+        console.log('find recommended: ', find);
+
+        if(find.length !== 0) {
+            let filtered = find.filter(p => p.rating >= 4);
+            console.log('filtered recommended: ', filtered);
+            return res.json(filtered);
+        }
+        res.send('Hubo un error al traerme los products');
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 module.exports = {
     getProducts,
     getProductById,
-    getTalles
+    getTalles,
+    recommended
 };
