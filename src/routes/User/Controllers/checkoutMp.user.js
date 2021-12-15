@@ -67,6 +67,7 @@ const { products } = req.body;
 
             const response = await mercadopago.preferences.create(preference)
             console.log('response', response)
+            await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user });
             global.id = response.id
             return res.json(response)
             // .then(function (response) {
