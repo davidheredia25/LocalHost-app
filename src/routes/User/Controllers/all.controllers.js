@@ -1,4 +1,4 @@
-const { createUser } = require('./create.user');
+// const { createUser } = require('./create.user');
 const { deleteUser } = require('./delete.user');
 const { getUserByID, getUser } = require('./get.user');
 const { updateUser } = require('./update.user'); 
@@ -12,7 +12,7 @@ const {forgotPassword} = require("./passwordUser");
 const { enviarMail } = require('./nodemailer.user');
 
 module.exports = {
-    createUser,
+    // createUser,
     deleteUser,
     getUser,
     getUserByID,
