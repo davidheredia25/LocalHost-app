@@ -19,12 +19,11 @@ const {
     forgotPassword,
     enviarMail,
     confirm,
-    Join
+    Join,
+  enviarMailTicket
  } = require('./Controllers/all.controllers');
 
-
 const router = Router();
-
 
 //          /user
 router.get('/', getUser);
@@ -45,6 +44,7 @@ router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
 router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
+router.post('/mailTicket', enviarMailTicket);
 
 
 module.exports = router;
