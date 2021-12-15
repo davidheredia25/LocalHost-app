@@ -20,7 +20,7 @@ const {
     forgotPassword,
     enviarMail,
 
-    confirm
+    confirm,
 
     Join
 
