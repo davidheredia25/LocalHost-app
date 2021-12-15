@@ -6,7 +6,11 @@ import {
   REMOVE_PRODUCTS
   } from "../actions/products.actions";
 
-const initialState = {
+import { sliceArray } from "./utils/sliceArray";
+
+  const initialState = {
+    products: [], // contiene sólo los productos de una página
+    allProducts: [], // contiene todos los productos
   products: [],
   product: null,
   page: 1,
@@ -15,9 +19,14 @@ const initialState = {
 export function productsReducer(state = initialState, action) {
   switch(action.type){
     case GET_PRODUCTS:
-      return {
+      let allProducts = action.payload;
+      let products = action.payload;
+      products = sliceArray(state.page, products);  
+
+    return {
         ...state,
-        products: action.payload
+        products: products,
+        allProducts: allProducts
       }
       case GET_PRODUCTS_DETAILS:
         console.log('payload',action.payload)

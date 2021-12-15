@@ -6,7 +6,7 @@ const Pagination = () => {
 
 	const productsPerPage = 12;
 	const dispatch = useDispatch();
-	const { page, products   } = useSelector(state => state.products);
+	const { page, allProducts, products   } = useSelector(state => state.products);
 
 	const changePage = (page) => {
 		dispatch(setPage(page))
@@ -29,7 +29,7 @@ const Pagination = () => {
 			</button>
 			<label>{page}</label>	
 			<button
-				disabled={products?.length <= (page * productsPerPage)}
+				disabled={allProducts?.length <= (page * productsPerPage)}
 				onClick={() => {changePage(page+1)}}
 			>
 				▶

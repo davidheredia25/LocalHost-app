@@ -7,7 +7,6 @@ import { getProducts } from "../../../redux/actions/products.actions";
 import styles from "./Catalogo.module.scss";
 import { resetAllFilters } from "../../../redux/actions/filters.actions";
 import vans from './img/vans.jpg';
-//  import Pagination from '../Pagination/Pagination'
 
 
 const Catalogo = () => {
@@ -23,6 +22,7 @@ const Catalogo = () => {
 
     return (
         <div>
+            
             <img className={styles.imgCata} src={vans}  />
             <div className={styles.filtersAndCards}>
                 <FiltersContainer />
@@ -36,7 +36,7 @@ const Catalogo = () => {
                 </div>
             </div>
 
-            {/* <Pagination /> */}
+             
         </div>
     )
 }
