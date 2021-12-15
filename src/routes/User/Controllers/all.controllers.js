@@ -1,4 +1,3 @@
-const { createUser } = require('./create.user');
 const { deleteUser } = require('./delete.user');
 const { getUserByID, getUser } = require('./get.user');
 const { updateUser } = require('./update.user'); 
