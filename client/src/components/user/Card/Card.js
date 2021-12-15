@@ -144,6 +144,7 @@ const Card = ({ product, favorites }) => {
                                                 onClick={onClick}
                                                 variant={ talle === t.name ? 'outlined' : 'text'}
                                                 style={{ 'color': '#000000' }}
+                                                disabled={t.stockTalle === 0}
                                             >
                                                 {t.name}
                                             </Button>
@@ -163,7 +164,7 @@ const Card = ({ product, favorites }) => {
                         <div className='card_ctn_btn_modal'>
 
                             <button className='card_btn_modal' onClick={closeModal}> CANCELAR</button>
-                            <button className='card_btn_modal' onClick={addCart}> AGREGAR </button>
+                            <button  className='card_btn_modal' onClick={addCart} disabled = {talle === ""}> AGREGAR </button>
                         </div>
                     </div>
                 </div>

@@ -87,7 +87,7 @@ const CartUser = ({id}) => {
             <div>
             {!cart?.length?
                 
-           <Link to='/'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>
+           <Link to='/catalogo'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>
                 :<div>
                 <Button variant='contained' onClick={()=>pagar(id)} size="large" style={{'backgroundColor': '#000000'}} >Pagar</Button>
                 <Button variant='contained' onClick={Limpiar} size="large" style={{'backgroundColor': 'red'}} >Limpiar</Button>
