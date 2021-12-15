@@ -121,7 +121,6 @@ const confirm = async (req, res) => {
 
     // Verificar la data
     const data = await getTokenData(token);
-
     if (data === null) {
       return res.json({
         success: false,
@@ -129,14 +128,11 @@ const confirm = async (req, res) => {
       });
     }
 
-    console.log(data);
-
-    const { email, code } = data.data;
-
+     const { user, code } = data;
     // Verificar existencia del usuario
-    const user = (await User.findOne({ email })) || null;
+    let usuario = await User.findOne({ email: user.email }) || null;
 
-    if (user === null) {
+    if (usuario === null) {
       return res.json({
         success: false,
         msg: "Usuario no existe",
@@ -144,16 +140,16 @@ const confirm = async (req, res) => {
     }
 
     // Verificar el código
-    if (code !== user.code) {
-      return res.redirect("/error.html");
-    }
+    // if (code !== usuario.code) {
+    //   return res.json("error");
+    // }
 
     // Actualizar usuario
-    user.status = "VERIFIED";
-    await user.save();
+    usuario.status = "VERIFIED";
+    await usuario.save();
 
     // Redireccionar a la confirmación
-    return res.redirect("/confirm.html");
+    return res.json("bien");
   } catch (error) {
     console.log(error);
     return res.json({
