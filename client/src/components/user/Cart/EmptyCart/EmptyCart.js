@@ -23,6 +23,10 @@ const EmptyCart = () => {
        return calculo 
     } 
 
+    const pagar = () => {
+        window.location.href ='/login';
+    }
+
     
 
     const Limpiar = () => {
@@ -34,7 +38,7 @@ const EmptyCart = () => {
 
     useEffect(() => {
          dispatch(getEmptyCart())
-    }, [])
+    },[emptyCart])
 
     return (
         <div className={style.cart}>
@@ -69,7 +73,7 @@ const EmptyCart = () => {
                 
            <Link to='/'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>
                 :<div>
-                <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Pagar</Button>
+                <Button variant='contained' size="large" onClick={pagar} style={{'backgroundColor': '#000000'}}>Pagar</Button>
                 <Button variant='contained' onClick={Limpiar} size="large" style={{'backgroundColor': 'red'}} >Limpiar</Button>
                 </div> 
             } 
