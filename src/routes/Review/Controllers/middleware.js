@@ -16,7 +16,7 @@ const verificacionId = async (id) => {
 const verificacionU = async (email) => {
     try {
         let find = await User.findOne({ email: email });
-        console.log('find vreificacionU: ', find);
+        // console.log('find vreificacionU: ', find);
         let obj = { bool: false };
         if(find !== null)  return obj = { bool: true, user: find._id };
         return obj;
@@ -28,11 +28,11 @@ const verificacionU = async (email) => {
 const verificacionExis = async (id, email) => {
     try {
         let find = await Product.findById(id);
-        console.log('find verificacionExis', find.reviews);
+        // console.log('find verificacionExis', find.reviews);
         let obj = { bool: false };
         let veri = [];
         if (find.reviews && find.reviews !== null)  veri = find.reviews.filter(r => r.user.email === email);
-        console.log('veri verificacionExis', veri);
+        // console.log('veri verificacionExis', veri);
         if(veri.length !== 0)  return obj = { bool: true };
         return obj;
     } catch (error) {

@@ -5,9 +5,9 @@ const updateTicket = async (req, res) => {
     const { id } = req.params;
     try {
         let verificacionTicket = await verificacionId(id);
-        let update;
-
+        
         if (verificacionTicket.bool) {
+            let update;
             switch (verificacionTicket.ticket.state) {
                 case 'pending':
                     update = await Ticket.findByIdAndUpdate(id, {

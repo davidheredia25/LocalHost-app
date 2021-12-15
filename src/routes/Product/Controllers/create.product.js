@@ -20,38 +20,38 @@ const createProduct = async (req, res) => {
         color,
         talle, // Array de obj
     } = req.body;
-    console.log("body (T.C.B.N.T) createproduct: ", types, categories, brand, name, talle);
+    // console.log("body (T.C.B.N.T) createproduct: ", types, categories, brand, name, talle);
     try {
         let verificacion = await verificacionName(name);
-        console.log('verificacion createProduct', verificacion);
+        // console.log('verificacion createProduct', verificacion);
         if (verificacion.bool) return res.send(`El producto ${name} ya existe`);
 
         let brands;
         if (brand !== "") {
             let verificacionBrand = await verificacionB(brand);
-            console.log('verificacionBrand createProduct', verificacionBrand);
+            // console.log('verificacionBrand createProduct', verificacionBrand);
             if (verificacionBrand.bool) brands = verificacionBrand.brand
             else return res.json(verificacionBrand.message);
         } else { return res.send('Se necesita marcas'); }
-        console.log('brands createProduct', brands);
+        // console.log('brands createProduct', brands);
 
         let category;
         if (categories !== "") {
             let verificacionCategory = await verificacionC(categories);
-            console.log('verificacionCategory createProduct', verificacionCategory);
+            // console.log('verificacionCategory createProduct', verificacionCategory);
             if (verificacionCategory.bool) category = verificacionCategory.category
             else return res.json(verificacionCategory.message);
         } else { return res.send('Se necesita categorias') }
-        console.log('category createProduct', category);
+        // console.log('category createProduct', category);
 
         let type;
         if (types !== "") {
             let verificacionTypes = await verificacionT(types);
-            console.log('verificacionTypes createProduct', verificacionTypes);
+            // console.log('verificacionTypes createProduct', verificacionTypes);
             if (verificacionTypes.bool) type = verificacionTypes.type
             else return res.json(verificacionTypes.message);
         } else { return res.send('Se necesita tipos') }
-        console.log('type createProduct', type);
+        // console.log('type createProduct', type);
 
         let sumStock = 0;
         talle.forEach(t => sumStock += t.stockTalle);
@@ -72,8 +72,8 @@ const createProduct = async (req, res) => {
             });
             newProduct = await newProduct.save();
             await fs.unlink(req.file.path);
-            console.log('newProduct createProduct', newProduct);
-            res.json(newProduct);
+            // console.log('newProduct createProduct', newProduct);
+            return res.json(newProduct);
         }
         let newProduct = new Product({
             name,
@@ -88,7 +88,7 @@ const createProduct = async (req, res) => {
             image: ''
         });
         newProduct = await newProduct.save();
-        console.log('newProduct createProduct', newProduct);
+        // console.log('newProduct createProduct', newProduct);
         res.json(newProduct);
     } catch (error) {
         console.log(error);

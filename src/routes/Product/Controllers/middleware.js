@@ -6,7 +6,7 @@ const Types = require('../../../models/Types');
 const verificacionName = async (name) => {
     try {
         let find = await Product.find({name: name});
-         console.log('find verificacionName', find);
+        // console.log('find verificacionName', find);
         let obj = { bool: false };
         if(find.length !== 0) return obj = { bool: true };
         return obj;
@@ -62,7 +62,6 @@ const verificacionT = async (name) => {
         // console.log('find verificacionT', find);
         let obj = { bool: false, message: 'No lo encontro o exis esta en false' };
         if(find !== null && find.exis) return obj = { bool: true, type: find._id };
-
         return obj;
     } catch (error) {
         console.log(error);

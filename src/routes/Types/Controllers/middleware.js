@@ -16,7 +16,7 @@ const verificacionId = async (id) => {
 const verificacionName = async (name) => {
     try {
         let find = await Types.findOne({ name: name });
-        let obj = { bool: false };
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false'  };
         if(find !== null && find.exis) return obj = { bool: true, type: find};
         return obj;
     } catch(error) {
@@ -30,18 +30,18 @@ const setExisP = async (brand, category, type) => {
         let findC = await Category.findOne({ name: category });
         let findT = await Types.findOne({ name: type });
         let find = await Product.find({ brand: findB._id, category: findC._id, type: findT._id });
-        console.log('find setExisP: ', find);
+        // console.log('find setExisP: ', find);
         if (find.length !== 0) {
             let arrayDelete = [];
             find.forEach(async (p) => {
-                console.log('p setExisP: ', p);
+                // console.log('p setExisP: ', p);
                 let deleted = await Product.findByIdAndUpdate(p._id, {
                     exis: false
                 }, { new: true });
                 deleted = await deleted.save();
                 arrayDelete.push(deleted.name);
             });
-            console.log('arrayDelete setExisP: ', arrayDelete);
+            // console.log('arrayDelete setExisP: ', arrayDelete);
             return arrayDelete;
         }
         return 'No se encontro nada';
