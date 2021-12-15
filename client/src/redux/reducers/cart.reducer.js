@@ -122,7 +122,7 @@ export function cartReducer(state = initialState, { type, payload }) {
     case GET_EMPTY_CART:
       return {
         ...state,
-        emptyCart : state.emptyCart
+        emptyCart : JSON.parse(localStorage.getItem('cart'))
       }  
     case DELETE_EMPTY_ONE:
       console.log('entro aca bro', payload)
