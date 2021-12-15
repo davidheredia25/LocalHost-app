@@ -72,8 +72,27 @@ const getProductById = async (req, res) => {
     }
 };
 
+const getTalles = async (req, res) => {
+    try {
+        let product = await Product.find({ exis: true })
+        let array = [];
+        product.forEach(p => {
+            p.talle.forEach(obj => {
+                if (obj.name) {
+                    array.push(obj.name)
+                }
+            })
+        })
+        array = [...new Set(array)]
+        res.json(array)
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
 
 module.exports = {
     getProducts,
-    getProductById
+    getProductById,
+    getTalles
 };

@@ -7,7 +7,7 @@ import CreateProduct from "./ProductCRUD/Create/CreateProduct";
 import EditProducts from "./ProductCRUD/Edit/EditProducts";
 import AdminWelcome from "../admin/AdminWelcome/AdminWelcome"
 import TicketsSection from "../admin/Tickets/TicketsSection"
-import { getUsers, getTickets } from "../../redux/actions/admin.actions";
+import { getUsers, getTickets, getTalles } from "../../redux/actions/admin.actions";
 import { getProducts } from "../../redux/actions/products.actions";
 import { getBrands, getCategories, getSubcategories } from "../../redux/actions/brand.actions";
 import style from "./Admin.module.css";
@@ -23,6 +23,7 @@ const AdminSection = () => {
         dispatch(getCategories())
         dispatch(getSubcategories())
         dispatch(getTickets())
+        dispatch(getTalles())
     }, [])
 
     const { section } = useSelector(state => state.admin)

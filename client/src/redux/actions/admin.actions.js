@@ -5,6 +5,7 @@ export const GET_USERS = "GET_USERS"
 export const GET_TICKETS = "GET_TICKETS"
 export const FIND_TICKET = "FIND_TICKET"
 export const FILTER_TICKETS = "FILTER_TICKETS"
+export const GET_TALLES = "GET_TALLES"
 
 
 export const setSection = (section)  => {
@@ -97,4 +98,12 @@ export const filterTickets = (status) => {
         type: FILTER_TICKETS,
         payload: status
     }
+}
+
+export const getTalles = () => async (dispatch) => {
+    const { data } = await axios.get('/product/talles')
+    return dispatch({
+        type: GET_TALLES,
+        payload: data
+    })
 }
