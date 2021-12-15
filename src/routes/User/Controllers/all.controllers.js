@@ -9,7 +9,7 @@ const { postUser, postLogin, profileAuthenticate, loginGoogle, confirm } = requi
 const { addCart, getCartUser, deleteCart, deleteCartOne, Join } = require('./cart.user');
 const {forgotPassword} = require("./passwordUser");
 const { enviarMail } = require('./nodemailer.user');
-const { enviarMailTicket } = require('./mailTicket.user')
+// const { enviarMailTicket } = require('./mailTicket.user')
 
 module.exports = {
     deleteUser,
@@ -30,5 +30,5 @@ module.exports = {
     enviarMail,
     confirm,
     Join,
-  enviarMailTicket
+  // enviarMailTicket
 };

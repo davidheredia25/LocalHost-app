@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     type: "OAuth2",
-    user: "tincho20012017@gmail.com",
+    user: "vsclothes2@gmail.com",
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     refreshToken: REFRESH_TOKEN,
@@ -27,9 +27,9 @@ const sendConfirmationMail = async (email, template) => {
 
     const accessToken = await oAuth2Client.getAccessToken();
     const mailOptions = {
-      from: "VSClothes <tincho20012017@gmail.com>",
+      from: "VSClothes <vsclothes2@gmail.com>",
       to: `${email}`,
-      subject: "Recuperación de contraseña",
+      subject: "Confirmación de usuario",
       html: `${template}`,
     };
 
