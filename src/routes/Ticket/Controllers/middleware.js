@@ -22,7 +22,18 @@ const verificacionId = async (id) => {
     }
 };
 
+const verificacionP = async (name) => {
+    try {
+        let find = await Ticket.findOne({name: name});
+        let obj = { bool: false, message: 'No lo encontro o exis esta en false' }
+        if(find !== null && find.exis) return obj = { bool: true, ticket: find };
+        return obj
+    } catch (error) {
+        console.log(error);
+    }
+};
 module.exports = {
     verificacionNumOrder,
-    verificacionId
+    verificacionId,
+    verificacionP
 }

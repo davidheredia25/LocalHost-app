@@ -61,6 +61,7 @@ const CartUser = ({id}) => {
             <div  className={style.cart}>
                 {cart?.length ?
                  cart.map(x => {
+                     console.log('x.cart._id login: ', x.cart._id)
                      return(
                    <CartCard
                     key={x.cart._id} 

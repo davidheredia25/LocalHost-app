@@ -4,7 +4,7 @@ const { Schema, model } = pkg;
 const ticketSchema = new Schema({
     date: {
         type: Date,
-        default: new Date
+        default: Date
     },
     numOrden: {
         type: Number,
@@ -24,7 +24,8 @@ const ticketSchema = new Schema({
     },
     metodoPago: {
         type: String,
-        required: true
+        required: true,
+        default: 'Mercado Pago'
     },
     user: {
         type: Schema.Types.ObjectId,
@@ -42,6 +43,9 @@ const ticketSchema = new Schema({
             ref: "Product",
             required: true,
             autopopulate: true
+        },
+        talle: {
+            type: String,
         },
         qty: {
             type: Number
