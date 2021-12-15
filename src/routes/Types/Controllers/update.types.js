@@ -12,7 +12,7 @@ const updateTypes = async (req, res) => {
 
         if(name && verificacion.bool) {
             let update = await Types.findByIdAndUpdate(id, {
-                name
+                name: name
             }, {new: true});
             // console.log('update updateTypes', update);
             update = await update.save();
