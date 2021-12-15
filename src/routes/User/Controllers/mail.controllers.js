@@ -32,7 +32,6 @@ const sendConfirmationMail = async (email, template) => {
       subject: "Confirmación de usuario",
       html: `${template}`,
     };
-
     const result = await transporter.sendMail(mailOptions);
     return result;
   } catch (error) {
