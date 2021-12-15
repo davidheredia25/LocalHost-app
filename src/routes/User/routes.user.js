@@ -19,12 +19,9 @@ const {
     deleteCartOne,
     forgotPassword,
     enviarMail,
-
-    confirm
-
-    Join
-
-
+    confirm,
+    Join,
+    enviarMailTicket
  } = require('./Controllers/all.controllers');
 
 
@@ -51,6 +48,7 @@ router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
 router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
+router.post('/ticketMail', enviarMailTicket);
 
 
 module.exports = router;
