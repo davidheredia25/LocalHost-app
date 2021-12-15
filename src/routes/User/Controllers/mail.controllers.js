@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendConfirmationMail = async (email, template) => {
-  console.log('body sendConfirmationMail: ', email, template);
+  // console.log('body sendConfirmationMail: ', email, template);
   try {
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
@@ -45,7 +45,7 @@ const sendConfirmationEmail = async (req, res) => {
     // const { email } = req.body;
     sendConfirmationMail()
       .then((res) => {
-        res.status(200).send("enviado");
+        res.send("enviado");
       })
       .catch((error) => console.log(error.message));
   } catch (err) {

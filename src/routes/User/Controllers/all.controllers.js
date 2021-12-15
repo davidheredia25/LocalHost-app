@@ -1,4 +1,3 @@
-const { createUser } = require('./create.user');
 const { deleteUser } = require('./delete.user');
 const { getUserByID, getUser } = require('./get.user');
 const { updateUser } = require('./update.user'); 
@@ -12,7 +11,6 @@ const {forgotPassword} = require("./passwordUser");
 const { enviarMail } = require('./nodemailer.user');
 
 module.exports = {
-    createUser,
     deleteUser,
     getUser,
     getUserByID,
@@ -29,10 +27,6 @@ module.exports = {
     deleteCartOne,
     forgotPassword,
     enviarMail,
-
     confirm,
-
     Join
-
-
 };

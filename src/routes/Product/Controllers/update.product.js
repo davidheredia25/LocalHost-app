@@ -18,8 +18,8 @@ const updateProduct = async (req, res) => {
         talle,
         stock
     } = req.body;
-    console.log('id updateProduct: ', id);
-    console.log("body (T.C.B.N.T) updateProduct: ", types, categories, brand, name, talle);
+    // console.log('id updateProduct: ', id);
+    // console.log("body (T.C.B.N.T) updateProduct: ", types, categories, brand, name, talle);
     try {
         let verificacion = await verificacionId(id);
         // console.log('verificacion updateProduct', verificacion);

@@ -33,7 +33,6 @@ const loginGoogle = async (req, res) => {
                 await user.save();
                 return res.json(user);
               } else {
-
                 const { email, picture, name } = response.payload;
                 // console.log('email', email);
                 let contraseña = email + "top_secret";
@@ -50,9 +49,7 @@ const loginGoogle = async (req, res) => {
                 let find = await User.findById(newUser._id);
                 // console.log('find loginGoogle: ', find);
                 if (find !== null) return res.json(find);
-
                 return res.send("Hubo un problema");
-
               }
             }
           });
@@ -65,24 +62,16 @@ const loginGoogle = async (req, res) => {
 };
 
 const postUser = async (req, res) => {
-  console.log("req postUser", req);
-
+  // console.log("req postUser", req);
   try {
     // Obtener la data del usuario: name, email
     const { fristName, lastName, email } = req.body;
-    console.log('body postUser: ', fristName, lastName, email);
+    // console.log('body postUser: ', fristName, lastName, email);
     // Verificar que el usuario no exista
     let verificacion = await verificacionEmail(email);
-    console.log('user postUser:', verificacion.user);
+    // console.log('user postUser:', verificacion.user);
 
     if (verificacion.bool) {
-      // if(user ) {
-      //     return res.json({
-      //         success: false,
-      //         msg: 'Usuario ya existe'
-      //     });
-      // }
-  
       // Generar el código
       const code = uuidv4();
       //   Generar token
@@ -90,15 +79,15 @@ const postUser = async (req, res) => {
         expiresIn: "1h",
       });
       verificacion.user.token = token;
-  
+
       // Obtener un template
       const template = getTemplate(fristName, token);
-      console.log('template postUser: ', template);
-  
+      // console.log('template postUser: ', template);
+
       // Enviar el email
       await sendConfirmationMail(verificacion.user.email, template);
       await verificacion.user.save();
-  
+
       res.json({
         message: "Se registro correctamente",
         user: req.user,
@@ -128,7 +117,7 @@ const confirm = async (req, res) => {
       });
     }
 
-     const { user, code } = data;
+    const { user, code } = data;
     // Verificar existencia del usuario
     let usuario = await User.findOne({ email: user.email }) || null;
 
@@ -138,11 +127,6 @@ const confirm = async (req, res) => {
         msg: "Usuario no existe",
       });
     }
-
-    // Verificar el código
-    // if (code !== usuario.code) {
-    //   return res.json("error");
-    // }
 
     // Actualizar usuario
     usuario.status = "VERIFIED";
@@ -160,7 +144,7 @@ const confirm = async (req, res) => {
 };
 
 const postLogin = async (req, res, next) => {
-  console.log("req postLogin: ", req);
+  // console.log("req postLogin: ", req);
   try {
     passport.authenticate("login", async (err, user, info) => {
       try {
@@ -205,8 +189,8 @@ const postLogin = async (req, res, next) => {
 };
 
 const profileAuthenticate = (req, res, next) => {
-  console.log("token profile", req.query.secret_token);
-  console.log("req profile", req);
+  // console.log("token profile", req.query.secret_token);
+  // console.log("req profile", req);
   res.json({
     message: "Dale que sos vos",
     user: req.user,

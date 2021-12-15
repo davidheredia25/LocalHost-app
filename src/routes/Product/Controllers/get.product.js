@@ -13,7 +13,7 @@ const getProducts = async (req, res) => {
         category, 
         type
     } = req.query;
-    console.log('body getProducts: ', name, brand, category, type);
+    // console.log('body getProducts: ', name, brand, category, type);
     try {
         let getAllProducts = await Product.find({ exis: true })
         .populate('brand', ['name'])
@@ -41,7 +41,7 @@ const getProducts = async (req, res) => {
         }
         // console.log('filterTypes getProducts', filterTypes);
         let veriName = name === '' || name === undefined;
-        console.log('veriName getProducts', veriName);
+        // console.log('veriName getProducts', veriName);
         // Search
         if(veriName && filtered.length === 0) return res.json(getAllProducts);
         
@@ -75,16 +75,20 @@ const getProductById = async (req, res) => {
 const getTalles = async (req, res) => {
     try {
         let product = await Product.find({ exis: true })
-        let array = [];
-        product.forEach(p => {
-            p.talle.forEach(obj => {
-                if (obj.name) {
-                    array.push(obj.name)
-                }
+        console.log('product getTalles: ', product);
+        if (product.length !== 0) {
+            let array = [];
+            product.forEach(p => {
+                p.talle.forEach(obj => {
+                    if (obj.name) {
+                        array.push(obj.name)
+                    }
+                })
             })
-        })
-        array = [...new Set(array)]
-        res.json(array)
+            array = [...new Set(array)]
+            return res.json(array)
+        }
+        res.send('Hubo un error al traer los Products');
     }
     catch (err) {
         console.log(err)

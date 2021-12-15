@@ -9,7 +9,7 @@ const updateBrand = async (req, res) => {
     const { id } = req.params;
     const { name, categories, types } = req.body;
     // console.log('id updateBrand: ', id);
-    // console.log('name, categories, types updateBrand: ', name, categories, types);
+    // console.log('body updateBrand: ', name, categories, types);
     try {
         let verificacion = await verificacionId(id);
         // console.log('verificacion updateBrand', verificacion);
