@@ -58,7 +58,7 @@ const { products } = req.body;
                     installments: 3  //Cantidad máximo de cuotas
                 },
                 back_urls: {
-                    success: 'http://localhost:3000/catalogo',
+                    success: 'http://localhost:3000/profile/misordenes',
                     failure: 'http://localhost:3000/mercadopago/pagos',
                     pending: 'http://localhost:3000/mercadopago/pagos',
                 },
