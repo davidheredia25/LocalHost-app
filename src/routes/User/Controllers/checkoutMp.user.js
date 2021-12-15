@@ -1,4 +1,5 @@
-const Ticket = require('../../../models/Ticket')
+const Ticket = require('../../../models/Ticket');
+const axios = require('axios');
 
 const {
     verificacionId,
@@ -23,21 +24,21 @@ const { products } = req.body;
     const { userId } = req.params;
     console.log('userId checkoutMp: ', userId)
     try {
-        
         let verificacionUser = await verificacionId(userId);
         console.log('verificacionUser checkoutMp: ', verificacionUser);
-        
+        let user = verificacionUser.user
+
         if (verificacionUser.bool) {
             
             const tickets = await Ticket.find();
-            const id_orden = tickets.length++;
+            const id_orden = tickets.length + 1;
             console.log('id_orden checkoutMp: ', id_orden)
             
 
             // user.cart.qtyCart: cantidad
             // user.cart.cart.price: precio
             // user.cart.cart.name: nombre
-            const items_ml = verificacionUser.user.cart.map(i => ({
+            const items_ml = user.cart.map(i => ({
                 title: i.cart.name,
                 unit_price: i.cart.price ,
                 quantity: i.qtyCart,
@@ -66,9 +67,11 @@ const { products } = req.body;
             console.log('preference checkoutMp: ', preference)
 
             const response = await mercadopago.preferences.create(preference)
+            const ticket = await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user })
             console.log('response', response)
             global.id = response.id
-            return res.json(response)
+            console.log('global.id: ', global.id)
+            return res.json(response);
             // .then(function (response) {
             //     console.info('respondio', response.body.init_point)
             //     //Este valor reemplazará el string"<%= global.id %>" en tu HTML
