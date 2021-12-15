@@ -56,7 +56,25 @@ const createProduct = async (req, res) => {
         let sumStock = 0;
         talle.forEach(t => sumStock += t.stockTalle);
 
-        const result = await cloudinary.uploader.upload(req.file.path);
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path);
+            let newProduct = new Product({
+                name,
+                description,
+                brand: brands,
+                category: category,
+                type: type,
+                price,
+                color,
+                talle,
+                stock: sumStock,
+                image: result.url
+            });
+            newProduct = await newProduct.save();
+            await fs.unlink(req.file.path);
+            console.log('newProduct createProduct', newProduct);
+            res.json(newProduct);
+        }
         let newProduct = new Product({
             name,
             description,
@@ -67,10 +85,9 @@ const createProduct = async (req, res) => {
             color,
             talle,
             stock: sumStock,
-            image: result.url
+            image: ''
         });
         newProduct = await newProduct.save();
-        await fs.unlink(req.file.path);
         console.log('newProduct createProduct', newProduct);
         res.json(newProduct);
     } catch (error) {

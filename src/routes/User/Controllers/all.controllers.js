@@ -30,7 +30,7 @@ module.exports = {
     forgotPassword,
     enviarMail,
 
-    confirm
+    confirm,
 
     Join
 
