@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { forgotPassword } from "../../../redux/actions/login.actions";
 
+
 const RecuperarPassword = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState({});
@@ -59,6 +60,7 @@ const RecuperarPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(forgotPassword(input));
+    alert("Se ha actualizado su contraseña exitosamente")
     setInput({
       password: "",
       passwordDos: "",
