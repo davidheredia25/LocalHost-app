@@ -30,8 +30,7 @@ const checkoutMp = async (req, res) => {
             const items_ml = user.cart.map(i => ({
                 title: i.cart.name,
                 unit_price: i.cart.price,
-                quantity: i.qtyCart,
-
+                quantity: i.qtyCart
             }));
             // console.log('items_ml checkoutMp: ', items_ml)
             // Crea un objeto de preferencia
