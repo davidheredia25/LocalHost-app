@@ -8,6 +8,7 @@ export const FILTER_TICKETS = "FILTER_TICKETS"
 export const GET_TALLES = "GET_TALLES"
 
 
+
 export const setSection = (section)  => {
     return {
         type: SET_SECTION,

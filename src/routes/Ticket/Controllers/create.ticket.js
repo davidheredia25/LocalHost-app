@@ -4,7 +4,7 @@ const { addUser,setStock ,setCart} = require('./middleware');
 
 const createTicket = async (req, res) => {
     const { id_orden, user } = req.body;
-    console.log('body createTicket: ', id_orden, user);
+    // console.log('body createTicket: ', id_orden, user);
     try {
         if (user !== null) {
             // console.log('user createTicket: ', user);
