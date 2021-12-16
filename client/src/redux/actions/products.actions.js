@@ -5,8 +5,7 @@ export const GET_PRODUCTS_DETAILS = "GET_PRODUCTS_DETAILS"
 export const SET_PAGE = "SET_PAGE";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const REMOVE_PRODUCTS = "REMOVE_PRODUCTS";
-export const ORDER_RATING = "ORDER_RATING";
-export const ORDER_PRICE = "ORDER_PRICE";
+
 
 export const setPage = (page) => {
     return {
@@ -16,10 +15,10 @@ export const setPage = (page) => {
 };
 
 
-export const getProducts = ({ name, brand, category, subcategory }) => async (dispatch) => {
+export const getProducts = ({ name, brand, category, subcategory, order }) => async (dispatch) => {
     try {
        // const res = await axios.get(`/product?name=${name ? name : ""}`); //&category=${category ? category : ""}
-       let res = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}`)
+       let res = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}&order=${order ? order : ""}`)
         return dispatch({
             type: GET_PRODUCTS,
             payload: res.data,
@@ -52,17 +51,5 @@ export const removeProduct = () => {
 export const removeProducts = () => {
     return {
         type: REMOVE_PRODUCTS
-    }
-}
-export const orderRating = (payload) => {
-    return {
-        type: ORDER_RATING,
-        payload
-    }
-}
-export const orderPrice = (payload) => {
-    return {
-        type: ORDER_PRICE,
-        payload
     }
 }
