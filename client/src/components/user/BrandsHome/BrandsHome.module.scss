@@ -1,26 +1,44 @@
+@import "../../styles/media-queries.scss";
+
 .ctnBrands {
   display: flex;
   justify-content: space-around;
-  margin: 10px 0px 10px 0px;
- 
-  
+  margin: 10px 10px 10px 10px;
+  @include medium {
+    display: flex;
+    justify-content: space-around;
+  }
+  @include large {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  @include small {
+    display: inline-block;
+  }
 }
 
-// .imgIcon:hover{
-//     height: 120px;
-// }
-
 .imgIcon {
-  
   filter: brightness(1.1);
   mix-blend-mode: multiply;
   height: 70px;
   cursor: pointer;
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  @include small {
+    height: 50px;
+    margin: 0px 15px 0px 15px;
+
+  }
+  @include medium {
+    height: 50px;
+  }
+  @include large {
+    height: 50px;
+  }
+  @include smallSmall {
+    height: 40px;
+  }
 }
+
 
 @keyframes slidein {
   from {
@@ -35,5 +53,4 @@
 
 .imgIcon:hover {
   transform: scale(1.2);
-
 }

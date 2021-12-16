@@ -1,10 +1,24 @@
+@import "../../styles/media-queries.scss";
+
 .ctnTxt {
   margin-bottom: 10%;
+
+  @include smallSmall {
+    margin-top: 100px;
+    margin-bottom: 0%;
+  }
+  @include small {
+    margin-top: 20px;
+    margin-bottom: 0%;
+  }
+  @include medium {
+    margin-top: 30px;
+  }
 }
 
 .btn {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 0.8em 2em;
   color: white;
   border: 1px solid rgb(255, 255, 255);
@@ -14,11 +28,31 @@
   letter-spacing: 1px;
   background-color: #00000000;
   cursor: pointer;
+
+  @include smallSmall {
+    padding: 0.4em 1em;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  @include small {
+    margin-bottom: 35px;
+    padding: 0.4em 1em;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  @include medium {
+    margin-top: 15px;
+  }
+  @include large {
+    margin-top: 20px;
+  }
 }
 
-.link{
+.link {
   text-decoration: none;
-  &:hover{
+  &:hover {
     text-decoration: none;
     background-color: rgba(141, 137, 137, 0.541);
   }
@@ -34,10 +68,16 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-}
-
-.txt {
-  font-size: 25px;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
+  @include smallSmall {
+    margin-top: 1000px;
+    font-size: 50px;
+  }
+  @include small {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  @include medium {
+    margin-top: 20px;
+    font-size: 20px;
+  }
 }
