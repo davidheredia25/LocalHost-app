@@ -6,12 +6,30 @@
 
 .titlePrin {
   @include title;
-  text-align: center
+  text-align: center;
+ 
 }
 
 .ctnDetail {
   @include ctnMedida;
-  
+  @include smallSmall {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+  }
+  @include small {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+  }
+  @include large {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+  }
 }
 
 .data {
@@ -19,6 +37,19 @@
   align-items: center;
   margin-top: 10px;
   font-size: 18px;
+  @include smallSmall {
+    font-size: 15px;
+    width: 100px;
+  }
+  @include small {
+    font-size: 15px;
+
+  }
+  @include large {
+    font-size: 15px;
+  
+  }
+ 
 }
 
 .title1 {
@@ -27,20 +58,42 @@
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   margin-right: 10px;
+  @include smallSmall {
+    font-size: 15px;
+  }
+  @include small {
+    font-size: 15px;
+  }
+  @include large {
+    font-size: 15px;
+  
+  }
 }
 
 .ctnText {
   margin: 30px 50px 0px 50px;
+  @include smallSmall {
+    margin: 0 auto;
+  
+  }
+  @include small {
+    margin: 0 auto;
+    
+  }
+  @include large {
+    margin: 0 auto;
+    
+  }
+  
 }
 
-.icon{
- cursor: pointer;
+.icon {
+  cursor: pointer;
 }
 
 .icon:hover {
   transform: scale(1.1);
 }
-
 
 .titleModal {
   @include title;
@@ -57,10 +110,22 @@
 
 .ctnGrid {
   display: flex;
+  @include smallSmall {
+    display: block;
+  }
+  @include small {
+    display: block;
+  }
 }
 .ctnGrid > .InputForm {
   flex: 1 1 100px;
   margin: 20px 10px 0px 10px;
+  @include smallSmall {
+    margin: 0 auto;
+  }
+  @include small {
+    margin: 0 auto;
+  }
 }
 
 .text {
@@ -75,10 +140,19 @@
 .input {
   width: 100%;
   height: 60%;
+  @include smallSmall {
+    width: 100%;
+  }
 }
 
 .ctnBtn {
   justify-content: center;
+  @include smallSmall {
+    display: flex;
+  }
+  @include small {
+    display: flex;
+  }
 }
 
 .btn {
@@ -92,6 +166,9 @@
   background-color: #000000;
   cursor: pointer;
   width: 150px;
+  @include smallSmall{
+    
+  }
 }
 
 .btn:hover {

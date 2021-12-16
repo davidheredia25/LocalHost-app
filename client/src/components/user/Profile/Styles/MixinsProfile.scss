@@ -1,3 +1,27 @@
+@mixin smallSmall {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: 1065px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: 1264px) {
+    @content;
+  }
+}
+
 @mixin title {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -8,8 +32,12 @@
   height: 40px;
   width: 400px;
   margin: 0 auto;
+  @include smallSmall {
+    font-size: 18px;
+    height: 30px;
+    width: 300px;
+  }
 }
-
 
 @mixin centerCnt {
   margin-top: 4%;

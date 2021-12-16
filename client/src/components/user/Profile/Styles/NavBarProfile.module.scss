@@ -1,3 +1,5 @@
+@import "./MixinsProfile.scss";
+
 .ctnNavBar {
   display: flex;
   flex-direction: column;
@@ -8,11 +10,22 @@
 .ctnUl {
   list-style: none;
   margin-top: 20px;
+  @include smallSmall {
+    display: flex ;
+  }
+  @include small {
+    display: flex ;
+  }
+  @include large {
+    display: flex ;
+  }
+ 
 }
 
 .link {
   text-decoration: none;
   cursor: pointer;
+ 
 }
 
 .btn {
@@ -25,6 +38,11 @@
   border: none;
   background-color: rgba(255, 255, 255, 0);
   color: rgba(0, 38, 255, 0.719);
+  @include smallSmall {
+    display: flex ;
+    justify-content: space-around;
+    font-size: 14px;
+  }
 }
 
 .btn:hover,
@@ -49,4 +67,7 @@
   letter-spacing: 0.5px;
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
+  @include smallSmall {
+    font-size: 20px;
+  }
 }
