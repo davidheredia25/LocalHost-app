@@ -3,7 +3,7 @@ const { verificacionName, setExisP } = require('./middleware');
 
 const deleteTypes = async (req, res) => {
     const { brand, category, type } = req.body; 
-    console.log('body deleteTypes: ', brand, category, type);
+    // console.log('body deleteTypes: ', brand, category, type);
     try {
         let verificacion = await verificacionName(type);
         // console.log('verificacion deleteTypes', verificacion);

@@ -9,13 +9,13 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const FilterByBrand = ({ brands }) => {
     
     const dispatch = useDispatch();
-    const { category, subcategory } = useSelector(state => state.filters)
+    const { category, subcategory, name, order } = useSelector(state => state.filters)
     
     const [open, setOpen] = useState(false);
 
     const handleClick = (e) => {
         dispatch(setFilterBrand(e.target.value))
-        dispatch(getProducts({ brand: e.target.value, category, subcategory }))
+        dispatch(getProducts({ brand: e.target.value, category, subcategory, name, order }))
     }
 
     return (

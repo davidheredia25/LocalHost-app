@@ -6,10 +6,10 @@ const {
 
 const deleteBrand = async (req, res) => {
     const { brand } = req.body; 
-    console.log('brand deleteBrand', brand);
+    // console.log('brand deleteBrand', brand);
     try {
         let verificacion = await verificacionName(brand);
-        console.log('verificacion deleteBrand: ', verificacion);
+        // console.log('verificacion deleteBrand: ', verificacion);
 
         if (verificacion.bool) {
             let deleteProduct = await setExisP(verificacion.brand._id);
@@ -17,7 +17,7 @@ const deleteBrand = async (req, res) => {
                 exis: false
             }, { new: true });
             deleted = await deleted.save();
-            console.log('deleted deleteBrand', deleted);
+            // console.log('deleted deleteBrand', deleted);
             if (deleted) return res.json(deleted, deleteProduct);
             return res.send('No se elimino correctamente');
         }

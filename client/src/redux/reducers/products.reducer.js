@@ -3,7 +3,7 @@ import {
   GET_PRODUCTS_DETAILS,
   SET_PAGE,
   REMOVE_PRODUCT,
-  REMOVE_PRODUCTS
+  REMOVE_PRODUCTS,
   } from "../actions/products.actions";
 
 import { sliceArray } from "./utils/sliceArray";
@@ -44,12 +44,7 @@ export function productsReducer(state = initialState, action) {
           ...state,
           product: null
         }
-      case REMOVE_PRODUCTS:
-        return {
-          ...state,
-          products: []
-        }
-    default:
-    return state;
+        default:
+        return state;
   }
 }

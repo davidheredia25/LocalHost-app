@@ -7,6 +7,7 @@ const Pagination = () => {
 	const productsPerPage = 12;
 	const dispatch = useDispatch();
 	const { page, allProducts, products   } = useSelector(state => state.products);
+	const {brand, category, subcategory, name, order } = useSelector(state => state.filters)
 
 	const changePage = (page) => {
 		dispatch(setPage(page))
@@ -15,7 +16,7 @@ const Pagination = () => {
 		// 	dispatch(getProducts({category}));
 		// }
 		// else {
-			dispatch(getProducts({}));
+			dispatch(getProducts({brand, category, subcategory, name, order}));
 		// }
 	}
 

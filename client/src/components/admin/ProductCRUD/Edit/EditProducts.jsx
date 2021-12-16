@@ -77,9 +77,9 @@ const EditProducts = ({ products }) => {
                             return (
                                 <tr >
                                     <td> <img className={style.image} src={x.image} alt={x.name} /></td>
-                                    <td  >{x.name}</td>
+                                    <td>{x.name}</td>
                                     <td>{x.brand.name.charAt(0).toUpperCase() + x.brand.name.slice(1)}</td>
-                                    <td>{x.category.name.charAt(0).toUpperCase() + x.category.name.slice(1)}</td>
+                                    <td>{x.name.charAt(0).toUpperCase() + x.category.name.slice(1)}</td>
                                     <td>{x.type.name.charAt(0).toUpperCase() + x.type.name.slice(1)}</td>
                                     <td> $ {x.price}</td>
                                     <td>

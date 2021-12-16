@@ -60,18 +60,18 @@ const verificacionT = async (name) => {
 const setExisP = async (brand) => {
     try {
         let find = await Product.find({ brand: brand });
-        console.log('find setExisP: ', find);
+        // console.log('find setExisP: ', find);
         if (find.length !== 0) {
             let arrayDelete = [];
             find.forEach(async (p) => {
-                console.log('p setExisP: ', p);
+                // console.log('p setExisP: ', p);
                 let deleted = await Product.findByIdAndUpdate(p._id, {
                     exis: false
                 }, { new: true });
                 deleted = await deleted.save();
                 arrayDelete.push(deleted.name);
             });
-            console.log('arrayDelete setExisP: ', arrayDelete);
+            // console.log('arrayDelete setExisP: ', arrayDelete);
             return arrayDelete;
         }
         return 'No se encontro nada';

@@ -13,7 +13,7 @@ const CreateProduct = () => {
   const [form, setForm] = useState({
     name: "",
     brand: "",
-    categories: "",
+    categories: [],
     types: "",
     price: "",
     color: [],
@@ -23,7 +23,14 @@ const CreateProduct = () => {
     image: [],
   });
 
-  // const {color, size} = useSelector(state => state.prodcuts)
+  const [actualImage, setActualImage] = useState("");
+
+  const [talleObj, setTalleObj] = useState({
+    name: "",
+    stockTalle: 0
+  })
+
+  const { talles } = useSelector(state => state.admin)
   const { brands, categories, subcategories } = useSelector(
     (state) => state.brand
   );
@@ -82,9 +89,56 @@ const CreateProduct = () => {
     });
   };
 
+  const selectTalle = (e) => {
+    setTalleObj({
+      ...talleObj,
+      name: e.target.value
+    })
+  }
+
+  const addTalleObj = (e) => {
+    e.preventDefault();
+    let found = form.talle.find(x => x.name === talleObj.name)
+    if(!found) {
+      setForm({
+        ...form,
+        talle: [...form.talle, talleObj]
+      })
+      setTalleObj({
+        name: "",
+        stockTalle: 0
+      })
+    }
+    else {
+      found.stockTalle = Number(found.stockTalle) + Number(talleObj.stockTalle)
+      let array = form.talle.filter(e => e.name !== found.name)
+      setForm({
+        ...form,
+        talle: [...array, found]
+      })
+    }
+  }
+
+  const deleteTalleObj = (e) => {
+    let filtered = form.talle.filter(x => x.name !== e.target.value)
+    setForm({
+      ...form,
+      talle: filtered
+    })
+  }
+
+  const saveImg = (e) => {
+    e.preventDefault()
+    console.log(actualImage)
+    setForm({
+      ...form,
+      image: [...form.image, actualImage]
+    })
+    setActualImage("")
+  }
+
   return (
-
-
+    <div>
     <form className={style.formu}>
       <h1 className={style.titleform}>Crear productos</h1>
       
@@ -145,29 +199,22 @@ const CreateProduct = () => {
       {/* div */}
       <div className={style.ctnGrid}>
         <div className={style.InputForm}>
-          <label className={style.text}>Talle</label>
-          <input 
-            className={style.input} 
-            name="talle" 
-            type="text" 
-            placeholder="Talle..." 
-            value={form.talle} 
-            onChange={handleChange} 
-          />
-        </div>
-
-        <div className={style.InputForm}>
           <label className={style.text}>Imagen</label>
           <input 
             className={style.input} 
+            value={actualImage}
             name="image" 
             type="text" 
             placeholder="Imagen.." 
-            value={form.image} 
-            onChange={handleChange} 
+            /* value={form.image}  */
+            onChange={(e) => {
+              setActualImage(e.target.value)
+            }} 
           />
         </div>
+        <button onClick={saveImg}>GUARDAR</button>
       </div>
+      <br/>
 
       {/* div */}
       <div className={style.ctnGrid}>
@@ -220,12 +267,67 @@ const CreateProduct = () => {
           {/* crea una nueva subcategoría
           <input /> */}
         </div>
+        <div className={style.InputForm}>
+          <label className={style.text}>Talle</label>
+          <select className={style.input1} onChange={selectTalle}>
+            <option selected value={form.brand}>
+              Selecciona Talle
+            </option>
+            {talles?.map((e) => {
+              return (
+                <option name="talle" value={e}>
+                  {e}
+                </option>
+              );
+            })}
+          </select>
+          <div>
+            {
+              talleObj.name &&
+                <div>
+                  <h4>{talleObj.name}</h4>
+                  <input 
+                    value={talleObj.stockTalle} 
+                    type="number" 
+                    min="0" 
+                    onChange={(e) => setTalleObj({...talleObj, stockTalle: e.target.value})} 
+                  />
+                  <button onClick={addTalleObj}>GUARDAR</button>
+                </div> 
+            }
+          </div>
+        </div>
       </div>
 
       <button className={style.btn} onClick={handleClick}>CREAR</button>
 
     </form>
-
+    <div>
+      <h3>Nombre: {form.name}</h3>
+      <h3>Precio: {form.price && `$${form.price}`}</h3>
+      <h3>Marca: {form.brand}</h3>
+      <h3>Categoría: {form.categories}</h3>
+      <h3>Subcategoría: {form.types}</h3>
+      <div>
+      <h3>Talles:</h3>
+      {
+          form.talle.map(obj => {
+            return (
+              <div>
+                <p>Talle: {obj.name}</p>
+                <p>Stock: {obj.stockTalle}</p>
+                <button value={obj.name} onClick={deleteTalleObj}>X</button>
+              </div>
+            )
+          })
+        }
+      </div>
+      <div>
+        <h3>Imágenes:</h3>
+        <div>{form.image.map(e => <p>{e}</p>)}</div>
+      </div>
+    </div>
+    </div>
 
   );
 };

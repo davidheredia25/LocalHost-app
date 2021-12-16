@@ -4,7 +4,8 @@ const {
     deleteTicket,
     getTicketById,
     getTicket,
-    updateTicket
+    updateTicket,
+    getUserTickets
  } = require('./Controllers/all.controllers');
 
 const router = Router();
@@ -12,6 +13,7 @@ const router = Router();
 //          /ticket
 router.get('/', getTicket);
 router.get('/:id', getTicketById);
+router.get('/user/:id', getUserTickets)
 router.post('/create', createTicket);
 router.put('/update/:id', updateTicket);
 router.put('/delete', deleteTicket);

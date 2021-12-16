@@ -24,7 +24,8 @@ const ticketSchema = new Schema({
     },
     metodoPago: {
         type: String,
-        required: true
+        required: true,
+        default: 'mercadoPago'
     },
     user: {
         type: Schema.Types.ObjectId,

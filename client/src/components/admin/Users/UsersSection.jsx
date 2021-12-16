@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeRol, deleteUser, getUsers } from "../../../redux/actions/admin.actions.js";
+import { changeRol, deleteUser, getUsers, sendNewPassword } from "../../../redux/actions/admin.actions.js";
 
 
 const UsersSection = () => {
@@ -20,6 +20,10 @@ const UsersSection = () => {
 
     const handleDelete = (e) =>{
         dispatch(deleteUser(e.target.value))
+    }
+
+    const handleClick = (e) => {
+        dispatch(sendNewPassword(e.target.value))
     }
 
 
@@ -42,6 +46,11 @@ const UsersSection = () => {
                             value={u._id}
                             onClick={handleDelete}>
                                 eliminar usuario
+                            </button>
+                            <button 
+                            value={u._id}
+                            onClick={handleClick}>
+                                crear nueva contraseña
                             </button>
                         </div>
                     )

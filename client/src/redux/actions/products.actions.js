@@ -6,6 +6,7 @@ export const SET_PAGE = "SET_PAGE";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const REMOVE_PRODUCTS = "REMOVE_PRODUCTS";
 
+
 export const setPage = (page) => {
     return {
         type: SET_PAGE,
@@ -14,10 +15,10 @@ export const setPage = (page) => {
 };
 
 
-export const getProducts = ({ name, brand, category, subcategory }) => async (dispatch) => {
+export const getProducts = ({ name, brand, category, subcategory, order }) => async (dispatch) => {
     try {
        // const res = await axios.get(`/product?name=${name ? name : ""}`); //&category=${category ? category : ""}
-       let res = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}`)
+       let res = await axios.get(`/product?name=${name ? name : ""}&brand=${brand ? brand : ""}&category=${category ? category : ""}&type=${subcategory ? subcategory : ""}&order=${order ? order : ""}`)
         return dispatch({
             type: GET_PRODUCTS,
             payload: res.data,

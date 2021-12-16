@@ -1,5 +1,6 @@
 const Ticket = require('../../../models/Ticket');
 const User = require('../../../models/User');
+const Product = require('../../../models/Product');
 
 const verificacionNumOrder = async (numOrder) => {
     try {
@@ -59,11 +60,46 @@ const addUser = async (userId, arrayProductId, ticketId) => {
     }
 };
 
+const setStock = async (stock, id) => {
+    try {
+        let find = await Product.findById(id);
+        let preStock = find.talle.find(x => x.name === stock.talle);
+        let obj = {
+            name: stock.talle,
+            stockTalle: preStock.stockTalle - stock.qty
+        };
+        let talle = find.talle.filter(t => t.name !== obj.name);
+        let update = await Product.findByIdAndUpdate(id, {
+            talle: [...talle, obj]
+        }, { new: true });
+        await update.save();
+        return update;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+const setCart = async(id) => {
+    try {   
+        let user = await User.findByIdAndUpdate(id, {
+            cart: []
+        }, { new: true });
+        await user.save()
+        return user;
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 
 module.exports = {
     verificacionNumOrder,
     verificacionId,
     verificacionP,
     verificacionU,
-    addUser
+    addUser,
+    setStock,
+    setCart
 }
