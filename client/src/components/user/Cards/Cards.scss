@@ -2,11 +2,15 @@
 @import "../../styles/media-queries.scss";
 
 .container {
-  width: 150vh;
+
   .cards {
     @include flexCenter(column);
     margin-top: 20px;
-    @include xs {
+    @include smallSmall{
+      display: block;
+      margin: 0px;
+    }
+    @include small {
       display: block;
       margin: 0px;
     }

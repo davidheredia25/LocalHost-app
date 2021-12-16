@@ -1,12 +1,21 @@
+@import "../../styles/media-queries.scss";
+
 .ctn {
   display: flex;
   justify-content: space-around;
+  @include small {
+    display: flex;
+    flex-direction: column;
+  }
+  @include medium {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.fondo{
+.fondo {
   background-color: black;
 }
-
 
 .ctnImg {
   display: inline-block;
@@ -16,14 +25,19 @@
 .title {
   position: absolute;
   color: white;
-  font-size:20px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  @include small {
+    letter-spacing: 4px;
+  }
+  @include medium {
+    letter-spacing: 4px;
+  }
 }
 
 .imgSec {
@@ -31,11 +45,15 @@
   object-fit: cover;
   opacity: 60%;
   cursor: pointer;
+  @include small {
+    height: 200px;
+  }
+  @include medium {
+    height: 450px;
+  }
 }
 
 .imgSec:hover {
   opacity: 100%;
   transform: scale(1.01);
 }
-
-

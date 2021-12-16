@@ -1,23 +1,23 @@
-@import '../../styles/media-queries.scss';
+@import "../../styles/media-queries.scss";
 
-.imgCata{
+.imgCata {
   width: 100%;
   height: 400px;
 }
 
 .filtersAndCards {
-    display: flex;
-    justify-content: space-evenly;
-    @include xs {
-        display: block;
-        margin: 0px;
-      }
-      @include sm {
-        display: block;
-        margin: 0px;
-      }
-      @include md {
-        display: block;
-        margin: 0px;
-      }
+  display: flex;
+  justify-content: space-evenly;
+  @include small {
+    display: block;
+    margin: 0px;
+  }
+  @include medium {
+    display: block;
+    margin: 0px;
+  }
+  @include large {
+    display: block;
+    margin: 0px;
+  }
 }

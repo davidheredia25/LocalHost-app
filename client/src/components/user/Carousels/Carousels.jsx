@@ -20,7 +20,6 @@ const Carousels = () => {
                     />
                     <Carousel.Caption className={style.ctnTxt}>
                         <h3 className={style.title}>Just Do It</h3>
-                        <p className={style.txt}></p>
                        <Link to='/catalogo' className={style.link}> <button className={style.btn}>Catalogo</button> </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -32,7 +31,6 @@ const Carousels = () => {
                     />
                     <Carousel.Caption className={style.ctnTxt}>
                         <h3 className={style.title}>Achieve New Balance </h3>
-                        <p className={style.txt}></p>
                         <Link to='/catalogo' className={style.link}> <button className={style.btn}>Catalogo</button> </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -45,7 +43,6 @@ const Carousels = () => {
                     />
                     <Carousel.Caption className={style.ctnTxt}>
                         <h3 className={style.title}>Impossible is nothing</h3>
-                        <p className={style.txt}></p>
                         <Link to='/catalogo' className={style.link}> <button className={style.btn}>Catalogo</button> </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
