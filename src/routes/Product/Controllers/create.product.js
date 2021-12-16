@@ -1,4 +1,7 @@
 const Product = require('../../../models/Product');
+const cloudinary = require('../../Cloudinary/Middleware');
+const fs = require('fs-extra');
+
 const {
     verificacionName,
     verificacionB,
@@ -16,7 +19,6 @@ const createProduct = async (req, res) => {
         price,
         color,
         talle, // Array de obj
-        image
     } = req.body;
     console.log("body (T.C.B.N.T) createproduct: ", types, categories, brand, name, talle);
     try {
@@ -54,6 +56,25 @@ const createProduct = async (req, res) => {
         let sumStock = 0;
         talle.forEach(t => sumStock += t.stockTalle);
 
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path);
+            let newProduct = new Product({
+                name,
+                description,
+                brand: brands,
+                category: category,
+                type: type,
+                price,
+                color,
+                talle,
+                stock: sumStock,
+                image: result.url
+            });
+            newProduct = await newProduct.save();
+            await fs.unlink(req.file.path);
+            console.log('newProduct createProduct', newProduct);
+            res.json(newProduct);
+        }
         let newProduct = new Product({
             name,
             description,
@@ -64,7 +85,7 @@ const createProduct = async (req, res) => {
             color,
             talle,
             stock: sumStock,
-            image
+            image: ''
         });
         newProduct = await newProduct.save();
         console.log('newProduct createProduct', newProduct);

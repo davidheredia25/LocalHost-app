@@ -28,7 +28,6 @@ const Dates = () => {
     const [input, setInput] = useState({
         fristName: '',
         lastName: '',
-        image:'',
         document: '',
         dateOfBirth: '',
         telephone: '',
@@ -52,7 +51,6 @@ const Dates = () => {
         setInput({
             fristName: User.fristName,
             lastName: User.lastName,
-            image: User.image,
             document: User.document,
             dateOfBirth: User.dateOfBirth,
             telephone: User.telephone,
@@ -72,7 +70,6 @@ const Dates = () => {
         setInput({
             fristName: '',
             lastName: '',
-            image:'',
             document: '',
             dateOfBirth: '',
             telephone: '',
@@ -164,15 +161,6 @@ const Dates = () => {
                                 name="lastName" 
                                 type="text" 
                                 value={input.lastName} 
-                                onChange={onChange} />
-                            </div>
-                            <div className={style.InputForm} >
-                                <label className={style.text}>Foto</label >
-                                <input 
-                                className={style.input} 
-                                name="image" 
-                                type="text" 
-                                value={input.image} 
                                 onChange={onChange} />
                             </div>
                         </div>
