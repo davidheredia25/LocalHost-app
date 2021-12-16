@@ -5,7 +5,7 @@ import ProductImage from "./ProductImage";
 import ProductInfo from "./ProductInfo";
 import CreateReview from "./CreateReview";
 import { useParams } from "react-router-dom";
-import './Details.scss';
+import style from './Details.module.scss';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -23,15 +23,18 @@ const Details = () => {
   return (
     product
       ?
-      <div>
-        <div className='details_container'>
-          <div className='details_image'>
-            <ProductImage
-              images={[product.image, product.image1, product.image2]}
-              product={product}
-            />
+      <div className={style.ctnSuperior}>
+        <div className={style.details_container}>
+          <ProductImage
+            images={[product.image, product.image1, product.image2]}
+            product={product}
+          />
+          <div>
+            <ProductInfo product={product} />
           </div>
-          <ProductInfo product={product} />
+
+        </div>
+        <div>
           {
             user !== null ? (
               <CreateReview id={id} />

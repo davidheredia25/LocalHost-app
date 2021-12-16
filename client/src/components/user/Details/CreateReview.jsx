@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import StarRatings from 'react-star-ratings';
 import { createReview } from '../../../redux/actions/review.actions';
 import { getProductsDetails } from '../../../redux/actions/products.actions';
+import style from './CreateReview.module.scss'
 
 const CreateReview = ({ id }) => {
     const [rating, setRating] = useState(0);
@@ -40,7 +41,7 @@ const CreateReview = ({ id }) => {
     };
 
     return (
-        <div className=''>
+        <div className={style.CtnRating}>
             <StarRatings
                 rating={rating}
                 starRatedColor="blue"
@@ -48,13 +49,13 @@ const CreateReview = ({ id }) => {
                 numberOfStars={5}
                 name='rating'
             />
-            <textarea 
+            <textarea  className={style.Cuadrado} 
                 type='text'
                 value={comment}
                 placeholder='Ingrese su comentario ...'
                 onChange={handleChange}
             />
-            <button onClick={handleSubmit}>AGREGAR COMMENTARIO</button>
+            <button className={style.btnRating} onClick={handleSubmit}>AGREGAR COMENTARIO</button>
         </div>
     );
 };
