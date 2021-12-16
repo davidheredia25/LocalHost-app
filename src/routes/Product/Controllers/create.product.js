@@ -1,6 +1,6 @@
 const Product = require('../../../models/Product');
-const cloudinary = require('../../Cloudinary/Middleware');
-const fs = require('fs-extra');
+// const cloudinary = require('../../Cloudinary/Middleware');
+// const fs = require('fs-extra');
 
 const {
     verificacionName,
@@ -18,9 +18,10 @@ const createProduct = async (req, res) => {
         types, // String
         price,
         color,
+        image,
         talle, // Array de obj
     } = req.body;
-    console.log("body (T.C.B.N.T) createproduct: ", types, categories, brand, name, talle);
+    console.log("body (I.T.C.B.N.T) createproduct: ", image, types, categories, brand, name, talle);
     try {
         let verificacion = await verificacionName(name);
         console.log('verificacion createProduct', verificacion);
@@ -54,27 +55,27 @@ const createProduct = async (req, res) => {
         console.log('type createProduct', type);
 
         let sumStock = 0;
-        talle.forEach(t => sumStock += t.stockTalle);
+        talle.forEach(t => sumStock += Number(t.stockTalle));
 
-        if (req.file) {
-            const result = await cloudinary.uploader.upload(req.file.path);
-            let newProduct = new Product({
-                name,
-                description,
-                brand: brands,
-                category: category,
-                type: type,
-                price,
-                color,
-                talle,
-                stock: sumStock,
-                image: result.url
-            });
-            newProduct = await newProduct.save();
-            await fs.unlink(req.file.path);
-            console.log('newProduct createProduct', newProduct);
-            res.json(newProduct);
-        }
+        // if (req.file) {
+        //     // const result = await cloudinary.uploader.upload(req.file.path);
+        //     let newProduct = new Product({
+        //         name,
+        //         description,
+        //         brand: brands,
+        //         category: category,
+        //         type: type,
+        //         price,
+        //         color,
+        //         talle,
+        //         stock: Number(sumStock),
+        //         image: image
+        //     });
+        //     newProduct = await newProduct.save();
+        //     // await fs.unlink(req.file.path);
+        //     console.log('newProduct createProduct', newProduct);
+        //     reurn res.json(newProduct);
+        // }
         let newProduct = new Product({
             name,
             description,
@@ -84,8 +85,8 @@ const createProduct = async (req, res) => {
             price,
             color,
             talle,
-            stock: sumStock,
-            image: ''
+            stock: Number(sumStock),
+            image: image
         });
         newProduct = await newProduct.save();
         console.log('newProduct createProduct', newProduct);

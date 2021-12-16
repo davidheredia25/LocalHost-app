@@ -30,7 +30,7 @@ const getProducts = async (req, res) => {
 
         if (type) getAllProducts = await filterT(type, getAllProducts);
         // console.log('filterTypes getProducts', filterTypes);
-        if (name !== '') getAllProducts.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));
+        if (name !== '') getAllProducts = getAllProducts.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));
         // console.log('getProductsName getProducts', getProductsName);
         // console.log('getProductsFilterName getProducts', getProductsFilterName);
 
