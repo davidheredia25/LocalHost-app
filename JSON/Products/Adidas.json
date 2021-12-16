@@ -1,0 +1,1072 @@
+[
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Adidas Originals Con Gráfico Trefoil Lounge",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 6499,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Conviértete en un creyente con la camiseta adidas Originals Trefoil Lounge Graphic, que luce brillantes detalles de patines de Alien y está confeccionada con suaves telas de algodón para brindar comodidad durante todo el día y estilo urbano.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/246522_Main_Thumb_0997642.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/246522_Gallery_1_0997646.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/246522_Gallery_2_0997648.jpg?imwidth=768"
+      },
+      {
+        "rating": 5,
+        "exis": true,
+        "name": "Remera Adidas Originals De Yoga",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 4999,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "AEROREADY con esta camiseta adidas te mantiene seco mientras pruebas nuevas poses. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4064056901403_1_0974343.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4064056901403_2_0974344.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4064056901403_4_0974346.jpg?imwidth=375"
+      },
+      {
+        "rating": 1,
+        "exis": true,
+        "name": "Pantalon Cargo Trefoil Adidas Originals",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 13999,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ead"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "El pantalón cargo adidas Originals Trefoil en negro ofrece un estilo moderno, relajado y utilitario, que representa el estilo clásico de skate y brinda comodidad de carga. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/246504_Main_1016033.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/246504_Gallery_1_1016034.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/246504_Gallery_2_1016035.jpg?imwidth=768"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Pantalon Adidas Originals Essentials Trefoil Joggers",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 10999,
+        "color": [
+          "Verde"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleve consigo una comodidad suave con la sudadera con capucha adidas Originals Essential, confeccionada con una mezcla de lana de algodón pesado para una cobertura confiable y una sensación lujosamente suave.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/245371_Main_0978031.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/245371_Gallery_1_0978045.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/245371_Gallery_1_0978045.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Buzo Adidas Originals Essentials",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 14999,
+        "color": [
+          "Verde"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleve consigo una comodidad suave con la sudadera con capucha adidas Originals Essential, confeccionada con una mezcla de lana de algodón pesado para una cobertura confiable y una sensación lujosamente suave.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/245370_Main_Thumb_0983398.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/245370_Gallery_1_0983401.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/245370_Gallery_2_0983403.jpg?imwidth=768"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Buzo Adidas Originals MM Trefoil FB-Ambient",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 10999,
+        "color": [
+          "Rosa"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleva contigo una comodidad suave con la sudadera con capucha adidas Originals MM Trefoil FB, confeccionada con una mezcla de algodón grueso para una cobertura confiable y una sensación lujosamente suave.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237719_Main_Thumb_0925931.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237719_Gallery_1_0925934.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237719_Gallery_2_0925936.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Buzo Adidas Original Essentials",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 13999,
+        "color": [
+          "Gris"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleve consigo una comodidad suave con la sudadera con capucha adidas Originals Essential, confeccionada con una mezcla de lana de algodón pesado para una cobertura confiable y una sensación lujosamente suave.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237735_Main_Thumb_0926077.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237735_Gallery_1_0926079.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237735_Gallery_2_0926080.jpg?imwidth=375"
+      },
+      {
+        "rating": 4,
+        "exis": true,
+        "name": "Buzo Adidas Originals 3 Rayas",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 9499,
+        "color": [
+          "Gris"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eae"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleva contigo una comodidad suave con la sudadera con capucha de 3 rayas de adidas Originals, confeccionada con una mezcla de lana de algodón pesado para una cobertura confiable y una sensación lujosamente suave.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237694_Main_Thumb_0925776.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237694_Gallery_1_0925777.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237694_Gallery_2_0925779.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Adidas Originals Warm Up",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 14999,
+        "color": [
+          "Violeta"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Ilumina tu día con el cortavientos tejido adidas Originals en Legend Ink / Glory Purple, la chaqueta holgada de inspiración retro que hace que tu día sea un poco más emocionante.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237701_Main_0921921.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237701_Gallery_1_0921923.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237701_Gallery_2_0921924.jpg?imwidth=768"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Adidas Originals Adventure Con Media Cremallera",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 15999,
+        "color": [
+          "Celeste",
+          "Negro",
+          "Amarillo"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleva un poco de la actitud de los 80 donde quiera que vayas con la chaqueta adidas Originals Adventure con media cremallera, que cuenta con un cálido forro polar y un diseño de bloques de colores para brindar comodidad y estilo durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230987_Main_Thumb_0848216.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230987_Gallery_1_0848217.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230987_Gallery_2_0848218.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Short Adidas Originals Táctico ",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 8999,
+        "color": [
+          "Gris"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eb0"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Combina elegante y sofisticado y tienes los pantalones cortos adidas Originals Tactical de ajuste regular en gris sólido, con cintura elástica y cordón, tienes estilo y comodidad en uno.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237725_Main_Thumb_0970762.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237725_Gallery_1_0970763.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237725_Gallery_2_0970765.jpg?imwidth=768"
+      },
+      {
+        "rating": 4,
+        "exis": true,
+        "name": "Short Adidas Origianls Cargo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 9499,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eb0"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Confeccionados con 100% algodón ripstop, estos pantalones cortos fiables y versátiles, perfectos para resistir las exigencias del uso diario.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237712_Main_Thumb_0922485.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237712_Gallery_1_0922486.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237712_Gallery_2_0922487.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Adidas Earth Graphic Yoga",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 6999,
+        "color": [
+          "Azul",
+          "Blanco",
+          "Marron"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "La tela suave se siente suave contra tu piel, y AEROREADY que absorbe la humedad te mantiene enfocado en tu práctica.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4064057520696_1_0970001.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Main/4064057520696_1_0970001.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4064057520696_4_0970005.jpg?imwidth=768"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Con Logo Adidas Originals",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 6999,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Embárcate en la aventura con la camiseta adidas Originals Logo, con un gráfico de aventuras al aire libre inspirado en diseños de archivo en algodón suave y cómodo, para un estilo para todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/237709_Main_Thumb_0925876.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/237709_Gallery_1_0925877.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/237709_Gallery_2_0925878.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Adidas Essentials 3 Rayas",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 3499,
+        "color": [
+          "Rojo"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Representa el espíritu atlético de adidas con esta versátil camiseta. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4062064962485_1_0892954.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4062064962485_2_0892955.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4062064962485_4_0892957.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Adidas Essentials 3 Rayas",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 6999,
+        "color": [
+          "Blanco"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169ea7"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4062064962485_4_0892957.jpg?imwidth=375",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4062064985521_1_0892647.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4062064985521_2_0892648.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4062064985521_4_0892650.jpg?imwidth=375"
+      },
+      {
+        "rating": 4,
+        "exis": true,
+        "name": "Short De Yoga Warp Knit",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 5999,
+        "color": [
+          "Beige"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eb0"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "La entrepierna caída de estos pantalones cortos de yoga adidas es un cambio de juego. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4064057538653_1_0942998.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4064057538653_2_0942999.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4064057538653_4_0943001.jpg?imwidth=768"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Short Adidas Hombre Adiplore 2.0",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 4560,
+        "color": [
+          "Celeste"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eb0"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Haga una declaración con el adidas Originals adiplore 2.0 Woven Short en Bright Cyan, con cintura con cordón y bolsillos frontales con cremallera, este es el short práctico ideal para el uso diario.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/223389_Main_Thumb_0789881.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/223389_Gallery_1_0789882.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/223389_Gallery_2_0789883.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Adidas Chandal Firebird",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 13999,
+        "color": [
+          "Verde"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Lleva un ícono al siguiente nivel con la camiseta adidas Originals Firebird, con telas de alto rendimiento Primeblue recicladas y un trébol clásico para un estilo ecológico.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/230977_Main_Thumb_0851179.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/230977_Gallery_1_0851180.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/230977_Gallery_2_0851181.jpg?imwidth=768"
+      },
+      {
+        "rating": 4,
+        "exis": true,
+        "name": "Campera Adidas Impermeable 2 Capas Terrex Multi",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 8999,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Esta chaqueta de lluvia adidas Terrex ofrece una cobertura transpirable para aventuras en climas húmedos. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/417579_Main_Thumb_1000481.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/417579_Gallery_1_1000484.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/417579_Gallery_2_1000487.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Adidas Terrex Multi Rain.RDY",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 19499,
+        "color": [
+          "Amarillo",
+          "Celeste",
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Su diseño impermeable y transpirable lo mantiene al aire libre en climas mixtos. ",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4064044643629_1_0858662.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4064044643629_2_0858663.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4064044643629_4_0858665.jpg?imwidth=375"
+      },
+      {
+        "rating": 4,
+        "exis": true,
+        "name": "Campera Adidas Hombre 3-Stripes Rojo",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 135999,
+        "color": [
+          "Marron"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eaa"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Su diseño de felpa de rejilla mejora la transpirabilidad y el calor para una mayor regulación de la temperatura y comodidad de secado rápido.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/4062064912428_1_0883719.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/4062064912428_2_0883720.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/4062064912428_4_0883722.jpg?imwidth=375"
+      },
+      {
+        "rating": 3,
+        "exis": true,
+        "name": "Pantalon Adidas Orlando Pirates Track",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 11499,
+        "color": [
+          "Negro"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "S",
+            "stockTalle": 32
+          },
+          {
+            "name": "M",
+            "stockTalle": 45
+          },
+          {
+            "name": "L",
+            "stockTalle": 13
+          },
+          {
+            "name": "XL",
+            "stockTalle": 51
+          }
+        ],
+        "stock": 141,
+        "description": "Celebre el legado de las 3 bandas de Happy People con el pantalón de chándal negro Orlando Pirates 21/22 de adidas, con el escudo del club en el muslo y una sutil marca adi en los costados.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/245324_Main_Thumb_0998244.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/245324_Gallery_1_0998247.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/245324_Gallery_2_0998249.jpg?imwidth=768"
+      },
+      {
+        "rating": 5,
+        "exis": true,
+        "name": "Pantalon Adidas Must Haves Con Estampado 3 Rayas",
+        "brand": 
+          {
+            "$oid": "619ecea36a92375a826baf19"
+          },
+        "price": 8099,
+        "color": [
+          "Azul"
+        ],
+        "category": 
+          {
+            "$oid": "619ecde06a92375a826aa8e3"
+          },
+        "type": 
+          {
+            "$oid": "619e97976a92375a82169eac"
+          },
+        "talle": [
+          {
+            "name": "38",
+            "stockTalle": 20
+          },
+          {
+            "name": "39",
+            "stockTalle": 20
+          },
+          {
+            "name": "40",
+            "stockTalle": 20
+          },
+          {
+            "name": "41",
+            "stockTalle": 20
+          },
+          {
+            "name": "42",
+            "stockTalle": 20
+          },
+          {
+            "name": "43",
+            "stockTalle": 20
+          }
+        ],
+        "stock": 120,
+        "description": "Ponte los pantalones adidas Must Haves 3 Stripe Print para mantenerte abrigado después de un largo entrenamiento y tienen una construcción de algodón suave y un moderno ajuste cónico.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/213415_Main_Thumb_0589485.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/213415_Gallery_1_0589486.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/213415_Gallery_2_0589487.jpg?imwidth=375"
+      }
+]

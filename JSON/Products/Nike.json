@@ -1,0 +1,1216 @@
+[
+    {
+        "rating": 4,
+        "exis": true,
+        "name": "Zapatillas Nike Air Force 1 07 LV8",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 14754,
+        "color": [
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Celebre el pasado y el futuro con las Nike Air Force 1 '07 LV8, que cuentan con detalles premium sobre la clásica amortiguación Nike Air para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/255321_Main_1001776.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/255321_Gallery_1_1001778.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/255321_Gallery_2_1001779.jpg"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Ojotas Nike Sportswear Victori One Slide",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 3755,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb4"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Ponte cómodo para el verano con el Nike Victori One Slide, hecho de espuma suave y amortiguación mecánica para un uso elegante y fácil desde la playa hasta las gradas.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250936_Main_1003708.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250936_Gallery_1_1003709.jpg",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/250936_Gallery_2_1003710.jpg"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Zapatillas Nike Air VaporMax 2021 FK",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 26825,
+        "color": [
+            "Azul"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Muestra el legado de Max con las Nike Air VaporMax 2021 FK, logrando una comodidad superior y una flexibilidad elástica con las tecnologías Flyknit y Vapormax.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/255325_Main_Thumb_1014115.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/255325_Gallery_1_1014117.jpg",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/255325_Gallery_2_1014118.jpg"
+    },
+    {
+        "rating": 5,
+        "exis": true,
+        "name": "Nike Sportwear Sport Essentials",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 10999,
+        "color": [
+            "Marron"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Abróchate con estilo con la sudadera con capucha Nike Sportswear Sport Essentials + Brushed Back Pullover, con el estilo de la firma futura y un suave forro polar French Terry para un estilo y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243061601_1_1019549.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243061601_2_1019550.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243061601_4_1019552.jpg?imwidth=768"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Buzo Con Capucha Nike Sportwear Club",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 10999,
+        "color": [
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Ponte cómodo y confiable con la sudadera con capucha Nike Sportswear Club Fleece, con suave forro polar cepillado en la parte posterior y detalles clásicos de Nike para brindar comodidad y estilo durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250875_Main_Thumb_1018243.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250875_Gallery_1_1018244.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/250875_Gallery_2_1018249.jpg?imwidth=768"
+    },
+    {
+        "exis": true,
+        "name": "Nike LeBron Sherpa Con Botones",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 15999,
+        "color": [
+            "Negro",
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Protégete del frío invernal con la chaqueta Nike LeBron Sherpa Button-Up, con cómodos materiales de vellón Sherpa y gráficos frondosos de LeBron-California.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/254496_Main_Thumb_0989508.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/254496_Gallery_1_0989510.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/254496_Gallery_2_0989512.jpg?imwidth=768"
+    },
+    {
+        "rating": 4,
+        "exis": true,
+        "name": "Pantalon Nike Sportwear Sport Essentials",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 13499,
+        "color": [
+            "Rosa"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eac"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Abróchate con un estilo sencillo con los pantalones de chándal Nike Sportswear Sport Essentials + Brushed Back, con el estilo de la firma futura y un suave forro polar French Terry para un estilo y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243064442_1_1009113.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243064442_2_1009114.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243064442_4_1009116.jpg?imwidth=768"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Pantalon Nike Sportwear Sport Essentials",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 13499,
+        "color": [
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ead"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Abróchate con un estilo sencillo con los pantalones de chándal Nike Sportswear Sport Essentials + Brushed Back, con el estilo de la firma futura y un suave forro polar French Terry para un estilo y comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243063780_1_1009099.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243063780_2_1009100.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243063780_4_1009102.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Short Nike Essentials",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 18000,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb0"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Abrígate con la parka Nike Sportswear Storm-Fit Windrunner en negro y vela, la acogedora capa exterior completa con la tecnología Nike Storm-FIT para protegerte incluso de las condiciones meteorológicas más adversas para que puedas estar cómodo durante todo el invierno.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/243442_Main_Thumb_0925441.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/243442_Gallery_1_0925442.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/243442_Gallery_2_0925444.jpg?imwidth=768"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Bermuda Nike Sportwear Trend",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 5699,
+        "color": [
+            "Negro",
+            "Rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb0"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Elija a su equipo y represente con el estilo llamativo de Nike Sportswear Mesh Short Evil, que ofrece un ajuste cómodo con una marca atrevida para una apariencia destacada que seguramente llamará la atención.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0193658807289_1_1009803.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Main/0193658807289_1_1009803.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0193658807289_4_1009807.jpg?imwidth=375"
+    },
+    {
+        "rating": 4,
+        "exis": true,
+        "name": "Remera Nike Sportwear Con Efecto Tie-Dye",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 4999,
+        "color": [
+            "Negro",
+            "Blanco",
+            "Azul",
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Ponte un estilo versátil y elegante con la camiseta Nike Sportswear Black Light Tie-Dye, confeccionada con algodón suave para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243173199_1_0992983.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243173199_2_0992984.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243173199_4_0992986.jpg?imwidth=768"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Nike Sportwear",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 7999,
+        "color": [
+            "Celeste"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Mantente cubierto y cómodo con la camiseta Nike Sportswear, confeccionada con algodón suave y bordado Nike para un estilo cómodo y fiable.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250934_Main_Thumb_0995559.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250934_Gallery_1_0995560.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/250934_Gallery_2_0995561.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Zapatilla Nike Sportwear Air Flight Lit Mid",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 13299,
+        "color": [
+            "Negro",
+            "Naranja",
+            "Celeste"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Adopte el estilo de la pantalla grande con las Nike Sportswear Air Flight Lite Mid, que cuentan con una parte superior de gamuza súper suave y la clásica amortiguación Nike Air para brindar comodidad liviana y un aspecto moderno.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250956_Main_Thumb_1010608.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250956_Gallery_1_1010609.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/250956_Gallery_2_1010610.jpg?imwidth=768"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Zapatilla Nike Air Force 07 LV8",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 11399,
+        "color": [
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Celebre el pasado y el futuro con las Nike Air Force 1 '07 LV8, que cuentan con detalles premium sobre la clásica amortiguación Nike Air para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/255321_Main_1001776.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/255321_Gallery_1_1001778.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/255321_Gallery_2_1001779.jpg?imwidth=375"
+    },
+    {
+        "rating": 4,
+        "exis": true,
+        "name": "Zapatilla Nike Air Force 07 LV8",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 9999,
+        "color": [
+            "Beige",
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb3"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "Celebre la herencia y la calidez invernal con las Nike Sportswear Air Force 1 '07 Lv8, que cuentan con detalles premium sobre la clásica amortiguación Nike Air y espuma duradera para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243510949_1_1009264.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243510949_2_1009265.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243510949_4_1009267.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Zapatillas Nike Air Max Genoma",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 16499,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e2"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eb2"
+            },
+        "talle": [
+            {
+                "name": "38",
+                "stockTalle": 20
+            },
+            {
+                "name": "39",
+                "stockTalle": 20
+            },
+            {
+                "name": "40",
+                "stockTalle": 20
+            },
+            {
+                "name": "41",
+                "stockTalle": 20
+            },
+            {
+                "name": "42",
+                "stockTalle": 20
+            },
+            {
+                "name": "43",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 120,
+        "description": "El estilo de Noughties da un aspecto nuevo y fresco con las Nike Air Max Genome, con un diseño inspirado en los años 2000 y una amortiguación Max Air completa para brindar comodidad y estilo durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/254775_Main_Thumb_1001229.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/254775_Gallery_1_1001230.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/254775_Gallery_2_1001231.jpg?imwidth=375"
+    },
+    {
+        "rating": 2,
+        "exis": true,
+        "name": "Buzo Nike Sportwear Top World Tour LS",
+        "brand": {
+            "$oid": "619ecea36a92375a826baf1f"
+        },
+        "price": 14999,
+        "color": [
+            "Negro"
+        ],
+        "category": {
+            "$oid": "619ecde06a92375a826aa8e3"
+        },
+        "type": {
+            "$oid": "619e97976a92375a82169eae"
+        },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Celebre la moda de B-ball con las Nike Sportswear Top World Tour LS, que cuentan con un algodón pesado y un gráfico de todo el mundo para una comodidad elegante.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238428_Main_Thumb_0859190.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238428_Gallery_1_0859213.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238428_Gallery_2_0859255.jpg?imwidth=768"
+    },
+    {
+        "rating": 5,
+        "exis": true,
+        "name": "Buzo Nike Sportwear Top World Tour LS",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 9499,
+        "color": [
+            "Naranja",
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Celebre la moda de B-ball con las Nike Sportswear Top World Tour LS, que cuentan con un algodón pesado y un gráfico de todo el mundo para una comodidad elegante.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238430_Main_Thumb_0859870.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238430_Gallery_1_0859872.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238430_Gallery_2_0859873.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Buzo Nike Sportwear Air Crew",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 10499,
+        "color": [
+            "Negro",
+            "Rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Adopta el estilo casual con la Nike Air Fleece Crew.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/217425_Main_Thumb_0633055.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/217425_Gallery_1_0633057.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/217425_Gallery_2_0633061.jpg?imwidth=375"
+    },
+    {
+        "rating": 1,
+        "exis": true,
+        "name": "Buzo Nike Sporwear Club Fleece",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 11499,
+        "color": [
+            "Celeste"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eae"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Ponte cómodo y confiable con la camiseta Nike Sportswear Club Fleece Crew, que cuenta con un suave forro polar cepillado en la parte posterior y detalles clásicos de Nike para brindar comodidad y estilo durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/238442_Main_Thumb_0855139.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/238442_Gallery_1_0855140.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/238442_Gallery_2_0855141.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Nike Sportwear Therma-Fit Repel Legacy",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 28499,
+        "color": [
+            "Negro"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Mantente cubierto y cómodo con la parka Nike Sportswear Therma-Fit Repel Legacy, con aislamiento Thermore EcoDown para brindar una calidez ligera reciclada que es ideal para protegerte del frío.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/243444_Main_Thumb_1002300.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/243444_Gallery_1_1002303.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/243444_Gallery_2_1002304.jpg?imwidth=375"
+    },
+    {
+        "rating": 5,
+        "exis": true,
+        "name": "Campera Nike con Forro Tejido Swoosh",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 18999,
+        "color": [
+            "Blanco",
+            "Rojo"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Muestra el legado de la ropa deportiva con orgullo en la chaqueta con forro tejido Nike Sportswear Swoosh, con nailon ligero y malla que brindan una cobertura cómoda y lucen un diseño de swoosh de gran tamaño que garantiza llamar la atención.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/243382_Main_Thumb_0922427.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/243382_Gallery_1_0922433.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/243382_Gallery_2_0922434.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Campera Nike Con Forro Tejido Swoosh",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 18499,
+        "color": [
+            "Negro",
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169eaa"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Muestra la herencia de la ropa deportiva con orgullo con la chaqueta con forro tejido Nike Sportswear Swoosh, con nailon ligero y malla que brindan una cobertura cómoda y lucen un diseño de swoosh extragrande que seguramente llamará la atención.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/243381_Main_Thumb_0922410.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/243381_Gallery_1_0922411.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/243381_Gallery_2_0922413.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Nike Premium Essential",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 3800,
+        "color": [
+            "Marron"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 20
+            },
+            {
+                "name": "M",
+                "stockTalle": 20
+            },
+            {
+                "name": "L",
+                "stockTalle": 20
+            },
+            {
+                "name": "XL",
+                "stockTalle": 20
+            },
+            {
+                "name": "XXL",
+                "stockTalle": 20
+            }
+        ],
+        "stock": 100,
+        "description": "Ponte un estilo versátil y elegante con la camiseta Nike Sportswear Premium Essential, confeccionada con algodón suave para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/250926_Main_Thumb_1019900.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/250926_Gallery_1_1019902.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/250926_Gallery_2_1019904.jpg?imwidth=768"
+    },
+    {
+        "rating": 5,
+        "exis": true,
+        "name": "Remera Nike Con Efecto Tie-Dye",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 3999,
+        "color": [
+            "Blanco",
+            "Verde"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Ponte un estilo versátil y elegante con la camiseta Nike Sportswear Black Light Tie-Dye, confeccionada con algodón suave para brindar comodidad durante todo el día.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243173267_1_0992990.jpg?imwidth=375",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243173267_2_0992991.jpg?imwidth=375",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243173267_4_0992993.jpg?imwidth=375"
+    },
+    {
+        "rating": 3,
+        "exis": true,
+        "name": "Remera Nike Max 90 Tee",
+        "brand": 
+            {
+                "$oid": "619ecea36a92375a826baf1f"
+            },
+        "price": 4999,
+        "color": [
+            "Negro",
+            "Blanco"
+        ],
+        "category": 
+            {
+                "$oid": "619ecde06a92375a826aa8e3"
+            },
+        "type": 
+            {
+                "$oid": "619e97976a92375a82169ea7"
+            },
+        "talle": [
+            {
+                "name": "S",
+                "stockTalle": 32
+            },
+            {
+                "name": "M",
+                "stockTalle": 45
+            },
+            {
+                "name": "L",
+                "stockTalle": 13
+            },
+            {
+                "name": "XL",
+                "stockTalle": 51
+            }
+        ],
+        "stock": 141,
+        "description": "Mire hacia el futuro con la camiseta Nike Max 90, con tejidos de punto grueso súper cómodos y una elegante construcción de manga larga que muestra los gráficos de Nike y la paz en la parte delantera y trasera.",
+        "image": "https://www.prodirectselect.com/productimages/V3_1_Main/0195243199472_1_0991820.jpg?imwidth=768",
+        "image1": "https://www.prodirectselect.com/productimages/V3_1_Gallery_1/0195243199472_2_0991821.jpg?imwidth=768",
+        "image2": "https://www.prodirectselect.com/productimages/V3_1_Gallery_2/0195243199472_4_0991823.jpg?imwidth=768"
+    }
+]
