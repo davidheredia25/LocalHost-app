@@ -4,7 +4,7 @@ const { updateUser } = require('./update.user');
 const { editDateUser } = require('./editDate.user');
 const { checkoutMp } = require('./checkoutMp.user');
 const { addCart, getCartUser, deleteCart, deleteCartOne, Join } = require('./cart.user');
-const { postUser, postLogin, profileAuthenticate, loginGoogle } = require('./login.user');
+const { postUser, postLogin, profileAuthenticate, loginGoogle, confirm } = require('./login.user');
 const {forgotPassword} = require("./passwordUser");
 const { enviarMail } = require('./nodemailer.user');
 // const { enviarMailTicket } = require('./mailTicket.user')
@@ -27,5 +27,6 @@ module.exports = {
     forgotPassword,
     enviarMail,
     Join,
+    confirm
     // enviarMailTicket
 };

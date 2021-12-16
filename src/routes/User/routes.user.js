@@ -18,7 +18,8 @@ const {
     deleteCartOne,
     forgotPassword,
     enviarMail,
-    Join
+    Join, 
+    confirm
  } = require('./Controllers/all.controllers');
 
 
@@ -37,11 +38,12 @@ router.put('/cart/deleteOne/:id/:productId/:talle', deleteCartOne)
 router.put('/cart/join/:id', Join)
 router.delete('/delete/:id', deleteUser);
 router.post('/register', passport.authenticate("register", { session: false }), postUser);
-router.post('/login', postLogin);
+router.get('/confirm/:token', confirm);
+router.post('/login', postLogin)
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
-router.put("/login/password/:id", forgotPassword);
+router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
 
 

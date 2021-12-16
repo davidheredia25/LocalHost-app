@@ -4,7 +4,21 @@ const User = require("../../../models/User");
 const Product = require("../../../models/Product");
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
+const jwt = require('jsonwebtoken');
 
+const getTokenData = (token) => {
+    let data = null;
+    jwt.verify(token, 'top_secret', (err, decoded) => {
+        // console.log("TOKEN", token)
+        if(err) {
+            console.log('Error al obtener data del token');
+        } else {
+            data = decoded;
+        }
+    });
+    // console.log("DATA", data)
+    return data;
+}
 
 passport.use('register', new localStrategy({
     usernameField: "email",
@@ -87,5 +101,6 @@ const splitt = (string) => {
 module.exports = {
     verificacionId,
     verificacionP,
-    splitt
+    splitt,
+    getTokenData
 };
