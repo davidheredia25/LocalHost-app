@@ -6,13 +6,21 @@ import { Button } from '@mui/material';
 import {deleteCart, getCart, Pagar, deleteAllCart, Join} from '../../../../redux/actions/cart.actions';
 import style from '../carrito.module.scss';
 import axios from "axios";
+import Dates from "../../Profile/Dates";
+import Modal from 'react-bootstrap/Modal';
 
 
 
 
 const CartUser = ({id}) => {
     const  dispatch = useDispatch();
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     const {user} =useSelector(state => state.login)
+    let User;
+    if(user?.email) User = user
+    else User = user?.user;
    // let emptyCart = JSON.parse(localStorage.getItem('cart'));
     console.log('id', id)
     let userId = id;
@@ -46,6 +54,8 @@ const CartUser = ({id}) => {
         
     }
 
+
+
     let pago = total();
 
     useEffect(() => {
@@ -57,6 +67,7 @@ const CartUser = ({id}) => {
 
 
     return (
+        <div className={style.container}>
         <div style={{marginTop: '150px', marginBottom: '10%'}} className={style.cart} >
             <div  className={style.cart}>
                 {cart?.length ?
@@ -75,7 +86,12 @@ const CartUser = ({id}) => {
                  : <p>No hay Productos</p>
             } 
             </div>
+            </div>
+            
             <div>
+                <Dates />
+            </div>
+            <div style={{marginTop: '10%'}}>
               {cart?.length && pago!==NaN? 
                 <div>
                 <h3>TOTAL : $ {pago}</h3> 
@@ -83,17 +99,23 @@ const CartUser = ({id}) => {
                 :<p></p>
                 } 
         
-            </div>
+            
             <div>
             {!cart?.length?
                 
            <Link to='/catalogo'> <Button variant='contained' size="large" style={{'backgroundColor': '#000000'}} >Agregar</Button></Link>
                 :<div>
-                <Button variant='contained' onClick={()=>pagar(id)} size="large" style={{'backgroundColor': '#000000'}} >Pagar</Button>
+                <Button variant='contained' onClick={User.direction !== ''? ()=>pagar(id) : handleShow} size="large" style={{'backgroundColor': '#000000'}} >Pagar</Button>
                 <Button variant='contained' onClick={Limpiar} size="large" style={{'backgroundColor': 'red'}} >Limpiar</Button>
                 </div> 
             } 
-            </div> 
+            </div>
+            <Modal show={show} centered>
+                <p style={{color: 'red'}}>Necesita direccion</p>
+                <button onClick={handleClose}> OK</button>
+                </Modal> 
+            </div>
+        
         </div>
     )
 } 

@@ -66,7 +66,6 @@ const EmptyCart = () => {
                 <h3>TOTAL : $ {pago}</h3>  
                 : null
             } 
-        
             </div>
             <div className={style.buttons}>
             {!emptyCart?.length?
