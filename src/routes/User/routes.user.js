@@ -44,7 +44,7 @@ router.post('/login', postLogin);
 router.post('/profile', passport.authenticate('jwt', { session: false }), profileAuthenticate);
 router.post('/loginG', loginGoogle);
 router.post('/checkoutMp/:userId', checkoutMp);
-router.put("/login/password/:id", forgotPassword);
+router.put("/login/password", forgotPassword);
 router.post('/nodemailer', enviarMail);
 
 
