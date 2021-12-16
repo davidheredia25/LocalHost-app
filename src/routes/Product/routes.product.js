@@ -18,7 +18,7 @@ router.get('/talles', getTalles);
 router.get('/', getProducts);
 router.get('/recommended', recommended);
 router.get('/:id', getProductById);
-router.post('/create', upload.single('image'), createProduct);
+router.post('/create', createProduct); //upload.single('image')
 router.put('/update/:id', updateProduct);
 router.put('/update/rating/:id', updateRating);
 router.put('/delete/:id', deleteProduct);

@@ -53,7 +53,7 @@ const CartUser = ({id}) => {
            return  dispatch(Join(id))
         } */
         dispatch(getCart(id))
-    },[dispatch])
+    },[])
 
 
     return (
@@ -76,7 +76,7 @@ const CartUser = ({id}) => {
             } 
             </div>
             <div>
-              {cart?.length && pago!==NaN? 
+              {cart?.length && pago!==0? 
                 <div>
                 <h3>TOTAL : $ {pago}</h3> 
                 </div> 

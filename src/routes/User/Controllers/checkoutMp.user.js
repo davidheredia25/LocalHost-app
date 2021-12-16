@@ -52,8 +52,8 @@ const checkoutMp = async (req, res) => {
             // console.log('preference checkoutMp: ', preference)
 
             const response = await mercadopago.preferences.create(preference)
-            await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user });
-            // console.log('response', response);
+            let ticket = await axios.post(`http://localhost:4000/ticket/create`, { id_orden, user });
+            console.log('ticket', ticket);
             global.id = response.id;
             // console.log('global.id: ', global.id);
             return res.json(response);
