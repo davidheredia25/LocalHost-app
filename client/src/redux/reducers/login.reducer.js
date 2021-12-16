@@ -1,7 +1,8 @@
-import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT, EDIT_DATE_USER, GET_USER_GOOGLE} from "../actions/login.actions";
+import { LOGIN_LOCAL, REGISTER_LOCAL, GET_USER, LOG_OUT, EDIT_DATE_USER, GET_USER_GOOGLE, TICKETS} from "../actions/login.actions";
 
 let initialState = {
-    user: JSON.parse(localStorage.getItem('user'))
+    user: JSON.parse(localStorage.getItem('user')),
+    tickets: []
 }
 
 export function loginReducer(state = initialState, { type, payload }) {
@@ -40,6 +41,12 @@ export function loginReducer(state = initialState, { type, payload }) {
         return {
             ...state,
             user: payload
+        }
+        case TICKETS: 
+        return {
+            ...state,
+            tickets: payload
+            
         }
             
 

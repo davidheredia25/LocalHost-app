@@ -1,6 +1,6 @@
 const Ticket = require('../../../models/Ticket');
 const User = require('../../../models/User');
-const { addUser,setStock } = require('./middleware');
+const { addUser,setStock ,setCart} = require('./middleware');
 
 const createTicket = async (req, res) => {
     const { id_orden, user } = req.body;
@@ -40,6 +40,7 @@ const createTicket = async (req, res) => {
                     await setStock(arrayProduct[i], arrayProductId[i]);
                 }
                 // console.log('created createTicket: ', created);
+                await setCart(user._id)
                 return res.json(created);
             }
             return res.send('No tienes direccion o no tienes productos en el carrito');
