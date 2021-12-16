@@ -10,6 +10,7 @@ export const LOGIN_AUTH = "LOGIN_AUTH";
 export const LOG_OUT = 'LOG_OUT';
 export const EDIT_DATE_USER ='EDIT_DATE_USER';
 export const GET_USER_GOOGLE = 'GET_USER_GOOGLE';
+export const TICKETS = 'TICKETS';
 
 const emptyCart = JSON.parse(localStorage.getItem('cart'))
 
@@ -65,7 +66,7 @@ export const loginLocal = (input) => async (dispatch) => {
             type: LOGIN_LOCAL,
             payload: userinfo
         })
-        console.log('userinfo', userinfo.user._id)
+        console.log('userinfo', userinfo.user._id   )
         console.log('entro aca')
         return dispatch(Join(userinfo.user._id))
     } catch (error) {
@@ -98,9 +99,22 @@ export const editDateUser = (id, input) => async (dispatch) => {
     }
 }
 
-export const forgotPassword = async (input) => {
+export const forgotPassword = () => async(input) => {
     try {
         await axios.put(`/user/login/password`, input)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export const getTickets = (id) => async(dispatch)  => {
+    try {
+        let {data} = await axios.get(`/ticket/user/${id}`)
+        return dispatch({
+            type: TICKETS,
+            payload: data
+        })
     } catch (error) {
         console.log(error)
     }

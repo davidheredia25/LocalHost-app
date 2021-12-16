@@ -1,6 +1,6 @@
 const { createTicket } = require('./create.ticket');
 const { deleteTicket } = require('./delete.ticket');
-const { getTicket, getTicketById } = require('./get.ticket');
+const { getTicket, getTicketById, getUserTickets } = require('./get.ticket');
 const { updateTicket } = require('./update.ticket');
 
 module.exports = {
@@ -8,5 +8,6 @@ module.exports = {
     deleteTicket,
     getTicketById,
     getTicket,
-    updateTicket
+    updateTicket,
+    getUserTickets
 };

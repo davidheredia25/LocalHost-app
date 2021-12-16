@@ -27,7 +27,7 @@ const router = Router();
 
 //          /user
 router.get('/', getUser);
-//router.get('/:userId', getUserByID);
+router.get('/:id', getUserByID);
 router.put('/edit/:id', upload.single('image'), editDateUser);
 router.put('/update/:id', updateUser);
 router.get('/get/cart/:id', getCartUser);

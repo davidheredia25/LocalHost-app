@@ -1,5 +1,6 @@
 const Ticket = require('../../../models/Ticket');
 const User = require('../../../models/User');
+const Product = require('../../../models/Product');
 
 const verificacionNumOrder = async (numOrder) => {
     try {
@@ -79,11 +80,26 @@ const setStock = async (stock, id) => {
 }
 
 
+const setCart = async(id) => {
+    try {   
+        let user = await User.findByIdAndUpdate(id, {
+            cart: []
+        }, { new: true });
+        await user.save()
+        return user;
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 module.exports = {
     verificacionNumOrder,
     verificacionId,
     verificacionP,
     verificacionU,
     addUser,
-    setStock
+    setStock,
+    setCart
 }

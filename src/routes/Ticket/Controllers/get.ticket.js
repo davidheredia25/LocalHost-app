@@ -1,4 +1,5 @@
 const Ticket = require('../../../models/Ticket');
+const User = require('../../../models/User');
 const { verificacionId } = require('./middleware');
 
 const getTicket = async (req, res) => {
@@ -11,6 +12,23 @@ const getTicket = async (req, res) => {
         console.log(error);
     }
 };
+
+const getUserTickets = async(req,res) => {
+    const {id} = req.params;
+
+    try {
+        let user= await User.findById(id)
+        console.log('tickets', user.ticket)
+        if(user){
+          return  res.json(user.ticket)
+        }
+
+        res.send('no gordito')
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 const getTicketById = async (req, res) => {
     const { id } = req.params;
@@ -26,5 +44,6 @@ const getTicketById = async (req, res) => {
 
 module.exports = {
     getTicket,
-    getTicketById
+    getTicketById,
+    getUserTickets
 };
