@@ -3,23 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import style from "./Login.module.scss";
 import { Link } from "react-router-dom";
 import Google from "../LoginGoogle/LoginGoogle";
-import { Button ,TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Imagen from './1.png';
 import { loginLocal } from "../../../redux/actions/login.actions";
-import {loginAuth} from "../../../redux/actions/login.actions";
+import { loginAuth } from "../../../redux/actions/login.actions";
 import { Join } from "../../../redux/actions/cart.actions";
 import { useNavigate } from "react-router-dom";
 
- 
+
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const emptyCart= JSON.parse(localStorage.getItem('cart'));
-  const {user} = useSelector(state => state.login)
+  const emptyCart = JSON.parse(localStorage.getItem('cart'));
+  const { user } = useSelector(state => state.login)
   let User;
-  if(user?.email) User = user
+  if (user?.email) User = user
   else User = user?.user;
   let userId = User?._id;
   const [input, setInput] = useState({
@@ -43,11 +43,11 @@ const Login = () => {
     return errors;
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!error.email && !error.password) {
-        dispatch(loginLocal(input))
-        navigate("/")
+      dispatch(loginLocal(input))
+      navigate("/")
     }
     else { alert("The form is required"); }
     setInput({
@@ -56,9 +56,9 @@ const Login = () => {
     })
   }
 
-  
 
- 
+
+
 
   const handleChange = (e) => {
     setInput({
@@ -75,16 +75,16 @@ const Login = () => {
 
   return (
     <div className={style.container}>
-        <div className={style.test}>
-        <div className={style.imagen}> 
-           <img className={style.image} src={Imagen} alt='' /> 
+      <div className={style.test}>
+        <div className={style.imagen}>
+          <img className={style.image} src={Imagen} alt='' />
         </div>
         <div className={style.contenedor}>
-      <form className={style.form} onSubmit={handleSubmit}>
-        <p className={style.titleLogin}>INGRESAR</p>
-        <div className={style.username}>
+          <form className={style.form} onSubmit={handleSubmit}>
+            <p className={style.titleLogin}>INGRESAR</p>
+            <div className={style.username}>
 
-         {/*} <input
+              {/*} <input
             className={style.input}
             type="text"
             name='email'
@@ -92,51 +92,42 @@ const Login = () => {
             value={input.email}
             onChange={handleChange}
   /> */}
-          <TextField id="standard-basic" type="text"
-            name='email' value={input.email}
-            onChange={handleChange}
-             style={{'width': '250px'}} 
-              label={<EmailIcon/> }
-               variant="standard" />
-          <p className={style.error}>{error.email}</p>
+              <TextField id="standard-basic" type="text"
+                name='email' value={input.email}
+                onChange={handleChange}
+                style={{ 'width': '250px' }}
+                label={<EmailIcon />}
+                variant="standard" />
+              <p className={style.error}>{error.email}</p>
+            </div>
+            <div className={style.password}>
+              <TextField id="standard-basic" type="password"
+                name='password'
+                value={input.password}
+                onChange={handleChange}
+                style={{ 'width': '250px' }}
+                label={<VpnKeyIcon />} variant="standard" />
+              <p className={style.error}>{error.password}</p>
+            </div>
+            <div className={style.ctnGoogle}>
+              <Button
+                onClick={handleSubmit}
+                variant='contained' size="x-large" style={{ 'backgroundColor': '#000000', 'width': 200 }} type="submit" className={style.btn}>
+                INGRESÁ
+              </Button>
+              <div className={style.google}>
+                <Google className={style.btnGoogle} />
+              </div>
+            </div>
+            <div className={style.link}>
+              <p> No tenes cuenta? <Link to="/register">Registrate</Link></p>
+              <p>  Olvidaste tu contraseña? <Link to="/user/nodemailer">Cambiala ahora</Link></p>
+            </div>
+          </form>
         </div>
-        <div className={style.password}>
-          
-          {/*<input
-            className={style.input}
-            type="password"
-            name='contraseña'
-            placeholder="Su contraseña..."
-            value={input.contraseña}
-            onChange={handleChange}
-          />*/}
-          <TextField id="standard-basic"  type="password"
-            name='password' 
-            value={input.password}
-            onChange={handleChange}
-             style={{'width': '250px'}} 
-             label={<VpnKeyIcon/>}variant="standard" />
-          <p className={style.error}>{error.password}</p>
-        </div>
-        <div className={style.ctnGoogle}>
-          <Button 
-           onClick={handleSubmit}
-          variant='contained' size="x-large" style={{'backgroundColor': '#000000', 'width': 200}}  type="submit" className={style.btn}>
-            INGRESÁ
-          </Button>
-          <div className={style.google}>
-          <Google  className={style.btnGoogle}/>
-          </div>
-        </div>
-        <div className={style.link}>
-         <p> No tenes cuenta? <Link to="/register">Registrate</Link></p>
-         <p>  Olvidaste tu contraseña? <Link to="/forgot">Cambiala ahora</Link></p>
-        </div>
-  </form>
-  </div>
-  </div>
-  </div>
-  
+      </div>
+    </div>
+
   );
 };
 

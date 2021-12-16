@@ -1,3 +1,4 @@
+
 const nodemailer = require("nodemailer");
 const {google} = require("googleapis");
 
@@ -15,16 +16,11 @@ const enviarMail = async (req, res) => {
   try {
       //voy a recibir el email por body para verificar si existe user.
    if(email){
-  
-    // const contentHTML = `
-    //             <h1>Formulario de nodemailer</h1>
-    //             <ul>
-    //                  </li>
-    //                 <li>Email: ${email} </li>
-    //                 <li>Password: ${password} </li>
-    //             </ul>`;
-
-    const link = `http://localhost:3000/user/login/password`;
+    const HTML = `
+    <h1> Hola </h1>
+    <h4> Para recuperar su contraseña, por favor ingrese en el siguiente link</h4>
+    http://localhost:3000/user/login/password
+`;
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
@@ -40,7 +36,7 @@ const enviarMail = async (req, res) => {
           service: "gmail",
           auth: {
             type: "OAuth2",
-            user: "tincho20012017@gmail.com",
+            user: "vsclothes2@gmail.com",
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
             refreshToken: REFRESH_TOKEN,
@@ -48,10 +44,10 @@ const enviarMail = async (req, res) => {
           },
         });
         const mailOptions = {
-          from: "VSClothes <tincho20012017@gmail.com>",
+          from: "VSClothes <vsclothes2@gmail.com>",
           to: email,
           subject: "Recuperación de contraseña",
-          text: link,
+          html: HTML,
         };
 
         const result = await transporter.sendMail(mailOptions);

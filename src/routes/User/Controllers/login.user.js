@@ -1,9 +1,12 @@
 const passport = require("passport");
+const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
-const User = require('../../../models/User');
+const User = require("../../../models/User");
 const { OAuth2Client } = require("google-auth-library");
 const config = require("../../../config.js");
 const client = new OAuth2Client(config.GOOGLE_CLIENT_ID);
+const { getTokenData, verificacionEmail } = require("./middleware.js");
+const { getTemplate, sendConfirmationMail } = require("./mail.cotrollers");
  
 
 const loginGoogle = async (req, res) => {
@@ -18,7 +21,7 @@ const loginGoogle = async (req, res) => {
               if (err) {
                 return res.status(400).json({
                   error: "Something went wrong",
-                });
+                })
               } else {
                 // console.log('user loginGoogle', user);
                 if (user) {
@@ -58,20 +61,94 @@ const loginGoogle = async (req, res) => {
   }
 };
 
-const postUser = (req, res, next) => {
-  console.log('req postUser', req);
-  res.json({
-    message: "Se registro correctamente",
-    user: req.user
-  });
+const postUser = async (req, res) => {
+  // console.log("req postUser", req);
+  try {
+    // Obtener la data del usuario: name, email
+    const { fristName, lastName, email } = req.body;
+    // console.log('body postUser: ', fristName, lastName, email);
+    // Verificar que el usuario no exista
+    let verificacion = await verificacionEmail(email);
+    // console.log('user postUser:', verificacion.user);
+
+    if (verificacion.bool) {
+      // Generar el código
+      const code = uuidv4();
+      //   Generar token
+      const token = jwt.sign({ user: { email } }, "top_secret", {
+        expiresIn: "1h",
+      });
+      verificacion.user.token = token;
+
+      // Obtener un template
+      const template = getTemplate(fristName, token);
+      // console.log('template postUser: ', template);
+
+      // Enviar el email
+      await sendConfirmationMail(verificacion.user.email, template);
+      await verificacion.user.save();
+
+      res.json({
+        message: "Se registro correctamente",
+        user: req.user,
+      });
+    }
+    res.send(verificacion.message)
+  } catch (error) {
+    console.log(error);
+    return res.json({
+      success: false,
+      msg: "Error al registrar usuario",
+    });
+  }
+};
+
+const confirm = async (req, res) => {
+  try {
+    // Obtener el token
+    const { token } = req.params;
+
+    // Verificar la data
+    const data = await getTokenData(token);
+    if (data === null) {
+      return res.json({
+        success: false,
+        msg: "Error al obtener data",
+      });
+    }
+
+    const { user, code } = data;
+    // Verificar existencia del usuario
+    let usuario = await User.findOne({ email: user.email }) || null;
+
+    if (usuario === null) {
+      return res.json({
+        success: false,
+        msg: "Usuario no existe",
+      });
+    }
+
+    // Actualizar usuario
+    usuario.status = "VERIFIED";
+    await usuario.save();
+
+    // Redireccionar a la confirmación
+    return res.json("bien");
+  } catch (error) {
+    console.log(error);
+    return res.json({
+      success: false,
+      msg: "Error al confirmar usuario",
+    });
+  }
 };
 
 const postLogin = async (req, res, next) => {
-  console.log('req postLogin: ', req);
+  // console.log('req postLogin: ', req);
   try {
     passport.authenticate("login", async (err, user, info) => {
       try {
-        if (err || !user) {
+        if (!user) {
           const error = new Error("error");
           return error;
         }
@@ -111,6 +188,7 @@ const postLogin = async (req, res, next) => {
   }
 };
 
+
 const profileAuthenticate = (req, res, next) => {
   console.log('token profile', req.query.secret_token);
   console.log('req profile', req);
@@ -126,5 +204,6 @@ module.exports = {
   postLogin,
   profileAuthenticate,
   postUser,
-  loginGoogle
+  loginGoogle,
+  confirm
 };
