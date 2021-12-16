@@ -62,18 +62,16 @@ const loginGoogle = async (req, res) => {
 };
 
 const postUser = async (req, res) => {
-  console.log("req postUser", req);
-
+  // console.log("req postUser", req);
   try {
     // Obtener la data del usuario: name, email
     const { fristName, lastName, email } = req.body;
-    console.log('body postUser: ', fristName, lastName, email);
+    // console.log('body postUser: ', fristName, lastName, email);
     // Verificar que el usuario no exista
     let verificacion = await verificacionEmail(email);
-    console.log('user postUser:', verificacion.user);
+    // console.log('user postUser:', verificacion.user);
 
     if (verificacion.bool) {
-  
       // Generar el código
       const code = uuidv4();
       //   Generar token
@@ -81,15 +79,15 @@ const postUser = async (req, res) => {
         expiresIn: "1h",
       });
       verificacion.user.token = token;
-  
+
       // Obtener un template
       const template = getTemplate(fristName, token);
-      console.log('template postUser: ', template);
-  
+      // console.log('template postUser: ', template);
+
       // Enviar el email
       await sendConfirmationMail(verificacion.user.email, template);
       await verificacion.user.save();
-  
+
       res.json({
         message: "Se registro correctamente",
         user: req.user,
@@ -119,7 +117,7 @@ const confirm = async (req, res) => {
       });
     }
 
-     const { user, code } = data;
+    const { user, code } = data;
     // Verificar existencia del usuario
     let usuario = await User.findOne({ email: user.email }) || null;
 
@@ -150,7 +148,7 @@ const postLogin = async (req, res, next) => {
   try {
     passport.authenticate("login", async (err, user, info) => {
       try {
-        if (err || !user) {
+        if (!user) {
           const error = new Error("error");
           return error;
         }
@@ -189,6 +187,7 @@ const postLogin = async (req, res, next) => {
     console.log(error);
   }
 };
+
 
 const profileAuthenticate = (req, res, next) => {
   console.log('token profile', req.query.secret_token);
