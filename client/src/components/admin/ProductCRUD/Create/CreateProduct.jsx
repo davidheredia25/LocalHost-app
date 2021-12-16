@@ -127,10 +127,12 @@ const CreateProduct = () => {
     })
   }
 
-  const saveImage = () => {
+  const saveImg = (e) => {
+    e.preventDefault()
+    console.log(actualImage)
     setForm({
       ...form,
-      image: [actualImage]
+      image: [...form.image, actualImage]
     })
     setActualImage("")
   }
@@ -207,11 +209,10 @@ const CreateProduct = () => {
             /* value={form.image}  */
             onChange={(e) => {
               setActualImage(e.target.value)
-              console.log(e.target.value)
             }} 
           />
-          <button onClick={saveImage}>GUARDAR</button>
         </div>
+        <button onClick={saveImg}>GUARDAR</button>
       </div>
       <br/>
 
@@ -321,10 +322,10 @@ const CreateProduct = () => {
           })
         }
       </div>
-      <h3>Imágenes:</h3>
-      {
-        form.image?.map(e => <p>{e}</p>)
-      }
+      <div>
+        <h3>Imágenes:</h3>
+        <div>{form.image.map(e => <p>{e}</p>)}</div>
+      </div>
     </div>
     </div>
 

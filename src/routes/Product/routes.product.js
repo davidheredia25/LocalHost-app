@@ -6,13 +6,17 @@ const {
     getProductById,
     getProducts,
     updateProduct,
-    updateRating
+    updateRating,
+    getTalles,
+    recommended
 } = require('./Controllers/all.controllers');
 
 const router = Router();
 
 //         /product
+router.get('/talles', getTalles);
 router.get('/', getProducts);
+router.get('/recommended', recommended);
 router.get('/:id', getProductById);
 router.post('/create', upload.single('image'), createProduct);
 router.put('/update/:id', updateProduct);
