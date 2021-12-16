@@ -49,6 +49,20 @@ const getProducts = async (req, res) => {
                     return 0;
                 })
             }
+            if (order === "maxR") {
+                getAllProducts = getAllProducts.sort(function (a, b) {
+                    if (a.rating > b.rating) return -1;
+                    if (b.rating > a.rating) return 1;
+                    return 0;
+                })
+            }
+            if (order === "minR") {
+                getAllProducts = getAllProducts.sort(function (a, b) {
+                    if (a.rating > b.rating) return 1;
+                    if (b.rating > a.rating) return -1;
+                    return 0;
+                })
+            }
         }
         res.json(getAllProducts);
     } catch (error) {
