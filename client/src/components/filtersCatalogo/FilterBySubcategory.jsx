@@ -10,12 +10,12 @@ import { subcategoriesArray } from "./subcategoriesArray";
 const FilterBySubcategory = ({ brands, subcategories }) => {
     
     const dispatch = useDispatch();
-    const { brand, category } = useSelector(state => state.filters)
+    const { brand, category, name, order } = useSelector(state => state.filters)
 
     const [open, setOpen] = useState(false);
     const handleClick = (e) =>{
         dispatch(setFilterSubcategory(e.target.value))
-        dispatch(getProducts({brand, category, subcategory: e.target.value}))
+        dispatch(getProducts({brand, category, name, order, subcategory: e.target.value }))
     }
     
     return ( 

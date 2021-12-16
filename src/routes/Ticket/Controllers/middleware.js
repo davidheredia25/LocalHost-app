@@ -59,11 +59,31 @@ const addUser = async (userId, arrayProductId, ticketId) => {
     }
 };
 
+const setStock = async (stock, id) => {
+    try {
+        let find = await Product.findById(id);
+        let preStock = find.talle.find(x => x.name === stock.talle);
+        let obj = {
+            name: stock.talle,
+            stockTalle: preStock.stockTalle - stock.qty
+        };
+        let talle = find.talle.filter(t => t.name !== obj.name);
+        let update = await Product.findByIdAndUpdate(id, {
+            talle: [...talle, obj]
+        }, { new: true });
+        await update.save();
+        return update;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
 module.exports = {
     verificacionNumOrder,
     verificacionId,
     verificacionP,
     verificacionU,
-    addUser
+    addUser,
+    setStock
 }

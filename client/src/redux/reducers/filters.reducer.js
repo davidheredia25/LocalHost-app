@@ -4,7 +4,8 @@ import {
     SET_FILTER_SUBCATEGORY,
     RESET_FILTER,
     SET_FILTER_NAME,
-    RESET_ALL_FILTERS
+    RESET_ALL_FILTERS,
+    SET_ORDER
 } from "../actions/filters.actions";
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
   category: "",
   subcategory: "",
   name: "",
+  order: ""
 }
 
 export function filtersReducer(state = initialState, { type, payload }) {
@@ -49,6 +51,12 @@ export function filtersReducer(state = initialState, { type, payload }) {
             subcategory: "",
             name: ""
         }
+    case SET_ORDER:
+        return{
+            ...state,
+            order: payload
+        }
+    
     default:
         return state;
   }
